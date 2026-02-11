@@ -1,241 +1,558 @@
 <!DOCTYPE html>
+<html class="light" lang="en">
 
-<html class="light" lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Consulting Agency | Precision Scaling</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Aegis Consulting | Transform Your Business with Strategic Excellence</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#0f6df0",
-                        "background-light": "#f5f7f8",
-                        "background-dark": "#101822",
+                        "primary": "#2563eb",
+                        "primary-dark": "#1e40af",
+                        "accent": "#f59e0b",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
                         "navy-deep": "#0a192f",
-                        "slate-custom": "#475569"
                     },
                     fontFamily: {
-                        "display": ["Public Sans", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
                         "serif": ["Playfair Display", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
                     },
                 },
             },
         }
     </script>
-<style>
-        body { font-family: 'Public Sans', sans-serif; }
-        .heading-serif { font-family: 'Playfair Display', serif; }
-        .bg-pattern {
-            background-image: radial-gradient(#0f6df010 1px, transparent 1px);
-            background-size: 20px 20px;
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .heading-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes gradient-shift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .gradient-animate {
+            background-size: 200% 200%;
+            animation: gradient-shift 8s ease infinite;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  <link rel="stylesheet" href="../../../../assets/css/global-styles.css">
-  <link rel="stylesheet" href="../../../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Consulting Agency | Precision Scaling">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+    <link rel="stylesheet" href="../../../../assets/css/global-styles.css">
+    <link rel="stylesheet" href="../../../../assets/css/design-enhancements.css">
+    <meta name="theme-color" content="#2563eb">
+    <meta property="og:title" content="Aegis Consulting | Strategic Business Transformation">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Elite consulting services for Fortune 500 companies and high-growth enterprises">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-custom selection:bg-primary/30">
-<!-- Sticky Navigation -->
-<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-<div class="px-6 py-4 flex justify-between items-center">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
-<span class="text-white font-bold text-lg">A</span>
-</div>
-<span class="font-bold text-navy-deep dark:text-white tracking-tight uppercase text-sm">Aegis Consulting</span>
-</div>
-<button class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-semibold hover:bg-primary/90 transition-colors">
-                Contact
-            </button>
-</div>
-</nav>
-<main>
-<!-- Hero Section -->
-<section class="relative overflow-hidden pt-12 pb-20 px-6 bg-pattern">
-<div class="max-w-md mx-auto relative z-10">
-<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-</span>
-                    B2B Growth Partners
+
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100">
+
+    <!-- Enhanced Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
+                        <span class="text-white font-bold text-xl">A</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-gray-900 dark:text-white text-lg tracking-tight">Aegis
+                            Consulting</span>
+                        <p class="text-xs text-gray-500">Strategic Excellence</p>
+                    </div>
                 </div>
-<h1 class="heading-serif text-4xl md:text-5xl text-navy-deep dark:text-white leading-tight mb-6">
-                    Scale Your Operations with <span class="text-primary italic">Precision</span>
-</h1>
-<p class="text-slate-custom dark:text-slate-400 text-lg leading-relaxed mb-8">
-                    High-authority advisory for Fortune 500 enterprises and rapid-growth B2B firms focusing on lead generation and operational clarity.
-                </p>
-<div class="flex flex-col gap-4">
-<button class="bg-primary text-white py-4 px-8 rounded-xl font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all text-center">
-                        Get a Free Quote
-                    </button>
-<button class="flex items-center justify-center gap-2 py-4 px-8 text-navy-deep dark:text-white font-semibold border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-<span class="material-icons text-sm">play_circle</span>
-                        View Our Methodology
-                    </button>
-</div>
-</div>
-<!-- Decorative Element -->
-<div class="absolute -bottom-10 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-</section>
-<!-- Trusted By Section -->
-<section class="py-12 bg-white dark:bg-background-dark border-y border-slate-100 dark:border-slate-800">
-<div class="px-6 text-center">
-<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-8">Trusted by Global Leaders</p>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-<img class="h-6 mx-auto object-contain" data-alt="Corporate logo of a global tech company" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUZyaH3GgTbhSoMvMuxE9VQWIHIygFmlzVobcf24rg7bSGRqc9QtbM7nFoU0tmpE36ZWFKmzi2bzDsKDxAY84o0bvhHuY4sAe8OMDmnKYf20G0oJAMGN-PVSxTZ20wGAHdGO33xGinPbAK7cOo9zoGRegnIJy8pcNj55VTN5IUG7mN3xeVVq-KvwkBhnoJWE7Nhukeip-qa9Mhw6zE-1RwU1oV6mWE1vWF1B2RJZEBvl5U2w75-BoLUBn_hy34JAwMy76O1496IVlP"/>
-<img class="h-6 mx-auto object-contain" data-alt="Logo of a major financial institution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKbR1pQF9r4IjAaOL4ReGGOcZXJzvSufjKqjr9CMOqX4IkgxlGjg8caEcp5i7aeMuDErsr4_BHTTLX0Jh7IxKDujuE0VTZ09vp0LCitM2QRP_YZEo4Dkao-DK_tAbAdXs2EV0P3G4-QlqAPlgXutfAzVm2QKjUElHULtg364uk-ecH58tIJ03z2nlv4syPu-QKXRFLc1XCWC7KafNDM-OvXs_MB3MA6x8Nvha3bhZlzIsYDCcM6qouvmh4B_LrZ679PGRMbffgeK4R"/>
-<img class="h-6 mx-auto object-contain" data-alt="Logo of a Fortune 500 enterprise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqZjPssrAZ-EfOoMc7tupPOh41IvvtcIKCHVo9qdGnkkY4R6um9w_kwjvQUoBvzcXjJWfyDJolp4fsavhmHz4ur8PfHdhXcuJR_3oDY8Ypota9wOkMrS7A0MQUCWYe3sEAQR9lLH3eTSzb1pUkfVYXZQpXrTNA7Y426-m6fGpNoS1CEL-yc9vfL5CO5usxVJIi1-9WZ6aibt4pzSwMb6bUnuUp3j1ka7NU1OcDFU9z1hsMCCLsuFPE8kbnnMVAs7uS7R9rleTEWsTB"/>
-<img class="h-6 mx-auto object-contain" data-alt="Corporate logo of an industrial leader" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZzBw3imlO9a46TymlDhTvLaskYum5WpjOqPe_X3or4wxTzWm63DzD7YebNn2RqvwDBeFtstkKf2zWItsRx8PoYid3-gdOnWy8ZQ_cgRKFrHvZeGdLsKvwV-UEcSwPGwW1xFPAuHn8mXEiWN4wkE_jBaZey6ms-n1GVCyf9EmBh9IvmxB0v03tDxOzS1ihAUZ-guAz0FsBBLh0z1BpCBlp0TnWMDAjNxB_MS8265wb86sTppo4bGJlhuDByHGN6EU3SHId2Tn2gmer"/>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-20 px-6 bg-background-light dark:bg-background-dark/50">
-<div class="max-w-md mx-auto">
-<h2 class="heading-serif text-3xl text-navy-deep dark:text-white mb-4 text-center">Expert Solutions</h2>
-<p class="text-slate-custom dark:text-slate-400 text-center mb-12">Engineered strategies to drive sustainable B2B performance.</p>
-<div class="space-y-6">
-<!-- Service Card 1 -->
-<div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
-<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-<span class="material-icons text-primary">analytics</span>
-</div>
-<h3 class="font-bold text-xl text-navy-deep dark:text-white mb-3">Lead Generation</h3>
-<p class="text-sm text-slate-custom dark:text-slate-400 leading-relaxed">
-                            Implementing data-driven pipelines that deliver high-intent prospects directly to your sales team.
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services"
+                        class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Services</a>
+                    <a href="#expertise"
+                        class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Expertise</a>
+                    <a href="#results"
+                        class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Results</a>
+                    <a href="#contact"
+                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40">
+                        Get Started
+                    </a>
+                </div>
+
+                <button class="md:hidden p-2">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+
+        <!-- Hero Section - Dramatically Enhanced -->
+        <section class="relative overflow-hidden py-20 md:py-32 px-6">
+            <!-- Animated Background -->
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20">
+            </div>
+            <div class="absolute inset-0 opacity-30">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float"
+                    style="animation-delay: 2s;"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6 border border-primary/20">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            Trusted by Fortune 500 Leaders
+                        </div>
+
+                        <h1
+                            class="heading-serif text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+                            Transform Your Business with
+                            <span class="text-gradient">Strategic Excellence</span>
+                        </h1>
+
+                        <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
+                            Elite consulting services that drive measurable growth. We partner with Fortune 500
+                            enterprises and high-growth B2B firms to unlock operational excellence and sustainable
+                            competitive advantages.
                         </p>
-</div>
-<!-- Service Card 2 -->
-<div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
-<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-<span class="material-icons text-primary">architecture</span>
-</div>
-<h3 class="font-bold text-xl text-navy-deep dark:text-white mb-3">Operational Clarity</h3>
-<p class="text-sm text-slate-custom dark:text-slate-400 leading-relaxed">
-                            Streamlining internal workflows and reporting structures to ensure 100% executive visibility.
+
+                        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                            <a href="#contact"
+                                class="group bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all text-center flex items-center justify-center gap-2 hover:scale-105">
+                                Schedule Free Consultation
+                                <span
+                                    class="material-icons group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </a>
+                            <a href="#case-studies"
+                                class="flex items-center justify-center gap-2 px-8 py-4 text-gray-900 dark:text-white font-semibold border-2 border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                <span class="material-icons">play_circle</span>
+                                View Case Studies
+                            </a>
+                        </div>
+
+                        <!-- Trust Indicators -->
+                        <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <span class="material-icons text-green-500">verified</span>
+                                <span>ISO 9001 Certified</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="material-icons text-blue-500">security</span>
+                                <span>100% Confidential</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="material-icons text-purple-500">workspace_premium</span>
+                                <span>12+ Years Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual -->
+                    <div class="hidden md:block relative">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary to-purple-600 rounded-3xl transform rotate-6 opacity-20">
+                            </div>
+                            <div
+                                class="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-200 dark:border-gray-700">
+                                <div class="space-y-6">
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
+                                        <div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Revenue Growth</p>
+                                            <p class="text-3xl font-bold text-green-600">+150%</p>
+                                        </div>
+                                        <div
+                                            class="w-16 h-16 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center">
+                                            <span class="material-icons text-green-600 text-3xl">trending_up</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+                                        <div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</p>
+                                            <p class="text-3xl font-bold text-blue-600">98.5%</p>
+                                        </div>
+                                        <div
+                                            class="w-16 h-16 bg-blue-100 dark:bg-blue-900/40 rounded-full flex items-center justify-center">
+                                            <span
+                                                class="material-icons text-blue-600 text-3xl">sentiment_very_satisfied</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                                        <div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Projects Delivered</p>
+                                            <p class="text-3xl font-bold text-purple-600">500+</p>
+                                        </div>
+                                        <div
+                                            class="w-16 h-16 bg-purple-100 dark:bg-purple-900/40 rounded-full flex items-center justify-center">
+                                            <span class="material-icons text-purple-600 text-3xl">rocket_launch</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Section - Enhanced -->
+        <section class="py-16 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-12">Trusted by
+                    Industry Leaders</p>
+                <div
+                    class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center opacity-60 hover:opacity-100 transition-opacity duration-500">
+                    <img class="h-8 mx-auto object-contain grayscale hover:grayscale-0 transition-all" alt="Client logo"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUZyaH3GgTbhSoMvMuxE9VQWIHIygFmlzVobcf24rg7bSGRqc9QtbM7nFoU0tmpE36ZWFKmzi2bzDsKDxAY84o0bvhHuY4sAe8OMDmnKYf20G0oJAMGN-PVSxTZ20wGAHdGO33xGinPbAK7cOo9zoGRegnIJy8pcNj55VTN5IUG7mN3xeVVq-KvwkBhnoJWE7Nhukeip-qa9Mhw6zE-1RwU1oV6mWE1vWF1B2RJZEBvl5U2w75-BoLUBn_hy34JAwMy76O1496IVlP" />
+                    <img class="h-8 mx-auto object-contain grayscale hover:grayscale-0 transition-all" alt="Client logo"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKbR1pQF9r4IjAaOL4ReGGOcZXJzvSufjKqjr9CMOqX4IkgxlGjg8caEcp5i7aeMuDErsr4_BHTTLX0Jh7IxKDujuE0VTZ09vp0LCitM2QRP_YZEo4Dkao-DK_tAbAdXs2EV0P3G4-QlqAPlgXutfAzVm2QKjUElHULtg364uk-ecH58tIJ03z2nlv4syPu-QKXRFLc1XCWC7KafNDM-OvXs_MB3MA6x8Nvha3bhZlzIsYDCcM6qouvmh4B_LrZ679PGRMbffgeK4R" />
+                    <img class="h-8 mx-auto object-contain grayscale hover:grayscale-0 transition-all" alt="Client logo"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqZjPssrAZ-EfOoMc7tupPOh41IvvtcIKCHVo9qdGnkkY4R6um9w_kwjvQUoBvzcXjJWfyDJolp4fsavhmHz4ur8PfHdhXcuJR_3oDY8Ypota9wOkMrS7A0MQUCWYe3sEAQR9lLH3eTSzb1pUkfVYXZQpXrTNA7Y426-m6fGpNoS1CEL-yc9vfL5CO5usxVJIi1-9WZ6aibt4pzSwMb6bUnuUp3j1ka7NU1OcDFU9z1hsMCCLsuFPE8kbnnMVAs7uS7R9rleTEWsTB" />
+                    <img class="h-8 mx-auto object-contain grayscale hover:grayscale-0 transition-all" alt="Client logo"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZzBw3imlO9a46TymlDhTvLaskYum5WpjOqPe_X3or4wxTzWm63DzD7YebNn2RqvwDBeFtstkKf2zWItsRx8PoYid3-gdOnWy8ZQ_cgRKFrHvZeGdLsKvwV-UEcSwPGwW1xFPAuHn8mXEiWN4wkE_jBaZey6ms-n1GVCyf9EmBh9IvmxB0v03tDxOzS1ihAUZ-guAz0FsBBLh0z1BpCBlp0TnWMDAjNxB_MS8265wb86sTppo4bGJlhuDByHGN6EU3SHId2Tn2gmer" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section - Completely Redesigned -->
+        <section id="services"
+            class="py-24 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-background-dark">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-bold mb-4">Our
+                        Services</span>
+                    <h2 class="heading-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                        Comprehensive Solutions for <span class="text-gradient">Business Excellence</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                        Engineered strategies that deliver measurable results and sustainable competitive advantages
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div
+                        class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:-translate-y-2">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/30">
+                            <span class="material-icons text-white text-3xl">analytics</span>
+                        </div>
+                        <h3 class="font-bold text-2xl text-gray-900 dark:text-white mb-4">Lead Generation & Pipeline
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Data-driven lead generation systems that deliver high-intent prospects directly to your
+                            sales team. Increase conversion rates by 200%+ with our proven methodologies.
                         </p>
-</div>
-<!-- Service Card 3 -->
-<div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
-<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-<span class="material-icons text-primary">insights</span>
-</div>
-<h3 class="font-bold text-xl text-navy-deep dark:text-white mb-3">Market Strategy</h3>
-<p class="text-sm text-slate-custom dark:text-slate-400 leading-relaxed">
-                            Deep-dive competitive analysis and positioning to capture untapped market segments.
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Account-Based Marketing
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Sales Funnel Optimization
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                CRM Integration & Automation
+                            </li>
+                        </ul>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+                            Learn More
+                            <span class="material-icons text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:-translate-y-2">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/30">
+                            <span class="material-icons text-white text-3xl">architecture</span>
+                        </div>
+                        <h3 class="font-bold text-2xl text-gray-900 dark:text-white mb-4">Operational Excellence</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Streamline workflows, eliminate bottlenecks, and achieve 100% executive visibility.
+                            Transform chaos into clarity with our operational frameworks.
                         </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Authority Stat Section -->
-<section class="py-20 px-6 relative overflow-hidden bg-navy-deep text-white">
-<div class="absolute inset-0 opacity-10">
-<img class="w-full h-full object-cover" data-alt="Subtle geometric pattern on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYSvws9qyofIIeyVmD7v4y1OsZwFC3_urHAOFeOX3MOgGT4AcfTyvf0winqG7zWl32LZPzrs-hyZkvXyU5TAIs9AtkJZD59WHTdkfUShDg4mPNqoFRCCavOzcXsV8oEE8GMMrETr-fyQKuCMqlqpwOc7CgssHfXYFyOfbMGGu7y3-eaofjjpe2MaRl4T8txpZL4iuSIDwW_qgxukPmwNWcGxZMU0dXcux0HJR2PuxFFFxFdcyv6-WxvFemfDZYd2nVMrnn2_rMy0cz"/>
-</div>
-<div class="relative z-10 text-center max-w-md mx-auto">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-<div>
-<div class="text-4xl font-bold text-primary mb-2">150%</div>
-<div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400">Avg. Revenue ROI</div>
-</div>
-<div>
-<div class="text-4xl font-bold text-primary mb-2">45+</div>
-<div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400">Fortune 500 Clients</div>
-</div>
-<div>
-<div class="text-4xl font-bold text-primary mb-2">12yr</div>
-<div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400">Industry Excellence</div>
-</div>
-<div>
-<div class="text-4xl font-bold text-primary mb-2">$2B+</div>
-<div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400">Managed Pipeline</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Final Call to Action -->
-<section class="py-24 px-6">
-<div class="max-w-md mx-auto bg-white dark:bg-slate-900 rounded-2xl p-10 shadow-2xl border border-slate-100 dark:border-slate-800 text-center">
-<h2 class="heading-serif text-3xl text-navy-deep dark:text-white mb-6">Ready to lead your industry?</h2>
-<p class="text-slate-custom dark:text-slate-400 mb-8">Schedule a 15-minute diagnostic call with our principal consultants.</p>
-<form class="space-y-4 text-left">
-<div>
-<label class="block text-xs font-bold text-slate-400 uppercase mb-2">Work Email</label>
-<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-4 px-4 text-sm focus:ring-primary focus:border-primary transition-all" placeholder="name@company.com" type="email"/>
-</div>
-<button class="w-full bg-primary text-white py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all" type="submit">
-                        Book Your Strategy Call
-                    </button>
-<p class="text-[10px] text-center text-slate-400 mt-4">No commitment required. 100% confidentiality guaranteed.</p>
-</form>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pt-16 pb-8 px-6">
-<div class="max-w-md mx-auto">
-<div class="flex items-center gap-2 mb-8">
-<div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
-<span class="text-white font-bold text-xs">A</span>
-</div>
-<span class="font-bold text-navy-deep dark:text-white tracking-tighter uppercase text-xs">Aegis Consulting</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-<div>
-<h4 class="text-navy-deep dark:text-white font-bold text-sm mb-4">Firm</h4>
-<ul class="space-y-3 text-xs text-slate-500 dark:text-slate-400">
-<li>About Us</li>
-<li>Case Studies</li>
-<li>Methodology</li>
-<li>Insights</li>
-</ul>
-</div>
-<div>
-<h4 class="text-navy-deep dark:text-white font-bold text-sm mb-4">Support</h4>
-<ul class="space-y-3 text-xs text-slate-500 dark:text-slate-400">
-<li>Contact</li>
-<li>Privacy</li>
-<li>Terms</li>
-<li>LinkedIn</li>
-</ul>
-</div>
-</div>
-<div class="flex flex-col items-center gap-6 mb-8">
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400" href="#">
-<span class="material-icons text-lg">public</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400" href="#">
-<span class="material-icons text-lg">description</span>
-</a>
-</div>
-<p class="text-[10px] text-slate-400 text-center">© 2024 Aegis Consulting Group. All rights reserved. Registered B2B Entity.</p>
-</div>
-</div>
-</footer>
-<script src="../../../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Process Automation
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Performance Dashboards
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Team Alignment Programs
+                            </li>
+                        </ul>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+                            Learn More
+                            <span class="material-icons text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:-translate-y-2">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-amber-500/30">
+                            <span class="material-icons text-white text-3xl">insights</span>
+                        </div>
+                        <h3 class="font-bold text-2xl text-gray-900 dark:text-white mb-4">Market Strategy & Growth</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Deep competitive analysis and strategic positioning to capture untapped market segments.
+                            Dominate your industry with data-backed strategies.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Competitive Intelligence
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Market Entry Strategy
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Brand Positioning
+                            </li>
+                        </ul>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+                            Learn More
+                            <span class="material-icons text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section - Enhanced -->
+        <section id="results"
+            class="py-24 px-6 relative overflow-hidden bg-gradient-to-br from-navy-deep via-blue-900 to-purple-900 text-white">
+            <div class="absolute inset-0 opacity-10">
+                <img class="w-full h-full object-cover" alt="Background pattern"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYSvws9qyofIIeyVmD7v4y1OsZwFC3_urHAOFeOX3MOgGT4AcfTyvf0winqG7zWl32LZPzrs-hyZkvXyU5TAIs9AtkJZD59WHTdkfUShDg4mPNqoFRCCavOzcXsV8oEE8GMMrETr-fyQKuCMqlqpwOc7CgssHfXYFyOfbMGGu7y3-eaofjjpe2MaRl4T8txpZL4iuSIDwW_qgxukPmwNWcGxZMU0dXcux0HJR2PuxFFFxFdcyv6-WxvFemfDZYd2nVMrnn2_rMy0cz" />
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="heading-serif text-4xl md:text-5xl font-bold mb-6">Proven Track Record of Success</h2>
+                    <p class="text-xl text-blue-200 max-w-2xl mx-auto">Numbers that speak louder than words</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                    <div class="text-center group">
+                        <div
+                            class="text-5xl md:text-6xl font-bold text-gradient mb-3 group-hover:scale-110 transition-transform">
+                            150%</div>
+                        <div class="text-sm uppercase tracking-widest font-semibold text-blue-300">Average Revenue ROI
+                        </div>
+                    </div>
+                    <div class="text-center group">
+                        <div
+                            class="text-5xl md:text-6xl font-bold text-gradient mb-3 group-hover:scale-110 transition-transform">
+                            45+</div>
+                        <div class="text-sm uppercase tracking-widest font-semibold text-blue-300">Fortune 500 Clients
+                        </div>
+                    </div>
+                    <div class="text-center group">
+                        <div
+                            class="text-5xl md:text-6xl font-bold text-gradient mb-3 group-hover:scale-110 transition-transform">
+                            12yr</div>
+                        <div class="text-sm uppercase tracking-widest font-semibold text-blue-300">Industry Excellence
+                        </div>
+                    </div>
+                    <div class="text-center group">
+                        <div
+                            class="text-5xl md:text-6xl font-bold text-gradient mb-3 group-hover:scale-110 transition-transform">
+                            $2B+</div>
+                        <div class="text-sm uppercase tracking-widest font-semibold text-blue-300">Managed Pipeline
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section - Enhanced -->
+        <section id="contact" class="py-24 px-6 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="bg-gradient-to-br from-primary to-purple-600 rounded-3xl p-12 md:p-16 shadow-2xl relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10">
+                        <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                    </div>
+
+                    <div class="relative z-10 text-center text-white">
+                        <h2 class="heading-serif text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?
+                        </h2>
+                        <p class="text-xl mb-8 opacity-90">Schedule a complimentary 30-minute strategy session with our
+                            senior consultants</p>
+
+                        <form class="max-w-md mx-auto space-y-4">
+                            <div class="text-left">
+                                <label class="block text-sm font-bold mb-2 opacity-90">Work Email</label>
+                                <input type="email" placeholder="name@company.com"
+                                    class="w-full bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl py-4 px-6 text-white placeholder-white/60 focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all" />
+                            </div>
+                            <div class="text-left">
+                                <label class="block text-sm font-bold mb-2 opacity-90">Company Name</label>
+                                <input type="text" placeholder="Your Company"
+                                    class="w-full bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl py-4 px-6 text-white placeholder-white/60 focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all" />
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-white text-primary py-4 rounded-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all">
+                                Book Your Strategy Call
+                            </button>
+                            <p class="text-xs opacity-75 text-center">No commitment required • 100% confidential •
+                                Response within 24 hours</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">A</span>
+                        </div>
+                        <span class="font-bold text-xl">Aegis Consulting</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Strategic excellence for Fortune 500 companies and high-growth enterprises.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Lead Generation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Operational Excellence</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Market Strategy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Transformation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Methodology</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Connect</h4>
+                    <div class="flex gap-4 mb-6">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-all">
+                            <span class="material-icons text-sm">public</span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-all">
+                            <span class="material-icons text-sm">description</span>
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-500">
+                        © 2024 Aegis Consulting Group<br />
+                        All rights reserved
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>Registered B2B Consulting Entity • ISO 9001 Certified</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../../assets/js/global-enhancement.js" defer></script>
+</body>
+
+</html>
