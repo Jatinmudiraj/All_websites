@@ -1,228 +1,397 @@
 <!DOCTYPE html>
+<html class="dark" lang="en">
 
-<html class="dark" lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Executive Modernist - B2B Agency</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Aurelius Group | Executive Business Consulting</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
                         "primary": "#f2b90d",
-                        "background-light": "#f8f8f5",
-                        "background-dark": "#221e10",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#1a1a1a",
                     },
                     fontFamily: {
-                        "display": ["Newsreader", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
+                        "serif": ["Newsreader", "serif"],
+                        "sans": ["Inter", "sans-serif"]
                     },
                 },
             },
         }
     </script>
-<style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .heading-serif {
+            font-family: 'Newsreader', serif;
+        }
+
         .glass-card {
-            background: rgba(242, 185, 13, 0.05);
+            background: rgba(242, 185, 13, 0.03);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(242, 185, 13, 0.2);
+            border: 1px solid rgba(242, 185, 13, 0.15);
         }
+
+        @keyframes ticker {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
         .ticker-scroll {
-            display: flex;
-            width: fit-content;
-            animation: scroll 20s linear infinite;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            animation: ticker 30s linear infinite;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  <link rel="stylesheet" href="../../assets/css/global-styles.css">
-  <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Executive Modernist - B2B Agency">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+    <link rel="stylesheet" href="../../assets/css/global-styles.css">
+    <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
+    <meta name="theme-color" content="#f2b90d">
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
-<!-- iOS Status Bar Spacer -->
-<div class="h-12 w-full bg-background-dark"></div>
-<!-- Navigation -->
-<nav class="sticky top-0 z-50 px-6 py-4 flex justify-between items-center bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
-<div class="text-xl font-bold tracking-tight text-primary uppercase">
-            Aurelius <span class="font-light text-white">Group</span>
-</div>
-<button class="p-2">
-<span class="material-icons text-primary">menu</span>
-</button>
-</nav>
-<!-- Hero Section -->
-<section class="relative px-6 pt-16 pb-12 overflow-hidden bg-background-dark">
-<div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
-<div class="relative z-10">
-<span class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest text-primary uppercase border border-primary/30 rounded">
-                Established Authority
-            </span>
-<h1 class="text-5xl md:text-6xl font-medium leading-[1.1] mb-6 text-white italic">
-                Legacy Built on <span class="text-primary not-italic">Performance.</span>
-</h1>
-<p class="text-lg text-slate-400 max-w-sm mb-10 leading-relaxed font-light">
-                Strategic B2B growth for industry leaders who demand precision over promises.
-            </p>
-<div class="flex flex-col gap-4">
-<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-4 px-8 rounded-lg shadow-lg shadow-primary/20 transition-all flex justify-between items-center">
-                    Request Executive Briefing
-                    <span class="material-icons">arrow_forward</span>
-</button>
-<button class="bg-transparent border border-white/20 text-white font-medium py-4 px-8 rounded-lg transition-all">
-                    View Case Studies
+
+<body class="bg-background-dark text-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 py-5">
+            <div class="flex justify-between items-center">
+                <div class="heading-serif text-2xl font-bold tracking-tight">
+                    <span class="text-primary">AURELIUS</span>
+                    <span class="font-light text-white ml-2">GROUP</span>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services"
+                        class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Services</a>
+                    <a href="#legacy"
+                        class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Legacy</a>
+                    <a href="#contact"
+                        class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Contact</a>
+                    <button
+                        class="bg-primary text-background-dark px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                        Executive Briefing
+                    </button>
+                </div>
+
+                <button class="md:hidden p-2">
+                    <span class="material-icons text-primary">menu</span>
                 </button>
-</div>
-</div>
-</section>
-<!-- Results Ticker -->
-<div class="bg-primary/10 border-y border-primary/20 py-4 overflow-hidden whitespace-nowrap">
-<div class="ticker-scroll flex items-center gap-12">
-<div class="flex items-center gap-12 text-sm font-semibold tracking-wider text-primary uppercase">
-<span>Revenue Generated: $24.8M</span>
-<span class="text-white/20">|</span>
-<span>Client Growth: +142%</span>
-<span class="text-white/20">|</span>
-<span>Retention Rate: 98.4%</span>
-<span class="text-white/20">|</span>
-<span>Global Reach: 14 Nations</span>
-<span class="text-white/20">|</span>
-</div>
-<!-- Duplicated for seamless loop -->
-<div class="flex items-center gap-12 text-sm font-semibold tracking-wider text-primary uppercase">
-<span>Revenue Generated: $24.8M</span>
-<span class="text-white/20">|</span>
-<span>Client Growth: +142%</span>
-<span class="text-white/20">|</span>
-<span>Retention Rate: 98.4%</span>
-<span class="text-white/20">|</span>
-<span>Global Reach: 14 Nations</span>
-<span class="text-white/20">|</span>
-</div>
-</div>
-</div>
-<!-- Trusted By -->
-<section class="py-12 px-6 bg-background-dark">
-<p class="text-center text-xs font-bold tracking-widest text-slate-500 uppercase mb-8">Trusted by Global Enterprise Leaders</p>
-<div class="grid grid-cols-3 gap-8 items-center opacity-40 grayscale contrast-125">
-<img alt="Client Logo" class="h-6 mx-auto" data-alt="Corporate logo of Goldman Sachs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLsXzuPfe7_l59vf2tLp843AAFYC2T4O7osxvThmp4d_C1avvQKFL5QOTZKSZhXw8p-bYn0fmGsN_5qRJlwWUFmCWBIVFRA3SY_22p9iWkrebMEpBP28njVwXrC06OovfTsYDdK4aupFrOz-3hGa2TZqniXpMfiX1SsEOyrA02FXBRJwhOTRoIJzRXtBPW2eIlwR1uZTmuiJrefB0UPDIcTrSHq0cDXOCEF8dOct0P-KQ5R_OtU67YYh1StgwxiTCp5n-eXxdGAMr0"/>
-<img alt="Client Logo" class="h-6 mx-auto" data-alt="Corporate logo of McKinsey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05Dm8ThAFM1zqmMwMEBobDDaxoB6_JWljzn5hYvDZ-qzl_tvBv1Mw5MLKn8RqEHT1DJQj7nj4IYfUwNxjl7Xjtmcmn31G0n52NSDOIzqjmgJUGnsf8pa14sj1GaSq1f8y06HQXh9IVXNKg1ZAuwzG8H-jJNzYFjV_LafSld_oNcQQYwIwB-Tw-esyzBv0WO5L7lPmffXfK1VZ6M3Vc_bwCCMEK8Xveoo4cT6AyiGckJQQ8U33RDExqMIGJUzAPkka-g3swHnxo2Ez"/>
-<img alt="Client Logo" class="h-6 mx-auto" data-alt="Corporate logo of Deloitte" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsCWjbJ5WSKqfEFI3Xzyy7K2V5BAhHxiBu2pGWlS1ONpMVafoeF4AcJNmJwhF5w4jYeVsE-iLXs2LIdSB3UxuvGMweu4tAMu-AzmvBm7UsxMDfeoPFj3ijYfVEcn1RDVccTaeWYBZy9OHovKvwBWwv_PzBCqrqOrnBuzzBuvNfe5nuvtSpFz2FyKlxVJwiVXAvSNbXWE91vvrfSiYyZb2scHC9FkJ2WkysP1w34N9oYLOUf-X3BeiM9h0gdyb-NYPziiaGvHIli8P9"/>
-</div>
-</section>
-<!-- Services Section -->
-<section class="px-6 py-20 bg-background-dark">
-<div class="mb-12">
-<h2 class="text-3xl font-medium text-white mb-4 italic">Core Disciplines</h2>
-<div class="h-1 w-12 bg-primary"></div>
-</div>
-<div class="space-y-6">
-<!-- Card 1 -->
-<div class="glass-card p-8 rounded-xl relative group">
-<span class="material-icons text-primary mb-4 text-3xl">architecture</span>
-<h3 class="text-xl font-bold text-white mb-3">Strategic Consulting</h3>
-<p class="text-slate-400 font-light leading-relaxed">
-                    Bespoke market entry and scaling frameworks designed for high-barrier industries.
-                </p>
-<div class="mt-6 flex items-center text-primary font-bold text-sm tracking-widest uppercase">
-                    Learn More <span class="material-icons text-xs ml-2">east</span>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="glass-card p-8 rounded-xl relative">
-<span class="material-icons text-primary mb-4 text-3xl">insights</span>
-<h3 class="text-xl font-bold text-white mb-3">Revenue Operations</h3>
-<p class="text-slate-400 font-light leading-relaxed">
-                    Optimization of the entire sales cycle using proprietary AI-driven data analysis.
-                </p>
-<div class="mt-6 flex items-center text-primary font-bold text-sm tracking-widest uppercase">
-                    Learn More <span class="material-icons text-xs ml-2">east</span>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="glass-card p-8 rounded-xl relative">
-<span class="material-icons text-primary mb-4 text-3xl">verified</span>
-<h3 class="text-xl font-bold text-white mb-3">Brand Authority</h3>
-<p class="text-slate-400 font-light leading-relaxed">
-                    Establishing your leadership team as the definitive voice in your vertical.
-                </p>
-<div class="mt-6 flex items-center text-primary font-bold text-sm tracking-widest uppercase">
-                    Learn More <span class="material-icons text-xs ml-2">east</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Results/Legacy Section -->
-<section class="relative py-24 px-6 bg-primary/5">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-10 mix-blend-overlay" data-alt="Sophisticated modern corporate architecture detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUJ73ogwTn-ZhL_V8_5Ke57Wez0taobZ4LMvPE5HeJRU3hTU3-ENzfI08ZwyK6dizbiy7x94jnghlv46UxvawFatl0Mikqf6IYIGbj0Oslb6WLPLHjtbZhRmVnFKdAw0ioj1pdz-o9C_b7IUc6w8PaEhCX9Ef4qxaCU_Qj7NJv0114mVnfUQs49GLW2-ZfnFSrBI9rfJJgX4kUJFE166xx_0SPWHXAcWedvQNWippG39ca_bXkcsUPlTJVEGqpPHmeTqAxJjd4IsR"/>
-</div>
-<div class="relative z-10 text-center">
-<h2 class="text-4xl font-medium text-white mb-8 italic">The Aurelius Standard</h2>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-<div class="text-center">
-<div class="text-3xl font-bold text-primary mb-1">12+</div>
-<div class="text-xs tracking-widest text-slate-500 uppercase">Years Legacy</div>
-</div>
-<div class="text-center">
-<div class="text-3xl font-bold text-primary mb-1">$4B</div>
-<div class="text-xs tracking-widest text-slate-500 uppercase">AUM Guided</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Lead Generation Footer -->
-<footer class="bg-background-dark px-6 py-20 border-t border-primary/20">
-<div class="mb-12">
-<h2 class="text-3xl font-medium text-white mb-4 italic">Begin the Partnership.</h2>
-<p class="text-slate-400 font-light">Join the ranks of the world's most innovative B2B organizations.</p>
-</div>
-<form class="space-y-4">
-<div>
-<label class="block text-xs font-bold tracking-widest text-primary uppercase mb-2">Professional Email</label>
-<input class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder:text-white/20 focus:border-primary focus:ring-0" placeholder="executive@company.com" type="email"/>
-</div>
-<button class="w-full bg-primary text-background-dark font-bold py-4 rounded-lg flex justify-center items-center gap-2">
-                Download Executive Portfolio
-                <span class="material-icons text-sm">download</span>
-</button>
-</form>
-<div class="mt-20 pt-10 border-t border-white/5 text-center">
-<div class="text-xl font-bold tracking-tight text-primary uppercase mb-6">
-                Aurelius <span class="font-light text-white">Group</span>
-</div>
-<div class="flex justify-center gap-6 mb-8 text-slate-500">
-<span class="material-icons text-xl">public</span>
-<span class="material-icons text-xl">work</span>
-<span class="material-icons text-xl">gavel</span>
-</div>
-<p class="text-[10px] text-slate-600 tracking-[0.2em] uppercase">
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+
+        <!-- Hero Section -->
+        <section class="relative px-6 py-20 md:py-32 overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span
+                            class="inline-block px-4 py-2 mb-8 text-xs font-bold tracking-widest text-primary uppercase border border-primary/30 rounded-lg">
+                            Established Authority Since 2012
+                        </span>
+
+                        <h1 class="heading-serif text-6xl md:text-7xl font-medium leading-[1.05] mb-8 text-white">
+                            Legacy Built on
+                            <span class="text-primary italic block mt-2">Performance.</span>
+                        </h1>
+
+                        <p class="text-xl text-gray-400 max-w-xl mb-12 leading-relaxed">
+                            Strategic B2B growth for industry leaders who demand precision over promises. We architect
+                            sustainable competitive advantages.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button
+                                class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-4 px-8 rounded-xl shadow-2xl shadow-primary/30 transition-all flex justify-center items-center gap-2 group">
+                                Request Executive Briefing
+                                <span
+                                    class="material-icons group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+                            <button
+                                class="bg-transparent border-2 border-white/20 text-white font-semibold py-4 px-8 rounded-xl hover:bg-white/5 transition-all">
+                                View Case Studies
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl">
+                            </div>
+                            <div class="relative glass-card p-8 rounded-3xl">
+                                <div class="space-y-6">
+                                    <div
+                                        class="flex items-center justify-between p-6 bg-surface-dark rounded-2xl border border-primary/10">
+                                        <div>
+                                            <p class="text-sm text-gray-400 mb-1">Revenue Generated</p>
+                                            <p class="text-4xl font-bold text-primary">$24.8M</p>
+                                        </div>
+                                        <div
+                                            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                            <span class="material-icons text-primary text-3xl">trending_up</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-center justify-between p-6 bg-surface-dark rounded-2xl border border-primary/10">
+                                        <div>
+                                            <p class="text-sm text-gray-400 mb-1">Client Growth</p>
+                                            <p class="text-4xl font-bold text-primary">+142%</p>
+                                        </div>
+                                        <div
+                                            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                            <span class="material-icons text-primary text-3xl">insights</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-center justify-between p-6 bg-surface-dark rounded-2xl border border-primary/10">
+                                        <div>
+                                            <p class="text-sm text-gray-400 mb-1">Retention Rate</p>
+                                            <p class="text-4xl font-bold text-primary">98.4%</p>
+                                        </div>
+                                        <div
+                                            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                            <span class="material-icons text-primary text-3xl">verified</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Ticker -->
+        <div class="bg-primary/5 border-y border-primary/20 py-6 overflow-hidden">
+            <div class="ticker-scroll flex items-center gap-16 whitespace-nowrap">
+                <div class="flex items-center gap-16 text-sm font-bold tracking-wider text-primary uppercase">
+                    <span>Revenue Generated: $24.8M</span>
+                    <span class="text-white/20">•</span>
+                    <span>Client Growth: +142%</span>
+                    <span class="text-white/20">•</span>
+                    <span>Retention Rate: 98.4%</span>
+                    <span class="text-white/20">•</span>
+                    <span>Global Reach: 14 Nations</span>
+                    <span class="text-white/20">•</span>
+                </div>
+                <div class="flex items-center gap-16 text-sm font-bold tracking-wider text-primary uppercase">
+                    <span>Revenue Generated: $24.8M</span>
+                    <span class="text-white/20">•</span>
+                    <span>Client Growth: +142%</span>
+                    <span class="text-white/20">•</span>
+                    <span>Retention Rate: 98.4%</span>
+                    <span class="text-white/20">•</span>
+                    <span>Global Reach: 14 Nations</span>
+                    <span class="text-white/20">•</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trusted By -->
+        <section class="py-16 px-6">
+            <div class="max-w-7xl mx-auto">
+                <p class="text-center text-xs font-bold tracking-widest text-gray-500 uppercase mb-12">Trusted by Global
+                    Enterprise Leaders</p>
+                <div
+                    class="grid grid-cols-3 md:grid-cols-6 gap-12 items-center opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                    <img alt="Goldman Sachs" class="h-8 mx-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLsXzuPfe7_l59vf2tLp843AAFYC2T4O7osxvThmp4d_C1avvQKFL5QOTZKSZhXw8p-bYn0fmGsN_5qRJlwWUFmCWBIVFRA3SY_22p9iWkrebMEpBP28njVwXrC06OovfTsYDdK4aupFrOz-3hGa2TZqniXpMfiX1SsEOyrA02FXBRJwhOTRoIJzRXtBPW2eIlwR1uZTmuiJrefB0UPDIcTrSHq0cDXOCEF8dOct0P-KQ5R_OtU67YYh1StgwxiTCp5n-eXxdGAMr0" />
+                    <img alt="McKinsey" class="h-8 mx-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05Dm8ThAFM1zqmMwMEBobDDaxoB6_JWljzn5hYvDZ-qzl_tvBv1Mw5MLKn8RqEHT1DJQj7nj4IYfUwNxjl7Xjtmcmn31G0n52NSDOIzqjmgJUGnsf8pa14sj1GaSq1f8y06HQXh9IVXNKg1ZAuwzG8H-jJNzYFjV_LafSld_oNcQQYwIwB-Tw-esyzBv0WO5L7lPmffXfK1VZ6M3Vc_bwCCMEK8Xveoo4cT6AyiGckJQQ8U33RDExqMIGJUzAPkka-g3swHnxo2Ez" />
+                    <img alt="Deloitte" class="h-8 mx-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsCWjbJ5WSKqfEFI3Xzyy7K2V5BAhHxiBu2pGWlS1ONpMVafoeF4AcJNmJwhF5w4jYeVsE-iLXs2LIdSB3UxuvGMweu4tAMu-AzmvBm7UsxMDfeoPFj3ijYfVEcn1RDVccTaeWYBZy9OHovKvwBWwv_PzBCqrqOrnBuzzBuvNfe5nuvtSpFz2FyKlxVJwiVXAvSNbXWE91vvrfSiYyZb2scHC9FkJ2WkysP1w34N9oYLOUf-X3BeiM9h0gdyb-NYPziiaGvHIli8P9" />
+                    <img alt="Goldman Sachs" class="h-8 mx-auto object-contain hidden md:block"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLsXzuPfe7_l59vf2tLp843AAFYC2T4O7osxvThmp4d_C1avvQKFL5QOTZKSZhXw8p-bYn0fmGsN_5qRJlwWUFmCWBIVFRA3SY_22p9iWkrebMEpBP28njVwXrC06OovfTsYDdK4aupFrOz-3hGa2TZqniXpMfiX1SsEOyrA02FXBRJwhOTRoIJzRXtBPW2eIlwR1uZTmuiJrefB0UPDIcTrSHq0cDXOCEF8dOct0P-KQ5R_OtU67YYh1StgwxiTCp5n-eXxdGAMr0" />
+                    <img alt="McKinsey" class="h-8 mx-auto object-contain hidden md:block"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05Dm8ThAFM1zqmMwMEBobDDaxoB6_JWljzn5hYvDZ-qzl_tvBv1Mw5MLKn8RqEHT1DJQj7nj4IYfUwNxjl7Xjtmcmn31G0n52NSDOIzqjmgJUGnsf8pa14sj1GaSq1f8y06HQXh9IVXNKg1ZAuwzG8H-jJNzYFjV_LafSld_oNcQQYwIwB-Tw-esyzBv0WO5L7lPmffXfK1VZ6M3Vc_bwCCMEK8Xveoo4cT6AyiGckJQQ8U33RDExqMIGJUzAPkka-g3swHnxo2Ez" />
+                    <img alt="Deloitte" class="h-8 mx-auto object-contain hidden md:block"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsCWjbJ5WSKqfEFI3Xzyy7K2V5BAhHxiBu2pGWlS1ONpMVafoeF4AcJNmJwhF5w4jYeVsE-iLXs2LIdSB3UxuvGMweu4tAMu-AzmvBm7UsxMDfeoPFj3ijYfVEcn1RDVccTaeWYBZy9OHovKvwBWwv_PzBCqrqOrnBuzzBuvNfe5nuvtSpFz2FyKlxVJwiVXAvSNbXWE91vvrfSiYyZb2scHC9FkJ2WkysP1w34N9oYLOUf-X3BeiM9h0gdyb-NYPziiaGvHIli8P9" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="px-6 py-24">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <span
+                        class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-bold mb-6">Core
+                        Disciplines</span>
+                    <h2 class="heading-serif text-5xl font-medium text-white mb-4 italic">Strategic Services</h2>
+                    <div class="h-1 w-16 bg-primary"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="glass-card p-10 rounded-2xl group hover:border-primary/40 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons text-primary text-3xl">architecture</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Strategic Consulting</h3>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            Bespoke market entry and scaling frameworks designed for high-barrier industries and complex
+                            B2B environments.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-primary font-bold text-sm tracking-widest uppercase hover:gap-3 gap-2 transition-all">
+                            Learn More
+                            <span class="material-icons text-xs">east</span>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-card p-10 rounded-2xl group hover:border-primary/40 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons text-primary text-3xl">insights</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Revenue Operations</h3>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            Optimization of the entire sales cycle using proprietary AI-driven data analysis and
+                            predictive modeling.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-primary font-bold text-sm tracking-widest uppercase hover:gap-3 gap-2 transition-all">
+                            Learn More
+                            <span class="material-icons text-xs">east</span>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-card p-10 rounded-2xl group hover:border-primary/40 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons text-primary text-3xl">verified</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Brand Authority</h3>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            Establishing your leadership team as the definitive voice in your vertical through thought
+                            leadership.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-primary font-bold text-sm tracking-widest uppercase hover:gap-3 gap-2 transition-all">
+                            Learn More
+                            <span class="material-icons text-xs">east</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section id="legacy" class="relative py-32 px-6 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover opacity-5" alt="Corporate architecture"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUJ73ogwTn-ZhL_V8_5Ke57Wez0taobZ4LMvPE5HeJRU3hTU3-ENzfI08ZwyK6dizbiy7x94jnghlv46UxvawFatl0Mikqf6IYIGbj0Oslb6WLPLHjtbZhRmVnFKdAw0ioj1pdz-o9C_b7IUc6w8PaEhCX9Ef4qxaCU_Qj7NJv0114mVnfUQs49GLW2-ZfnFSrBI9rfJJgX4kUJFE166xx_0SPWHXAcWedvQNWippG39ca_bXkcsUPlTJVEGqpPHmeTqAxJjd4IsR" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-background-dark via-primary/5 to-background-dark"></div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="heading-serif text-5xl md:text-6xl font-medium text-white mb-6 italic">The Aurelius
+                        Standard</h2>
+                    <p class="text-xl text-gray-400 max-w-2xl mx-auto">A legacy of excellence spanning over a decade</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold text-primary mb-3">12+</div>
+                        <div class="text-sm tracking-widest text-gray-500 uppercase">Years Legacy</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold text-primary mb-3">$4B</div>
+                        <div class="text-sm tracking-widest text-gray-500 uppercase">AUM Guided</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold text-primary mb-3">98%</div>
+                        <div class="text-sm tracking-widest text-gray-500 uppercase">Client Retention</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold text-primary mb-3">14</div>
+                        <div class="text-sm tracking-widest text-gray-500 uppercase">Global Markets</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="px-6 py-24">
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-12 md:p-16 rounded-3xl text-center">
+                    <h2 class="heading-serif text-4xl md:text-5xl font-medium text-white mb-6 italic">Begin the
+                        Partnership.</h2>
+                    <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                        Join the ranks of the world's most innovative B2B organizations
+                    </p>
+
+                    <form class="max-w-md mx-auto space-y-6">
+                        <div class="text-left">
+                            <label
+                                class="block text-xs font-bold tracking-widest text-primary uppercase mb-3">Professional
+                                Email</label>
+                            <input
+                                class="w-full bg-white/5 border border-white/10 rounded-xl p-5 text-white placeholder:text-white/30 focus:border-primary focus:ring-2 focus:ring-primary/50 transition-all"
+                                placeholder="executive@company.com" type="email" />
+                        </div>
+                        <button
+                            class="w-full bg-primary text-background-dark font-bold py-5 rounded-xl flex justify-center items-center gap-2 hover:bg-primary/90 transition-all shadow-2xl shadow-primary/30">
+                            Download Executive Portfolio
+                            <span class="material-icons">download</span>
+                        </button>
+                        <p class="text-xs text-gray-500">Confidential • No commitment required</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="heading-serif text-3xl font-bold tracking-tight mb-4">
+                    <span class="text-primary">AURELIUS</span>
+                    <span class="font-light text-white ml-2">GROUP</span>
+                </div>
+                <div class="flex justify-center gap-8 mb-8 text-gray-500">
+                    <span
+                        class="material-icons text-2xl hover:text-primary transition-colors cursor-pointer">public</span>
+                    <span
+                        class="material-icons text-2xl hover:text-primary transition-colors cursor-pointer">work</span>
+                    <span
+                        class="material-icons text-2xl hover:text-primary transition-colors cursor-pointer">gavel</span>
+                </div>
+            </div>
+            <p class="text-xs text-gray-600 tracking-[0.2em] uppercase text-center">
                 © 2024 Aurelius Strategic Partners. All Rights Reserved.
             </p>
-</div>
-<!-- iOS Home Indicator Spacer -->
-<div class="h-8"></div>
-</footer>
-<script src="../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/global-enhancement.js" defer></script>
+</body>
+
+</html>

@@ -1,268 +1,323 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tech Innovator - Scale Your Operations</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>TechCore | Scale Your Operations</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
                         "primary": "#0f6df0",
-                        "background-light": "#f5f7f8",
-                        "background-dark": "#101822",
+                        "background-light": "#f8f9fa",
                     },
                     fontFamily: {
                         "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
                     },
                 },
             },
         }
     </script>
-<style>
+    <style>
         body {
             font-family: 'Space Grotesk', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(15, 109, 240, 0.1);
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  <link rel="stylesheet" href="../../assets/css/global-styles.css">
-  <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Tech Innovator - Scale Your Operations">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+    <link rel="stylesheet" href="../../assets/css/global-styles.css">
+    <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
+    <meta name="theme-color" content="#0f6df0">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
-<!-- Sticky Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-50 glass-effect dark:bg-background-dark/80">
-<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
-<span class="material-icons-round text-white text-xl">layers</span>
-</div>
-<span class="font-bold text-xl tracking-tight">TECH<span class="text-primary">CORE</span></span>
-</div>
-<button class="text-primary p-2">
-<span class="material-icons-round text-3xl">menu</span>
-</button>
-</div>
-</nav>
-<!-- Split-Screen Hero Section -->
-<section class="pt-24 pb-12 px-6">
-<div class="flex flex-col gap-8">
-<div class="space-y-4">
-<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-<span class="w-2 h-2 bg-primary rounded-full"></span>
-                    Now Scaling Series B Tech
+
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+                    <span class="material-icons-round text-white text-xl">layers</span>
                 </div>
-<h1 class="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 dark:text-white">
-                    Scale Your Operations with <span class="text-primary">Precision.</span>
-</h1>
-<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                    We bridge the gap between complex infrastructure and seamless business growth. Efficiency by design.
-                </p>
-<div class="flex flex-col gap-3 pt-2">
-<button class="bg-primary text-white font-semibold py-4 px-8 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/30">
-                        Get Started <span class="material-icons-round text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Video Testimonial Preview -->
-<div class="relative group aspect-video rounded-2xl overflow-hidden shadow-2xl">
-<img alt="Client Success Story" class="w-full h-full object-cover" data-alt="Modern tech office with diverse professionals working" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL_kL5e_8azp5yPoeG4JzjWQl2PkvWXDi-0Z1ePtUdbkvJ-D6WmeWaL8WpAyjBTVGZ6ti5lNy1GpybhFpKoKqUsfAP3reZiUTvwPNa9lQqLmIJ6rMgsDO5MSalD2BhWRA2yWgkJy9TeATWAxhGPyOJBBU49p_0BBlYN9nOspULUaJd_ibWtIQuTxJ8vLMfvqdf9mE3infKhihh0BtGlK1AUU_WZgTVkXLxLBfagx_3pDKBevEFnnLfGJ0ZMuvMq0G-3E0zOiIAdCpB"/>
-<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
-<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl">
-<span class="material-icons-round text-primary text-4xl ml-1">play_arrow</span>
-</div>
-</div>
-<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900 to-transparent">
-<p class="text-white text-sm font-medium">"40% Increase in deployment velocity"</p>
-<p class="text-white/70 text-xs">Sarah Chen, CTO at CloudNexus</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Social Proof Marquee -->
-<section class="py-12 bg-white dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800">
-<div class="px-6 flex overflow-x-auto gap-8 no-scrollbar opacity-50 grayscale">
-<div class="flex-shrink-0 flex items-center gap-2">
-<span class="material-icons-round text-2xl">token</span>
-<span class="font-bold text-lg">DATAFLOW</span>
-</div>
-<div class="flex-shrink-0 flex items-center gap-2">
-<span class="material-icons-round text-2xl">auto_awesome</span>
-<span class="font-bold text-lg">QUANTUM</span>
-</div>
-<div class="flex-shrink-0 flex items-center gap-2">
-<span class="material-icons-round text-2xl">language</span>
-<span class="font-bold text-lg">NEONET</span>
-</div>
-<div class="flex-shrink-0 flex items-center gap-2">
-<span class="material-icons-round text-2xl">security</span>
-<span class="font-bold text-lg">SHIELD</span>
-</div>
-</div>
-</section>
-<!-- Service Grid -->
-<section class="py-16 px-6">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold mb-4">Engineered for <span class="text-primary">Scale</span></h2>
-<div class="w-12 h-1 bg-primary mx-auto rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<!-- Service Card 1 -->
-<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
-<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-<span class="material-icons-round text-primary text-3xl">view_in_ar</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Cloud Infrastructure</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                    Custom-built distributed systems designed to scale from zero to millions of users seamlessly.
-                </p>
-</div>
-<!-- Service Card 2 -->
-<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
-<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-<span class="material-icons-round text-primary text-3xl">psychology</span>
-</div>
-<h3 class="text-xl font-bold mb-3">AI Integration</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                    Deploying large language models and predictive analytics into your existing workflow.
-                </p>
-</div>
-<!-- Service Card 3 -->
-<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
-<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-<span class="material-icons-round text-primary text-3xl">bolt</span>
-</div>
-<h3 class="text-xl font-bold mb-3">DevOps Efficiency</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                    Automating CI/CD pipelines to reduce deployment friction and eliminate manual errors.
-                </p>
-</div>
-<!-- Service Card 4 -->
-<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
-<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-<span class="material-icons-round text-primary text-3xl">analytics</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Strategic Scaling</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                    Data-driven roadmaps to help your technical architecture stay ahead of business growth.
-                </p>
-</div>
-</div>
-</section>
-<!-- Authority Metrics -->
-<section class="py-16 px-6 bg-primary">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
-<div class="space-y-1">
-<p class="text-4xl font-bold">99.9%</p>
-<p class="text-primary-20 opacity-80 text-sm uppercase tracking-widest font-medium">Uptime Guarantee</p>
-</div>
-<div class="space-y-1">
-<p class="text-4xl font-bold">5x</p>
-<p class="text-primary-20 opacity-80 text-sm uppercase tracking-widest font-medium">Faster Deploy</p>
-</div>
-<div class="space-y-1">
-<p class="text-4xl font-bold">24/7</p>
-<p class="text-primary-20 opacity-80 text-sm uppercase tracking-widest font-medium">Expert Support</p>
-</div>
-<div class="space-y-1">
-<p class="text-4xl font-bold">120+</p>
-<p class="text-primary-20 opacity-80 text-sm uppercase tracking-widest font-medium">Nodes Managed</p>
-</div>
-</div>
-</section>
-<!-- Call to Action Section -->
-<section class="py-20 px-6">
-<div class="bg-slate-900 dark:bg-slate-800 rounded-3xl p-10 relative overflow-hidden">
-<!-- Abstract Background Decoration -->
-<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
-<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
-<div class="relative z-10 text-center space-y-6">
-<h2 class="text-3xl font-bold text-white">Ready to Innovate?</h2>
-<p class="text-slate-400">Join 500+ enterprises scaling with our proprietary framework.</p>
-<div class="pt-4">
-<button class="w-full bg-primary text-white font-bold py-5 px-8 rounded-xl shadow-xl shadow-primary/20 flex items-center justify-center gap-2">
-                        Book a Consultation
-                        <span class="material-icons-round">calendar_today</span>
-</button>
-<p class="text-slate-500 text-xs mt-6">Free 30-minute infrastructure audit for new partners.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="py-12 px-6 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
-<div class="space-y-8">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
-<span class="material-icons-round text-white text-xl">layers</span>
-</div>
-<span class="font-bold text-xl tracking-tight">TECH<span class="text-primary">CORE</span></span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
-<div class="space-y-4">
-<p class="font-bold text-slate-900 dark:text-white uppercase tracking-wider">Company</p>
-<ul class="space-y-2 text-slate-500">
-<li>About Us</li>
-<li>Case Studies</li>
-<li>Careers</li>
-</ul>
-</div>
-<div class="space-y-4">
-<p class="font-bold text-slate-900 dark:text-white uppercase tracking-wider">Resources</p>
-<ul class="space-y-2 text-slate-500">
-<li>Documentation</li>
-<li>API Access</li>
-<li>Tech Blog</li>
-</ul>
-</div>
-</div>
-<div class="pt-8 flex justify-between items-center border-t border-slate-100 dark:border-slate-800">
-<p class="text-xs text-slate-400">© 2024 TechCore Inc.</p>
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-<span class="material-icons-round text-slate-400 text-sm">public</span>
-</div>
-<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-<span class="material-icons-round text-slate-400 text-sm">alternate_email</span>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<!-- Sticky Lead Gen Footer Button (Mobile Optimized) -->
-<div class="fixed bottom-0 left-0 right-0 p-4 z-50 md:hidden pointer-events-none">
-<button class="pointer-events-auto w-full bg-primary text-white font-bold py-4 rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center gap-2">
-            Let's Talk Scale
-            <span class="material-icons-round">chat_bubble</span>
-</button>
-</div>
-<!-- Padding for sticky footer -->
-<div class="h-24"></div>
-<script src="../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+                <span class="font-bold text-2xl tracking-tight">TECH<span class="text-primary">CORE</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services"
+                    class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Services</a>
+                <a href="#metrics"
+                    class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Metrics</a>
+                <a href="#contact"
+                    class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Contact</a>
+                <button
+                    class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-blue-600 transition-all shadow-lg shadow-primary/25">
+                    Get Started
+                </button>
+            </div>
+            <button class="md:hidden text-primary p-2">
+                <span class="material-icons-round text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+
+        <!-- Hero Section -->
+        <section class="px-6 py-20 md:py-32">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            Now Scaling Series B Tech Companies
+                        </div>
+
+                        <h1 class="text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight">
+                            Scale Your Operations with <span class="text-primary">Precision</span>.
+                        </h1>
+
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            We bridge the gap between complex infrastructure and seamless business growth. Efficiency by
+                            design, scalability by default.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button
+                                class="bg-primary text-white font-bold py-4 px-8 rounded-xl flex items-center justify-center gap-2 shadow-xl shadow-primary/30 hover:bg-blue-600 transition-all">
+                                Get Started
+                                <span class="material-icons-round text-sm">arrow_forward</span>
+                            </button>
+                            <button
+                                class="border-2 border-gray-200 font-semibold py-4 px-8 rounded-xl hover:bg-gray-50 transition-all">
+                                View Case Studies
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Video Testimonial -->
+                    <div class="relative group aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                        <img alt="Client Success Story" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL_kL5e_8azp5yPoeG4JzjWQl2PkvWXDi-0Z1ePtUdbkvJ-D6WmeWaL8WpAyjBTVGZ6ti5lNy1GpybhFpKoKqUsfAP3reZiUTvwPNa9lQqLmIJ6rMgsDO5MSalD2BhWRA2yWgkJy9TeATWAxhGPyOJBBU49p_0BBlYN9nOspULUaJd_ibWtIQuTxJ8vLMfvqdf9mE3infKhihh0BtGlK1AUU_WZgTVkXLxLBfagx_3pDKBevEFnnLfGJ0ZMuvMq0G-3E0zOiIAdCpB" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform cursor-pointer">
+                                <span class="material-icons-round text-primary text-5xl ml-1">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <p class="text-white text-lg font-semibold mb-1">"40% Increase in deployment velocity"</p>
+                            <p class="text-white/80 text-sm">Sarah Chen, CTO at CloudNexus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By -->
+        <section class="py-16 px-6 border-y border-gray-100">
+            <p class="text-xs uppercase tracking-wider text-gray-400 text-center mb-12">Trusted by innovative companies
+            </p>
+            <div
+                class="max-w-5xl mx-auto flex flex-wrap justify-center gap-16 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2">
+                    <span class="material-icons-round text-3xl">token</span>
+                    <span class="font-bold text-2xl">DATAFLOW</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-icons-round text-3xl">auto_awesome</span>
+                    <span class="font-bold text-2xl">QUANTUM</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-icons-round text-3xl">language</span>
+                    <span class="font-bold text-2xl">NEONET</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-icons-round text-3xl">security</span>
+                    <span class="font-bold text-2xl">SHIELD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-bold mb-6">Our
+                        Services</span>
+                    <h2 class="text-5xl font-bold mb-4">Engineered for <span class="text-primary">Scale</span></h2>
+                    <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-primary/50 hover:shadow-2xl transition-all group">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons-round text-primary text-3xl">view_in_ar</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Cloud Infrastructure</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Custom-built distributed systems designed to scale from zero to millions of users
+                            seamlessly.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-primary/50 hover:shadow-2xl transition-all group">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons-round text-primary text-3xl">psychology</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">AI Integration</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Deploying large language models and predictive analytics into your existing workflow.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-primary/50 hover:shadow-2xl transition-all group">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons-round text-primary text-3xl">bolt</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">DevOps Efficiency</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Automating CI/CD pipelines to reduce deployment friction and eliminate manual errors.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-primary/50 hover:shadow-2xl transition-all group">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons-round text-primary text-3xl">analytics</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Strategic Scaling</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Data-driven roadmaps to help your technical architecture stay ahead of business growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics -->
+        <section id="metrics" class="py-24 px-6 bg-primary">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-white text-center">
+                    <div>
+                        <p class="text-5xl md:text-6xl font-bold mb-3">99.9%</p>
+                        <p class="text-white/80 text-sm uppercase tracking-widest font-semibold">Uptime Guarantee</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl md:text-6xl font-bold mb-3">5x</p>
+                        <p class="text-white/80 text-sm uppercase tracking-widest font-semibold">Faster Deploy</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl md:text-6xl font-bold mb-3">24/7</p>
+                        <p class="text-white/80 text-sm uppercase tracking-widest font-semibold">Expert Support</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl md:text-6xl font-bold mb-3">120+</p>
+                        <p class="text-white/80 text-sm uppercase tracking-widest font-semibold">Nodes Managed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="contact" class="py-24 px-6">
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-12 md:p-16 relative overflow-hidden">
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+
+                    <div class="relative z-10 text-center space-y-8">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white">Ready to Innovate?</h2>
+                        <p class="text-xl text-gray-300">Join 500+ enterprises scaling with our proprietary framework.
+                        </p>
+                        <div>
+                            <button
+                                class="bg-primary text-white font-bold py-5 px-10 rounded-xl shadow-2xl shadow-primary/30 flex items-center justify-center gap-2 mx-auto hover:bg-blue-600 transition-all">
+                                Book a Consultation
+                                <span class="material-icons-round">calendar_today</span>
+                            </button>
+                            <p class="text-gray-400 text-sm mt-6">Free 30-minute infrastructure audit for new partners
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 border-t border-gray-100 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="material-icons-round text-white text-xl">layers</span>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight">TECH<span
+                                class="text-primary">CORE</span></span>
+                    </div>
+                    <p class="text-gray-600 max-w-md">Scaling operations with precision for the world's most innovative
+                        companies.</p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-gray-900 uppercase tracking-wider mb-4 text-sm">Company</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><a href="#" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-bold text-gray-900 uppercase tracking-wider mb-4 text-sm">Resources</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><a href="#" class="hover:text-primary transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">API Access</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Tech Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-200">
+                <p class="text-sm text-gray-500">© 2024 TechCore Inc. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-gray-200 hover:bg-primary/10 flex items-center justify-center transition-colors cursor-pointer">
+                        <span class="material-icons-round text-gray-600 text-sm">public</span>
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-gray-200 hover:bg-primary/10 flex items-center justify-center transition-colors cursor-pointer">
+                        <span class="material-icons-round text-gray-600 text-sm">alternate_email</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/global-enhancement.js" defer></script>
+</body>
+
+</html>
