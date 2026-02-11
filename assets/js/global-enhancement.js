@@ -2,37 +2,36 @@
 (function () {
     console.log("Global enhancement script loaded.");
 
+    // --- Helper to get site name ---
+    function getSiteName() {
+        let title = document.title;
+        if (title.includes('|')) return title.split('|')[0].trim();
+        if (title.includes('-')) return title.split('-')[0].trim();
+        return title.trim() || "Our Website";
+    }
+    const SITE_NAME = getSiteName();
+
+    // --- Helper to get path depth ---
+    // To link to assets/pages/about.html, we need to know how deep we are relative to root.
+    // Standard: root/Niche/Site/index.html -> depth 2 -> ../../assets/pages/about.html
+    // But some files might be deeper.
+    // We can use absolute path if on a domain (Github Pages).
+    // Or simpler: Find the `global-styles.css` link and use its base path.
+    function getAssetsBasePath() {
+        const cssLink = document.querySelector('link[href*="global-styles.css"]');
+        if (cssLink) {
+            const href = cssLink.getAttribute('href');
+            // href is something like "../../assets/css/global-styles.css"
+            // We want "../../assets/"
+            return href.replace('css/global-styles.css', '');
+        }
+        return '../../assets/'; // Default fallback
+    }
+    const ASSETS_BASE = getAssetsBasePath();
+
     // 1. Add "Back to Collection" Button
     let backBtn = document.createElement('a');
-    backBtn.href = "../../index.html";
-
-    // Try to find the root path if "currentScript" attribute exists on any element
-    // Or just guess based on location.pathname depth?
-    // Most sites are: /Niche/Site/index.html -> depth 2 -> ../../
-    // Some might be /Niche/Site/extracted/index.html -> depth 3?
-    // Let's count slashes relative to "All_websites" or "All_website_theme" in pathname?
-    // Hard if run locally vs github pages.
-    // Best heuristic: Just ../../ works for 90% sites.
-    // Let's be smart: search for "All_websites" in pathname and count depth.
-
-    const pathParts = window.location.pathname.split('/');
-    const rootIndex = pathParts.findIndex(p => p === 'All_website_theme' || p === 'All_websites');
-    let upLevel = 2;
-    if (rootIndex !== -1) {
-        upLevel = pathParts.length - 1 - rootIndex - 1;
-        // e.g. /.../root/Niche/Site/index.html -> length=N, rootIndex=N-3. 
-        // upLevel = (N-1) - (N-3) - 1 = 1 ??? No.
-        // root/Niche/Site/index.html -> 3 levels deep from root (Niche, Site, index).
-        // need 2 ups (../..) to get to root.
-        // Actually, root is directory containing index.html.
-        // So if path is .../root/index.html -> 0 ups.
-        // if path is .../root/Niche/index.html -> 1 up.
-        // if path is .../root/Niche/Site/index.html -> 2 ups.
-        // Depth = pathParts.length - (rootIndex + 1); // +1 because rootIndex is directory itself
-        // If index.html is counted, depth is inclusive.
-        // Let's stick with ../../ as default.
-    }
-
+    backBtn.href = ASSETS_BASE.replace('assets/', '') + "index.html";
     backBtn.className = "theme-back-btn theme-back-btn-float";
     backBtn.innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -42,63 +41,127 @@
   `;
     document.body.appendChild(backBtn);
 
-    // 2. Responsive Layout Fixer (NEW)
-    // Fix full-width mobile designs on desktop
-
+    // 2. Responsive Layout Fixer
     function fixLayout() {
         const width = window.innerWidth;
-
-        // Target main containers lacking constraint
-        // Exclude if already has max-w class
         const potentialContainers = document.querySelectorAll('body > main, body > section, body > div.container');
-
         potentialContainers.forEach(el => {
             if (!el.className.includes('max-w-')) {
                 if (width > 1024) {
-                    // Force a constraint
                     el.classList.add('max-w-7xl', 'mx-auto', 'px-4');
-                    // px-4 prevents edge-touching after max-width constraint
                 }
             }
         });
 
-        // Fix Specific "Grid" issues if undetected by regex script
-        // e.g. Flex containers that should wrap or grid
-        // Detected via many children + horizontal overflow
-        // Just a heuristic:
-        // Find all flex containers with > 3 children and NO flex-wrap
         const flexRows = document.querySelectorAll('.flex:not(.flex-wrap):not(.flex-col)');
         flexRows.forEach(row => {
             if (row.children.length > 3 && row.scrollWidth > row.clientWidth) {
-                // It's scrolling horizontally (carousel-like). On desktop, maybe grid?
-                // Only if width > 1024
-                if (width > 1024 && !row.classList.contains('hide-scrollbar')) { // If explicitly hidden scrollbar, it's intended carousel
+                if (width > 1024 && !row.classList.contains('hide-scrollbar')) {
                     row.classList.add('flex-wrap', 'gap-4', 'justify-center');
-                    // Remove overflow-x-auto if present to avoid dual behavior?
                     row.classList.remove('overflow-x-auto');
                 }
             }
         });
 
-        // Fix Navigation Bar Full Width
-        // Often navs are "fixed w-full". We want content inside to be centered.
         const navs = document.querySelectorAll('nav, header');
         navs.forEach(nav => {
-            // Check if direct children are fluid
             if (nav.children.length > 0) {
                 let directChild = nav.firstElementChild;
                 if (!directChild.className.includes('max-w-') && !directChild.className.includes('container')) {
                     if (width > 1024) {
                         directChild.classList.add('max-w-7xl', 'mx-auto', 'px-6');
-                        // Ensure nav has background so it spans full width
-                        // (usually already has bg class)
                     }
                 }
             }
         });
     }
 
-    // 3. Auto-Mobile Menu Logic (Previous)
+    // 3. Navigation Augmenter (Add About/Contact links)
+    function enhanceNavigation() {
+        const nav = document.querySelector('nav');
+        if (!nav) return;
+
+        // Look for a link container. md:flex usually.
+        const linkContainer = nav.querySelector('.hidden.md\\:flex') || nav.querySelector('ul.flex');
+
+        if (linkContainer) {
+            // Check if About Us already exists
+            if (linkContainer.innerHTML.toLowerCase().includes('about')) return;
+
+            const aboutUrl = `${ASSETS_BASE}pages/about.html?site=${encodeURIComponent(SITE_NAME)}`;
+            const contactUrl = `${ASSETS_BASE}pages/contact.html?site=${encodeURIComponent(SITE_NAME)}`;
+
+            // Create generic link style based on first existing link
+            const existingLink = linkContainer.querySelector('a');
+            const className = existingLink ? existingLink.className : 'hover:text-blue-500 transition-colors font-medium';
+
+            const aboutLink = document.createElement('a');
+            aboutLink.href = aboutUrl;
+            aboutLink.className = className;
+            aboutLink.textContent = "About";
+
+            const contactLink = document.createElement('a');
+            contactLink.href = contactUrl;
+            contactLink.className = className;
+            contactLink.textContent = "Contact";
+
+            // Append wrapped in li if ul
+            if (linkContainer.tagName === 'UL') {
+                const li1 = document.createElement('li'); li1.appendChild(aboutLink);
+                const li2 = document.createElement('li'); li2.appendChild(contactLink);
+                linkContainer.appendChild(li1);
+                linkContainer.appendChild(li2);
+            } else {
+                linkContainer.appendChild(aboutLink);
+                linkContainer.appendChild(contactLink);
+            }
+        }
+    }
+
+    // 4. Footer Injector (If missing or small)
+    function enhanceFooter() {
+        const footer = document.querySelector('footer');
+        // If footer doesn't exist, create one
+        if (!footer) {
+            const newFooter = document.createElement('footer');
+            newFooter.className = "bg-gray-900 text-white py-12 mt-24";
+            newFooter.innerHTML = `
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">${SITE_NAME}</h3>
+                    <p class="text-gray-400 text-sm">Empowering your digital presence with premium design.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="${ASSETS_BASE}pages/about.html?site=${encodeURIComponent(SITE_NAME)}" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="${ASSETS_BASE}pages/contact.html?site=${encodeURIComponent(SITE_NAME)}" class="hover:text-white">Contact Center</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Stay Connected</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-blue-600 transition-colors">F</a>
+                        <a href="#" class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-blue-400 transition-colors">T</a>
+                        <a href="#" class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-pink-600 transition-colors">I</a>
+                    </div>
+                </div>
+            </div>
+          `;
+            document.body.appendChild(newFooter);
+        }
+    }
+
+    // 5. Mobile Menu (Original)
     function initMobileMenu() {
         const desktopLinksContainer = document.querySelector('.hidden.md\\:flex');
         if (desktopLinksContainer) {
@@ -154,10 +217,15 @@
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             initMobileMenu();
-            fixLayout();
+            enhanceNavigation();
+            enhanceFooter();
+            // Wait a bit for other scripts to render
+            setTimeout(fixLayout, 100);
         });
     } else {
         initMobileMenu();
+        enhanceNavigation();
+        enhanceFooter();
         fixLayout();
     }
 

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-900" id="site-title">About Us</h1>
+            <a href="javascript:history.back()" class="text-blue-600 hover:text-blue-800 font-medium">Back to Home</a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-12">
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6">Our Story</h2>
+            <p class="text-lg leading-relaxed text-gray-600 mb-6">
+                Established with a passion for excellence, <span class="site-name font-bold"></span> has been dedicated to providing top-tier services and products to our community. 
+                What started as a small idea has grown into a trusted name in the industry, driven by our commitment to quality and customer satisfaction.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-600">
+                Our mission is simple: to deliver exceptional value and create meaningful experiences for every customer. Whether you're here for the first time or a returning client, we strive to exceed your expectations at every touchpoint.
+            </p>
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
+                     <span class="material-icons">verified</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Quality First</h3>
+                <p class="text-gray-500">We never compromise on the standards of our offerings. Excellence is our baseline.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+                     <span class="material-icons">groups</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Community Focused</h3>
+                <p class="text-gray-500">Building strong relationships with our customers and community is at the heart of what we do.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4">
+                     <span class="material-icons">rocket_launch</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Innovation</h3>
+                <p class="text-gray-500">We continuously evolve and adapt to bring you the latest and best solutions.</p>
+            </div>
+        </section>
+        
+        <section class="bg-blue-50 rounded-2xl p-8 md:p-12 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Our Journey</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">We're just getting started. Be a part of our growing family and experience the difference.</p>
+            <a href="contact.html" id="contact-link" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition-colors inline-block">Contact Us Today</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="opacity-50">&copy; <span id="year"></span> <span class="site-name"></span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic Content Injection
+        const params = new URLSearchParams(window.location.search);
+        const siteName = params.get('site') || 'Our Company';
+        
+        document.querySelectorAll('.site-name').forEach(el => el.textContent = siteName);
+        document.getElementById('site-title').textContent = 'About ' + siteName;
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Fix Contact Link relative path
+        // Since this page is in assets/pages/, contact.html is sibling.
+        // It should inherit the query param.
+        const contactLink = document.getElementById('contact-link');
+        contactLink.href = 'contact.html?site=' + encodeURIComponent(siteName);
+    </script>
+</body>
+</html>
