@@ -2,358 +2,330 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services & Case Studies | Aegis Consulting</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#2563eb",
-                        "primary-dark": "#1e40af",
-                    },
-                    fontFamily: {
-                        "sans": ["Inter", "sans-serif"],
-                        "serif": ["Playfair Display", "serif"]
-                    },
-                },
-            },
-        }
-    </script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .heading-serif {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif
         }
     </style>
     <link rel="stylesheet" href="../../../../assets/css/global-styles.css">
-    <link rel="stylesheet" href="../../../../assets/css/design-enhancements.css">
-    <meta name="theme-color" content="#2563eb">
 </head>
 
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-white">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
-                        <span class="text-white font-bold text-xl">A</span>
-                    </div>
-                    <span class="font-bold text-gray-900 text-lg">Aegis Consulting</span>
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <h1 class="text-2xl font-bold">AEGIS<span class="text-blue-600">.</span></h1>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#" class="text-gray-900 font-semibold border-b-2 border-blue-600">Services</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Expertise</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Case Studies</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
                 </div>
-
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#services"
-                        class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Services</a>
-                    <a href="#case-studies"
-                        class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Case Studies</a>
-                    <a href="#"
-                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-all shadow-lg shadow-primary/25">
-                        Get Started
-                    </a>
-                </div>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Get
+                    Started</button>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-16">
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-gray-50 to-blue-50 py-24">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <span class="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">Our
+                Services</span>
+            <h2 class="text-6xl font-bold text-gray-900 mb-6">Comprehensive Business Solutions</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end consulting services designed to transform your
+                organization and drive sustainable growth.</p>
+        </div>
+    </section>
 
-        <!-- Header -->
-        <header class="text-center mb-20">
-            <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-bold mb-6">Our
-                Expertise</span>
-            <h1 class="heading-serif text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                Expertise & <span
-                    class="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">Proven
-                    Results</span>
-            </h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                High-authority strategies designed for B2B growth and operational clarity
-            </p>
-        </header>
+    <!-- Services Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Services Section -->
-        <section id="services" class="mb-24">
-            <div class="flex items-center justify-between mb-12">
-                <h2 class="text-3xl font-bold text-gray-900">Core Services</h2>
-                <a href="#" class="text-primary font-semibold flex items-center gap-1 hover:gap-2 transition-all">
-                    View All
-                    <span class="material-icons text-sm">arrow_forward</span>
-                </a>
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-blue-600 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span
+                            class="material-icons text-blue-600 group-hover:text-white text-3xl">business_center</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Strategy Consulting</h3>
+                    <p class="text-gray-600 mb-6">Develop winning strategies aligned with your vision and market
+                        realities.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Market Analysis</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Growth Planning</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Competitive Positioning</li>
+                    </ul>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Learn
+                        More <span class="material-icons text-sm">arrow_forward</span></a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-blue-600 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span class="material-icons text-blue-600 group-hover:text-white text-3xl">analytics</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Digital Transformation</h3>
+                    <p class="text-gray-600 mb-6">Modernize operations with cutting-edge technology and data insights.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Process Automation</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Cloud Migration</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>AI Integration</li>
+                    </ul>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Learn
+                        More <span class="material-icons text-sm">arrow_forward</span></a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-blue-600 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span class="material-icons text-blue-600 group-hover:text-white text-3xl">groups</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Organizational Excellence</h3>
+                    <p class="text-gray-600 mb-6">Build high-performing teams and cultures that drive results.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Change Management</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Leadership Development</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Culture Transformation</li>
+                    </ul>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Learn
+                        More <span class="material-icons text-sm">arrow_forward</span></a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-blue-600 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span class="material-icons text-blue-600 group-hover:text-white text-3xl">trending_up</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Performance Optimization</h3>
+                    <p class="text-gray-600 mb-6">Maximize efficiency and profitability across your operations.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Process Improvement</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Cost Reduction</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>KPI Development</li>
+                    </ul>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Learn
+                        More <span class="material-icons text-sm">arrow_forward</span></a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-blue-600 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span class="material-icons text-blue-600 group-hover:text-white text-3xl">security</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Risk Management</h3>
+                    <p class="text-gray-600 mb-6">Identify, assess, and mitigate business risks effectively.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Risk Assessment</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Compliance</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Crisis Management</li>
+                    </ul>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Learn
+                        More <span class="material-icons text-sm">arrow_forward</span></a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-blue-600 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span
+                            class="material-icons text-blue-600 group-hover:text-white text-3xl">account_balance</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Financial Advisory</h3>
+                    <p class="text-gray-600 mb-6">Strategic financial planning and investment guidance.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Financial Planning</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>M&A Advisory</li>
+                        <li class="flex items-center gap-2 text-gray-700"><span
+                                class="material-icons text-blue-600 text-sm">check</span>Valuation</li>
+                    </ul>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Learn
+                        More <span class="material-icons text-sm">arrow_forward</span></a>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div
-                    class="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-primary/50 hover:shadow-2xl transition-all duration-300">
-                    <div class="flex items-start justify-between mb-6">
-                        <div
-                            class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
-                            <span class="material-icons text-white text-2xl">trending_up</span>
-                        </div>
-                        <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1.5 rounded-full">+50%
-                            Growth</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Lead Generation Strategy</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Targeting high-intent decision makers with precision-engineered outbound funnels that convert.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            Account-Based Marketing
-                        </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            Outbound Automation
-                        </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            CRM Integration
-                        </li>
-                    </ul>
-                    <a href="#"
-                        class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
-                        Learn More
-                        <span class="material-icons text-sm">arrow_forward</span>
-                    </a>
-                </div>
-
-                <!-- Service 2 -->
-                <div
-                    class="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-primary/50 hover:shadow-2xl transition-all duration-300">
-                    <div class="flex items-start justify-between mb-6">
-                        <div
-                            class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform">
-                            <span class="material-icons text-white text-2xl">insights</span>
-                        </div>
-                        <span class="bg-green-500/10 text-green-600 text-xs font-bold px-3 py-1.5 rounded-full">+30%
-                            Efficiency</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Operational Clarity Audit</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Eliminating bottlenecks in your delivery process to maximize professional bandwidth.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            Process Automation
-                        </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            Workflow Optimization
-                        </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            Performance Dashboards
-                        </li>
-                    </ul>
-                    <a href="#"
-                        class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
-                        Learn More
-                        <span class="material-icons text-sm">arrow_forward</span>
-                    </a>
-                </div>
-
-                <!-- Service 3 -->
-                <div
-                    class="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-primary/50 hover:shadow-2xl transition-all duration-300">
-                    <div class="flex items-start justify-between mb-6">
-                        <div
-                            class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
-                            <span class="material-icons text-white text-2xl">rocket_launch</span>
-                        </div>
-                        <span class="bg-purple-500/10 text-purple-600 text-xs font-bold px-3 py-1.5 rounded-full">2x
-                            Revenue</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Scalable Sales Systems</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Architecture for automated sales operations that work while your team focuses on closing.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            Sales Automation
-                        </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            Pipeline Management
-                        </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600">
-                            <span class="material-icons text-green-500 text-sm">check_circle</span>
-                            Revenue Forecasting
-                        </li>
-                    </ul>
-                    <a href="#"
-                        class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
-                        Learn More
-                        <span class="material-icons text-sm">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Case Study Section -->
-        <section id="case-studies" class="mb-24">
-            <div class="text-center mb-12">
+    <!-- Case Studies Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-16">
                 <span
-                    class="inline-block px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-bold mb-4">Success
-                    Story</span>
-                <h2 class="heading-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">TechScale SaaS Solutions
-                </h2>
-                <p class="text-xl text-gray-600">Enterprise Software Growth Transformation</p>
+                    class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">Success
+                    Stories</span>
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Proven Results Across Industries</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">See how we've helped organizations achieve
+                    transformational growth.</p>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left: Image -->
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-                    <img alt="Business meeting" class="w-full h-full object-cover aspect-[4/3]"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpmwpR_c7-I2BZ2pW3ePrpSFdJ4xeIMZ6345C-Tq1e812GT1atv1AF7U9vFphdyxK9-EF8Wo5T4iuDzZvc_mZN2rZabZDq8JIiYA1pITSb-7HAEYzLGsI0jT7fmJKEmnZfhVbFmJBkDEity0DlgWLTKV07cz0K5rJtNDFxASDLJEcZD10RaU4e8OvQ2E9PRGNcxXoNXxgUTzoruqUuvVIVDvPU5xYfcvvrOj4nmdWAba4o8yo9is0ZykX8rMBcJPdPe_7DGFdB72nG" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                </div>
-
-                <!-- Right: Content -->
-                <div class="space-y-8">
-                    <!-- Problem -->
-                    <div class="flex gap-6">
-                        <div class="flex-shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold text-lg">
-                                1</div>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2 uppercase tracking-wide">The Problem</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Client faced high churn rates and a stagnant lead flow from outdated traditional
-                                marketing methods. Their sales team was overwhelmed with unqualified leads.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Solution -->
-                    <div class="flex gap-6">
-                        <div class="flex-shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg">
-                                2</div>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2 uppercase tracking-wide">The Solution</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Implementation of an automated CRM and outbound sequence tailored for C-suite
-                                engagement, combined with a data-driven lead scoring system.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Result -->
-                    <div class="flex gap-6">
-                        <div class="flex-shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-lg">
-                                3</div>
-                        </div>
-                        <div class="flex-grow">
-                            <h3 class="text-lg font-bold text-gray-900 mb-4 uppercase tracking-wide">The Result</h3>
-                            <div
-                                class="p-6 bg-gradient-to-br from-primary/5 to-purple-50 rounded-2xl border-2 border-primary/20">
-                                <div class="text-5xl font-bold text-primary mb-2">+45%</div>
-                                <p class="text-sm font-semibold text-gray-600 mb-4">Qualified Meetings in 90 Days</p>
-
-                                <!-- Chart -->
-                                <div class="h-24 flex items-end gap-2 mb-4">
-                                    <div class="bg-gray-200 w-full h-1/4 rounded-t"></div>
-                                    <div class="bg-gray-200 w-full h-1/3 rounded-t"></div>
-                                    <div class="bg-gray-200 w-full h-2/5 rounded-t"></div>
-                                    <div class="bg-primary/40 w-full h-1/2 rounded-t"></div>
-                                    <div class="bg-primary/60 w-full h-3/4 rounded-t"></div>
-                                    <div class="bg-primary w-full h-full rounded-t shadow-lg"></div>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200">
-                                    <div>
-                                        <p class="text-2xl font-bold text-gray-900">$2.4M</p>
-                                        <p class="text-xs text-gray-600">Pipeline Generated</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-2xl font-bold text-gray-900">32%</p>
-                                        <p class="text-xs text-gray-600">Close Rate</p>
-                                    </div>
-                                </div>
+            <!-- Featured Case Study -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+                <div class="grid lg:grid-cols-2">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
+                        alt="Success" class="w-full h-full object-cover" />
+                    <div class="p-12">
+                        <span
+                            class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold mb-4">FEATURED
+                            CASE STUDY</span>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">TechCorp's 300% Revenue Growth</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed">Through strategic planning and digital
+                            transformation, we helped TechCorp scale from $50M to $200M in annual revenue within 18
+                            months.</p>
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="p-4 bg-gray-50 rounded-xl">
+                                <div class="text-3xl font-bold text-blue-600 mb-1">300%</div>
+                                <div class="text-sm text-gray-600">Revenue Growth</div>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-xl">
+                                <div class="text-3xl font-bold text-blue-600 mb-1">18mo</div>
+                                <div class="text-sm text-gray-600">Time to Scale</div>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-xl">
+                                <div class="text-3xl font-bold text-blue-600 mb-1">45%</div>
+                                <div class="text-sm text-gray-600">Cost Reduction</div>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-xl">
+                                <div class="text-3xl font-bold text-blue-600 mb-1">92%</div>
+                                <div class="text-sm text-gray-600">Team Satisfaction</div>
                             </div>
                         </div>
+                        <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700">Read
+                            Full Story</button>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Testimonial -->
-        <section class="mb-16">
-            <div
-                class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-12 md:p-16 rounded-3xl relative overflow-hidden shadow-2xl">
-                <span class="material-icons absolute -top-8 -right-8 text-white/5 text-[200px]">format_quote</span>
-                <div class="relative z-10 max-w-4xl mx-auto">
-                    <p class="text-2xl md:text-3xl font-serif italic leading-relaxed mb-8 text-center">
-                        "This firm didn't just give us a strategy; they gave us a scalable engine for growth. The
-                        clarity we have now is priceless."
-                    </p>
-                    <div class="flex items-center justify-center gap-4">
-                        <img alt="Marcus Thorne"
-                            class="w-16 h-16 rounded-full object-cover border-4 border-primary shadow-lg"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzCoWeTCAsnDqNFXfDTpbl1wfmeO--45UyYI8CN0JfGOfesQ0jUAw1Oz-rAmm0ju1Ssg90WfiY5SzATzy1Z0j3GVZ4rZ_QzpU376-fKUgNoQ_rT0I-4T4ClElNv1wD4sjw721-GMqxrN0hfFV7EavY9xfxETxLY1LuvQYQYHPyeJnOMSlVk-2_78ObTq3bEQMl45ZpeNrW1PfJoLPu50rui8wb1AnKh9WzkAHSFzIZ8iOmU_ioLORfoPGg1aDn5bgXR0ymF3qVAWc4" />
-                        <div class="text-left">
-                            <p class="text-lg font-bold">Marcus Thorne</p>
-                            <p class="text-sm text-primary font-semibold">CEO, TechScale</p>
-                        </div>
-                    </div>
+            <!-- More Case Studies -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop"
+                        alt="Case" class="w-full h-48 object-cover rounded-xl mb-6" />
+                    <span
+                        class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-3">RETAIL</span>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">RetailMax Digital Transformation</h4>
+                    <p class="text-gray-600 mb-4">Modernized operations resulting in 150% online sales growth.</p>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Read More
+                        <span class="material-icons text-sm">arrow_forward</span></a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=250&fit=crop" alt="Case"
+                        class="w-full h-48 object-cover rounded-xl mb-6" />
+                    <span
+                        class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold mb-3">HEALTHCARE</span>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">MediCare Process Optimization</h4>
+                    <p class="text-gray-600 mb-4">Reduced operational costs by 40% while improving patient care.</p>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Read More
+                        <span class="material-icons text-sm">arrow_forward</span></a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop"
+                        alt="Case" class="w-full h-48 object-cover rounded-xl mb-6" />
+                    <span
+                        class="inline-block px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold mb-3">FINANCE</span>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">FinServe Market Expansion</h4>
+                    <p class="text-gray-600 mb-4">Successfully entered 5 new markets in 12 months.</p>
+                    <a href="#"
+                        class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-2">Read More
+                        <span class="material-icons text-sm">arrow_forward</span></a>
                 </div>
             </div>
-        </section>
 
-        <!-- CTA -->
-        <section class="text-center">
-            <div class="bg-gradient-to-br from-primary to-purple-600 p-12 rounded-3xl shadow-2xl">
-                <h2 class="heading-serif text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Schedule a complimentary strategy session with
-                    our senior partners</p>
-                <a href="#"
-                    class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-all">
-                    Book Discovery Call
-                    <span class="material-icons">arrow_forward</span>
-                </a>
-            </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <h2 class="text-5xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+            <p class="text-xl mb-8 opacity-90">Let's discuss how we can help you achieve similar results.</p>
+            <button
+                class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg">Schedule
+                Consultation</button>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-20">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex items-center justify-center gap-3 mb-4">
-                <div
-                    class="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold text-xl">A</span>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">AEGIS<span class="text-blue-500">.</span></h3>
+                    <p class="text-sm">Strategic consulting excellence.</p>
                 </div>
-                <span class="font-bold text-xl">Aegis Consulting</span>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Strategy</a></li>
+                        <li><a href="#" class="hover:text-white">Digital</a></li>
+                        <li><a href="#" class="hover:text-white">Organization</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Connect</h4>
+                    <div class="flex gap-3"><button
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700"><span
+                                class="material-icons text-sm">public</span></button></div>
+                </div>
             </div>
-            <p class="text-gray-400 text-sm">© 2024 Aegis Consulting Group. All rights reserved.</p>
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© 2024 Aegis Consulting. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="../../../../assets/js/global-enhancement.js" defer></script>
+    <script src="../../../../assets/js/global-enhancement.js"></script>
 </body>
 
 </html>
