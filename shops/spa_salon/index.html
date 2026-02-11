@@ -1,221 +1,144 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html class="light" lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Azure Serenity Spa &amp; Salon</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#30c9e8",
-                        "background-light": "#f6f8f8",
-                        "background-dark": "#111e21",
-                    },
-                    fontFamily: {
-                        "display": ["Newsreader", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquility Spa & Wellness | Premium Relaxation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
         body {
-            font-family: 'Newsreader', serif;
-            -webkit-tap-highlight-color: transparent;
+            font-family: 'Inter', sans-serif
         }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+
+        .heading-font {
+            font-family: 'Playfair Display', serif
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  <link rel="stylesheet" href="../../assets/css/global-styles.css">
-  <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Azure Serenity Spa &amp; Salon">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+    <link rel="stylesheet" href="../../assets/css/global-styles.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display">
-<!-- Hero Section with Split Screen -->
-<section class="relative h-[60vh] w-full overflow-hidden">
-<div class="absolute inset-0">
-<img alt="Spa Interior" class="w-full h-full object-cover" data-alt="Luxurious minimalist spa interior with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkYe9pY_plJpiuZ1IkVXi1gTrxpWD-90TIrRVsnwUJ1eYiMaEJWo2s7ygELCRZKzY5BQfov1jUOGnKboX4tonWMigpyUaeosbAtwCMvJjWrE-ZMgRHv-Td2G1HoSRVoV0GI9UwV6bRUEsjxm_9PlX1iOBGOH9E_giFo6wchtJ_t_TqE5GPEjxR1O1ryFNV96ow_Ib5CJ6ubsEDrTcfaCuachzJojJNPp9A_oup7CRYBqU9z-su6S6_cdseXbsTpEszAOH1eS_51j-E"/>
-<div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background-light dark:to-background-dark"></div>
-</div>
-<!-- Top Nav -->
-<nav class="relative z-10 flex justify-between items-center px-6 py-4">
-<div class="bg-white/80 dark:bg-black/40 backdrop-blur-md p-2 rounded-full">
-<span class="material-icons text-primary">spa</span>
-</div>
-<div class="bg-white/80 dark:bg-black/40 backdrop-blur-md p-2 rounded-full">
-<span class="material-icons text-slate-700 dark:text-slate-200">menu</span>
-</div>
-</nav>
-<div class="relative z-10 px-6 pt-12">
-<h1 class="text-4xl md:text-5xl font-light text-white drop-shadow-md">Azure Serenity</h1>
-<p class="text-white/90 italic text-lg mt-2">Elevated wellness for your soul.</p>
-</div>
-</section>
-<!-- Floating Book Now Card -->
-<section class="relative z-20 px-6 -mt-32">
-<div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl p-6 border border-primary/10">
-<div class="flex justify-between items-end mb-4">
-<div>
-<h2 class="text-2xl font-semibold">Book a Session</h2>
-<p class="text-sm text-slate-500 dark:text-slate-400">Select your preferred treatment</p>
-</div>
-<div class="text-primary text-sm font-medium">From $45</div>
-</div>
-<div class="space-y-4">
-<div class="relative">
-<select class="w-full bg-primary/5 dark:bg-primary/10 border-none rounded-lg py-3 px-4 appearance-none focus:ring-2 focus:ring-primary text-slate-700 dark:text-slate-200">
-<option>Aromatherapy Massage (60 min)</option>
-<option>Signature Glow Facial</option>
-<option>Swedish Deep Tissue</option>
-<option>Precision Hair Styling</option>
-</select>
-<span class="material-icons absolute right-3 top-3 text-primary/60 pointer-events-none">expand_more</span>
-</div>
-<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 rounded-lg shadow-lg shadow-primary/30 transition-all active:scale-[0.98]">
-                    Reserve My Appointment
-                </button>
-</div>
-</div>
-</section>
-<!-- Staff Favorites -->
-<section class="py-12 px-6">
-<div class="flex justify-between items-center mb-6">
-<h3 class="text-2xl font-medium">Meet Our Artisans</h3>
-<a class="text-primary text-sm font-semibold" href="#">View All</a>
-</div>
-<div class="flex overflow-x-auto gap-5 pb-4 hide-scrollbar">
-<!-- Staff 1 -->
-<div class="flex-shrink-0 w-40 text-center">
-<div class="relative mb-3">
-<img alt="Elena" class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-primary/20" data-alt="Portrait of a smiling professional spa therapist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGeTQ0oY3j8hfV3fA-kRuXE0R8KP-yFsw0I1FCACx71clh2o3PIaUG8sQVpixUtNFv9J03RrJYP4RBfyoXD9y5BwHy0KFeef83FGjENs3c6hgUlV7fyNEzxlyShoV6JNcZGwkSqJbw-Eb4vnq3t_s9ZhWPJoabdm31ugJ231j_lpuNVdrLdenzJwaBXuu9mWU-9pWHOhuOzp415MIz2H-3d0fWBLz__T55h7R0pE1NChf9USuXABO0RmmIu0f8D-8qeWUfkREbiaDy"/>
-<div class="absolute bottom-1 right-6 bg-primary text-white p-1 rounded-full border-2 border-white dark:border-slate-900">
-<span class="material-icons text-xs">verified</span>
-</div>
-</div>
-<h4 class="font-semibold text-lg">Elena Vance</h4>
-<p class="text-primary text-xs uppercase tracking-wider mb-2">Lead Esthetician</p>
-<span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full font-bold">FACIAL EXPERT</span>
-</div>
-<!-- Staff 2 -->
-<div class="flex-shrink-0 w-40 text-center">
-<div class="relative mb-3">
-<img alt="Marcus" class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-slate-200 dark:border-slate-700" data-alt="Portrait of a male professional massage therapist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4QfGVfdMQ1U-ayETFcTXmkD7FeD0IV9SGmY-RcTKmAeHgKyKN8AozW671tYHxDk2Exo6ARpg7jb397tgw_CW8G9zZUrn4UnXeDLd2_V4wQzQ39amwTQVUCGQsdAuCmA04T9hSC-DlxviW1TwnsTQ6CdUkJ59xA9-ydvdAC11RIqpPERROJHiNIWsBMQbDZevfbtoq2zPfylUZo7LqdRj8zQKn8itSO3QolGpJxbxAjIz3u8v2_kZGYMjBpnek3CB_SyxqH5_Ia7mJ"/>
-</div>
-<h4 class="font-semibold text-lg">Marcus Thorne</h4>
-<p class="text-primary text-xs uppercase tracking-wider mb-2">Massage Artist</p>
-<span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full font-bold">DEEP TISSUE</span>
-</div>
-<!-- Staff 3 -->
-<div class="flex-shrink-0 w-40 text-center">
-<div class="relative mb-3">
-<img alt="Sarah" class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-slate-200 dark:border-slate-700" data-alt="Portrait of a professional hair stylist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGMey5Rtj8WMZUWoVZYfxgHNF3lATvQdX8g7d76PFk01jBkekKeW96vg9488ABFWek7XZFQwUSpJP8lM1j1rKKeBffn9lfKFD2iSXaCH0NBzjnIqLc2VRJC8I1F9aVgxnLhRIR3dEeXI64ZelPNXUdXcy4VyJ0v662alvrBnoxrwLwMHbUAwCiJwqHF36h10v7H9tzoERoAMKLHoDtLOOXJ0OyMx5K_pyMPZQu1FlT0dz9OgLfNF-S647tDqlzezwMxGjkfoP4pUEj"/>
-</div>
-<h4 class="font-semibold text-lg">Sarah Jenkins</h4>
-<p class="text-primary text-xs uppercase tracking-wider mb-2">Senior Stylist</p>
-<span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full font-bold">BALAYAGE</span>
-</div>
-</div>
-</section>
-<!-- Services Highlight -->
-<section class="bg-primary/5 dark:bg-primary/10 py-12 px-6 rounded-t-3xl">
-<h3 class="text-2xl font-medium mb-6">Seasonal Rituals</h3>
-<div class="grid gap-4">
-<div class="bg-white dark:bg-slate-900 p-4 rounded-xl flex items-center gap-4 shadow-sm">
-<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-<img alt="Treatment" class="w-full h-full object-cover" data-alt="Close up of essential oils and spa stones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxFsyo0K8UbHhjuqVRqDjqrMX-v0oDZbUURjej-qh6PmQUImPTt_LI2DVx3idePFqvr8winOd3-a6h3B-35jwP7uRRchid8yvMMbePjgjf9FK5h7Z4cyE0xFacHLOw0r0pPA0bLneONGbWmdSdNAVXqnE4AtF3PtxuSN412PRkVMcGUMmTo5Giy0ONkr8WR1K5yST94R8T5PHIU-aVbVy0hiwRLK229OMLGZno_egDjvk4Z6hsj6hHxHHH2RHDcZ2PNPAhStKgEF8A"/>
-</div>
-<div class="flex-1">
-<h5 class="font-semibold">Midnight Lavender Soak</h5>
-<p class="text-xs text-slate-500 dark:text-slate-400">90 min • Rejuvenating</p>
-</div>
-<div class="text-right">
-<div class="font-bold text-primary">$120</div>
-<span class="material-icons text-slate-300">chevron_right</span>
-</div>
-</div>
-<div class="bg-white dark:bg-slate-900 p-4 rounded-xl flex items-center gap-4 shadow-sm">
-<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-<img alt="Facial" class="w-full h-full object-cover" data-alt="Woman receiving a luxury facial treatment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiza1RB9QYAM6KS7qZOvWD3Gakfrw1aHHeUyuLg8nEMWq4yNKwwlDd7dkjOXIGascQ32_n6Mnx-Wvmh4TPIiSDQvf4GQuSVvL-O03sp5NJBra_2qle4j3r9JWXr3oxlYQzTK7x2duGshcxPxdSQLPFtDKMaLRT4wJ9eF_YDvqToW9wXu8ErP9Q7yraeRfDeoaCpfivofAenKGP1Na5d0BAbfBcqzau3W-sOw8tahkNxlASN1EO5O-TbwHK58ptzNN5eeKD4iH23nMz"/>
-</div>
-<div class="flex-1">
-<h5 class="font-semibold">Vitamin C Radiance</h5>
-<p class="text-xs text-slate-500 dark:text-slate-400">45 min • Brightening</p>
-</div>
-<div class="text-right">
-<div class="font-bold text-primary">$85</div>
-<span class="material-icons text-slate-300">chevron_right</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Map/Location Shortcut -->
-<section class="py-12 px-6 mb-24">
-<div class="bg-slate-200 dark:bg-slate-800 rounded-xl h-40 relative overflow-hidden mb-4 group">
-<img alt="Map" class="w-full h-full object-cover opacity-60 dark:opacity-40" data-alt="Abstract map view of a city area" data-location="Santa Monica, California" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY2yCTc0SW-0KEG158IloaWOuKDD8w_8YPhBnY_gQr3PbkqI_M2-MOUAm5nj5T0jOTQ6YvIZUty0q1xi1MEAnCBhzkQlq4jDZO0wAK9HB0EWn--QhKQvGuSN-hkNr29HaxcLrZNRDbGmVNLRL9ZWuIxAabE7LUgXnbFvPpz_XmnWZvnpVB3axMG68BeUICOel2uMU3vppVunv43S7rkkf1b-AwWqy9J8-yx3Kw-S5j1Ew_GTfJ-99kLv4VuLZ-t1ovBqOAe4LhSNkM"/>
-<div class="absolute inset-0 flex items-center justify-center">
-<div class="bg-white dark:bg-slate-900 px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-<span class="material-icons text-primary text-sm">location_on</span>
-<span class="text-sm font-semibold">124 Serenity Way, SM</span>
-</div>
-</div>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<h4 class="font-semibold italic text-lg">Always Open for Peace</h4>
-<p class="text-sm text-slate-500">Tue – Sun: 9:00 AM – 8:00 PM</p>
-</div>
-<div class="flex gap-2">
-<div class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center">
-<span class="material-icons text-slate-400 text-sm">public</span>
-</div>
-<div class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center">
-<span class="material-icons text-slate-400 text-sm">share</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Sticky Quick Contact Bar -->
-<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 px-6 py-4 pb-8 z-50 flex items-center justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Have Questions?</span>
-<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Connect with us now</span>
-</div>
-<div class="flex gap-3">
-<a class="w-12 h-12 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full flex items-center justify-center active:bg-slate-200" href="tel:+">
-<span class="material-icons">call</span>
-</a>
-<a class="bg-primary text-white px-5 py-3 rounded-full flex items-center gap-2 font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-transform" href="https://wa.me/">
-<span class="material-icons text-lg">chat</span>
-<span>WhatsApp</span>
-</a>
-</div>
-</div>
-<script src="../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+
+<body class="bg-purple-50">
+    <nav class="bg-white border-b border-purple-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <h1 class="heading-font text-3xl font-bold text-gray-900">Tranquility<span
+                        class="text-purple-600">Spa</span></h1>
+                <div class="hidden lg:flex gap-8"><a href="#"
+                        class="text-gray-700 hover:text-purple-600 font-medium">Services</a><a href="#"
+                        class="text-gray-700 hover:text-purple-600 font-medium">Packages</a><a href="#"
+                        class="text-gray-700 hover:text-purple-600 font-medium">Membership</a><a href="#"
+                        class="text-gray-700 hover:text-purple-600 font-medium">Contact</a></div><button
+                    class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Book
+                    Appointment</button>
+            </div>
+        </div>
+    </nav>
+    <section class="relative h-[700px]"><img
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=700&fit=crop" alt="Spa"
+            class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+        <div class="relative max-w-7xl mx-auto px-8 h-full flex items-center">
+            <div class="max-w-2xl text-white"><span
+                    class="inline-block px-4 py-2 bg-purple-600 rounded-full text-sm font-bold mb-6">Premium Wellness
+                    Experience</span>
+                <h2 class="heading-font text-7xl font-bold mb-6 leading-tight">Escape to Pure Tranquility</h2>
+                <p class="text-2xl mb-8 opacity-90 leading-relaxed">Immerse yourself in a world of relaxation with our
+                    luxury spa treatments and wellness therapies</p>
+                <div class="flex gap-4"><button
+                        class="bg-purple-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-purple-700 shadow-lg">View
+                        Services</button><button
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10">Gift
+                        Cards</button></div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-16"><span
+                    class="text-sm text-purple-600 uppercase tracking-wider font-semibold">Our Services</span>
+                <h2 class="heading-font text-5xl font-bold mt-4 mb-4">Signature Spa Treatments</h2>
+                <p class="text-xl text-gray-600">Indulge in our premium wellness experiences</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">{[{name:'Aromatherapy Massage',price:'$150',time:'90 min',desc:'Deep
+                relaxation with essential oils'},{name:'Luxury Facial',price:'$120',time:'75 min',desc:'Rejuvenating
+                skin treatment'},{name:'Hot Stone Therapy',price:'$140',time:'80 min',desc:'Therapeutic heat
+                treatment'}].map(s=>`<div
+                    class="bg-purple-50 p-8 rounded-2xl border-2 border-purple-200 hover:shadow-2xl transition-all">
+                    <h3 class="heading-font text-2xl font-bold mb-3">${s.name}</h3>
+                    <div class="flex items-baseline gap-2 mb-4"><span
+                            class="text-4xl font-bold text-purple-600">${s.price}</span><span
+                            class="text-gray-500">${s.time}</span></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">${s.desc}</p><button
+                        class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700">Book
+                        Treatment</button>
+                </div>`).join('')}</div>
+        </div>
+    </section>
+    <section class="py-20 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="heading-font text-5xl font-bold mb-6">Spa Membership</h2>
+                    <p class="text-xl mb-8 opacity-90">Enjoy unlimited access to our premium facilities and exclusive
+                        member benefits</p>
+                    <ul class="space-y-4 mb-8">{['Unlimited spa access','Priority booking','20% off all
+                        treatments','Complimentary refreshments'].map(b=>`<li class="flex items-center gap-3"><span
+                                class="material-icons">check_circle</span><span class="text-lg">${b}</span></li>
+                        `).join('')}</ul><button
+                        class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100">Join
+                        Now</button>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
+                    <div class="text-center">
+                        <div class="text-6xl font-bold mb-2">$99</div>
+                        <div class="text-xl opacity-90 mb-8">per month</div>
+                        <div class="space-y-3">{['Unlimited Access','Member Discounts','Priority Booking','Exclusive
+                            Events'].map(f=>`<div class="flex items-center gap-2 justify-center"><span
+                                    class="material-icons text-sm">star</span><span>${f}</span></div>`).join('')}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="heading-font text-2xl font-bold text-white mb-4">Tranquility Spa</h3>
+                    <p class="text-sm leading-relaxed">Premium wellness and relaxation experiences in a serene
+                        environment.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Massage Therapy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Facials</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Body Treatments</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Wellness Packages</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contact</h4>
+                    <p class="text-sm">(555) 123-4567<br />info@tranquilityspa.com<br /><br />123 Wellness Way<br />Spa
+                        District, NY 10001</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Hours</h4>
+                    <p class="text-sm">Monday - Friday<br />9:00 AM - 9:00 PM<br /><br />Saturday - Sunday<br />8:00 AM
+                        - 10:00 PM</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© 2024 Tranquility Spa & Wellness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../assets/js/global-enhancement.js"></script>
+</body>
+
+</html>

@@ -1,193 +1,109 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html class="light" lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Pampered Paws - Local Pet Grooming &amp; Boutique</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f09942",
-                        "background-light": "#f8f7f6",
-                        "background-dark": "#221910",
-                    },
-                    fontFamily: {
-                        "display": ["Spline Sans"]
-                    },
-                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
-                },
-            },
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pampered Paws | Professional Pet Grooming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif
         }
-    </script>
-<style>
-        body { font-family: 'Spline Sans', sans-serif; }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  <link rel="stylesheet" href="../../assets/css/global-styles.css">
-  <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Pampered Paws - Local Pet Grooming &amp; Boutique">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+    <link rel="stylesheet" href="../../assets/css/global-styles.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-[#4a3a2a] dark:text-[#f8f7f6] antialiased">
-<!-- Header -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-<span class="material-icons text-white">pets</span>
-</div>
-<div>
-<h1 class="text-lg font-bold leading-none">Pampered Paws</h1>
-<div class="flex items-center gap-1 mt-1">
-<span class="w-2 h-2 bg-green-500 rounded-full"></span>
-<span class="text-[10px] font-medium opacity-70 uppercase tracking-wider">Open Until 7 PM</span>
-</div>
-</div>
-</div>
-<button class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-icons">notifications_none</span>
-</button>
-</header>
-<main class="pt-20 pb-32">
-<!-- Hero Section -->
-<section class="px-4 mb-8">
-<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
-<img alt="Cute groomed golden retriever" class="w-full h-full object-cover" data-alt="Happy groomed golden retriever in a pet salon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuKpj6auNTNpGcOb7-gkPpnKOe6aMM0cUPCwKrJn3mqPYLizQS1TJTKLZYe72GN9HGZDJgFY8F_w7PmtDK8IACE6K2I5b0ATxQNd3iXOHWp1HBcZEl_xEm2QC-OcaFhgZo-D51GZ-fEO3ceZ-OtISTkjbQ_umSly_26hWKXqJaYiE_TauRKF4jnzJ-WLJ4OXLpv1Zw08Uze6STOtZqKMy2h4iKzIc_jaUl_1i9RsBzIhgP32PfzxPAGXKlSjoSjVzbDz910AT4q60G"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-<div class="absolute bottom-6 left-4 right-4">
-<h2 class="text-white text-3xl font-bold mb-4">Pampered Paws,<br/>Happy Hearts.</h2>
-<div class="flex items-center gap-3">
-<button class="flex-1 bg-primary text-white font-bold py-4 rounded-full flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform">
-<span class="material-icons text-sm">calendar_today</span>
-                            Book Appointment
-                        </button>
-<a class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 active:scale-95 transition-transform" href="tel:+123456789">
-<span class="material-icons">call</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Pet of the Month -->
-<section class="px-4 mb-10">
-<div class="flex items-center justify-between mb-4">
-<h3 class="text-xl font-bold">Pet of the Month</h3>
-<span class="text-primary text-sm font-semibold">Meet them all</span>
-</div>
-<div class="bg-primary/10 dark:bg-primary/5 rounded-lg p-4 flex items-center gap-4 relative overflow-hidden">
-<div class="absolute -top-4 -right-4 w-20 h-20 bg-primary/20 rounded-full blur-2xl"></div>
-<div class="relative w-24 h-24 rounded-full border-4 border-white dark:border-background-dark overflow-hidden shrink-0">
-<img alt="Cute small white dog" class="w-full h-full object-cover" data-alt="Happy small white dog with a blue ribbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8I0pyyZ4VR-CfwPFwBFerkksO8DIIOppkGRsQFs8xzmLSSnf8FtvYTtHEY8a79nzbX5-7aJg9yEB-HEJep3_z5Xo28XmaSGavnBP2gx_BI5gXFnYbANCtBeCY61FYgZEGngI7ThmWcb59TLptSQ6z-c9S9gUj0-e4eUHaoq_sfyg3WowFrqSCY-RcZBh8UWwJv7bCdxTgp1E8nr1aOCF_cN7JLVsNn_yNiStgc0LCgZhVSGAt37vCH7bdwqLHJl2EJvt4PDbQa7gB"/>
-<div class="absolute bottom-0 right-0 bg-primary text-white p-1 rounded-full border-2 border-white dark:border-background-dark">
-<span class="material-icons text-[12px]">stars</span>
-</div>
-</div>
-<div>
-<h4 class="font-bold text-lg mb-1">Meet Luna!</h4>
-<p class="text-sm opacity-80 leading-snug">"The best groom she's ever had! Luna came back smelling like strawberries."</p>
-<div class="mt-2 flex items-center gap-1">
-<span class="material-icons text-primary text-sm">star</span>
-<span class="material-icons text-primary text-sm">star</span>
-<span class="material-icons text-primary text-sm">star</span>
-<span class="material-icons text-primary text-sm">star</span>
-<span class="material-icons text-primary text-sm">star</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Top Selling Treats -->
-<section class="mb-10">
-<div class="px-4 flex items-center justify-between mb-4">
-<h3 class="text-xl font-bold">Top Selling Treats</h3>
-<span class="text-primary text-sm font-semibold">View Shop</span>
-</div>
-<div class="flex gap-4 overflow-x-auto px-4 hide-scrollbar">
-<!-- Product 1 -->
-<div class="min-w-[160px] bg-white dark:bg-white/5 p-3 rounded-lg shadow-sm border border-primary/5">
-<div class="w-full aspect-square rounded-lg bg-primary/5 mb-3 overflow-hidden relative">
-<img alt="Organic dog treats" class="w-full h-full object-cover" data-alt="Organic gourmet dog treats in a jar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe4WOTmcbzeegZAoN7i9JrysWGNPn3ZuW4DWlKm25J-XlPpKkMxtX7hxvmkPZMFMZJmDrOtc5tQKKBCs7VDs7hXX2BMX1eAfdM-VYgE4OKehtfXcFfX7yDgwaRTx9-_8RgIDd1QsYtKgHVm5wAZJyyD8axtZpGRff5qc1rVH64SBcp1CIhIanH5wbdj6S-f4mb2j8aVp9mkLyKHbFzD--9GOwq8RjLzrJVsX-KpkPYCrn9g9ZU7ZV_G1OYmg6xyDZvKX9uTLJVrk0i"/>
-<button class="absolute bottom-2 right-2 w-8 h-8 bg-primary rounded-full text-white flex items-center justify-center shadow-md">
-<span class="material-icons text-sm">add</span>
-</button>
-</div>
-<h5 class="font-bold text-sm mb-1 truncate">Honey Biscuits</h5>
-<p class="text-primary font-bold">$12.99</p>
-</div>
-<!-- Product 2 -->
-<div class="min-w-[160px] bg-white dark:bg-white/5 p-3 rounded-lg shadow-sm border border-primary/5">
-<div class="w-full aspect-square rounded-lg bg-primary/5 mb-3 overflow-hidden relative">
-<img alt="Peanut butter treats" class="w-full h-full object-cover" data-alt="Bag of peanut butter flavored dog treats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK_2VGq5OflmAtpuZUEIov9w-CK1yAAyirtyD2U6o1lQ0yHUbOeGbi0P7TNoAhFq-7a3ZgOq2VLXLioXy4BpQytuSOCbJCQQHiFFt0aQ5f7fBG9D7BwfSt363XB1PcQE0fCrXCPW5HkYklyKu1DnyUfuK77VUqneRu2GXvlXsJyhQNcELdOFnW-1rD5JaASP99k6-OSvA7vi-iOzNGXMA3QNtePcTweolZJWE1uGw9Rouz6zO0ow7w-7g0EEnK9d8UO8-rL3crmccV"/>
-<button class="absolute bottom-2 right-2 w-8 h-8 bg-primary rounded-full text-white flex items-center justify-center shadow-md">
-<span class="material-icons text-sm">add</span>
-</button>
-</div>
-<h5 class="font-bold text-sm mb-1 truncate">PB Delights</h5>
-<p class="text-primary font-bold">$15.50</p>
-</div>
-<!-- Product 3 -->
-<div class="min-w-[160px] bg-white dark:bg-white/5 p-3 rounded-lg shadow-sm border border-primary/5">
-<div class="w-full aspect-square rounded-lg bg-primary/5 mb-3 overflow-hidden relative">
-<img alt="Salmon jerky" class="w-full h-full object-cover" data-alt="Dried salmon jerky strips for pets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdAncBba4kwA4Ws4JM_HMiZYvI-sNikTVXAE8Bqv0XREKpEDVh6JixLVsGHl0pkHZQ2vwl39RvZCuEqEjkp9iWjV9TbTjtrgI6UnzazrCrti6DjJhB7jSMA97Oachyk8iJPLoO__jIW_VVIMRfMjduK_FiPQkW0yUnratADkF1ZKD3CTiwh1L5pe8AigfYEr86A5ZdaY9FwJE_sbg3DHjmDo4WAwx-_ZOslgz-WdGqcnH_9pUTey2mKNErhGb5_TZFUaqV4SZv8T_C"/>
-<button class="absolute bottom-2 right-2 w-8 h-8 bg-primary rounded-full text-white flex items-center justify-center shadow-md">
-<span class="material-icons text-sm">add</span>
-</button>
-</div>
-<h5 class="font-bold text-sm mb-1 truncate">Salmon Jerky</h5>
-<p class="text-primary font-bold">$18.00</p>
-</div>
-</div>
-</section>
-<!-- Location/Hours -->
-<section class="px-4">
-<div class="bg-background-dark/5 dark:bg-white/5 rounded-lg p-5">
-<div class="flex items-start gap-4 mb-4">
-<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary shrink-0">
-<span class="material-icons">location_on</span>
-</div>
-<div>
-<h4 class="font-bold">Find Us</h4>
-<p class="text-sm opacity-70">123 Puppy Lane, Petville, NY 10001</p>
-</div>
-</div>
-<div class="w-full h-32 rounded-lg overflow-hidden bg-primary/10 mb-4 border border-primary/10">
-<img alt="Map" class="w-full h-full object-cover opacity-60" data-alt="Map view showing the shop location" data-location="Petville, NY" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC182ecPVuEW_b8jl5mNLRJ7InJTFPtnRniJX4EIvp3i9hJuTFElyvFaWizn2KYwpyJ5bpTq47cvPoij3HFMGIaf5kHadYkM48YFUagFsU2khjdgURtYRPi9wohsoPZAYrSTFfCSL5VZlx1zlIF4dvNVUCTpPpbjr7KljuJGMPSloIAiyt85pGm7boy8eKCrR5eFL6Qm1bX343NaqYcnP0tIj3m4K-IvOMIcU4g85eSjK7_EhW_LPcMx03LcKy3ZrN8bYAsW3IYpZSV"/>
-</div>
-<div class="flex items-center justify-between py-2 border-t border-primary/10">
-<span class="text-sm opacity-70">Mon - Sat</span>
-<span class="text-sm font-semibold">9:00 AM - 7:00 PM</span>
-</div>
-</div>
-</section>
-</main>
-<!-- Sticky Footer -->
-<footer class="fixed bottom-0 left-0 right-0 z-50 px-4 pb-6 pt-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-primary/10">
-<div class="max-w-md mx-auto grid grid-cols-2 md:grid-cols-4 gap-3">
-<button class="bg-[#25D366] text-white py-4 rounded-full flex items-center justify-center gap-2 font-bold shadow-lg shadow-green-500/20 active:scale-95 transition-transform">
-<span class="material-icons">chat</span>
-                WhatsApp
-            </button>
-<button class="bg-primary text-white py-4 rounded-full flex items-center justify-center gap-2 font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform">
-<span class="material-icons">directions</span>
-                Directions
-            </button>
-</div>
-<!-- iOS Home Indicator Safe Area -->
-<div class="h-4"></div>
-</footer>
-<script src="../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+
+<body class="bg-orange-50">
+    <nav class="bg-white border-b border-orange-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl">
+                        🐾</div>
+                    <h1 class="text-2xl font-bold text-gray-900">Pampered Paws</h1>
+                </div>
+                <div class="hidden lg:flex items-center gap-8"><a href="#services"
+                        class="text-gray-700 hover:text-orange-600 font-medium">Services</a><a href="#pricing"
+                        class="text-gray-700 hover:text-orange-600 font-medium">Pricing</a><a href="#gallery"
+                        class="text-gray-700 hover:text-orange-600 font-medium">Gallery</a><a href="#contact"
+                        class="text-gray-700 hover:text-orange-600 font-medium">Contact</a></div><button
+                    class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">Book
+                    Appointment</button>
+            </div>
+        </div>
+    </nav>
+    <section class="relative h-[600px]"><img
+            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1920&h=600&fit=crop" alt="Pet grooming"
+            class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+        <div class="relative max-w-7xl mx-auto px-8 h-full flex items-center">
+            <div class="max-w-2xl text-white"><span
+                    class="inline-block px-4 py-2 bg-orange-500 rounded-full text-sm font-bold mb-6">Professional Pet
+                    Care</span>
+                <h2 class="text-6xl font-bold mb-6">Your Pet Deserves the Best</h2>
+                <p class="text-xl mb-8 opacity-90">Expert grooming services with love and care for your furry friends.
+                </p><button
+                    class="bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 shadow-lg">Book
+                    Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600">Complete grooming care for your pets</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">{[{name:'Full Grooming',price:'$65',icon:'spa',desc:'Bath, haircut,
+                nail trim, ear cleaning'},{name:'Bath & Brush',price:'$45',icon:'shower',desc:'Gentle bath with premium
+                products'},{name:'Nail Trim',price:'$20',icon:'cut',desc:'Professional nail trimming service'}].map(s=>`
+                <div
+                    class="bg-orange-50 p-8 rounded-2xl border-2 border-orange-200 hover:border-orange-500 transition-all">
+                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6"><span
+                            class="material-icons text-white text-3xl">${s.icon}</span></div>
+                    <h3 class="text-2xl font-bold mb-2">${s.name}</h3>
+                    <div class="text-4xl font-bold text-orange-600 mb-4">${s.price}</div>
+                    <p class="text-gray-600 mb-6">${s.desc}</p><button
+                        class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600">Book
+                        Service</button>
+                </div>`).join('')}</div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Pampered Paws</h3>
+                    <p class="text-sm">Professional pet grooming with love.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Grooming</a></li>
+                        <li><a href="#" class="hover:text-white">Bath</a></li>
+                        <li><a href="#" class="hover:text-white">Nail Trim</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contact</h4>
+                    <p class="text-sm">(555) 123-4567<br />info@pamperedpaws.com</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Hours</h4>
+                    <p class="text-sm">Mon-Sat: 9AM-7PM<br />Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© 2024 Pampered Paws. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../assets/js/global-enhancement.js"></script>
+</body>
+
+</html>

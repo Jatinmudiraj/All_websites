@@ -1,254 +1,96 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html class="light" lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Vibrant Shop - Local Deals &amp; Actions</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f56e3d", // Coral
-                        "secondary": "#2d9cdb", // Teal/Blue for contrast
-                        "background-light": "#f8f6f5",
-                        "background-dark": "#221510",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Market | Colorful Shopping Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+            font-family: 'Inter', sans-serif
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  <link rel="stylesheet" href="../../assets/css/global-styles.css">
-  <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Vibrant Shop - Local Deals &amp; Actions">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+    <link rel="stylesheet" href="../../assets/css/global-styles.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
-<!-- Top Status Bar (iOS Style) -->
-<div class="px-6 pt-4 pb-2 flex justify-between items-center bg-background-light dark:bg-background-dark sticky top-0 z-50">
-<div class="flex items-center gap-2">
-<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-<span class="material-icons-round text-white">storefront</span>
-</div>
-<div>
-<h1 class="text-lg font-bold leading-none tracking-tight">Urban Bloom</h1>
-<div class="flex items-center gap-1 mt-1">
-<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-<span class="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Open Now</span>
-</div>
-</div>
-</div>
-<button class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-sm">
-<span class="material-icons-round text-slate-600 dark:text-slate-300">notifications_none</span>
-</button>
-</div>
-<main class="px-4 pb-24">
-<!-- Hero Section: Split Layout -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-32 gap-3 mt-4">
-<!-- Brand Column -->
-<div class="col-span-7 bg-white dark:bg-slate-800 p-5 rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden min-h-[180px]">
-<div class="relative z-10">
-<h2 class="text-2xl font-extrabold text-slate-900 dark:text-white leading-tight">Your Local <br/><span class="text-primary">Style Hub</span></h2>
-<p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Curated essentials for the modern lifestyle.</p>
-</div>
-<div class="absolute -bottom-4 -right-4 opacity-10">
-<span class="material-icons-round text-[120px]">local_mall</span>
-</div>
-<div class="flex gap-1 mt-4 relative z-10">
-<span class="text-xs font-bold px-2 py-1 bg-primary/10 text-primary rounded-full">★ 4.9</span>
-<span class="text-xs font-bold px-2 py-1 bg-secondary/10 text-secondary rounded-full">New Collection</span>
-</div>
-</div>
-<!-- Quick Action Grid -->
-<div class="col-span-5 grid grid-cols-2 md:grid-cols-4 gap-2">
-<button class="bg-primary hover:bg-primary/90 transition-colors flex flex-col items-center justify-center rounded-xl p-3 text-white shadow-md shadow-primary/20">
-<span class="material-icons-round text-2xl mb-1">call</span>
-<span class="text-[10px] font-bold">Call</span>
-</button>
-<button class="bg-secondary hover:bg-secondary/90 transition-colors flex flex-col items-center justify-center rounded-xl p-3 text-white shadow-md shadow-secondary/20">
-<span class="material-icons-round text-2xl mb-1">near_me</span>
-<span class="text-[10px] font-bold">Map</span>
-</button>
-<button class="bg-slate-900 dark:bg-white flex flex-col items-center justify-center rounded-xl p-3 text-white dark:text-slate-900">
-<span class="material-icons-round text-2xl mb-1">forum</span>
-<span class="text-[10px] font-bold">Chat</span>
-</button>
-<button class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center rounded-xl p-3 text-slate-900 dark:text-white">
-<span class="material-icons-round text-2xl mb-1 text-primary">event</span>
-<span class="text-[10px] font-bold">Book</span>
-</button>
-</div>
-</div>
-<!-- Flash Deals Section -->
-<div class="mt-8">
-<div class="flex justify-between items-end mb-4 px-1">
-<div>
-<h3 class="text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-                        Flash Deals <span class="material-icons-round text-primary">bolt</span>
-</h3>
-<p class="text-xs text-slate-500 dark:text-slate-400">Ending soon in your area</p>
-</div>
-<a class="text-xs font-bold text-primary flex items-center underline underline-offset-4" href="#">View All</a>
-</div>
-<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-4 -mx-1 px-1">
-<!-- Deal Card 1 -->
-<div class="min-w-[240px] bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
-<div class="h-32 bg-slate-200 relative">
-<img alt="Fresh baked bread" class="w-full h-full object-cover" data-alt="Freshly baked artisan sourdough bread loaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEZxYmKhaI8IQffKw3sLKBDYOQrldsayJNCoUvafn9TOgHp1Nf-Upl7eg_dWqf_2ZJqXT2-NZl56qWg3k-QSXI5EMKGRlom4OJVqLrlRkIOCrPpd-3ElUQ43SHjRp8d9TYp1ONxhs911iul7_NpELgPk_mcgummhkcyQi1FFQ5KBMcsZGu0DlBwaRxxVymlECYJgXZD3202sMq-SEKYU-GsqPDAIrwMVssFyp2wlDtuGAh8ampKbcadafV3v1G-t9ve9CCiZ7Ydk9u"/>
-<div class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-1 rounded-lg uppercase">
-                            -40% OFF
-                        </div>
-<div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded-lg flex items-center gap-1">
-<span class="material-icons-round text-[12px]">schedule</span> 02:45:12
-                        </div>
-</div>
-<div class="p-3">
-<h4 class="font-bold text-sm text-slate-900 dark:text-white">Artisan Sourdough Bundle</h4>
-<div class="flex items-center gap-2 mt-1">
-<span class="text-primary font-extrabold">$12.00</span>
-<span class="text-xs text-slate-400 line-through">$20.00</span>
-</div>
-</div>
-</div>
-<!-- Deal Card 2 -->
-<div class="min-w-[240px] bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
-<div class="h-32 bg-slate-200 relative">
-<img alt="Specialty coffee" class="w-full h-full object-cover" data-alt="Close up of a latte with flower latte art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8CJtrYhU7cD08z8pDqPIyzmzW8p1F7pZg-yK38oeJKly3ArMe3noO_f6mtLbrW2oYreN7dVPHDy3zgIQMKN4IYdNt7YfhUodpy6canVk-TPx9F5zWhJMLvCa4WxXw9YK3f9hfRfH15pELjx_xi4DksHbbNaOv_ow5evUWnv_z7xGJtLXCMKgupaoyI7Rl4-4hnHeKQUKXCaykA_cwYNYHS54l36bhS5fdVjn6iq7UKL0fpLlCLKFyzFWgvz5GrfDRcKjDIllfKECk"/>
-<div class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-1 rounded-lg uppercase">
-                            -25% OFF
-                        </div>
-<div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded-lg flex items-center gap-1">
-<span class="material-icons-round text-[12px]">schedule</span> 00:52:04
-                        </div>
-</div>
-<div class="p-3">
-<h4 class="font-bold text-sm text-slate-900 dark:text-white">Ethiopian Cold Brew</h4>
-<div class="flex items-center gap-2 mt-1">
-<span class="text-primary font-extrabold">$4.50</span>
-<span class="text-xs text-slate-400 line-through">$6.00</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Visit Us Section -->
-<div class="mt-4">
-<h3 class="text-xl font-extrabold text-slate-900 dark:text-white px-1 mb-4">Visit Us</h3>
-<div class="bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 overflow-hidden">
-<div class="h-44 w-full rounded-xl bg-slate-100 dark:bg-slate-700 relative overflow-hidden">
-<!-- Placeholder for Map -->
-<img alt="Map" class="w-full h-full object-cover grayscale opacity-50 dark:opacity-30" data-alt="Simplified city street map view" data-location="Los Angeles, USA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWH-eUoTvqXI2Mw0QzssJHEmRHe3nann7PgGkpESQn1JSraKvd5e_4lO0DUC9mmlszsChb4iiI1dp9ntoBLVSJICT1atoruyzyrC8YeRPaSgkNEqBrMykgayDCkpYm592rt3r7QjEuPtXPh-IuimC7-kxy1ec5u4j_ocqH6o1GJPJxPvUM8RCjcYWDN6UBibudxEgyaPb5Y_cuuW56w0SXysmeegBXCQzmi3fFMtA5LWaaZRzEfRJmVZQxRpwIwfE1mYv0PO-eeK58"/>
-<!-- Pulsing Marker -->
-<div class="absolute inset-0 flex items-center justify-center">
-<div class="relative">
-<div class="w-8 h-8 bg-primary/20 rounded-full animate-ping absolute -top-1 -left-1"></div>
-<div class="w-6 h-6 bg-primary rounded-full border-2 border-white flex items-center justify-center shadow-lg relative z-10">
-<span class="material-icons-round text-white text-xs">storefront</span>
-</div>
-</div>
-</div>
-<!-- Floating Check-in Button -->
-<button class="absolute bottom-3 right-3 bg-primary text-white font-bold py-2 px-4 rounded-full shadow-xl flex items-center gap-2 text-sm">
-<span class="material-icons-round text-lg">where_to_vote</span>
-                        Check-in
-                    </button>
-</div>
-<div class="p-4 flex justify-between items-center">
-<div>
-<p class="font-bold text-slate-900 dark:text-white">742 Evergreen Terrace</p>
-<p class="text-xs text-slate-500 dark:text-slate-400">Open until 9:00 PM tonight</p>
-</div>
-<button class="bg-primary/10 text-primary w-10 h-10 rounded-full flex items-center justify-center">
-<span class="material-icons-round">directions</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Loyalty Card Mock -->
-<div class="mt-6 bg-gradient-to-r from-slate-900 to-slate-800 dark:from-primary/20 dark:to-primary/10 p-5 rounded-2xl text-white relative overflow-hidden">
-<div class="relative z-10">
-<div class="flex justify-between items-start">
-<div>
-<p class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-60">Rewards Member</p>
-<h4 class="text-lg font-bold">540 Points</h4>
-</div>
-<div class="bg-white/10 p-2 rounded-lg backdrop-blur-md">
-<span class="material-icons-round text-primary">qr_code_2</span>
-</div>
-</div>
-<div class="mt-6">
-<div class="flex justify-between text-[10px] font-bold mb-1">
-<span>Lvl 2 Silver Tier</span>
-<span>60 pts to Gold</span>
-</div>
-<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-<div class="h-full bg-primary w-[75%] rounded-full shadow-[0_0_10px_rgba(245,110,61,0.5)]"></div>
-</div>
-</div>
-</div>
-<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-</div>
-</main>
-<!-- Navigation Bar -->
-<nav class="fixed bottom-0 inset-x-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-6 py-3 z-50">
-<div class="flex justify-between items-center max-w-md mx-auto">
-<a class="flex flex-col items-center gap-1 text-primary" href="#">
-<span class="material-icons-round">home</span>
-<span class="text-[10px] font-bold">Home</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
-<span class="material-icons-round text-2xl">local_offer</span>
-<span class="text-[10px] font-medium">Deals</span>
-</a>
-<div class="relative -top-6">
-<button class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/40 border-4 border-background-light dark:border-background-dark">
-<span class="material-icons-round text-3xl">add</span>
-</button>
-</div>
-<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
-<span class="material-icons-round">auto_awesome_motion</span>
-<span class="text-[10px] font-medium">Feed</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
-<span class="material-icons-round">person</span>
-<span class="text-[10px] font-medium">Profile</span>
-</a>
-</div>
-</nav>
-<script src="../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+
+<body class="bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+    <nav class="bg-white/90 backdrop-blur-sm border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <h1
+                    class="text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
+                    VIBRANT MARKET</h1>
+                <div class="hidden lg:flex gap-8"><a href="#"
+                        class="text-gray-700 hover:text-purple-600 font-medium">Shop</a><a href="#"
+                        class="text-gray-700 hover:text-pink-600 font-medium">Collections</a><a href="#"
+                        class="text-gray-700 hover:text-orange-600 font-medium">About</a></div><button
+                    class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700">Shop
+                    Now</button>
+            </div>
+        </div>
+    </nav>
+    <section class="py-32">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <h2
+                class="text-7xl font-black mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
+                Shop in Full Color</h2>
+            <p class="text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">Discover unique products that bring joy and
+                vibrancy to your life</p><button
+                class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-5 rounded-lg font-bold hover:from-purple-700 hover:to-pink-700 shadow-lg text-lg">Explore
+                Collection</button>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                {[{name:'Fashion',color:'purple'},{name:'Accessories',color:'pink'},{name:'Home
+                Decor',color:'orange'}].map(c=>`<div
+                    class="bg-white p-8 rounded-2xl border-2 border-${c.color}-200 hover:shadow-2xl transition-all">
+                    <div class="w-full h-48 bg-gradient-to-br from-${c.color}-100 to-${c.color}-200 rounded-xl mb-6">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">${c.name}</h3>
+                    <p class="text-gray-600 mb-6">Vibrant ${c.name.toLowerCase()} collection</p><button
+                        class="w-full bg-gradient-to-r from-${c.color}-600 to-pink-600 text-white py-3 rounded-lg font-bold hover:from-${c.color}-700 hover:to-pink-700">Shop
+                        ${c.name}</button>
+                </div>`).join('')}</div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3
+                        class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+                        Vibrant Market</h3>
+                    <p class="text-sm">Shop in full color.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Shop</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Fashion</li>
+                        <li>Accessories</li>
+                        <li>Home Decor</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contact</h4>
+                    <p class="text-sm">(555) 123-4567</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Hours</h4>
+                    <p class="text-sm">Daily: 10AM-9PM</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© 2024 Vibrant Market.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../assets/js/global-enhancement.js"></script>
+</body>
+
+</html>

@@ -1,204 +1,86 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html class="light" lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Utility Shop - Quick Access</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#19e66b",
-                        "background-light": "#f6f8f7",
-                        "background-dark": "#112117",
-                        "neutral-gray": "#d1dcd5",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UtilityHub | Home Essentials & Hardware</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
         body {
-            font-family: 'Space Grotesk', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+            font-family: 'Inter', sans-serif
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  <link rel="stylesheet" href="../../assets/css/global-styles.css">
-  <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Utility Shop - Quick Access">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+    <link rel="stylesheet" href="../../assets/css/global-styles.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen pb-24">
-<!-- Header Section -->
-<header class="sticky top-0 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/20 pt-4 pb-3 px-4">
-<div class="flex items-center justify-between mb-4">
-<div>
-<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">METRO<span class="text-primary">UTILITY</span></h1>
-<p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-semibold">Downtown Store #402</p>
-</div>
-<div class="flex flex-col items-end">
-<span class="inline-flex items-center px-2 py-1 rounded bg-primary/10 text-primary border border-primary/20 text-[11px] font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1.5 animate-pulse"></span>
-                    OPEN UNTIL 10 PM
-                </span>
-</div>
-</div>
-<div class="relative group">
-<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-<span class="material-icons text-slate-400 text-lg">search</span>
-</div>
-<input class="w-full bg-white dark:bg-slate-800 border-2 border-neutral-gray dark:border-slate-700 rounded-lg py-3 pl-10 pr-12 focus:border-primary focus:ring-0 transition-all text-sm font-medium" placeholder="Search milk, bread, batteries..." type="text"/>
-<div class="absolute inset-y-0 right-3 flex items-center">
-<button class="p-1 hover:bg-primary/10 rounded">
-<span class="material-icons text-primary text-xl">qr_code_scanner</span>
-</button>
-</div>
-</div>
-</header>
-<main class="mt-4 px-4 space-y-6">
-<!-- Quick Order Carousel -->
-<section>
-<div class="flex items-center justify-between mb-3">
-<h2 class="text-sm font-bold uppercase tracking-wider text-slate-500">Quick Order Essentials</h2>
-<a class="text-xs font-bold text-primary underline underline-offset-4 tracking-tight" href="#">VIEW ALL</a>
-</div>
-<div class="flex overflow-x-auto gap-3 hide-scrollbar pb-2">
-<!-- Product 1 -->
-<div class="min-w-[140px] bg-white dark:bg-slate-800 border border-neutral-gray dark:border-slate-700 rounded-lg p-3 flex flex-col items-center">
-<img class="w-20 h-20 object-contain mb-2" data-alt="Bottle of fresh whole milk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmCPpeJrIcswatugj94VWlBJ6szaurU-t50VfwEzgbhfEOpZaLQ_WrB9XyvUSwi467IIxizTqRJJIvT6WuJWfKKg9h9BqrYULdFCNFNlgSkyFdaUHIpCGl8JomnXTTtV7cuyeMwmpbUmqU2gW4915y7q9kKprMO0YEggujJpvtVd5Wj9SCwM-1ZcZFcUB9zzxnbsK7vSFWYZ4vuZ3uAXpZcNfi2dngFc4y7kKmzsIwWJaTx6czQPt5r5ehhbJPeg9_NKPwWlRTa6tI"/>
-<p class="text-xs font-bold text-center h-8 flex items-center leading-tight">Fresh Whole Milk 2L</p>
-<div class="w-full flex items-center justify-between mt-2">
-<span class="font-bold text-sm">$3.50</span>
-<button class="bg-primary text-background-dark p-1.5 rounded-md hover:opacity-90 active:scale-95 transition-transform flex items-center justify-center">
-<span class="material-icons text-sm font-bold">add</span>
-</button>
-</div>
-</div>
-<!-- Product 2 -->
-<div class="min-w-[140px] bg-white dark:bg-slate-800 border border-neutral-gray dark:border-slate-700 rounded-lg p-3 flex flex-col items-center">
-<img class="w-20 h-20 object-contain mb-2" data-alt="Loaf of sliced artisanal bread" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRa7FEeK_Bcp0SDhcy1nNEcO8fY3z7Vh1L05s3zGWJJEmE3XuZuZhjiPxEN4kBF-S8m4nufoKUUZKB5lDMbXIpA0yayDnhnZHW5CJIWjwKqq1kqlPhIi-HLipIH9yQX82I9eCg-q87M3-h53OgcHvFYEpsLp-dvsRCbaunegdv0Ornraqhpw_YpHh6kM2krSiQ09iLeOw1qC1wdpTylkk0D2JPuv3MIUcGD-RKVkLF4jIAgVoTjj3Sn1zka7VUNsadHZAof-FmUlAa"/>
-<p class="text-xs font-bold text-center h-8 flex items-center leading-tight">Sliced Sourdough</p>
-<div class="w-full flex items-center justify-between mt-2">
-<span class="font-bold text-sm">$4.20</span>
-<button class="bg-primary text-background-dark p-1.5 rounded-md hover:opacity-90 active:scale-95 transition-transform flex items-center justify-center">
-<span class="material-icons text-sm font-bold">add</span>
-</button>
-</div>
-</div>
-<!-- Product 3 -->
-<div class="min-w-[140px] bg-white dark:bg-slate-800 border border-neutral-gray dark:border-slate-700 rounded-lg p-3 flex flex-col items-center">
-<img class="w-20 h-20 object-contain mb-2" data-alt="Carton of fresh brown eggs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWnjOUraPVB9mRxe8jR5fxT9DozTeGE1uGuaO87OAZPh-N9mwp_dtC32nqkV3yz5_nhb_cW7ugGqOcvQsJiyvXWLQO1dlUHmEZF29B3DmDO7H4v7a7m6SOCoPw9CirChnPgG4Ahmjl01K_onrI_DkyTOdru9uLg5BJltqrvPeHj04wBEf9qCxfV_UrJtmpwRe1hbFsZCz9QwH4MLZPy04iZsVtCrlnfdAsacFOhm-yM1XHI-fyUfs8COjQ0jr22dP0mT3OWmLWKv0L"/>
-<p class="text-xs font-bold text-center h-8 flex items-center leading-tight">Free Range Eggs x12</p>
-<div class="w-full flex items-center justify-between mt-2">
-<span class="font-bold text-sm">$5.50</span>
-<button class="bg-primary text-background-dark p-1.5 rounded-md hover:opacity-90 active:scale-95 transition-transform flex items-center justify-center">
-<span class="material-icons text-sm font-bold">add</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Promotional Strip -->
-<div class="bg-slate-900 dark:bg-primary/20 text-primary dark:text-primary rounded-lg p-3 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<span class="material-icons text-lg">local_shipping</span>
-<p class="text-xs font-bold tracking-tight uppercase">Free delivery on orders over $25</p>
-</div>
-<span class="material-icons text-sm">chevron_right</span>
-</div>
-<!-- Services Grid -->
-<section>
-<h2 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3">Our Services</h2>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-<div class="bg-white dark:bg-slate-800 border-b-4 border-primary rounded-lg p-4 flex flex-col items-center justify-center space-y-2 shadow-sm">
-<div class="bg-background-light dark:bg-slate-700 p-3 rounded-full">
-<span class="material-icons text-slate-900 dark:text-white">home_filled</span>
-</div>
-<span class="text-xs font-bold tracking-tight">HOME DELIVERY</span>
-</div>
-<div class="bg-white dark:bg-slate-800 border-b-4 border-slate-900 dark:border-primary/40 rounded-lg p-4 flex flex-col items-center justify-center space-y-2 shadow-sm">
-<div class="bg-background-light dark:bg-slate-700 p-3 rounded-full">
-<span class="material-icons text-slate-900 dark:text-white">shopping_bag</span>
-</div>
-<span class="text-xs font-bold tracking-tight">CLICK &amp; COLLECT</span>
-</div>
-<div class="bg-white dark:bg-slate-800 border-b-4 border-slate-900 dark:border-primary/40 rounded-lg p-4 flex flex-col items-center justify-center space-y-2 shadow-sm">
-<div class="bg-background-light dark:bg-slate-700 p-3 rounded-full">
-<span class="material-icons text-slate-900 dark:text-white">medical_services</span>
-</div>
-<span class="text-xs font-bold tracking-tight">PHARMACY</span>
-</div>
-<div class="bg-white dark:bg-slate-800 border-b-4 border-slate-900 dark:border-primary/40 rounded-lg p-4 flex flex-col items-center justify-center space-y-2 shadow-sm">
-<div class="bg-background-light dark:bg-slate-700 p-3 rounded-full">
-<span class="material-icons text-slate-900 dark:text-white">receipt_long</span>
-</div>
-<span class="text-xs font-bold tracking-tight">UTILITY BILLS</span>
-</div>
-</div>
-</section>
-<!-- Location Info -->
-<section class="bg-white dark:bg-slate-800 border border-neutral-gray dark:border-slate-700 rounded-lg overflow-hidden">
-<div class="h-32 bg-slate-200 dark:bg-slate-700 relative">
-<img class="w-full h-full object-cover opacity-50 grayscale" data-alt="Abstract map showing city grid" data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBorNkghshwENdUmCTLymmKrXzLPTkC-smROOg4Xk8nQwS5ca7XwOFFuamkVgXrVNDnGolOa8d9ioLCbMdwNpGWOmxGodlmjbBH9OVdPRQ3TKlH3BRl1Vmi9bmBWZwcRJovXSH91xVQdR4ACN-_efAhpRwP6XmZUFPqxr9MdXox0-iZpdhfE5EyNG2JHfbTg-5IrWbCLxCkmL4urwH8hQDaQmBghFsRvRzAk0jW6hAgUfpTqaAwrz-BnA0431WFGocPPqg4bgiHl9fx"/>
-<div class="absolute inset-0 flex items-center justify-center">
-<div class="bg-primary p-2 rounded-full shadow-lg">
-<span class="material-icons text-slate-900">location_on</span>
-</div>
-</div>
-</div>
-<div class="p-4 flex items-center justify-between">
-<div>
-<h3 class="text-sm font-bold">124 Utility Way, SE1 7PB</h3>
-<p class="text-[11px] text-slate-500 font-medium">0.4 miles from your current location</p>
-</div>
-<button class="bg-slate-900 dark:bg-slate-700 text-white p-2 rounded-lg">
-<span class="material-icons text-sm">directions</span>
-</button>
-</div>
-</section>
-</main>
-<!-- Sticky Footer Actions -->
-<footer class="fixed bottom-0 inset-x-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-neutral-gray dark:border-slate-800 px-4 py-4 flex gap-3 shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
-<button class="flex-1 flex items-center justify-center gap-2 py-3.5 bg-slate-900 dark:bg-slate-700 text-white rounded-lg font-bold text-sm tracking-tight active:scale-[0.98] transition-all">
-<span class="material-icons text-lg">call</span>
-            CALL STORE
-        </button>
-<button class="flex-1 flex items-center justify-center gap-2 py-3.5 bg-primary text-slate-900 rounded-lg font-bold text-sm tracking-tight shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
-<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.747-2.874-2.538-2.961-2.654-.087-.116-.708-.943-.708-1.799 0-.856.446-1.274.603-1.448.157-.174.341-.217.454-.217.114 0 .227 0 .326.005.105.004.246-.039.384.293.144.346.492 1.2.535 1.287.043.087.072.188.014.304-.058.116-.087.188-.174.289-.087.101-.183.226-.261.304-.087.087-.179.182-.077.356.101.174.449.741.964 1.2.664.59 1.224.774 1.397.86.174.087.275.072.376-.043.101-.116.435-.506.55-.68.116-.174.232-.144.39-.087.159.058 1.012.477 1.185.564.174.087.289.13.332.202.043.072.043.419-.101.824z"></path>
-</svg>
-            WHATSAPP
-        </button>
-</footer>
-<script src="../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+
+<body class="bg-gray-50">
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <h1 class="text-2xl font-bold">UTILITY<span class="text-green-600">HUB</span></h1>
+                <div class="hidden lg:flex gap-8"><a href="#"
+                        class="text-gray-700 hover:text-green-600 font-medium">Products</a><a href="#"
+                        class="text-gray-700 hover:text-green-600 font-medium">Services</a><a href="#"
+                        class="text-gray-700 hover:text-green-600 font-medium">Contact</a></div><button
+                    class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700">Shop
+                    Now</button>
+            </div>
+        </div>
+    </nav>
+    <section class="py-32 bg-gradient-to-br from-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <h2 class="text-6xl font-bold mb-6">Everything You Need<br />for Your Home</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Quality hardware, tools, and home essentials at
+                great prices</p><button
+                class="bg-green-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700">Browse
+                Products</button>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                {[{name:'Hardware',icon:'handyman'},{name:'Tools',icon:'construction'},{name:'Electrical',icon:'electrical_services'},{name:'Plumbing',icon:'plumbing'}].map(c=>`
+                <div class="p-8 border-2 border-gray-200 rounded-2xl hover:border-green-600 transition-all text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><span
+                            class="material-icons text-green-600 text-3xl">${c.icon}</span></div>
+                    <h3 class="text-xl font-bold mb-2">${c.name}</h3>
+                    <p class="text-gray-600 text-sm">Quality ${c.name.toLowerCase()} supplies</p>
+                </div>`).join('')}</div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">UtilityHub</h3>
+                    <p class="text-sm">Your home essentials store.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Categories</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Hardware</li>
+                        <li>Tools</li>
+                        <li>Electrical</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contact</h4>
+                    <p class="text-sm">(555) 123-4567</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Hours</h4>
+                    <p class="text-sm">Mon-Sat: 8AM-8PM</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© 2024 UtilityHub.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../assets/js/global-enhancement.js"></script>
+</body>
+
+</html>
