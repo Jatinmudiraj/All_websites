@@ -1,264 +1,92 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Premium E-commerce Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Inter"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium E-commerce Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <style>
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  <link rel="stylesheet" href="../../../../assets/css/global-styles.css">
-  <link rel="stylesheet" href="../../../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Premium E-commerce Home">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+    <link rel="stylesheet" href="../../../../assets/css/global-styles.css">
+    <link rel="stylesheet" href="../../../../assets/css/design-enhancements.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased selection:bg-primary/30">
-<!-- Status Bar Spacer (iOS Style) -->
-<div class="h-12 bg-white dark:bg-background-dark sticky top-0 z-50"></div>
-<!-- Header & Search Section -->
-<header class="sticky top-12 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md px-5 pb-4 border-b border-slate-100 dark:border-slate-800">
-<div class="flex items-center justify-between mb-4">
-<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Discover</h1>
-<div class="relative">
-<span class="material-icons-round text-slate-500">notifications_none</span>
-<span class="absolute top-0 right-0 h-2 w-2 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
-</div>
-</div>
-<div class="relative group">
-<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-<span class="material-icons-round text-slate-400 text-xl">search</span>
-</div>
-<input class="block w-full pl-11 pr-4 py-3 bg-slate-100 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary/50 transition-all text-sm placeholder:text-slate-500" placeholder="Search 'Minimalist Watch'..." type="text"/>
-</div>
-</header>
-<main class="pb-24">
-<!-- Promo Banner -->
-<div class="px-5 py-4">
-<div class="w-full h-40 relative rounded-xl overflow-hidden bg-primary/10 flex items-center group">
-<div class="relative z-10 pl-6 w-1/2">
-<span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 block">New Season</span>
-<h2 class="text-xl font-bold leading-tight mb-2">Summer Collection 2024</h2>
-<p class="text-xs text-slate-600 dark:text-slate-400 mb-3">Up to 40% Off select items.</p>
-<button class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-semibold hover:bg-primary/90 transition-colors">Shop Now</button>
-</div>
-<img alt="Summer Collection" class="absolute right-0 top-0 h-full w-3/5 object-cover" data-alt="Fashion model wearing summer collection apparel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuIUVg93iyuz8uPxHyPF81yjAMauK0H2QOBo5RuHp0_DQCcFX-cr2uLd798VYEU-jzhLwTR5qQXophVQ-zSrNaHIpCLhQmEyvYYLWSO7gDzvA3W_X-kS29LYapBIEUE6yxrTogae0zO65PUrvn4wC8mfWZr3NM41hTqDPfo60Lu8Nik0UANxIRh8eaW2bEmu2jAOqfNlcS4ixN3d1p2j5-KI0csP3FjngyGs9g3RLPX323ElRDIuGI6t9sxh74089gawEt73U"/>
-<div class="absolute inset-0 bg-gradient-to-r from-white/80 dark:from-background-dark/80 via-transparent to-transparent pointer-events-none"></div>
-</div>
-</div>
-<!-- Categories -->
-<section class="py-4">
-<div class="flex items-center justify-between px-5 mb-4">
-<h3 class="font-bold text-lg">Categories</h3>
-<button class="text-primary text-sm font-medium">See All</button>
-</div>
-<div class="flex overflow-x-auto hide-scrollbar gap-5 px-5">
-<div class="flex flex-col items-center flex-shrink-0">
-<div class="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-2 hover:bg-primary/10 transition-colors">
-<span class="material-icons-round text-slate-600 dark:text-slate-300">devices</span>
-</div>
-<span class="text-xs font-medium">Electronics</span>
-</div>
-<div class="flex flex-col items-center flex-shrink-0">
-<div class="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-2 hover:bg-primary/10 transition-colors">
-<span class="material-icons-round text-slate-600 dark:text-slate-300">checkroom</span>
-</div>
-<span class="text-xs font-medium">Fashion</span>
-</div>
-<div class="flex flex-col items-center flex-shrink-0">
-<div class="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-2 hover:bg-primary/10 transition-colors">
-<span class="material-icons-round text-slate-600 dark:text-slate-300">chair</span>
-</div>
-<span class="text-xs font-medium">Home</span>
-</div>
-<div class="flex flex-col items-center flex-shrink-0">
-<div class="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-2 hover:bg-primary/10 transition-colors">
-<span class="material-icons-round text-slate-600 dark:text-slate-300">face</span>
-</div>
-<span class="text-xs font-medium">Beauty</span>
-</div>
-<div class="flex flex-col items-center flex-shrink-0">
-<div class="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-2 hover:bg-primary/10 transition-colors">
-<span class="material-icons-round text-slate-600 dark:text-slate-300">fitness_center</span>
-</div>
-<span class="text-xs font-medium">Sports</span>
-</div>
-</div>
-</section>
-<!-- Curated Section -->
-<section class="py-4">
-<div class="flex items-center justify-between px-5 mb-4">
-<h3 class="font-bold text-lg">Curated for You</h3>
-<button class="text-primary text-sm font-medium">Explore</button>
-</div>
-<div class="flex overflow-x-auto hide-scrollbar gap-4 px-5">
-<!-- Product Card 1 -->
-<div class="flex-shrink-0 w-44 group">
-<div class="relative aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-slate-100 dark:bg-slate-800">
-<img alt="Watch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Minimalist luxury white watch on plain background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA23mR4yjQThoCmOJyihG50Pu8_v0iZ7dn9vOSzePlL101mZQun6oWFNyDE92opLk053GbFDeUj7m_9ruhJTE0rJ--682kB5Rgci23GXaXsCDWtFcZgzQge4OQTvv9OQuEPn34S_W8OOKQ3yNH-_APrypD4YuoHYdPGC_dXZfwdsB59v4Pd8sMD6Pkp-KAe22mV-4jc1IyBK2JcLhgscQmYIYhjPXrQkQpSKw5Y8Zwvzy27GNdf0eFtTRp38DhmaGWykr3kZ2w"/>
-<button class="absolute bottom-2 right-2 h-9 w-9 rounded-full bg-primary text-white flex items-center justify-center shadow-lg active:scale-95 transition-transform">
-<span class="material-icons-round text-xl">add</span>
-</button>
-<span class="absolute top-2 left-2 bg-white/90 dark:bg-slate-900/90 text-[10px] font-bold px-2 py-1 rounded text-primary">BESTSELLER</span>
-</div>
-<div class="space-y-1">
-<p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Nomos Glashütte</p>
-<h4 class="text-sm font-semibold truncate">Minimalist White Watch</h4>
-<div class="flex items-center justify-between">
-<span class="font-bold text-primary">$120.00</span>
-<div class="flex items-center text-[10px] text-yellow-500">
-<span class="material-icons-round text-xs">star</span>
-<span class="font-bold text-slate-600 dark:text-slate-400">4.9</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="flex-shrink-0 w-44 group">
-<div class="relative aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-slate-100 dark:bg-slate-800">
-<img alt="Headphones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Sleek black wireless headphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMGsbPT5gj9X-0qiYKAsDq-Y2labhg-YfZzr1w3e49olJp7GIZAdUsXkHTOL_DHvwRSmq0Vqnq1i9qJWc58hwYWa8ISVf72iALy180wWwYw7-fsEsoUF39RA2S2p2V5gmCJncZg7yPWRzu5CpWFYs3L8WVn6-72ATOwrIHyMfXkZOzr53ovj6MJftyt8Li9VwQwvqRbopPQKZZKxlj0EsihqTUo3RbDcG19eV0z6uf9wC1Asd5RS8zXbNb24zE4ryd9BiOUqY"/>
-<button class="absolute bottom-2 right-2 h-9 w-9 rounded-full bg-primary text-white flex items-center justify-center shadow-lg active:scale-95 transition-transform">
-<span class="material-icons-round text-xl">add</span>
-</button>
-</div>
-<div class="space-y-1">
-<p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Acoustic Pro</p>
-<h4 class="text-sm font-semibold truncate">Noise Cancelling Pro</h4>
-<div class="flex items-center justify-between">
-<span class="font-bold text-primary">$299.00</span>
-<div class="flex items-center text-[10px] text-yellow-500">
-<span class="material-icons-round text-xs">star</span>
-<span class="font-bold text-slate-600 dark:text-slate-400">4.8</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Product Card 3 -->
-<div class="flex-shrink-0 w-44 group">
-<div class="relative aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-slate-100 dark:bg-slate-800">
-<img alt="Shoes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vibrant red athletic running shoe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfQ6EpIIhFlAPBS0IVU12aKhSQgimD3WV_zIUjvJmega1D5eCAGWjb57briB6Cv7lbX4ZSU7eJejAkYtxWDPq65GchhYOfOOvMy0K-gjiW971txPjxLWttV-1m_Svldnxq6QgoJ2fhia5ffdZQDEtY7FWsf0fuIdVuAbYCSVCHgCIeZAgDaSy7FupMq2BUwB6ee4Pq6g0EhYWYm36Z8Rduzx-Ymp1jc2HjZSZ7zolvkoqEazYu7XZRfe1VD622CVUakeJLV_8"/>
-<button class="absolute bottom-2 right-2 h-9 w-9 rounded-full bg-primary text-white flex items-center justify-center shadow-lg active:scale-95 transition-transform">
-<span class="material-icons-round text-xl">add</span>
-</button>
-<span class="absolute top-2 left-2 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">20% OFF</span>
-</div>
-<div class="space-y-1">
-<p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Nike Sport</p>
-<h4 class="text-sm font-semibold truncate">Speed Runner X</h4>
-<div class="flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-bold text-primary">$85.00</span>
-<span class="text-[10px] line-through text-slate-400">$106.00</span>
-</div>
-<div class="flex items-center text-[10px] text-yellow-500">
-<span class="material-icons-round text-xs">star</span>
-<span class="font-bold text-slate-600 dark:text-slate-400">4.7</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Featured Section -->
-<section class="py-4 px-5">
-<h3 class="font-bold text-lg mb-4">Trending Now</h3>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
-<div class="aspect-square rounded-lg mb-3 bg-slate-50 dark:bg-slate-900 overflow-hidden">
-<img alt="Lamp" class="w-full h-full object-cover" data-alt="Modern desktop ceramic lamp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3KHxufKYp_pOo9f4lJt3DLszja3blUcACjwGDTLa-aJfEoYe7usAoyPGRY1TuFG07nRYZCoyVhKvWQPWRWh34Mjc35XERgkLMxtlkKII_nCC22DuQR1yA1Bs1cI3TOsc8pR2XkpkXzvca7_nALYIEyxHu4CzsrVamo2F4AEesW6EDP3Vi1b6zfkRBDNS5ShAsWqJtTGaXEPjYHGA5r9p6UwBA_yAf4NzEm38UsBHNI8V4fKPA7Ez0NkN2iOVN-Bnn9Gm_Rug"/>
-</div>
-<h4 class="text-xs font-semibold mb-1">Ceramic Desk Lamp</h4>
-<p class="text-xs font-bold text-primary">$45.00</p>
-</div>
-<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
-<div class="aspect-square rounded-lg mb-3 bg-slate-50 dark:bg-slate-900 overflow-hidden">
-<img alt="Apparel" class="w-full h-full object-cover" data-alt="Stack of minimalist black t-shirts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpJo9uBNx1EDuXz_Yx3h60uVKFSRNhyhcqwa0q-f0v7SFEOjhTs8IeItby_hrWhJMkV7gtWTurPsjR4wSdqnJcf6T5oZGXwtYWRNwmFJGFz6fY2cpvIE7LssT_3291rD766FV7ebDxXsrsTfHulR2bonOo2R0dRtKOFlC4iTCCGYfrfEaShXaCDlWSWnoaCSGqxur2YECHYpxm092ZaXLFEJJu5d8du2ejPD15ftJkXB7DGDqwL1y7IiyGFgXqSONTJrETSBM"/>
-</div>
-<h4 class="text-xs font-semibold mb-1">Essential Tee Pack</h4>
-<p class="text-xs font-bold text-primary">$32.00</p>
-</div>
-</div>
-</section>
-<!-- Shipping Banner -->
-<div class="px-5 py-4">
-<div class="bg-slate-900 dark:bg-primary rounded-xl p-4 flex items-center justify-between overflow-hidden relative">
-<div class="z-10">
-<h4 class="text-white font-bold text-sm">Free Shipping</h4>
-<p class="text-white/70 text-[10px]">On all orders over $50.00 today.</p>
-</div>
-<span class="material-icons-round text-white/20 text-5xl absolute -right-2 top-1 rotate-12">local_shipping</span>
-</div>
-</div>
-</main>
-<!-- Bottom Navigation -->
-<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 pb-8 pt-3 px-6 z-50">
-<div class="flex items-center justify-between max-w-md mx-auto">
-<a class="flex flex-col items-center gap-1 group" href="#">
-<span class="material-icons-round text-primary">home</span>
-<span class="text-[10px] font-bold text-primary">Home</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
-<span class="material-icons-round group-hover:text-slate-600 transition-colors">search</span>
-<span class="text-[10px] font-medium group-hover:text-slate-600 transition-colors">Search</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-400 group relative" href="#">
-<div class="absolute -top-1 -right-1 h-4 w-4 bg-primary text-white text-[9px] flex items-center justify-center rounded-full font-bold">2</div>
-<span class="material-icons-round group-hover:text-slate-600 transition-colors">shopping_bag</span>
-<span class="text-[10px] font-medium group-hover:text-slate-600 transition-colors">Cart</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
-<span class="material-icons-round group-hover:text-slate-600 transition-colors">favorite_border</span>
-<span class="text-[10px] font-medium group-hover:text-slate-600 transition-colors">Wishlist</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
-<span class="material-icons-round group-hover:text-slate-600 transition-colors">person_outline</span>
-<span class="text-[10px] font-medium group-hover:text-slate-600 transition-colors">Profile</span>
-</a>
-</div>
-</nav>
-<script src="../../../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+
+<body class="bg-gray-50">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between mb-4">
+                <h1 class="text-2xl font-bold">Discover</h1>
+                <div class="flex items-center gap-4">
+                    <button class="relative"><span class="material-icons-round">notifications</span><span
+                            class="absolute top-0 right-0 w-2 h-2 bg-blue-500 rounded-full"></span></button>
+                    <button><span class="material-icons-round">shopping_bag</span></button>
+                </div>
+            </div>
+            <div class="relative"><span
+                    class="material-icons-round absolute left-3 top-3 text-gray-400">search</span><input
+                    class="w-full pl-10 pr-4 py-3 bg-gray-100 rounded-xl border-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Search products..." /></div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <div
+            class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
+            <div class="relative z-10 max-w-xl"><span
+                    class="text-sm font-bold uppercase tracking-wider mb-2 block opacity-90">New Season</span>
+                <h2 class="text-4xl font-bold mb-4">Summer Collection 2024</h2>
+                <p class="text-lg mb-6 opacity-90">Up to 40% off on selected items</p><button
+                    class="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">Shop
+                    Now</button>
+            </div>
+            <div class="absolute right-0 top-0 w-1/2 h-full opacity-20"><span
+                    class="material-icons-round text-[300px]">shopping_bag</span></div>
+        </div>
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold mb-6">Categories</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                {['Electronics','Fashion','Home','Beauty','Sports'].map((cat,i)=><div key={i}
+                    class="bg-white p-6 rounded-2xl text-center hover:shadow-xl transition-all cursor-pointer border-2 border-gray-100 hover:border-blue-500">
+                    <span class="material-icons-round text-5xl text-blue-600 mb-3">category</span>
+                    <p class="font-semibold">{cat}</p>
+                </div>)}</div>
+        </section>
+        <section>
+            <h3 class="text-2xl font-bold mb-6">Featured Products</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">{[1,2,3,4,5,6,7,8].map(i=><div key={i}
+                    class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
+                    <div class="aspect-square bg-gray-100 relative overflow-hidden"><img
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            src="https://via.placeholder.com/400" alt="Product" /><button
+                            class="absolute bottom-3 right-3 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700"><span
+                                class="material-icons-round">add</span></button></div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase font-bold mb-1">Brand Name</p>
+                        <h4 class="font-semibold mb-2">Product Title</h4>
+                        <div class="flex items-center justify-between"><span
+                                class="text-lg font-bold text-blue-600">$99.00</span>
+                            <div class="flex items-center text-yellow-500"><span
+                                    class="material-icons-round text-sm">star</span><span
+                                    class="text-sm font-bold text-gray-600 ml-1">4.8</span></div>
+                        </div>
+                    </div>
+                </div>)}</div>
+        </section>
+    </main>
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-gray-200 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-around">
+            {['home','search','shopping_bag','favorite','person'].map((icon,i)=><button key={i} class={`flex flex-col
+                items-center gap-1 ${i===0?'text-blue-600':'text-gray-400 hover:text-gray-600'}`}><span
+                    class="material-icons-round">{icon}</span><span class="text-xs font-medium">{icon.replace('_','
+                    ')}</span></button>)}</div>
+    </nav>
+    <script src="../../../../assets/js/global-enhancement.js"></script>
+</body>
+
+</html>
