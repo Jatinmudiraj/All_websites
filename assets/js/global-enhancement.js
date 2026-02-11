@@ -12,17 +12,10 @@
     const SITE_NAME = getSiteName();
 
     // --- Helper to get path depth ---
-    // To link to assets/pages/about.html, we need to know how deep we are relative to root.
-    // Standard: root/Niche/Site/index.html -> depth 2 -> ../../assets/pages/about.html
-    // But some files might be deeper.
-    // We can use absolute path if on a domain (Github Pages).
-    // Or simpler: Find the `global-styles.css` link and use its base path.
     function getAssetsBasePath() {
         const cssLink = document.querySelector('link[href*="global-styles.css"]');
         if (cssLink) {
             const href = cssLink.getAttribute('href');
-            // href is something like "../../assets/css/global-styles.css"
-            // We want "../../assets/"
             return href.replace('css/global-styles.css', '');
         }
         return '../../assets/'; // Default fallback
@@ -81,17 +74,14 @@
         const nav = document.querySelector('nav');
         if (!nav) return;
 
-        // Look for a link container. md:flex usually.
         const linkContainer = nav.querySelector('.hidden.md\\:flex') || nav.querySelector('ul.flex');
 
         if (linkContainer) {
-            // Check if About Us already exists
             if (linkContainer.innerHTML.toLowerCase().includes('about')) return;
 
             const aboutUrl = `${ASSETS_BASE}pages/about.html?site=${encodeURIComponent(SITE_NAME)}`;
             const contactUrl = `${ASSETS_BASE}pages/contact.html?site=${encodeURIComponent(SITE_NAME)}`;
 
-            // Create generic link style based on first existing link
             const existingLink = linkContainer.querySelector('a');
             const className = existingLink ? existingLink.className : 'hover:text-blue-500 transition-colors font-medium';
 
@@ -105,7 +95,6 @@
             contactLink.className = className;
             contactLink.textContent = "Contact";
 
-            // Append wrapped in li if ul
             if (linkContainer.tagName === 'UL') {
                 const li1 = document.createElement('li'); li1.appendChild(aboutLink);
                 const li2 = document.createElement('li'); li2.appendChild(contactLink);
@@ -118,11 +107,13 @@
         }
     }
 
-    // 4. Footer Injector (If missing or small)
+    // 4. Footer Injector
     function enhanceFooter() {
         const footer = document.querySelector('footer');
-        // If footer doesn't exist, create one
-        if (!footer) {
+        if (!footer || footer.innerText.length < 50) {
+            // Only replace if non-existent or very tiny/empty
+            if (footer) footer.remove();
+
             const newFooter = document.createElement('footer');
             newFooter.className = "bg-gray-900 text-white py-12 mt-24";
             newFooter.innerHTML = `
@@ -161,7 +152,7 @@
         }
     }
 
-    // 5. Mobile Menu (Original)
+    // 5. Mobile Menu
     function initMobileMenu() {
         const desktopLinksContainer = document.querySelector('.hidden.md\\:flex');
         if (desktopLinksContainer) {
@@ -214,19 +205,62 @@
         }
     }
 
+    // 6. Scroll Animations (New)
+    function initScrollAnimations() {
+        // Inject Animation CSS
+        const style = document.createElement('style');
+        style.innerHTML = `
+           .reveal-on-scroll {
+               opacity: 0;
+               transform: translateY(30px);
+               transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+               will-change: opacity, transform;
+           }
+           .reveal-on-scroll.is-visible {
+               opacity: 1;
+               transform: translateY(0);
+           }
+       `;
+        document.head.appendChild(style);
+
+        // Target major elements
+        const elements = document.querySelectorAll('h1, h2, p, img, section > div, .card, article');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        elements.forEach(el => {
+            el.classList.add('reveal-on-scroll');
+            observer.observe(el);
+        });
+    }
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             initMobileMenu();
             enhanceNavigation();
             enhanceFooter();
             // Wait a bit for other scripts to render
-            setTimeout(fixLayout, 100);
+            setTimeout(() => {
+                fixLayout();
+                initScrollAnimations();
+            }, 100);
         });
     } else {
         initMobileMenu();
         enhanceNavigation();
         enhanceFooter();
         fixLayout();
+        initScrollAnimations();
     }
 
     window.addEventListener('resize', fixLayout);
