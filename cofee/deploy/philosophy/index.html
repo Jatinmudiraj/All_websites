@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Philosophy | Aeterna Artisanal Coffee</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "coffee-900": "#221810",
+                    },
+                    fontFamily: {
+                        "sans": ["Outfit", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(34, 24, 16, 0.4), rgba(34, 24, 16, 0.9));
+        }
+
+        .grain-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .cart-sidebar {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cart-sidebar.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#f8f7f6] dark:bg-coffee-900 text-stone-800 dark:text-stone-100 font-sans transition-colors duration-500 overflow-x-hidden">
+
+    <div class="fixed inset-0 grain-overlay z-50"></div>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar"
+        class="fixed inset-y-0 right-0 w-full max-w-md bg-white dark:bg-stone-900 z-[100] cart-sidebar shadow-2xl p-12 flex flex-col">
+        <div class="flex justify-between items-center mb-12">
+            <h2 class="text-3xl font-serif italic text-primary">Your Crate</h2>
+            <button onclick="toggleCart()" class="material-icons opacity-40 hover:opacity-100">close</button>
+        </div>
+        <div class="flex-1 overflow-y-auto space-y-8" id="cart-items">
+            <p class="text-stone-400 font-light italic text-center py-20">Your brew selection is empty.</p>
+        </div>
+        <div class="pt-8 border-t border-white/5 space-y-6">
+            <div class="flex justify-between font-bold uppercase tracking-widest text-xs">
+                <span>Subtotal</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button
+                class="w-full bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-[#b0520e] transition-all">CHECKOUT
+                NOW</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-10 py-8 flex justify-between items-center bg-transparent transition-all duration-500"
+        id="navbar">
+        <div class="flex items-center gap-12">
+            <a class="text-3xl font-bold tracking-tighter uppercase font-serif" href="#">Aeterna<span
+                    class="text-primary italic">.</span></a>
+            <div class="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.4em] font-bold opacity-60">
+                <a class="hover:text-primary transition-colors" href="#">The Roast</a>
+                <a class="hover:text-primary transition-colors" href="#">Origins</a>
+                <a class="hover:text-primary transition-colors" href="#">Brew Guides</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-8">
+            <button
+                class="material-icons opacity-40 hover:opacity-100 hover:text-primary transition-all">search</button>
+            <button onclick="toggleCart()" class="relative group">
+                <span
+                    class="material-icons opacity-40 group-hover:opacity-100 group-hover:text-primary transition-all">shopping_bag</span>
+                <span id="cart-count"
+                    class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-white text-[8px] rounded-full flex items-center justify-center font-bold">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <header class="relative h-screen w-full flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 z-0 scale-110 hero-container">
+                <img class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3oNneP6R92Evk_D0SInTNbib8xxIBLb6cwM_kf8Xsts-PYsYvKQhNpNmAhlHUBcxsMx76QXdMuoQFX4rArtqjVvh8Xz2lRjpQOrSTeCRlIGnSmnweWpxkonkGyY6PGlKSZFYTRjOgzSoMsrbkFp2sSm_BBDGvowX61KG_dJgAZ_jtBN1R3Ik5VXRfnrMyOc8VMyuok9spU3RO_1ipuCsyJMd_2QMwuOwc5B2_ByH8TiGw1hjfko6z5nReJXH6CvVtf-v6llV-NeU" />
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+
+            <div class="relative z-10 px-8 max-w-5xl space-y-12 reveal">
+                <span class="inline-block text-primary uppercase tracking-[0.5em] text-[10px] font-bold">The Art of the
+                    Wait</span>
+                <h1 class="text-6xl md:text-[9rem] font-serif font-light leading-[0.9] text-white">
+                    Brewed Slowly.<br /><span class="italic text-primary">Served Perfectly.</span>
+                </h1>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+                    <button
+                        class="bg-primary text-white px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:shadow-2xl hover:shadow-primary/40 transition-all">DISCOVER
+                        COLLECTION</button>
+                    <button
+                        class="glass text-white px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-coffee-900 transition-all">OUR
+                        STORY</button>
+                </div>
+            </div>
+
+            <!-- Scroll -->
+            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-30">
+                <div class="w-px h-20 bg-gradient-to-b from-primary to-transparent"></div>
+                <span class="text-[9px] uppercase tracking-[0.3em] font-bold">Explore Philosophy</span>
+            </div>
+        </header>
+
+        <!-- Values -->
+        <section class="py-40 bg-stone-100 dark:bg-stone-950 px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-24">
+                <div class="space-y-8 reveal" data-delay="0.1">
+                    <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl group relative">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg9nA58-eTlTHd3fqwxDh0NpnenCW7l1tmjxEjSbRRTeZ-pp855cuLd6nTceeA4tEOvFcPcUyU8j1RUq87LcQZyrfck_RUr-en81OP2f4yRIw2BuDz59NL8Ej7vV_4pIKr2dc8D5vFNi73atzVdn_xZ5T4HsA2u2A9ekZ-3S8TGBftSUsHIdaIHugfhhSlouqzels3e4Kh_-XRuRI-DMbT8dJqSvp_7eWyUP0nb98eTDAyYtmqSneV4NXtw5TgyjwJpJeA25f6LtQ" />
+                    </div>
+                    <h3 class="text-3xl font-serif italic text-primary">The High Altitude</h3>
+                    <p class="text-stone-500 font-light leading-relaxed">Sourced from the misty peaks where the air
+                        slows growth, intensifying every flavor molecule.</p>
+                </div>
+                <div class="space-y-8 reveal" data-delay="0.2">
+                    <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl md:mt-12 group relative">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3OOFkMvltzLsLoHO_54NnEU3NnuDAkNJ82jW2fI_2BHE0bGcnxa6wIuXreCykX-L4T2iwDM0Vxx_NJhgwgMmn9jZzGiMIuMlnP28KcxKiSXLaHLUcUliDgl86oMvwzgVae4yuU3rKwUdoyZZ2ePkNFNGPhp9wLkuCqr-LpvDWqoTx3VPYBAA_0jqR8Aul7eMjePsb-twIM7B63Btf2Jza22mKJVuWp0K9XSrltzg2zQUSbJXpex3oJtF4zSizKwswThBhyxPhQaA" />
+                    </div>
+                    <h3 class="text-3xl font-serif italic text-primary">The Hand-Pick</h3>
+                    <p class="text-stone-500 font-light leading-relaxed">Only the deepest crimson cherries are selected.
+                        A labor of patience that ensures consistent excellence.</p>
+                </div>
+                <div class="space-y-8 reveal" data-delay="0.3">
+                    <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl group relative">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9wuCeWK6ADRhgIG3IFYQqNUTls8eZ-aE08psXTH7Tvi5agPjzPV_mEP2u5JBoByPyIdMBli10FQ21SYBgR1eqOWBV8HMKW9krCQ9Ke9aSQiCf-1DvUyJcUjNgOsaoE9u-EjDBjQBCoVChCSvv1aWeVdlOYRKlJYddvzSxjFvnCWSknrVZygR7rZVawjxWwukcjd5U8TLywjqbEXoY4OYWc5WTVLz0h20IRGWgAbb_hslteuz2IbwwIbET3zhU__DN6Gh0vZvi_pw" />
+                    </div>
+                    <h3 class="text-3xl font-serif italic text-primary">The Sun-Dry</h3>
+                    <p class="text-stone-500 font-light leading-relaxed">Natural processing allows the bean to absorb
+                        the sweet, fruity essence of its own pulp.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drinks Grid -->
+        <section class="py-40 px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-12 mb-32 reveal">
+                <div class="max-w-2xl">
+                    <h2 class="text-6xl md:text-8xl font-serif font-light mb-8">Signature <span
+                            class="italic text-primary">Curations</span></h2>
+                    <p class="text-xl text-stone-500 font-light leading-relaxed">Experience the symphony of notes we've
+                        spent decades perfecting. Each pour is a testament to our commitment.</p>
+                </div>
+                <button class="text-[10px] uppercase tracking-[0.4em] font-bold border-b-2 border-primary pb-2">View All
+                    Offerings</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+                <div class="reveal group" data-delay="0.1">
+                    <div
+                        class="relative aspect-[3/4] overflow-hidden rounded-[2.5rem] mb-8 shadow-2xl bg-white dark:bg-stone-900 flex items-center justify-center p-12">
+                        <img class="w-full drop-shadow-2xl transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMb4f5yyZxuR9ewLbJxqeRnwixanQRbU8XDk4RAZDn6ZtHKw3UMzoB_Hsvg6-9fHIg016oqj6OxGyPtWUCb4qic6qVt3ybwZpg2yTv70vL_Fz_n8xHPCfoBdY4nxiDQRvTxCFp8AbuNhnx4i0wzIfKgrswDaNEIxaw-jGOFHn9X69O1on8HvV2hcml6OLIhpOfQ1Sl1uW7VxZ_YhlA4K5u-vDoW19bQCHeRu046C7uSy2bWqzjEIFaq90vnaRQcIQ8q3vNyW1Piig" />
+                        <button onclick="addToCart('Signature Espresso', 18)"
+                            class="absolute bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl scale-0 group-hover:scale-100 transition-transform flex items-center justify-center hover:bg-[#b0520e]">
+                            <span class="material-icons">add_shopping_cart</span>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="text-3xl font-serif italic mb-2">Signature Espresso</h4>
+                            <p class="text-[9px] uppercase tracking-[0.3em] font-bold text-primary">Ethiopian • Dark
+                                Roast</p>
+                        </div>
+                        <span class="text-2xl font-light">$18.00</span>
+                    </div>
+                </div>
+                <!-- Repeat for more items -->
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="py-40 relative overflow-hidden bg-coffee-900 px-8 border-t border-white/5">
+            <div class="relative z-10 max-w-4xl mx-auto text-center space-y-12 reveal">
+                <h2 class="text-5xl md:text-8xl font-serif font-light text-white italic leading-[1]">Join the Slow Brew
+                    <br /><span class="not-italic">Movement</span></h2>
+                <p class="text-stone-400 text-lg md:text-xl font-light leading-relaxed">Receive seasonal release notes,
+                    brewing secrets from our master roasters, and early access to limited micro-lots.</p>
+                <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4 pt-10"
+                    onsubmit="event.preventDefault(); alert('Subscribed to the movement.')">
+                    <input
+                        class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:border-primary outline-none transition-all placeholder:opacity-20"
+                        placeholder="Your email address" type="email">
+                    <button
+                        class="bg-primary text-white px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-[#b0520e] transition-all">SUBSCRIBE</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-900 py-32 border-t border-white/5 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-20">
+            <div class="space-y-8">
+                <a class="text-4xl font-bold tracking-tighter uppercase font-serif text-white" href="#">Aeterna<span
+                        class="text-primary italic">.</span></a>
+                <p class="text-stone-500 max-w-xs leading-relaxed font-light">Defining the pinnacle of luxury coffee
+                    through patience, precision, and respect for the bean.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-20">
+                <div class="space-y-8">
+                    <h5 class="text-[10px] uppercase tracking-[0.4em] font-bold text-white opacity-30">Atelier</h5>
+                    <p class="text-stone-400 font-light leading-relaxed">42nd Espresso Avenue<br />Manhattan, NY 10012
+                    </p>
+                </div>
+                <div class="space-y-8">
+                    <h5 class="text-[10px] uppercase tracking-[0.4em] font-bold text-white opacity-30">Ritual</h5>
+                    <ul class="space-y-4 text-xs font-bold uppercase tracking-widest text-stone-500">
+                        <li><a href="#" class="hover:text-primary transition-colors">Direct Trade</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Origins</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Guides</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="mt-40 pt-10 border-t border-white/5 text-center text-[9px] uppercase tracking-[0.5em] font-bold opacity-10 text-white">
+            © 2024 Aeterna Coffee Roasters. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Cart Logic
+        let cart = [];
+        const toggleCart = () => document.getElementById('cart-sidebar').classList.toggle('open');
+
+        window.addToCart = (name, price) => {
+            cart.push({ name, price });
+            updateCart();
+            if (!document.getElementById('cart-sidebar').classList.contains('open')) toggleCart();
+        };
+
+        const updateCart = () => {
+            const itemsContainer = document.getElementById('cart-items');
+            const count = document.getElementById('cart-count');
+            const total = document.getElementById('cart-total');
+
+            count.innerText = cart.length;
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = `<p class="text-stone-400 font-light italic text-center py-20">Your brew selection is empty.</p>`;
+                total.innerText = "$0.00";
+            } else {
+                itemsContainer.innerHTML = cart.map((item, i) => `
+                    <div class="flex justify-between items-center group animate-fade-in">
+                        <div>
+                            <h4 class="font-serif italic text-lg leading-tight">${item.name}</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">$${item.price.toFixed(2)}</p>
+                        </div>
+                        <button onclick="cart.splice(${i}, 1); updateCart();" class="material-icons text-sm opacity-20 hover:opacity-100 hover:text-red-500">delete</button>
+                    </div>
+                `).join('');
+
+                const sum = cart.reduce((acc, curr) => acc + curr.price, 0);
+                total.innerText = `$${sum.toFixed(2)}`;
+            }
+        };
+
+        // Animations
+        window.addEventListener('load', () => {
+            initAnimations();
+        });
+
+        function initAnimations() {
+            document.querySelectorAll('.reveal').forEach((el) => {
+                const delay = el.dataset.delay || 0;
+                gsap.to(el, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.5,
+                    delay: delay,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%",
+                    }
+                });
+            });
+
+            gsap.to('.hero-container', {
+                y: 100,
+                scrollTrigger: {
+                    trigger: 'body',
+                    start: "top top",
+                    scrub: 1
+                }
+            });
+        }
+
+        // Navbar Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-coffee-900/90', 'backdrop-blur-xl', 'py-6');
+                nav.classList.remove('py-8');
+            } else {
+                nav.classList.remove('bg-coffee-900/90', 'backdrop-blur-xl', 'py-6');
+                nav.classList.add('py-8');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Premium Bean | Ethiopia Yirgacheffe G1</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "stone-950": "#0c0a09",
+                    },
+                    fontFamily: {
+                        "sans": ["Outfit", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .light .glass-card {
+            background: rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .gallery-thumb.active {
+            border-color: #d46211;
+            opacity: 1;
+        }
+
+        .parallax {
+            will-change: transform;
+        }
+
+        @keyframes toast-in {
+            from {
+                transform: translateY(100%) scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .toast {
+            animation: toast-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#fdfaf7] dark:bg-stone-950 text-stone-800 dark:text-stone-200 font-sans transition-colors duration-500 overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav
+        class="sticky top-0 z-50 px-8 py-6 flex justify-between items-center bg-[#fdfaf7]/80 dark:bg-stone-950/80 backdrop-blur-xl border-b border-stone-200 dark:border-stone-800">
+        <div class="text-2xl font-bold tracking-tighter text-primary group cursor-pointer">
+            PREMIUM <span class="font-serif italic font-normal text-stone-800 dark:text-stone-200">Bean</span>
+        </div>
+        <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">
+            <a class="hover:text-primary transition-colors hover:opacity-100" href="#">Origins</a>
+            <a class="hover:text-primary transition-colors hover:opacity-100" href="#">Equipment</a>
+            <a class="hover:text-primary transition-colors hover:opacity-100" href="#">The Journal</a>
+            <a class="hover:text-primary transition-colors hover:opacity-100" href="#">Our Story</a>
+        </div>
+        <div class="flex items-center space-x-6">
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+                <span class="material-icons text-xl dark:hidden">dark_mode</span>
+                <span class="material-icons text-xl hidden dark:block">light_mode</span>
+            </button>
+            <span class="material-icons cursor-pointer opacity-60 hover:opacity-100 transition-opacity">search</span>
+            <div class="relative group cursor-pointer">
+                <span class="material-icons opacity-60 group-hover:opacity-100 transition-opacity">shopping_bag</span>
+                <span id="cart-count"
+                    class="absolute -top-2 -right-2 bg-primary text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 md:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+
+            <!-- Gallery -->
+            <div class="space-y-8 reveal">
+                <div
+                    class="aspect-[4/5] w-full overflow-hidden rounded-[2rem] relative group bg-stone-100 dark:bg-stone-900 shadow-2xl">
+                    <img id="main-image" class="w-full h-full object-cover transition-all duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuClQqqAiRxUyWbPiG77_SJXwzBZhAbP8qerDFWN8TyOV228MNf0gKVAKnKbKJQwNfEpQXeYLNw0gg8uEGJGrYP-dzJGwaiY32hU1MoCt8KRVLtpVpED-XEunW4WSkCNqSj37yXJzFkNikwSGtdMw-5iUS96XS2GK3oWBD3v0DZtzJDaYzU8ESRUucSGfilAuxNUalrsQTBoXoqk4gqKTQWJd2D2N7Vev_k9LrQ2q5LmiukR6C3oAkCKqb9ri4sPQzDW4vl-Z_UheDE" />
+                    <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+                    <div class="absolute top-8 left-8">
+                        <span
+                            class="bg-primary text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest backdrop-blur-md">Exclusive
+                            Batch</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 gap-6">
+                    <button
+                        class="gallery-thumb active aspect-square rounded-2xl overflow-hidden border-2 border-primary/20 transition-all opacity-60 hover:opacity-100"
+                        data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuClQqqAiRxUyWbPiG77_SJXwzBZhAbP8qerDFWN8TyOV228MNf0gKVAKnKbKJQwNfEpQXeYLNw0gg8uEGJGrYP-dzJGwaiY32hU1MoCt8KRVLtpVpED-XEunW4WSkCNqSj37yXJzFkNikwSGtdMw-5iUS96XS2GK3oWBD3v0DZtzJDaYzU8ESRUucSGfilAuxNUalrsQTBoXoqk4gqKTQWJd2D2N7Vev_k9LrQ2q5LmiukR6C3oAkCKqb9ri4sPQzDW4vl-Z_UheDE">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuClQqqAiRxUyWbPiG77_SJXwzBZhAbP8qerDFWN8TyOV228MNf0gKVAKnKbKJQwNfEpQXeYLNw0gg8uEGJGrYP-dzJGwaiY32hU1MoCt8KRVLtpVpED-XEunW4WSkCNqSj37yXJzFkNikwSGtdMw-5iUS96XS2GK3oWBD3v0DZtzJDaYzU8ESRUucSGfilAuxNUalrsQTBoXoqk4gqKTQWJd2D2N7Vev_k9LrQ2q5LmiukR6C3oAkCKqb9ri4sPQzDW4vl-Z_UheDE" />
+                    </button>
+                    <button
+                        class="gallery-thumb aspect-square rounded-2xl overflow-hidden border-2 border-transparent transition-all opacity-40 hover:opacity-100"
+                        data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS3HJQrouEc_o9LPC_4kkxcTPsMOwO0q06fOWqon15uTgaM9ZF_8eftY9d1ZJ5s8hxz26f9iM0bSiQjm_77b6P1lwghn-hlLUZ0BBNElLMd4Q0ygPosFJmC_dxIB4hcSHd4iTQ1KpbCzF2qV1h6LeJlIjk1Qxi2xJrLuDmDnC0FKvw7iZg5WZU5ADFtpIrDQmWglhOJlbYt1Whpyi1_7kQKP84V-QhmjkrsfCcwhD8PGc0tkU3k25XptMMn2hYpkkdWLVowO4YgUQ">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS3HJQrouEc_o9LPC_4kkxcTPsMOwO0q06fOWqon15uTgaM9ZF_8eftY9d1ZJ5s8hxz26f9iM0bSiQjm_77b6P1lwghn-hlLUZ0BBNElLMd4Q0ygPosFJmC_dxIB4hcSHd4iTQ1KpbCzF2qV1h6LeJlIjk1Qxi2xJrLuDmDnC0FKvw7iZg5WZU5ADFtpIrDQmWglhOJlbYt1Whpyi1_7kQKP84V-QhmjkrsfCcwhD8PGc0tkU3k25XptMMn2hYpkkdWLVowO4YgUQ" />
+                    </button>
+                    <button
+                        class="gallery-thumb aspect-square rounded-2xl overflow-hidden border-2 border-transparent transition-all opacity-40 hover:opacity-100"
+                        data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMgmKpqU4jss3xGlz5XiYYDq4V9LPSg0Ax1CFETQbCSPKtFldqYwmbtj9UfDjXYhxohQokbnrp5P3OhzWjhq0f_BxGnFP6RFkQSylkYeQI2I4O_Ccm4aD8LbmYLRuJ8BqTxcCvNWNcCG0V-ralDcs9Bl7D1jGJYGROLV2MP6VgW7i0wG3PrxiVxwEg2oYEnqD-USlOG1-2Aw0gCt40LLwaR2xYrmQIQW0nPbGuFdXqmNv6FV0n_CMi5xvnWDhQq8Pke4GNqNcXcZM">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMgmKpqU4jss3xGlz5XiYYDq4V9LPSg0Ax1CFETQbCSPKtFldqYwmbtj9UfDjXYhxohQokbnrp5P3OhzWjhq0f_BxGnFP6RFkQSylkYeQI2I4O_Ccm4aD8LbmYLRuJ8BqTxcCvNWNcCG0V-ralDcs9Bl7D1jGJYGROLV2MP6VgW7i0wG3PrxiVxwEg2oYEnqD-USlOG1-2Aw0gCt40LLwaR2xYrmQIQW0nPbGuFdXqmNv6FV0n_CMi5xvnWDhQq8Pke4GNqNcXcZM" />
+                    </button>
+                    <div
+                        class="aspect-square rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 flex items-center justify-center bg-stone-100 dark:bg-stone-900 group cursor-pointer">
+                        <span
+                            class="material-icons text-stone-400 group-hover:text-primary transition-colors">play_circle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details -->
+            <div class="space-y-12">
+                <div class="reveal" data-delay="0.1">
+                    <span
+                        class="text-primary tracking-[0.4em] uppercase text-xs font-bold bg-primary/10 px-4 py-2 rounded-full ring-1 ring-primary/20">Washed
+                        Process</span>
+                    <h1 class="text-6xl md:text-8xl font-serif mt-8 leading-[0.9]">Ethiopia <br /><span
+                            class="italic text-primary">Yirgacheffe G1</span></h1>
+                    <div class="flex items-center gap-6 mt-8">
+                        <p class="text-4xl font-light text-stone-500 dark:text-stone-400" id="product-price">$42.00</p>
+                        <div class="flex items-center text-primary">
+                            <span class="material-icons text-sm">star</span>
+                            <span class="material-icons text-sm">star</span>
+                            <span class="material-icons text-sm">star</span>
+                            <span class="material-icons text-sm">star</span>
+                            <span class="material-icons text-sm">star</span>
+                            <span class="text-xs font-bold ml-2 uppercase tracking-widest opacity-60">128 Reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8 reveal" data-delay="0.2">
+                    <p class="text-xl leading-relaxed text-stone-600 dark:text-stone-400 font-light italic">
+                        "A floral explosion with delicate citrus clarity. Harvested from the high-altitude misty slopes
+                        of Gedeo, this lot represents the pinnacle of washed processing."
+                    </p>
+
+                    <div class="glass-card rounded-[2.5rem] p-10 space-y-8">
+                        <h3 class="uppercase tracking-[0.3em] text-[10px] font-bold opacity-40">Tasting Profile</h3>
+                        <div class="space-y-6">
+                            <div class="space-y-3">
+                                <div class="flex justify-between text-[10px] uppercase tracking-widest font-bold">
+                                    <span>Acidity</span>
+                                    <span class="text-primary italic">High / Bright</span>
+                                </div>
+                                <div class="h-1 bg-stone-200 dark:bg-stone-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[85%] rounded-full shadow-[0_0_10px_#d46211]"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex justify-between text-[10px] uppercase tracking-widest font-bold">
+                                    <span>Body</span>
+                                    <span class="text-primary italic">Light / Tea-like</span>
+                                </div>
+                                <div class="h-1 bg-stone-200 dark:bg-stone-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[30%] rounded-full shadow-[0_0_10px_#d46211]"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/5">
+                            <div class="text-center group">
+                                <div
+                                    class="w-12 h-12 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all mb-3 shadow-inner">
+                                    <span class="material-icons text-xl">local_florist</span>
+                                </div>
+                                <p class="text-[9px] uppercase tracking-widest font-bold opacity-60">Jasmine</p>
+                            </div>
+                            <div class="text-center group">
+                                <div
+                                    class="w-12 h-12 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all mb-3 shadow-inner">
+                                    <span class="material-icons text-xl">energy_savings_leaf</span>
+                                </div>
+                                <p class="text-[9px] uppercase tracking-widest font-bold opacity-60">Bergamot</p>
+                            </div>
+                            <div class="text-center group">
+                                <div
+                                    class="w-12 h-12 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all mb-3 shadow-inner">
+                                    <span class="material-icons text-xl">restaurant</span>
+                                </div>
+                                <p class="text-[9px] uppercase tracking-widest font-bold opacity-60">Peach</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Options -->
+                <div class="space-y-10 reveal" data-delay="0.3">
+                    <div class="space-y-4">
+                        <label class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">Weight
+                            Preference</label>
+                        <div class="flex gap-4" id="weight-selector">
+                            <button
+                                class="weight-btn active px-8 py-3 rounded-full border-2 border-primary text-primary font-bold text-xs uppercase tracking-widest transition-all"
+                                data-price="42.00">250g</button>
+                            <button
+                                class="weight-btn px-8 py-3 rounded-full border-2 border-transparent bg-stone-100 dark:bg-stone-900 font-bold text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-all"
+                                data-price="78.00">500g</button>
+                            <button
+                                class="weight-btn px-8 py-3 rounded-full border-2 border-transparent bg-stone-100 dark:bg-stone-900 font-bold text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-all"
+                                data-price="145.00">1kg</button>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <label class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">Grind
+                            Strategy</label>
+                        <div class="relative">
+                            <select
+                                class="w-full bg-stone-100 dark:bg-stone-900 border-none rounded-2xl py-4 px-6 text-xs font-bold uppercase tracking-widest focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+                                <option>Whole Bean (Recommended)</option>
+                                <option>V60 Pour Over</option>
+                                <option>Aeropress</option>
+                                <option>French Press</option>
+                                <option>Cold Brew</option>
+                            </select>
+                            <span
+                                class="material-icons absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none opacity-40">expand_more</span>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button id="add-to-cart"
+                            class="flex-1 bg-primary text-white py-6 rounded-2xl text-xs uppercase tracking-[0.4em] font-bold hover:bg-[#b0520e] transition-all transform active:scale-[0.98] shadow-2xl shadow-primary/30 flex items-center justify-center gap-3">
+                            <span class="material-icons text-lg">shopping_bag</span>
+                            ADD TO BREW LIST
+                        </button>
+                        <button
+                            class="w-16 h-16 rounded-2xl border-2 border-stone-200 dark:border-stone-800 flex items-center justify-center hover:text-primary transition-colors">
+                            <span class="material-icons">favorite_border</span>
+                        </button>
+                    </div>
+
+                    <p
+                        class="text-center text-[9px] uppercase tracking-[0.3em] font-bold opacity-30 flex items-center justify-center gap-2">
+                        <span class="material-icons text-sm">verified_user</span>
+                        Sustainably Sourced & Hand-Roasted in Brooklyn
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-48 grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+            <div class="lg:col-span-12 text-center mb-12 reveal">
+                <h2 class="text-5xl md:text-7xl font-serif">The Heritage of <span
+                        class="italic text-primary">Gedeo</span></h2>
+            </div>
+            <div class="lg:col-span-5 space-y-10 reveal" data-delay="0.1">
+                <p class="text-2xl font-light italic leading-snug">"Each cherry is hand-sorted at the washing station to
+                    ensure only the most perfectly ripe fruit enters production."</p>
+                <div class="space-y-6 text-stone-500 dark:text-stone-400 leading-loose font-light">
+                    <p>Grown at an altitude of 2,100 meters above sea level, the cool nights and rich volcanic soil
+                        create a slow maturation process, condensing the floral and citrus sugars within the bean.</p>
+                    <p>This meticulous attention to detail is what gives our Yirgacheffe its legendary clarity and
+                        complex tea-like structure.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-10 pt-10 border-t border-stone-200 dark:border-stone-800">
+                    <div class="space-y-2">
+                        <span class="block text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">Process</span>
+                        <span class="text-xl font-serif italic text-primary">Fully Washed</span>
+                    </div>
+                    <div class="space-y-2">
+                        <span class="block text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">Variety</span>
+                        <span class="text-xl font-serif italic text-primary">Heirloom</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 aspect-[16/10] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] reveal"
+                data-delay="0.2">
+                <img class="w-full h-full object-cover parallax"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8jM-8VpGpEdXBKaWABi4cDzqpkxJgUeGV_trEvUtws5RazoIWk00d6AtL01DEeHlYWX4Qj9z7GyDDg7I4cS74vJy3heKyUp-nNOaQzaaR9v-q3G3-5NImVN0TUr2I9iS0T2KrbGhhQgDzB72Z1D62HDVXwU1kanQmnBCMcMpZR4sRf2U7wUXFHeskydgZ4PHGNaKIc3lEsZ63G_JNl1FczCeokJSDXYdnGGIr0lyZqqy9SPwsfsF_eCRG_nXCChvgio3WFn0d6UI" />
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] flex flex-col gap-4"></div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Entry Animations
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.reveal').forEach((el, i) => {
+                const delay = el.dataset.delay || 0;
+                gsap.to(el, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    delay: delay,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%",
+                    }
+                });
+            });
+
+            gsap.to('.parallax', {
+                y: -50,
+                scrollTrigger: {
+                    trigger: '.parallax',
+                    start: "top bottom",
+                    scrub: 1
+                }
+            });
+        });
+
+        // Gallery Logic
+        const mainImg = document.getElementById('main-image');
+        document.querySelectorAll('.gallery-thumb').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.gallery-thumb').forEach(b => b.classList.remove('active', 'opacity-60'));
+                btn.classList.add('active');
+                gsap.to(mainImg, {
+                    opacity: 0,
+                    duration: 0.3,
+                    onComplete: () => {
+                        mainImg.src = btn.dataset.src;
+                        gsap.to(mainImg, { opacity: 1, duration: 0.5 });
+                    }
+                });
+            });
+        });
+
+        // Price & Weight Logic
+        const priceEl = document.getElementById('product-price');
+        document.querySelectorAll('.weight-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.weight-btn').forEach(b => {
+                    b.classList.remove('active', 'border-primary', 'text-primary');
+                    b.classList.add('border-transparent', 'opacity-60');
+                });
+                btn.classList.add('active', 'border-primary', 'text-primary');
+                btn.classList.remove('border-transparent', 'opacity-60');
+
+                gsap.to(priceEl, {
+                    opacity: 0,
+                    y: -10,
+                    duration: 0.2,
+                    onComplete: () => {
+                        priceEl.innerText = `$${btn.dataset.price}`;
+                        gsap.to(priceEl, { opacity: 1, y: 0, duration: 0.4 });
+                    }
+                });
+            });
+        });
+
+        // Cart Logic
+        let cartCount = 0;
+        const countEl = document.getElementById('cart-count');
+        const addBtn = document.getElementById('add-to-cart');
+        const toastContainer = document.getElementById('toast-container');
+
+        addBtn.addEventListener('click', () => {
+            cartCount++;
+            countEl.innerText = cartCount;
+            gsap.from(countEl, { scale: 1.5, duration: 0.3, ease: "back.out" });
+
+            showToast("Added to Brew List!");
+        });
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = "toast bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-950 px-8 py-4 rounded-2xl shadow-2xl font-bold uppercase tracking-widest text-[10px] flex items-center gap-3";
+            toast.innerHTML = `<span class="material-icons text-primary">check_circle</span> ${msg}`;
+            toastContainer.appendChild(toast);
+
+            setTimeout(() => {
+                gsap.to(toast, {
+                    opacity: 0,
+                    y: -20,
+                    duration: 0.5,
+                    onComplete: () => toast.remove()
+                });
+            }, 3000);
+        }
+
+        // Theme Toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            document.documentElement.classList.toggle('light');
+        });
+    </script>
+</body>
+
+</html>
