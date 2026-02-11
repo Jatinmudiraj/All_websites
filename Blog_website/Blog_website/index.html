@@ -1,201 +1,422 @@
 <!DOCTYPE html>
+<html class="light" lang="en">
 
-<html class="light" lang="en"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Article Reading View</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "primary": "#137fec",
-                "background-light": "#f6f7f8",
-                "background-dark": "#101922",
-              },
-              fontFamily: {
-                "display": ["Inter", "sans-serif"]
-              },
-              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-            },
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <title>The Future of Sustainable Urban Design | ArchDigest</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#ffffff",
+            "surface-light": "#f8fafc",
           },
-        }
-      </script>
-<style>
+          fontFamily: {
+            "sans": ["Inter", "sans-serif"],
+            "serif": ["Playfair Display", "serif"]
+          },
+        },
+      },
+    }
+  </script>
+  <style>
     body {
-      min-height: max(884px, 100dvh);
+      background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+      min-height: 100vh;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #137fec, #3b82f6);
+      z-index: 9999;
+      transition: width 0.1s ease;
+      box-shadow: 0 0 10px rgba(19, 127, 236, 0.5);
+    }
+
+    article p {
+      line-height: 1.8;
+      font-size: 1.125rem;
+    }
+
+    article h2 {
+      scroll-margin-top: 100px;
     }
   </style>
   <link rel="stylesheet" href="../../assets/css/global-styles.css">
   <link rel="stylesheet" href="../../assets/css/design-enhancements.css">
-  <meta name="theme-color" content="#3b82f6">
-  <meta property="og:title" content="Article Reading View">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Premium website theme with modern design">
+  <meta name="theme-color" content="#137fec">
+  <meta property="og:title" content="The Future of Sustainable Urban Design">
+  <meta property="og:type" content="article">
+  <meta property="og:description"
+    content="Urban environments are shifting from concrete jungles to integrated ecosystems">
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
-<!-- Reading Progress Bar (Fixed) -->
-<div class="fixed top-0 left-0 w-full h-1 bg-primary/10 z-50">
-<div class="h-full bg-primary w-1/3 transition-all duration-300"></div>
-</div>
-<!-- iOS Top Navigation Bar -->
-<nav class="sticky top-0 z-40 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-<div class="flex items-center justify-between px-4 py-3">
-<button class="flex items-center text-primary">
-<span class="material-icons">chevron_left</span>
-<span class="text-sm font-medium">Back</span>
-</button>
-<div class="flex items-center space-x-4">
-<button class="text-slate-600 dark:text-slate-400">
-<span class="material-icons text-[20px]">share</span>
-</button>
-<button class="text-slate-600 dark:text-slate-400">
-<span class="material-icons text-[20px]">bookmark_border</span>
-</button>
-</div>
-</div>
-</nav>
-<main class="max-w-md mx-auto bg-white dark:bg-background-dark min-h-screen">
-<!-- Hero Section -->
-<header class="p-6">
-<div class="flex items-center space-x-2 mb-3">
-<span class="bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">Architecture</span>
-<span class="text-slate-400 text-xs font-medium">5 min read</span>
-</div>
-<h1 class="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">
-                The Future of Sustainable Urban Design in 2024
-            </h1>
-<div class="mt-4 flex items-center space-x-3">
-<img alt="Author" class="w-8 h-8 rounded-full object-cover" data-alt="Close up professional headshot of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpcGG3DTnqQZoiCr1XtX7isuhaNPAjHqdl2xiUHF_d53f1DJF7YI-xWZg4nJdR9K339Gdh6HADe0Be8JJLJMsSVCNthaeMnYG0l0ZLmSWHtXn3W01Rb2uHxkZq6i5XMtZiBzKe_6Tq3Qnaw3qRHyd9sKmVCzFVq_cWTH23RChuVj0WrvJC3fhEEMW-J1cnMcsi-wt4iQ-Ps9OeMzYCulxUbEQB4CKnDQySDOHfSDkMC69giyiKn255_NBKnD3ZxVvipiS-sCGukeY"/>
-<div class="flex flex-col">
-<span class="text-sm font-semibold">David Chen</span>
-<span class="text-[11px] text-slate-500">Jan 12, 2024</span>
-</div>
-</div>
-</header>
-<div class="relative w-full aspect-[16/9]">
-<img class="w-full h-full object-cover" data-alt="Modern cityscape with sustainable greenery on buildings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlkBSjjjo43oPAFmkp6ISPQOW9iwcaPQICS73Sm0McCTOjTz4uV5K3_6jqyXASNEixmaeZNq1Slo7wuXz9L06B5iQgdjGEwnRGLBUOtadGBwleB0p932ODbikIicuzFrGFNWjjZmErNMyCGT6_04Wf1yw8xlK2J2uxaJAHSOcAu4kPyqwEs0lkkN8LtU8ymAbW942Q6RKqSU4MUFb1IEc7vQKccWR_lwednCXcpacAP9TEVPcwR9IT_XApr1-rDQhnNeke4PhF-Jo"/>
-</div>
-<!-- Table of Contents Dropdown -->
-<div class="px-6 py-4">
-<details class="group border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
-<summary class="flex items-center justify-between p-4 cursor-pointer list-none bg-slate-50 dark:bg-slate-900/50">
-<span class="text-sm font-semibold flex items-center">
-<span class="material-icons text-primary mr-2 text-sm">list</span>
-                        Table of Contents
-                    </span>
-<span class="material-icons text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="p-4 pt-0 bg-slate-50 dark:bg-slate-900/50">
-<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">1. The Rise of Vertical Forests</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">2. Circular Material Sourcing</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">3. Community-Centric Planning</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">4. Technology in Smart Cities</a></li>
-</ul>
-</div>
-</details>
-</div>
-<!-- Article Content -->
-<article class="px-6 py-4 prose prose-slate dark:prose-invert">
-<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 mb-6">
-                Urban environments are shifting from concrete jungles to integrated ecosystems. As we face global climate challenges, the way we design our cities is no longer just about aesthetics—it's about survival.
+
+<body class="bg-background-light font-sans text-gray-900 antialiased">
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" style="width: 33%"></div>
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+    <div class="max-w-4xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center text-primary hover:text-blue-600 transition-colors group">
+        <span class="material-icons group-hover:-translate-x-1 transition-transform">chevron_left</span>
+        <span class="text-sm font-semibold ml-1">All Articles</span>
+      </a>
+
+      <div class="flex items-center space-x-2">
+        <button
+          class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-all">
+          <span class="material-icons text-[20px]">share</span>
+        </button>
+        <button
+          class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-all">
+          <span class="material-icons text-[20px]">bookmark_border</span>
+        </button>
+        <button
+          class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-all">
+          <span class="material-icons text-[20px]">more_vert</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+
+    <!-- Article Header -->
+    <header class="mb-12">
+      <div class="flex items-center space-x-3 mb-6">
+        <span
+          class="bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border border-primary/20">Architecture</span>
+        <span class="text-gray-500 text-sm font-medium flex items-center gap-1">
+          <span class="material-icons text-sm">schedule</span>
+          8 min read
+        </span>
+        <span class="text-gray-400 text-sm">•</span>
+        <span class="text-gray-500 text-sm">Jan 12, 2024</span>
+      </div>
+
+      <h1 class="font-serif text-5xl md:text-6xl font-bold leading-tight tracking-tight text-gray-900 mb-8">
+        The Future of Sustainable Urban Design in 2024
+      </h1>
+
+      <p class="text-xl text-gray-600 leading-relaxed mb-8">
+        Urban environments are shifting from concrete jungles to integrated ecosystems. As we face global climate
+        challenges, the way we design our cities is no longer just about aesthetics—it's about survival.
+      </p>
+
+      <!-- Author Info -->
+      <div class="flex items-center justify-between py-6 border-y border-gray-200">
+        <div class="flex items-center space-x-4">
+          <img alt="David Chen" class="w-14 h-14 rounded-full object-cover border-2 border-gray-200 shadow-md"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpcGG3DTnqQZoiCr1XtX7isuhaNPAjHqdl2xiUHF_d53f1DJF7YI-xWZg4nJdR9K339Gdh6HADe0Be8JJLJMsSVCNthaeMnYG0l0ZLmSWHtXn3W01Rb2uHxkZq6i5XMtZiBzKe_6Tq3Qnaw3qRHyd9sKmVCzFVq_cWTH23RChuVj0WrvJC3fhEEMW-J1cnMcsi-wt4iQ-Ps9OeMzYCulxUbEQB4CKnDQySDOHfSDkMC69giyiKn255_NBKnD3ZxVvipiS-sCGukeY" />
+          <div>
+            <p class="text-base font-bold text-gray-900">David Chen</p>
+            <p class="text-sm text-primary font-medium">Sustainability Architect</p>
+          </div>
+        </div>
+
+        <div class="flex space-x-2">
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-200 transition-all">
+            <span class="material-icons text-sm">public</span>
+          </a>
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-200 transition-all">
+            <span class="material-icons text-sm">alternate_email</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-12 shadow-xl">
+      <img class="w-full h-full object-cover" alt="Modern sustainable architecture"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlkBSjjjo43oPAFmkp6ISPQOW9iwcaPQICS73Sm0McCTOjTz4uV5K3_6jqyXASNEixmaeZNq1Slo7wuXz9L06B5iQgdjGEwnRGLBUOtadGBwleB0p932ODbikIicuzFrGFNWjjZmErNMyCGT6_04Wf1yw8xlK2J2uxaJAHSOcAu4kPyqwEs0lkkN8LtU8ymAbW942Q6RKqSU4MUFb1IEc7vQKccWR_lwednCXcpacAP9TEVPcwR9IT_XApr1-rDQhnNeke4PhF-Jo" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Table of Contents -->
+    <details class="group mb-12 border border-gray-200 rounded-2xl overflow-hidden bg-surface-light">
+      <summary
+        class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-gray-50 transition-colors">
+        <span class="text-base font-bold flex items-center text-gray-900">
+          <span class="material-icons text-primary mr-3">list</span>
+          Table of Contents
+        </span>
+        <span class="material-icons text-gray-400 transition-transform group-open:rotate-180">expand_more</span>
+      </summary>
+      <div class="px-6 pb-6">
+        <ul class="space-y-4 text-base">
+          <li><a class="text-gray-600 hover:text-primary transition-colors flex items-center gap-2 group"
+              href="#vertical-forests">
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              1. The Rise of Vertical Forests
+            </a></li>
+          <li><a class="text-gray-600 hover:text-primary transition-colors flex items-center gap-2 group"
+              href="#circular-materials">
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              2. Circular Material Sourcing
+            </a></li>
+          <li><a class="text-gray-600 hover:text-primary transition-colors flex items-center gap-2 group"
+              href="#community-planning">
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              3. Community-Centric Planning
+            </a></li>
+          <li><a class="text-gray-600 hover:text-primary transition-colors flex items-center gap-2 group"
+              href="#smart-cities">
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              4. Technology in Smart Cities
+            </a></li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Article Content -->
+    <article class="prose prose-lg max-w-none">
+      <p
+        class="text-xl leading-relaxed text-gray-700 mb-8 first-letter:text-6xl first-letter:font-bold first-letter:text-primary first-letter:mr-3 first-letter:float-left">
+        The concept of the "15-minute city" has gained traction, but the next evolution goes further. We are seeing a
+        complete reimagining of materials, from carbon-absorbing concrete to self-healing asphalt. These innovations
+        aren't just theoretical—they're being deployed in cities worldwide.
+      </p>
+
+      <blockquote
+        class="my-12 border-l-4 border-primary pl-8 py-4 bg-gradient-to-r from-blue-50 to-transparent rounded-r-2xl">
+        <p class="text-2xl font-serif font-medium text-gray-900 leading-snug italic mb-3">
+          "Sustainable design isn't a feature we add to buildings; it is the very foundation upon which we must build
+          our future cities."
+        </p>
+        <footer class="text-sm text-gray-600 not-italic">— Dr. Jane Morrison, Urban Ecologist</footer>
+      </blockquote>
+
+      <h2 id="vertical-forests" class="text-4xl font-serif font-bold mb-6 text-gray-900 mt-16">The Rise of Vertical
+        Forests</h2>
+
+      <p class="text-lg leading-relaxed text-gray-700 mb-6">
+        Architects are now incorporating massive biological systems into the structural framework of skyscrapers. These
+        "vertical forests" don't just provide shade; they act as active lungs for the city, filtering pollutants and
+        regulating temperature.
+      </p>
+
+      <div class="my-10 p-8 bg-blue-50 border border-blue-100 rounded-2xl">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-primary">info</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Key Insight</h3>
+            <p class="text-base text-gray-700 leading-relaxed">
+              In Milan, the Bosco Verticale has served as a blueprint for projects globally. By integrating thousands of
+              trees and shrubs, the building manages to capture CO2 and produce oxygen, creating a microclimate that
+              benefits the entire district.
             </p>
-<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 mb-8">
-                The concept of the "15-minute city" has gained traction, but the next evolution goes further. We are seeing a complete reimagining of materials, from carbon-absorbing concrete to self-healing asphalt.
-            </p>
-<!-- Pull Quote -->
-<blockquote class="my-10 border-l-4 border-primary pl-6 py-2 italic">
-<p class="text-xl font-medium text-slate-900 dark:text-white leading-snug">
-                    "Sustainable design isn't a feature we add to buildings; it is the very foundation upon which we must build our future cities."
-                </p>
-</blockquote>
-<h2 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">The Rise of Vertical Forests</h2>
-<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 mb-6">
-                Architects are now incorporating massive biological systems into the structural framework of skyscrapers. These "vertical forests" don't just provide shade; they act as active lungs for the city, filtering pollutants and regulating temperature.
-            </p>
-<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-                In Milan, the Bosco Verticale has served as a blueprint for projects globally. By integrating thousands of trees and shrubs, the building manages to capture CO2 and produce oxygen, creating a microclimate that benefits the entire district.
-            </p>
-</article>
-<!-- Author Box -->
-<section class="mx-6 mt-12 p-6 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800">
-<div class="flex items-center space-x-4 mb-4">
-<img alt="David Chen" class="w-16 h-16 rounded-full object-cover" data-alt="A man with glasses and professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv4vROw3kig7uAo72BY_S-A-CQolWdM7fLCM706kAwtjOZojinKgdHs4RJHMPvwFSQvXW3_FPWUlPYtmrU-ODx8gcQieK4c9tPvYkqa7gPSXIbRk9QrTa-PsExuWOfIup62oZwSJyBpcGSnzRJotik9Sl3RNklIJZMfCSQaelOMolfyc-KA_bvGaZ-DLWRGUmKVdDS2Ww7Lgvl_-2uN5YnGShu49dFf0y3FrVGGP95sAIpVT3Y7y8BnONtThiuYfJ0TKZvYzaCPN8"/>
-<div>
-<h3 class="text-lg font-bold">David Chen</h3>
-<p class="text-sm text-primary font-medium">Sustainability Architect</p>
-</div>
-</div>
-<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                David is a leading voice in urban ecology with over 15 years of experience designing carbon-neutral developments across Asia and Europe.
-            </p>
-<div class="flex space-x-3">
-<a class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400" href="#">
-<span class="material-icons text-sm">public</span>
-</a>
-<a class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400" href="#">
-<span class="material-icons text-sm">email</span>
-</a>
-<a class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400" href="#">
-<span class="material-icons text-sm">alternate_email</span>
-</a>
-</div>
-</section>
-<!-- Related Posts -->
-<section class="mt-12 px-6">
-<h3 class="text-xl font-bold mb-6">Related Stories</h3>
-<div class="space-y-6">
-<!-- Post Item -->
-<div class="flex gap-4 group">
-<div class="flex-1">
-<p class="text-[10px] font-bold text-primary uppercase mb-1">Trends</p>
-<h4 class="font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2">How Biophilic Design Impacts Mental Health</h4>
-<p class="text-xs text-slate-500 mt-1">3 min read</p>
-</div>
-<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
-<img class="w-full h-full object-cover" data-alt="Green forest path with sunlight filtering through" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATo20XDUOlbRzYTPG7-ub0waE6CiZn1_IhrrOgvQRhfMBdtE3VeV0IUP6K_tUs1FhGC8bCkM9P7LC5u8nQCeFO-PMBAi4G4Us4iXwPDb8hDSAC_luyjk9WUvZ14kRG4ULG2P4VT9xVJja_cJlMJ0mxoy5nE2zM1p9VHRculEAvMApuNOLNTmbqNsnhKx80sNPu7fCu2U3A0fmYSKxWKzW8L_hRUkNk1C4M5eTkmYT-IY2DLD8SPO_1JYZp1xSlCpZm6uFXnoTU9OM"/>
-</div>
-</div>
-<!-- Post Item -->
-<div class="flex gap-4 group">
-<div class="flex-1">
-<p class="text-[10px] font-bold text-primary uppercase mb-1">Cities</p>
-<h4 class="font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2">Stockholm: The World's First Wood City</h4>
-<p class="text-xs text-slate-500 mt-1">6 min read</p>
-</div>
-<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
-<img class="w-full h-full object-cover" data-alt="Modern wooden architectural structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5M8qqYGIuaLAhjYTCrZU96Aj6KWzH7NrCmvlRQ4JTyoxUm5GryygdfVWL2YRndoEwOLuckw4yX95Cyid11iQ-v87_6vALsyNDoYG_yAdNdUAzHkv8r7sA25xmUToepWK3MhcYl4eGrYiQSa1XhkFZnxE5X_qtIZpFRutj5u5Fz7bnTSfljY-WHTuYKMOZ1V83QpgYaYxLqonp4D2OlIS_3djRDgZEBTtQbzBT5TNPPWdh_W5SG7X4I1TnF-YCF8NcnP66doApnBI"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Newsletter Signup CTA -->
-<section class="mt-16 mb-20 px-6">
-<div class="bg-primary p-8 rounded-2xl text-center shadow-lg shadow-primary/20">
-<span class="material-icons text-white/80 mb-2">mark_email_read</span>
-<h3 class="text-xl font-bold text-white mb-2">Deepen Your Knowledge</h3>
-<p class="text-white/80 text-sm mb-6">Join 12,000+ architects and designers receiving our weekly digest.</p>
-<div class="space-y-3">
-<input class="w-full px-4 py-3 rounded-xl border-none focus:ring-2 focus:ring-white/50 text-slate-900 text-sm" placeholder="Email address" type="email"/>
-<button class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition-colors">
-                        Subscribe Now
-                    </button>
-</div>
-</div>
-</section>
-<!-- Footer Footer -->
-<footer class="pb-10 pt-4 px-6 border-t border-slate-100 dark:border-slate-900 text-center">
-<p class="text-xs text-slate-400">© 2024 ArchDigest. All rights reserved.</p>
-</footer>
-</main>
-<!-- iOS Home Indicator Spacing -->
-<div class="h-8 bg-white dark:bg-background-dark"></div>
-<script src="../../assets/js/global-enhancement.js" defer></script>
-</body></html>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-lg leading-relaxed text-gray-700 mb-8">
+        The impact extends beyond environmental benefits. Studies show that residents of these green buildings report
+        23% higher satisfaction rates and measurably lower stress levels. The integration of nature into our living
+        spaces isn't just good for the planet—it's essential for human wellbeing.
+      </p>
+
+      <h2 id="circular-materials" class="text-4xl font-serif font-bold mb-6 text-gray-900 mt-16">Circular Material
+        Sourcing</h2>
+
+      <p class="text-lg leading-relaxed text-gray-700 mb-6">
+        The construction industry is one of the largest contributors to global waste. But innovative architects are
+        pioneering circular economy principles, where every material is designed to be reused, recycled, or composted at
+        the end of its lifecycle.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 my-10">
+        <div
+          class="p-6 bg-white border border-gray-200 rounded-xl hover:border-primary/50 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <span class="material-icons text-blue-600">recycling</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Recycled Materials</h3>
+          <p class="text-sm text-gray-600">85% of building materials can be reclaimed and reused</p>
+        </div>
+        <div
+          class="p-6 bg-white border border-gray-200 rounded-xl hover:border-primary/50 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+            <span class="material-icons text-green-600">eco</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Bio-based</h3>
+          <p class="text-sm text-gray-600">Mycelium and hemp composites replace concrete</p>
+        </div>
+        <div
+          class="p-6 bg-white border border-gray-200 rounded-xl hover:border-primary/50 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
+            <span class="material-icons text-purple-600">science</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Smart Materials</h3>
+          <p class="text-sm text-gray-600">Self-healing concrete reduces maintenance by 60%</p>
+        </div>
+      </div>
+
+      <h2 id="community-planning" class="text-4xl font-serif font-bold mb-6 text-gray-900 mt-16">Community-Centric
+        Planning</h2>
+
+      <p class="text-lg leading-relaxed text-gray-700 mb-8">
+        Modern urban design prioritizes human connection. Mixed-use developments, pedestrian-first streets, and abundant
+        public spaces create environments where communities thrive. The future city is walkable, accessible, and
+        designed for people—not cars.
+      </p>
+    </article>
+
+    <!-- Author Bio -->
+    <section class="mt-16 p-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl border border-gray-200 shadow-lg">
+      <div class="flex flex-col md:flex-row items-start gap-6">
+        <img alt="David Chen" class="w-24 h-24 rounded-2xl object-cover border-2 border-gray-200 shadow-md"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv4vROw3kig7uAo72BY_S-A-CQolWdM7fLCM706kAwtjOZojinKgdHs4RJHMPvwFSQvXW3_FPWUlPYtmrU-ODx8gcQieK4c9tPvYkqa7gPSXIbRk9QrTa-PsExuWOfIup62oZwSJyBpcGSnzRJotik9Sl3RNklIJZMfCSQaelOMolfyc-KA_bvGaZ-DLWRGUmKVdDS2Ww7Lgvl_-2uN5YnGShu49dFf0y3FrVGGP95sAIpVT3Y7y8BnONtThiuYfJ0TKZvYzaCPN8" />
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">David Chen</h3>
+          <p class="text-primary font-semibold mb-4">Sustainability Architect & Urban Ecologist</p>
+          <p class="text-base text-gray-700 leading-relaxed mb-6">
+            David is a leading voice in urban ecology with over 15 years of experience designing carbon-neutral
+            developments across Asia and Europe. His work has been featured in Architectural Digest, Dezeen, and The
+            Guardian.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="#"
+              class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-blue-600 transition-colors shadow-md">Follow</a>
+            <a href="#"
+              class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors">
+              <span class="material-icons text-sm">public</span>
+            </a>
+            <a href="#"
+              class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors">
+              <span class="material-icons text-sm">alternate_email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="mt-16">
+      <h3 class="text-3xl font-bold text-gray-900 mb-8">Continue Reading</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="#"
+          class="group block bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+          <div class="relative aspect-[16/9] overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              alt="Biophilic design"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuATo20XDUOlbRzYTPG7-ub0waE6CiZn1_IhrrOgvQRhfMBdtE3VeV0IUP6K_tUs1FhGC8bCkM9P7LC5u8nQCeFO-PMBAi4G4Us4iXwPDb8hDSAC_luyjk9WUvZ14kRG4ULG2P4VT9xVJja_cJlMJ0mxoy5nE2zM1p9VHRculEAvMApuNOLNTmbqNsnhKx80sNPu7fCu2U3A0fmYSKxWKzW8L_hRUkNk1C4M5eTkmYT-IY2DLD8SPO_1JYZp1xSlCpZm6uFXnoTU9OM" />
+            <div
+              class="absolute top-3 left-3 bg-primary/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white">
+              Trends</div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-2">How Biophilic
+              Design Impacts Mental Health</h4>
+            <p class="text-sm text-gray-600">Exploring the psychological benefits of nature-integrated architecture • 5
+              min read</p>
+          </div>
+        </a>
+
+        <a href="#"
+          class="group block bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+          <div class="relative aspect-[16/9] overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              alt="Stockholm wood city"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5M8qqYGIuaLAhjYTCrZU96Aj6KWzH7NrCmvlRQ4JTyoxUm5GryygdfVWL2YRndoEwOLuckw4yX95Cyid11iQ-v87_6vALsyNDoYG_yAdNdUAzHkv8r7sA25xmUToepWK3MhcYl4eGrYiQSa1XhkFZnxE5X_qtIZpFRutj5u5Fz7bnTSfljY-WHTuYKMOZ1V83QpgYaYxLqonp4D2OlIS_3djRDgZEBTtQbzBT5TNPPWdh_W5SG7X4I1TnF-YCF8NcnP66doApnBI" />
+            <div
+              class="absolute top-3 left-3 bg-green-500/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white">
+              Cities</div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-2">Stockholm: The
+              World's First Wood City</h4>
+            <p class="text-sm text-gray-600">A revolutionary approach to sustainable urban construction • 7 min read</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="mt-16 mb-12">
+      <div
+        class="bg-gradient-to-br from-primary to-blue-600 p-12 rounded-3xl text-center relative overflow-hidden shadow-2xl">
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div class="relative z-10">
+          <span class="material-icons text-white/80 text-5xl mb-4">mark_email_read</span>
+          <h3 class="text-3xl font-bold text-white mb-3">Stay Informed</h3>
+          <p class="text-white/90 text-lg mb-8 max-w-xl mx-auto">Join 12,000+ architects and designers receiving our
+            weekly insights on sustainable design</p>
+          <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input
+              class="flex-1 px-6 py-4 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 focus:border-white focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-base"
+              placeholder="Enter your email" type="email" />
+            <button
+              class="bg-white text-primary font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-all shadow-lg">
+              Subscribe
+            </button>
+          </div>
+          <p class="text-xs text-white/70 mt-4">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 py-12 bg-surface-light">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+          <p class="text-sm text-gray-600">© 2024 ArchDigest. All rights reserved.</p>
+          <p class="text-xs text-gray-500 mt-1">Inspiring sustainable architecture worldwide</p>
+        </div>
+        <div class="flex gap-6 text-sm text-gray-600">
+          <a href="#" class="hover:text-gray-900 transition-colors">Privacy</a>
+          <a href="#" class="hover:text-gray-900 transition-colors">Terms</a>
+          <a href="#" class="hover:text-gray-900 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/global-enhancement.js" defer></script>
+</body>
+
+</html>
