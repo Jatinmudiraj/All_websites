@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artisanal Coffee | Brewed Slowly</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Noto Serif", serif
+    }
+.hero-gradient {
+    background: linear-gradient(rgba(34, 24, 16, 0.6), rgba(34, 24, 16, 0.8))
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC1DUwsbFoa5GgbJu-MKms6WwBeIGybJgCht_OS6RfNbpHWeGx3SAyIEQ033Kg0hFQR9WKkMokSxBjG9xCNTHSBLDPE9NPW2FMO-OADzyYwx-zUYwmsvAJFu6zFDcc3DlNPFZrO0LgkB47Rt-yk1uaABig-zFTPo_r0Hax1TPzbEFdE-5fHqhn4mAxJvQkIVV8A7uV60P_TIjaRBbKiTdtv-3AWz7AqwnnlFQggL-TPHyJA8ZD61oPVDJ5TCaopQwPEnEsTkkFRcIU);
+    opacity: 0.03;
+    pointer-events: none
+    }</style>
+<link rel="stylesheet" href="../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-background-dark dark:text-background-light font-display selection:bg-primary/30">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-transparent backdrop-blur-sm border-b border-white/5">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-bold tracking-tighter" href="#">AETERNA<span class="text-primary">.</span></a>
+<div class="hidden md:flex gap-6 text-sm uppercase tracking-widest opacity-80">
+<a class="hover:text-primary transition-colors" href="#">The Roast</a>
+<a class="hover:text-primary transition-colors" href="#">Origins</a>
+<a class="hover:text-primary transition-colors" href="#">Brew Guides</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-icons opacity-80 hover:text-primary transition-colors">search</button>
+<button class="material-icons opacity-80 hover:text-primary transition-colors">shopping_bag</button>
+<button class="md:hidden material-icons">menu</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full overflow-hidden flex items-center justify-center text-center">
+<!-- Video Placeholder / Image fallback -->
+<div class="absolute inset-0 z-0">
+<img alt="Coffee Pour" class="w-full h-full object-cover" data-alt="Slow motion pour of dark espresso coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3oNneP6R92Evk_D0SInTNbib8xxIBLb6cwM_kf8Xsts-PYsYvKQhNpNmAhlHUBcxsMx76QXdMuoQFX4rArtqjVvh8Xz2lRjpQOrSTeCRlIGnSmnweWpxkonkGyY6PGlKSZFYTRjOgzSoMsrbkFp2sSm_BBDGvowX61KG_dJgAZ_jtBN1R3Ik5VXRfnrMyOc8VMyuok9spU3RO_1ipuCsyJMd_2QMwuOwc5B2_ByH8TiGw1hjfko6z5nReJXH6CvVtf-v6llV-NeU"/>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute inset-0 grain-overlay"></div>
+</div>
+<div class="relative z-10 px-4 max-w-4xl">
+<span class="inline-block mb-4 text-primary uppercase tracking-[0.3em] text-sm font-bold">The Art of the Wait</span>
+<h1 class="text-5xl md:text-8xl mb-8 leading-tight">Brewed Slowly.<br/>Served Perfectly.</h1>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-10 py-4 rounded-lg hover:bg-primary/90 transition-all font-bold tracking-wide">
+                    Discover the Collection
+                </button>
+<button class="border border-white/30 text-white backdrop-blur-md px-10 py-4 rounded-lg hover:bg-white hover:text-background-dark transition-all font-bold tracking-wide">
+                    Our Story
+                </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="text-[10px] uppercase tracking-widest">Scroll to explore</span>
+<div class="w-[1px] h-12 bg-white/50"></div>
+</div>
+</header>
+<!-- Story Strip -->
+<section class="py-24 bg-background-light dark:bg-background-dark/50">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+<div class="space-y-4">
+<div class="h-64 w-full overflow-hidden rounded-xl">
+<img alt="Origin" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Mist covered coffee plantation on high altitude mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg9nA58-eTlTHd3fqwxDh0NpnenCW7l1tmjxEjSbRRTeZ-pp855cuLd6nTceeA4tEOvFcPcUyU8j1RUq87LcQZyrfck_RUr-en81OP2f4yRIw2BuDz59NL8Ej7vV_4pIKr2dc8D5vFNi73atzVdn_xZ5T4HsA2u2A9ekZ-3S8TGBftSUsHIdaIHugfhhSlouqzels3e4Kh_-XRuRI-DMbT8dJqSvp_7eWyUP0nb98eTDAyYtmqSneV4NXtw5TgyjwJpJeA25f6LtQ"/>
+</div>
+<h3 class="text-xl font-bold italic">The High Altitude</h3>
+<p class="text-sm opacity-70 leading-relaxed">Sourced from the misty peaks of the Blue Mountains, where the thin air slows growth, intensifying every flavor molecule.</p>
+</div>
+<div class="space-y-4 md:mt-12">
+<div class="h-64 w-full overflow-hidden rounded-xl">
+<img alt="Hand pick" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Close up of hands picking ripe red coffee cherries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3OOFkMvltzLsLoHO_54NnEU3NnuDAkNJ82jW2fI_2BHE0bGcnxa6wIuXreCykX-L4T2iwDM0Vxx_NJhgwgMmn9jZzGiMIuMlnP28KcxKiSXLaHLUcUliDgl86oMvwzgVae4yuU3rKwUdoyZZ2ePkNFNGPhp9wLkuCqr-LpvDWqoTx3VPYBAA_0jqR8Aul7eMjePsb-twIM7B63Btf2Jza22mKJVuWp0K9XSrltzg2zQUSbJXpex3oJtF4zSizKwswThBhyxPhQaA"/>
+</div>
+<h3 class="text-xl font-bold italic">The Hand-Pick</h3>
+<p class="text-sm opacity-70 leading-relaxed">Only the deepest crimson cherries are selected. A labor of patience that ensures consistent excellence in every cup.</p>
+</div>
+<div class="space-y-4">
+<div class="h-64 w-full overflow-hidden rounded-xl">
+<img alt="Sun dry" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Coffee beans drying under the golden evening sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9wuCeWK6ADRhgIG3IFYQqNUTls8eZ-aE08psXTH7Tvi5agPjzPV_mEP2u5JBoByPyIdMBli10FQ21SYBgR1eqOWBV8HMKW9krCQ9Ke9aSQiCf-1DvUyJcUjNgOsaoE9u-EjDBjQBCoVChCSvv1aWeVdlOYRKlJYddvzSxjFvnCWSknrVZygR7rZVawjxWwukcjd5U8TLywjqbEXoY4OYWc5WTVLz0h20IRGWgAbb_hslteuz2IbwwIbET3zhU__DN6Gh0vZvi_pw"/>
+</div>
+<h3 class="text-xl font-bold italic">The Sun-Dry</h3>
+<p class="text-sm opacity-70 leading-relaxed">Natural processing under the equatorial sun allows the bean to absorb the sweet, fruity essence of its own pulp.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Drinks Grid -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="text-4xl md:text-5xl mb-6">Signature Curations</h2>
+<p class="opacity-70">Experience the symphony of notes we've spent decades perfecting. Each pour is a testament to our commitment to the slow-brew philosophy.</p>
+</div>
+<a class="text-primary font-bold border-b border-primary/30 pb-1 hover:border-primary transition-all" href="#">View All Offerings</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Drink 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-background-dark/10 dark:bg-white/5">
+<img alt="Espresso" class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Minimalist shot of signature espresso in a ceramic cup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMb4f5yyZxuR9ewLbJxqeRnwixanQRbU8XDk4RAZDn6ZtHKw3UMzoB_Hsvg6-9fHIg016oqj6OxGyPtWUCb4qic6qVt3ybwZpg2yTv70vL_Fz_n8xHPCfoBdY4nxiDQRvTxCFp8AbuNhnx4i0wzIfKgrswDaNEIxaw-jGOFHn9X69O1on8HvV2hcml6OLIhpOfQ1Sl1uW7VxZ_YhlA4K5u-vDoW19bQCHeRu046C7uSy2bWqzjEIFaq90vnaRQcIQ8q3vNyW1Piig"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">New Arrival</span>
+</div>
+</div>
+<h4 class="text-2xl mb-2">Signature Espresso</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] border border-primary/30 px-2 py-0.5 rounded text-primary">DARK ROAST</span>
+<span class="text-[10px] border border-primary/30 px-2 py-0.5 rounded text-primary">ETHIOPIAN</span>
+</div>
+<p class="text-sm opacity-60 italic mb-4">"Notes of dark chocolate, toasted almond, and a hint of wild berries."</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-bold text-primary">$18.00</span>
+<button class="material-icons p-2 bg-background-dark dark:bg-background-light text-background-light dark:text-background-dark rounded-full hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-colors">add_shopping_cart</button>
+</div>
+</div>
+<!-- Drink 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-background-dark/10 dark:bg-white/5">
+<img alt="Flat White" class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Velvety flat white coffee with latte art in a glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu7tEidf3lbhtky-xV1QbhPCVou1y7Ako40IYrULpFCpDskFV6LqZDbnauPFmd9n6GsVbnlD3S4P9-xHBPGybdqwlBB-kAWa787N2p9dp7zc2SGLIpAFBmWH3nrZmO71JNauMZhqaHcQj7i4syhdeR41aCmit2QFEdoCEcQ_JVkbXiIehGxXMlfvEtjp7PsuSfToh1PApb18rXuKqwe2aBlGG4qvx94409iwwSXDTmg9N9z_iw4mQVmTYF39qV2Ha2s0RJcpM2c6w"/>
+</div>
+<h4 class="text-2xl mb-2">Velvet Flat White</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] border border-primary/30 px-2 py-0.5 rounded text-primary">MEDIUM ROAST</span>
+<span class="text-[10px] border border-primary/30 px-2 py-0.5 rounded text-primary">BRAZILIAN</span>
+</div>
+<p class="text-sm opacity-60 italic mb-4">"Silky micro-foam paired with a balanced, nutty cocoa finish."</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-bold text-primary">$22.00</span>
+<button class="material-icons p-2 bg-background-dark dark:bg-background-light text-background-light dark:text-background-dark rounded-full hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-colors">add_shopping_cart</button>
+</div>
+</div>
+<!-- Drink 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-background-dark/10 dark:bg-white/5">
+<img alt="Nitro Brew" class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Nitro cold brew coffee with cascading foam in a tall glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-dL9P2hZjFXOfGP9l5lEA_KQpZ1MfkUGPzp6UCLExDY9KtLcC4yC9mIbXZzZmg9AwJhKlKSjblUec4BglVmdzHpliFBU459r1xXJKp9voyHNxM7Z6HMAvjpHTGkqsdyPMPhuGrxgaYaE2-yLrmxsANbVaSs0BdqHORSM25Yd39aQ-SxTCp_BaUPauhUvFYj-5IuylCpSr4g8v8qDVtObeckcO9GEK-eCNHCGqHE9Veiv3MHt3fr5oOOJwqnvUnx3zKXCaxMXwdlE"/>
+</div>
+<h4 class="text-2xl mb-2">Nitro Cold Brew</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] border border-primary/30 px-2 py-0.5 rounded text-primary">COLD EXTRACTION</span>
+<span class="text-[10px] border border-primary/30 px-2 py-0.5 rounded text-primary">COLOMBIAN</span>
+</div>
+<p class="text-sm opacity-60 italic mb-4">"A 24-hour steep infused with nitrogen for a creamy, stout-like texture."</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-bold text-primary">$26.00</span>
+<button class="material-icons p-2 bg-background-dark dark:bg-background-light text-background-light dark:text-background-dark rounded-full hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-colors">add_shopping_cart</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="relative py-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Roasting" class="w-full h-full object-cover opacity-30" data-alt="Artisanal coffee beans being roasted in a copper machine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwxfwqVXO2VzD4C3iLenTjJ3um9YcPt38AcP0nwumgHKKU2Qauf8Oq0RgpWOpcmA3AdMKMEibP_623a2dOh8MNIH69EtJI2U6e05H0orYn42VBsraSDULx40RqSwbuTc3Ixv8jtTFclvprYmIh5gnSphk7XKiADOwgO3vgl1_mSLq0TiuDuJK7ggjX9ikO3xDsrkoTEsHFl_HSuwXy_M1FJa5uUESVpsGxdxzXLNaLQkV_kRwctWxVEFfd47ttr6BP92J5WT47Bpk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
+</div>
+<div class="relative z-10 container mx-auto px-6 text-center">
+<h2 class="text-4xl md:text-6xl mb-8">Join the Slow-Brew Movement</h2>
+<p class="max-w-2xl mx-auto mb-12 opacity-80 text-lg">Receive our seasonal release notes, brewing secrets from our master roasters, and early access to limited micro-lots.</p>
+<form class="max-w-md mx-auto flex flex-col md:flex-row gap-4">
+<input class="flex-1 bg-white/5 border border-white/20 rounded-lg px-6 py-4 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary/90 transition-all uppercase tracking-widest text-sm" type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark text-white/60 py-20 px-6 border-t border-white/5">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<a class="text-2xl font-bold tracking-tighter text-white" href="#">AETERNA<span class="text-primary">.</span></a>
+<p class="text-sm leading-relaxed">Defining the pinnacle of luxury coffee through patience, precision, and respect for the bean.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-icons">facebook</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-icons">camera_alt</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-icons">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Navigation</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Shop All</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Subscription Plans</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Wholesale</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Brewing Gear</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Philosophy</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Direct Trade</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">The Roasting Process</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Farmers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Visit Our Atelier</h5>
+<p class="text-sm leading-relaxed mb-4">
+                    42nd Espresso Avenue<br/>
+                    Manhattan, New York 10012
+                </p>
+<p class="text-sm">Mon — Sun: 08:00 - 20:00</p>
+</div>
+</div>
+<div class="container mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.2em]">
+<p>© 2024 Aeterna Coffee Roasters. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script src="../../assets/js/global-enhancement.js" defer></script>
+</body></html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Grocery &amp; Deli</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#19e66b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2e21",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen pb-24">
+<!-- Header / Search Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pt-4 pb-2">
+<div class="flex items-center justify-between mb-4">
+<div>
+<p class="text-xs uppercase tracking-widest text-slate-500 font-bold">Local Market</p>
+<h1 class="text-xl font-bold">The Green Deli</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-sm font-medium">Open until 9 PM</span>
+</div>
+</div>
+<div class="relative flex items-center gap-2">
+<div class="relative flex-1">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-white dark:bg-surface-dark border-none rounded-xl py-3 pl-10 pr-4 shadow-sm focus:ring-2 focus:ring-primary text-sm" placeholder="Search fresh groceries..." type="text"/>
+</div>
+<button class="bg-white dark:bg-surface-dark p-3 rounded-xl shadow-sm text-slate-600 dark:text-slate-300">
+<span class="material-icons">qr_code_scanner</span>
+</button>
+</div>
+</header>
+<main class="px-4 space-y-8 mt-4">
+<!-- Weekly Specials Slider -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Weekly Specials</h2>
+<button class="text-primary text-sm font-bold">View All</button>
+</div>
+<div class="flex overflow-x-auto gap-4 hide-scrollbar snap-x">
+<!-- Slide 1 -->
+<div class="flex-shrink-0 w-80 h-48 relative rounded-2xl overflow-hidden snap-center group">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Gourmet deli sandwich with fresh greens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSiSNNkAHnolRnUdEe5GOcNK498luN-BCURVsoW-pg4e6noqdc6uJERtaPDxTKT1zc11VoqoqCbqSo8ty1S5W4WXd26umla-CTik7JuZr9sxOpU7xdoIlVSDv9kuRYrF56Aw6Ht6fedHTjtMp6bjPDK2nnmfDxfPhnM4SaZZ1hdtKYS1wDVtfpJF1cSC2uRqVyEB4ELywLC-zPt2UkSq6SeqN70VOF9fUPYom4oq9oDKrQSAod2Lwr4QZONzoo8c8lKSBA9k6x7nI5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+<span class="bg-primary text-black text-[10px] font-black px-2 py-1 rounded w-fit mb-2">LIMITED TIME</span>
+<h3 class="text-white text-xl font-bold italic leading-tight">Artisan Deli Platter</h3>
+<p class="text-primary font-bold">$12.99 <span class="text-white/60 line-through text-sm ml-2">$18.00</span></p>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="flex-shrink-0 w-80 h-48 relative rounded-2xl overflow-hidden snap-center">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Fresh organic seasonal fruits basket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKdtXx9XlmOzjT7rO0TDImiQwVIUuZiWP8wIIi8wvkvoJQQnntJpObC2D7L_Iyb7UYuq1uSxdMZLRleAKuqNfuP2SSS1tBXohOZVmFwUExs2OM3U8AGTr2hg0zttl_b1uXirEcLMbFG1xPRB6EpIi8mJHtemUjFtRw3PgL-OtKteNytNJAyturLcsmEzk3pVldTTGYBqAawM1Ax9ZysconGCO9lzCTfepox7L-Z2OPSOb-JymmsuDYXbHFunARbJsrQY_8eGHN4yRF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+<span class="bg-primary text-black text-[10px] font-black px-2 py-1 rounded w-fit mb-2">FRESH PICK</span>
+<h3 class="text-white text-xl font-bold italic leading-tight">Organic Seasonal Fruit</h3>
+<p class="text-primary font-bold">$8.50 <span class="text-white/60 line-through text-sm ml-2">$11.00</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Staples Section -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Daily Staples</h2>
+<span class="text-xs text-slate-500 uppercase font-bold tracking-tight">1-Tap Quick Add</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Milk -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="h-24 mb-3 flex items-center justify-center">
+<img class="h-full object-contain" data-alt="Bottle of fresh whole milk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB69goF0ki2MX0tidL7DUSs_w8jCNiwWFs-09iCqYx1I4c-L9IqetChkK6tlLoHTZu27rg5_CopKhJ4ef1j4HmEFfOOEHMuSquIMHaW83I2p7oCVEvwkmqINOjTLRwyiom551bcPmhCKcOBrksDzM8jXGAWBj-A6QszCLz9GujbyYFXJlu4PhtyrSNFfkwJcCdNWIS3Kk5Kvg0rinF4rDAHZA3IGJR9Yr3i7YH2fn0Xnyn0ylYvYuOwLDMEan-yFd6ocXAy6LWrJAN1"/>
+</div>
+<div class="flex-1">
+<p class="text-xs text-slate-500 font-bold uppercase">Dairy</p>
+<h4 class="font-bold text-sm">Organic Whole Milk</h4>
+<div class="flex items-center justify-between mt-2">
+<span class="text-primary font-bold">$4.20</span>
+<button class="bg-primary text-black h-8 w-8 rounded-lg flex items-center justify-center">
+<span class="material-icons text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bread -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="h-24 mb-3 flex items-center justify-center">
+<img class="h-full object-contain" data-alt="Loaf of fresh sourdough bread" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRtwrdLZuZBixmw2afVqIdgClR8n6AOnaFFnhvIFdBkEi1DqNp7wtAtY_KQBPB4YyDzHN4kWweZC6MDHnT8J7CQtF12nn6WWlFxJEulkOfmMC0R__Sy5NIb2bGtB7wKGfrq7_GacAPRcG35asupjkXiVtZkLG9bC4kSAyav1rE92A3K8O1BC-ZDg8kDtENjClzjRjNVqVp1e5TlWs6Olj3KdpozM59Wm9gihFecwrknaRAByKAcMfoMFnWHiCFf3_0rK8aUI5VH3G1"/>
+</div>
+<div class="flex-1">
+<p class="text-xs text-slate-500 font-bold uppercase">Bakery</p>
+<h4 class="font-bold text-sm">Sourdough Loaf</h4>
+<div class="flex items-center justify-between mt-2">
+<span class="text-primary font-bold">$5.50</span>
+<button class="bg-primary text-black h-8 w-8 rounded-lg flex items-center justify-center">
+<span class="material-icons text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Eggs -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="h-24 mb-3 flex items-center justify-center">
+<img class="h-full object-contain" data-alt="Carton of large brown eggs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoCesVMTpiVeBZXhni_4z_6O_3ldybapdU3msDFmrPOoNWrkx2FM7o13s5IQlwJDfDMRf_J0lzEvszzxTmCLEBG-gRsDWMG8rIggk_cyJ7xCMbrLffFJIyeW6d_Y6JyqrgQ1JFeupGfKhMFTJe7A7EJXtZ9A93UN-EERNSYc27kIrvYCez9p4Y10YbfV8hGTFW4WAvQOIzOPZa60ZtDYgCpJO_y2LACsRgfgq9w-x8XZwcJVOeg9scQqmyiZpwUR_QBPDLnd_2EViJ"/>
+</div>
+<div class="flex-1">
+<p class="text-xs text-slate-500 font-bold uppercase">Dairy</p>
+<h4 class="font-bold text-sm">Large Brown Eggs</h4>
+<div class="flex items-center justify-between mt-2">
+<span class="text-primary font-bold">$3.95</span>
+<button class="bg-primary text-black h-8 w-8 rounded-lg flex items-center justify-center">
+<span class="material-icons text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bananas -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="h-24 mb-3 flex items-center justify-center">
+<img class="h-full object-contain" data-alt="Bunch of fresh yellow bananas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfdjehooY5c6p6mUVzkt6QZ5k2aUM_0wQYws2cK-wY_53heQiYYlgZj1o2wZI0hMObojJx6mplKB2QVv1fPMB4wjjCKAjNQcC9vmqJ-iJGU7gWVdalqZN41PJTQ5NnYP6OHCPrrAQo8kSCNUpkt-JyO-mn96ZG9D8oEii7DCHdepVQ1pMagx87yvtMftEFjGoWhpSxxcMSqJQNJJ8EKADMwQzMiKLo4NWWtVLIQJf0SDu9ttSXIrywnroPgzJQ-zo5LxNOlf4ZuGrE"/>
+</div>
+<div class="flex-1">
+<p class="text-xs text-slate-500 font-bold uppercase">Produce</p>
+<h4 class="font-bold text-sm">Fresh Bananas (lb)</h4>
+<div class="flex items-center justify-between mt-2">
+<span class="text-primary font-bold">$0.69</span>
+<button class="bg-primary text-black h-8 w-8 rounded-lg flex items-center justify-center">
+<span class="material-icons text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Directions / Mini Map Section -->
+<section class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-lg">
+<div class="p-5 border-b border-slate-50 dark:border-slate-800">
+<div class="flex justify-between items-start mb-1">
+<h2 class="text-lg font-bold">Visit the Shop</h2>
+<span class="bg-primary/20 text-primary-dark text-[10px] font-bold px-2 py-0.5 rounded">0.8 MILES AWAY</span>
+</div>
+<p class="text-sm text-slate-500 italic">124 Market Street, Fresh Valley, CA</p>
+</div>
+<div class="relative h-44 bg-slate-200 dark:bg-slate-800">
+<!-- Mini-map placeholder -->
+<div class="absolute inset-0 opacity-80" data-alt="Abstract dot pattern representing map layout" style="background-image: radial-gradient(#19e66b 1px, transparent 1px); background-size: 15px 15px;"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="absolute -top-1 left-1/2 -translate-x-1/2 h-10 w-10 bg-primary/20 rounded-full animate-ping"></div>
+<div class="relative z-10 bg-primary text-black p-2 rounded-full shadow-lg">
+<span class="material-icons">storefront</span>
+</div>
+</div>
+</div>
+<!-- Location Label -->
+<div class="absolute bottom-4 left-4 right-4 flex gap-2">
+<button class="flex-1 bg-white dark:bg-slate-900 py-2.5 rounded-xl font-bold text-sm shadow-md flex items-center justify-center gap-2 border border-slate-100 dark:border-slate-700">
+<span class="material-icons text-primary text-lg">directions</span>
+                        Get Directions
+                    </button>
+<button class="bg-white dark:bg-slate-900 w-12 rounded-xl flex items-center justify-center shadow-md border border-slate-100 dark:border-slate-700">
+<span class="material-icons text-slate-400">phone</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button / Quick Cart -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-full max-w-xs px-4">
+<button class="w-full bg-slate-900 dark:bg-primary py-4 px-6 rounded-2xl shadow-2xl flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="bg-primary dark:bg-slate-900 text-black dark:text-white h-8 w-8 rounded-full flex items-center justify-center text-xs font-bold">
+                    3
+                </div>
+<span class="text-white dark:text-slate-900 font-bold">View Basket</span>
+</div>
+<span class="text-white dark:text-slate-900 font-bold">$18.94</span>
+</button>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 px-8 py-4 flex justify-between items-center z-40">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">category</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Categories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">favorite_border</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">person_outline</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</button>
+</nav>
+</body></html>

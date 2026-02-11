@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Brutalist Boutique | Variant 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            color: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101622;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1152d4;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+<!-- Fixed Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 mix-blend-difference px-8 py-6 flex justify-between items-center">
+<div class="flex gap-12 text-xs uppercase tracking-[0.3em] font-medium">
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<a class="hover:text-primary transition-colors" href="#">Archive</a>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2">
+<h1 class="text-2xl font-bold tracking-tighter uppercase">Nexus</h1>
+</div>
+<div class="flex gap-12 text-xs uppercase tracking-[0.3em] font-medium">
+<a class="hover:text-primary transition-colors" href="#">Search</a>
+<a class="hover:text-primary transition-colors" href="#">Cart (0)</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<img alt="High fashion model in avant-garde clothing" class="w-full h-full object-cover grayscale brightness-50" data-alt="Editorial fashion model in dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWTkftTzGj0M7ZyXX0spgEUHQFoXEzcxO8UMx-i2mVY6zC7XVWEDKdisiV26z1-yHxlN8Nkg5bPZgzirRkfo4mm4ZaFGoUSTKZ1wLjsBc2K9YdyM76oGsLHXu7LhDz4hjR_PtoYdymLzvvLr63dYTKpvHBpfvgge04ZnBJ0srAo2vwXJB0TRRFolnlpCovfjp_x_UbPYMOFBdV219t5WTJOhCfat2iBvGuhPx7j2VAnL50FRAKGuIQckOTjfji2tGChXulpqJ7HpY"/>
+</div>
+<div class="relative z-10 w-full max-w-screen-2xl px-8 flex flex-col items-start pointer-events-none">
+<h2 class="text-[12rem] leading-none font-bold uppercase tracking-tighter -ml-2 -mb-8 select-none">
+                Autumn<br/>
+<span class="text-outline">Collection</span>
+</h2>
+<div class="flex items-end justify-between w-full pointer-events-auto">
+<p class="max-w-xs text-sm font-light leading-relaxed uppercase tracking-widest text-slate-400">
+                    A dialogue between structural rigidness and fluid motion. Engineered for the modern silhouette.
+                </p>
+<button class="bg-primary hover:bg-white hover:text-primary transition-all duration-300 text-white px-12 py-4 text-xs font-bold uppercase tracking-[0.4em] rounded-sm">
+                    Enter Archive
+                </button>
+</div>
+</div>
+</section>
+<!-- Ticker Tape -->
+<div class="bg-primary py-3 overflow-hidden border-y border-white/10">
+<div class="animate-marquee">
+<span class="text-white font-bold text-sm uppercase tracking-[0.5em] mx-4">New Drop Available Now • Worldwide Shipping • Limited Release 002 • </span>
+<span class="text-white font-bold text-sm uppercase tracking-[0.5em] mx-4">New Drop Available Now • Worldwide Shipping • Limited Release 002 • </span>
+<span class="text-white font-bold text-sm uppercase tracking-[0.5em] mx-4">New Drop Available Now • Worldwide Shipping • Limited Release 002 • </span>
+<span class="text-white font-bold text-sm uppercase tracking-[0.5em] mx-4">New Drop Available Now • Worldwide Shipping • Limited Release 002 • </span>
+</div>
+</div>
+<!-- Asymmetrical Grid Product Section -->
+<section class="py-32 px-8 max-w-[1800px] mx-auto">
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- Left Header -->
+<div class="col-span-12 mb-20">
+<div class="flex items-baseline gap-4">
+<span class="text-primary text-6xl font-bold italic">01</span>
+<h3 class="text-5xl font-bold uppercase tracking-tighter">Featured Artifacts</h3>
+</div>
+</div>
+<!-- Grid Item 1 (Vertical Large) -->
+<div class="col-span-12 md:col-span-5 group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[3/4] bg-slate-900">
+<img alt="Model in yellow high fashion outfit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Avant-garde yellow silhouette portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXEJK3-ubLjpOzDcMrK-KF89GeG1-5fL_dp8uSDW8pvX62yFTm1rCoFj4ovn7MmEH-UCf6TrPfyyjpzvbIf81ldcqf6jj8_Nqueop0W_Ky9o0o3C4rpzS0Jqy6idbBApYLFb7qi-dUEjLyphN7ZZg3yxIo14vnSIZ1pB7nP32s1GoQF2mUQbpTVd8i0l8NZn_G6fNbXguhxJq67m8VKtQ0JhnPktCXR4sEdRGGjPl81bdIENlFVZP15hTiQQXstIrszfNLuBxHNz4"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex justify-between items-start border-t border-white/20 pt-4">
+<div>
+<h4 class="text-lg font-bold uppercase tracking-tight">Structured Coat v.01</h4>
+<p class="text-xs uppercase text-slate-500 mt-1">Wool / Polymide Blend</p>
+</div>
+<span class="font-bold">$1,240</span>
+</div>
+</div>
+<!-- Grid Item 2 (Smaller, Offset Top) -->
+<div class="col-span-12 md:col-span-3 mt-24 group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-square bg-slate-900">
+<img alt="Modern bag accessory" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist leather tote bag photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt38hl8BERg2nBJDy9K65_CJcRaFfPneyBGyZJNXp7q3aoLE3u7sCfnV8d357QfkS4T1YxpsrhZViVM9qhJb-FQ4iK-Bk5Q5s3POUC7g_Ga-9lOtfqkCqdoItN03hQceDq4C4FSyXzRnzYokqUhWaQ8iTZ1EWtoDnIoSzxc5e9a0R2ciC8AoAKVcz7NQZvZmTjiVgywX1pf4vvbNpZVR2vyhE8WjHVMGne1nOZmQCPfMrO52zlheHz7tHM-t4tsUcO4EB2kfeFbpk"/>
+</div>
+<div class="flex justify-between items-start border-t border-white/20 pt-4">
+<div>
+<h4 class="text-lg font-bold uppercase tracking-tight">Tech Tote</h4>
+<p class="text-xs uppercase text-slate-500 mt-1">Full-grain leather</p>
+</div>
+<span class="font-bold">$680</span>
+</div>
+</div>
+<!-- Grid Item 3 (Medium) -->
+<div class="col-span-12 md:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[4/5] bg-slate-900">
+<img alt="Suit details" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Tailored suit detail high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLF0S3wi0qOMDPN_JmUgVRPeT5jLBihaRPDYo_jPJzD6iIMbn_apV6uZVrU6yyZ7jz1pz8b9rj152Xrnpj9fm0xGbaScRXNryAqoUqgu9ZwFK5jpRdeeSRTTPw37vYqDFUiT_fwp_nI6ImlDelK0a08XYZko-W0H2Q17iRwK3l_X_cLn982W1MNEzaJ_tcfyUjRyTrcnBnaADyoYynuo4TdVjqZkabrhmMnoEVbIQzWUPwA8DERS9cjDKA0sve7ejPm-B1CBtMUVw"/>
+</div>
+<div class="flex justify-between items-start border-t border-white/20 pt-4">
+<div>
+<h4 class="text-lg font-bold uppercase tracking-tight">Monolith Suit</h4>
+<p class="text-xs uppercase text-slate-500 mt-1">Black Silk Finish</p>
+</div>
+<span class="font-bold">$2,100</span>
+</div>
+</div>
+<!-- Editorial Section -->
+<div class="col-span-12 grid grid-cols-12 gap-8 my-32">
+<div class="col-span-12 md:col-span-7 h-[600px] overflow-hidden relative">
+<img alt="Editorial mood" class="w-full h-full object-cover brightness-75" data-alt="Moody editorial fashion wide shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkHudqXmG2u0u8irBGL_ucK1WWuh1d_0va2pHOGIZcwlTdHp7gaAd0I5yJC7g3r4E3mOCPPKH4UyQjF2OZBpvx35WyIsHnCm29HoIAi90caTJyvMoPo6Qh1JI3VGkZhWNUkrDKeO2-qfwWuZBucglzzI9KSoTkWRB85H0MrBenxxncbd0z4gUcGoMpdqvWcFfr_CPgekz-L3vS5FrRxUT5knx3GKNc3xy18DGAt8LJ_sKQ3HTN1laXu0xVv83z9YX7Q64UePcyv2A"/>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col justify-center px-12">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-6">Our Philosophy</span>
+<h3 class="text-4xl font-bold uppercase tracking-tighter leading-[0.9] mb-8">Architecture for the Body</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-10 max-w-sm">
+                        Inspired by the brutalist movement, we believe in the honesty of materials and the strength of form. Every piece is an exploration of volume and structure.
+                    </p>
+<a class="text-xs font-bold uppercase border-b-2 border-primary pb-2 w-max hover:text-primary transition-colors" href="#">Learn more about the vision</a>
+</div>
+</div>
+<!-- Grid Item 4 (Horizontal) -->
+<div class="col-span-12 md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[16/9] bg-slate-900">
+<img alt="Footwear detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High tech minimal sneakers on pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoW1pyBilQ1di6EcrHb7wfYSnWaCEkmGObRz3_HNMzGki2_YGDF-uQyaOQTdAZE6C4vGHaIUTDcNpb6m6c_izuQX4ZKjoya-6uQykyyr0LEqYmrkpYMpWyHs5gaL4kN9maaEwCbxG1MXi-eSQao_wjGcSMoDIAk96of3JpFpg1i2j9XTgKO-LERU-etxnKnUXu7vE8KW0-eSzlEuyp6-rKcJcP2qkbYVngPLGD0Dlw2HlmJRu7jSZ0MNqvvGKp_ISJtOlZMb9E8e8"/>
+</div>
+<div class="flex justify-between items-start border-t border-white/20 pt-4">
+<div>
+<h4 class="text-lg font-bold uppercase tracking-tight">Kinesis Boot 02</h4>
+<p class="text-xs uppercase text-slate-500 mt-1">Neoprene / Carbon Fiber</p>
+</div>
+<span class="font-bold">$550</span>
+</div>
+</div>
+<!-- Grid Item 5 (Floating Tall) -->
+<div class="col-span-12 md:col-span-4 -mt-32 group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[2/3] bg-slate-900">
+<img alt="Editorial model" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Model in high fashion pose" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgKWixkZJQsZ0OPVcFfWdPggTB3h9xSs84TLX_UEsMEDPgsl9r_4bFWn_mhW3n0PiB56gnZNF9MoUytpTAABiFkkBfsxOzUYA4M79rD3yKwIjEbAuWqArihJVgQV30OsFdN0SO25Bnp7Yp05cdg_4eqtX-vT_cuZiQ10tQSILcs2od2UvdiXwf4bKLGS3dD9fyaSS82O4f3HK8B7vf7CHfeMS4ZiwjJA7BsjtPlCxZp-2l5q_vU1vBtNyMvw9m7v0Dw8wOrNFRnnM"/>
+</div>
+<div class="flex justify-between items-start border-t border-white/20 pt-4">
+<div>
+<h4 class="text-lg font-bold uppercase tracking-tight">Utility Vest</h4>
+<p class="text-xs uppercase text-slate-500 mt-1">Tactical Nylon</p>
+</div>
+<span class="font-bold">$420</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Manifesto / Big Quote -->
+<section class="py-40 bg-white text-background-dark">
+<div class="max-w-[1200px] mx-auto px-8 text-center">
+<h4 class="text-[8vw] font-bold leading-none uppercase tracking-tighter">
+                Function is <span class="text-primary italic">Beauty</span>
+</h4>
+<div class="mt-12 flex justify-center">
+<div class="h-16 w-[1px] bg-background-dark"></div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-24 px-8 border-t border-white/10">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="max-w-md text-center md:text-left">
+<h5 class="text-2xl font-bold uppercase tracking-tighter mb-4">Join the Protocol</h5>
+<p class="text-slate-400 text-sm">Be the first to know about upcoming drops and exclusive archival access.</p>
+</div>
+<form class="flex w-full max-w-lg border-b border-white">
+<input class="bg-transparent border-none focus:ring-0 w-full py-4 text-xs font-bold uppercase tracking-widest placeholder:text-slate-600" placeholder="YOUR@EMAIL.COM" type="email"/>
+<button class="p-4 hover:text-primary transition-colors" type="submit">
+<span class="material-icons">arrow_forward</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark py-20 px-8 border-t border-white/5">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1">
+<h1 class="text-3xl font-bold tracking-tighter uppercase mb-6">Nexus</h1>
+<p class="text-xs text-slate-500 leading-relaxed uppercase tracking-widest">
+                    Nexus Boutique © 2024<br/>
+                    Berlin • Paris • Tokyo
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Shop</span>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">All Products</a>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Accessories</a>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Sale</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Support</span>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Shipping</a>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Returns</a>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Sizing Guide</a>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Legal</span>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-xs uppercase hover:text-primary transition-colors" href="#">Cookies</a>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-slate-600">
+<p>Designed for the digital avant-garde</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Instagram</a>
+<a class="hover:text-white transition-colors" href="#">Twitter</a>
+<a class="hover:text-white transition-colors" href="#">Vimeo</a>
+</div>
+</div>
+</footer>
+</body></html>

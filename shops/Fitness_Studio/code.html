@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fitness Studio Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#136dec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101822",
+              },
+              fontFamily: {
+                "display": ["Lexend"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- iOS Status Bar Spacer (Simulated) -->
+<div class="h-12 bg-background-light dark:bg-background-dark sticky top-0 z-50 flex items-center justify-between px-6">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-xs">signal_cellular_alt</span>
+<span class="material-icons text-xs">wifi</span>
+<span class="material-icons text-xs rotate-90">battery_full</span>
+</div>
+</div>
+<!-- Navigation -->
+<nav class="px-6 py-4 flex items-center justify-between sticky top-12 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white text-xl">bolt</span>
+</div>
+<span class="font-bold text-xl tracking-tight uppercase">Zenith</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-icons">menu</span>
+</button>
+</nav>
+<main class="pb-32">
+<!-- Hero Section -->
+<section class="relative h-[80vh] min-h-[600px] flex items-end px-6 pb-12 overflow-hidden">
+<img alt="Fitness Studio Hero" class="absolute inset-0 w-full h-full object-cover" data-alt="Modern gym interior with workout equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxMvnTAh1Zq93dXG6RLv6LjiJfa068BqBMOReXiIZRPRBOlCbjW-rdv9hgXpocgufqBFZkJkTSIafkPK2HOP8OqjgLF7Azg0pH-LiVFPs_LnWPhJoUFokVQXPS23fWCk8434AoFUNu8FBKrOvHFd0hzKagSNXrkoRjOJMEnKQWEMgFjxcQo_Nz1nvmgLi4zhYn_HDLtjgBkQIRQMkv3bwtbfl7wu95gfUJ_tpwVUoTm2QPeRt8QAvwkMRuUSPfGGjYO02GuQbW7Xcm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+<div class="relative z-10 w-full">
+<span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4 tracking-wider uppercase">New Member Offer</span>
+<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Elevate Your Limits.</h1>
+<p class="text-slate-300 mb-8 text-lg max-w-xs">Start your journey today with our world-class trainers and community.</p>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+                        Book Free Trial
+                    </button>
+<button class="w-full bg-white/10 border border-white/20 hover:bg-white/20 text-white font-semibold py-4 rounded-xl backdrop-blur-sm transition-all">
+                        See Schedule
+                    </button>
+</div>
+</div>
+</section>
+<!-- Today's Classes -->
+<section class="mt-12 px-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold">Today's Classes</h2>
+<a class="text-primary text-sm font-medium" href="#">View All</a>
+</div>
+<div class="space-y-4">
+<!-- Class Card 1 -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="text-center min-w-[50px]">
+<span class="block text-sm text-slate-500 dark:text-slate-400">08:00</span>
+<span class="block text-xs font-bold text-primary uppercase">AM</span>
+</div>
+<div class="h-10 w-[1px] bg-slate-200 dark:bg-primary/20"></div>
+<div>
+<h3 class="font-bold text-lg">Power HIIT</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Sarah Jenkins • 45m</p>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-[10px] font-bold text-orange-500 uppercase mb-1">Almost Full</span>
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="w-[85%] h-full bg-orange-500"></div>
+</div>
+<span class="text-[10px] text-slate-500 mt-1 block font-medium">2 Spots Left</span>
+</div>
+</div>
+<!-- Class Card 2 -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="text-center min-w-[50px]">
+<span class="block text-sm text-slate-500 dark:text-slate-400">10:30</span>
+<span class="block text-xs font-bold text-primary uppercase">AM</span>
+</div>
+<div class="h-10 w-[1px] bg-slate-200 dark:bg-primary/20"></div>
+<div>
+<h3 class="font-bold text-lg">Zen Flow Yoga</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">David Chen • 60m</p>
+</div>
+</div>
+<div class="text-right">
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="w-[40%] h-full bg-primary"></div>
+</div>
+<span class="text-[10px] text-slate-500 mt-1 block font-medium">8 Spots Left</span>
+</div>
+</div>
+<!-- Class Card 3 -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 p-5 rounded-2xl flex items-center justify-between opacity-70">
+<div class="flex items-center gap-4">
+<div class="text-center min-w-[50px]">
+<span class="block text-sm text-slate-500 dark:text-slate-400">05:30</span>
+<span class="block text-xs font-bold text-primary uppercase">PM</span>
+</div>
+<div class="h-10 w-[1px] bg-slate-200 dark:bg-primary/20"></div>
+<div>
+<h3 class="font-bold text-lg">CrossFit</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Marcus Wright • 50m</p>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-block px-2 py-0.5 bg-slate-200 dark:bg-slate-800 text-slate-500 text-[10px] font-bold rounded-md uppercase">Waitlist</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Instructor Spotlight -->
+<section class="mt-12">
+<div class="px-6 flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold">Meet the Elite</h2>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full border border-slate-200 dark:border-primary/20 flex items-center justify-center">
+<span class="material-icons text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-full border border-slate-200 dark:border-primary/20 flex items-center justify-center">
+<span class="material-icons text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-6 px-6">
+<!-- Instructor 1 -->
+<div class="min-w-[160px] text-center">
+<div class="relative mb-3 group">
+<div class="absolute inset-0 bg-primary/20 rounded-2xl rotate-3 group-hover:rotate-0 transition-transform"></div>
+<img alt="Instructor Sarah" class="relative w-40 h-48 object-cover rounded-2xl" data-alt="Fitness instructor Sarah posing in gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOZBrjMu99NWcE1bpT3U5FJFsvcwC-jpekjek_0s1KVss44ASf0b89ev_NxGoTFEIHdNyGcOzmWA9fp2BGwOh0efiSGkpvnbWOLcs_XtC1eyfWOnMsiR3MDX1E1QOW5VuczxRPQdLBZ1bQ5L4Kfb5qvnYQMuGUramXFDEeD-m7dJMnnfo4N2KsUJdEPdt_JdGFer_BMTB5EueyIBZHa7d70_PtNttjRXL82zm8snzmUXQ9sLmMvRqAPDvBSGf5PDovptdPoEnGI0_E"/>
+</div>
+<h4 class="font-bold">Sarah Jenkins</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Yoga &amp; Pilates Specialist</p>
+<button class="mt-3 px-4 py-1.5 text-xs font-semibold text-primary border border-primary/30 rounded-full hover:bg-primary/10 transition-colors">
+                        Follow
+                    </button>
+</div>
+<!-- Instructor 2 -->
+<div class="min-w-[160px] text-center">
+<div class="relative mb-3 group">
+<div class="absolute inset-0 bg-primary/20 rounded-2xl rotate-3 group-hover:rotate-0 transition-transform"></div>
+<img alt="Instructor Marcus" class="relative w-40 h-48 object-cover rounded-2xl" data-alt="Athletic trainer Marcus in training gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFnffac-9hh8pkQnWD2B3TqKkWAibl-mB13sH3SrI2YJWQUsXmuJg3kH_nlbxASuOfiV7GFKWdwgqvvvmoAtzqW2fee0D-fEupB--plqj_VqLCRXQddh3jo8HuAYifz3FM3yjBsOpF-TkJNgjEGX0OhvlN6s39k2ui8u3srmzXKS1Sjw6vxENQuUCON7qyZLQQ-OPh3cO_6nlanvXNqfve1omAU-ymlLfS0y_VQddq4TeuE79Vfdzs_AppUHzUj6ttzOMxGlM8PNG7"/>
+</div>
+<h4 class="font-bold">Marcus Wright</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Strength &amp; Conditioning</p>
+<button class="mt-3 px-4 py-1.5 text-xs font-semibold text-primary border border-primary/30 rounded-full hover:bg-primary/10 transition-colors">
+                        Follow
+                    </button>
+</div>
+<!-- Instructor 3 -->
+<div class="min-w-[160px] text-center">
+<div class="relative mb-3 group">
+<div class="absolute inset-0 bg-primary/20 rounded-2xl rotate-3 group-hover:rotate-0 transition-transform"></div>
+<img alt="Instructor David" class="relative w-40 h-48 object-cover rounded-2xl" data-alt="Portrait of instructor David Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApYFoJMw35IIOEL7h6CP5_T384W3m-Re78zXJWhqmTXXR2-pravSYlpi-2HGYM94jfB_bkGlF-Rv3RolEYo7olC6EW-abkNFnKBOIM_JCrHLT6h2DT_W2t1gSkuAaST1LFkY6kta6Ci_VkZCJQ2JwzZbRKgAEN6hY7P-5SgPta2z7_hTZeQ6NggCmefL884GNKOanEfhVKbdOvtI_Xpg9xCbmItzw1hs6qaBXOjHTg13U3ImnXsyufFDgVWsEfkgqa2J5Q10dY1QOt"/>
+</div>
+<h4 class="font-bold">David Chen</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">High Performance Lead</p>
+<button class="mt-3 px-4 py-1.5 text-xs font-semibold text-primary border border-primary/30 rounded-full hover:bg-primary/10 transition-colors">
+                        Follow
+                    </button>
+</div>
+</div>
+</section>
+<!-- Studio Location -->
+<section class="mt-12 px-6">
+<h2 class="text-2xl font-bold mb-6">Our Studio</h2>
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 rounded-2xl overflow-hidden">
+<div class="h-48 relative overflow-hidden">
+<img alt="Studio Map Location" class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="Stylized map showing gym location in downtown" data-location="Austin, TX" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqMRSX7L8orxz4r-xndlqUjEHg8jaGgyb_HFxQ9yX8ywJhRc3Qx6VqKR5Mmd8023VWN_QypJB2onRaRyK7eS6zOg73_S5Jv-k43p7NUhZ_qP-xElGg5pSywj8nl6UNaOGYAhxV-BT7n_sPkrZ_nty8DuufaJAsGHwzxx0RtSY20T5Ftn-0gOC2CjKQvsQef3euaag2Gcz6rTeuz5fGtXpvLKCi8Yy8_EQUlL5g5T06-VXvV-3BvSxNHtqmhspfKHILw3PlzWnSSCa9"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center animate-pulse">
+<span class="material-icons text-white">location_on</span>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="font-bold text-lg mb-1">Zenith Downtown</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">124 Innovation Dr. Suite 200<br/>Austin, TX 78701</p>
+</div>
+<button class="p-3 bg-primary rounded-xl text-white">
+<span class="material-icons">directions</span>
+</button>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium text-slate-400 uppercase tracking-widest">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                            Open Now
+                        </div>
+<div>Closes 10:00 PM</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center gap-4 bg-primary/5 p-4 rounded-xl border border-primary/10">
+<span class="material-icons text-primary">info</span>
+<p class="text-sm text-slate-500 dark:text-slate-300">Entrance is located on the west side, right next to the coffee shop.</p>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar -->
+<div class="fixed bottom-8 left-6 right-6 z-50">
+<div class="bg-white/10 dark:bg-primary/10 backdrop-blur-xl border border-white/20 dark:border-primary/20 p-2 rounded-2xl flex items-center justify-between shadow-2xl">
+<div class="px-4">
+<span class="block text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Next Class</span>
+<span class="block font-bold text-sm">Yoga • 10:30 AM</span>
+</div>
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-xl flex items-center gap-2 text-sm">
+                JOIN NOW
+                <span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Tab Bar (Simulated Mobile Nav) -->
+<div class="fixed bottom-0 inset-x-0 h-20 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 flex items-center justify-around px-4 pb-4">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">home</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">calendar_month</span>
+<span class="text-[10px] font-bold uppercase">Schedule</span>
+</button>
+<div class="w-12"></div> <!-- Spacer for FAB -->
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">groups</span>
+<span class="text-[10px] font-bold uppercase">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">person</span>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</button>
+</div>
+</body></html>

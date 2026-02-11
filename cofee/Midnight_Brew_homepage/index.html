@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Midnight Brew | The Art of the Slow Pour</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a",
+                        "charcoal": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Noto Serif', serif;
+                cursor: none;
+                @apply bg-background-dark text-white;
+            }
+        }.parallax-container {
+            perspective: 1000px;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        .parallax-wrapper {
+            position: relative;
+            transform-style: preserve-3d;
+        }.parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform: translateZ(-10px) scale(2);
+        }.parallax-fg-slow {
+            transform: translateZ(2px) scale(0.8);
+        }
+        .parallax-fg-fast {
+            transform: translateZ(5px) scale(0.5);
+        }
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #f4c025;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(244, 192, 37, 0.3);
+            color: transparent;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }@keyframes steamRise {
+            0% { transform: translateY(0) opacity(0); }
+            50% { opacity: 0.3; }
+            100% { transform: translateY(-100px) opacity(0); }
+        }
+        .steam-particle {
+            position: absolute;
+            background: white;
+            filter: blur(20px);
+            border-radius: 50%;
+            animation: steamRise 8s infinite linear;
+        }.philosophy-circle {
+            transition: transform 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }.parallax-scroll-group {
+            position: relative;
+            z-index: 10;
+        }.custom-cursor-dot {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background-color: #f4c025;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            mix-blend-difference: difference;
+        }
+    </style>
+<link rel="stylesheet" href="../../assets/css/global-styles.css">
+</head>
+<body class="selection:bg-primary/30 font-display">
+<div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img alt="Slow brew coffee" class="w-full h-full object-cover opacity-40 blur-[1px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjOblvhx12vvoaDLNNu8qZi1eFRC1gMj5y6UnrtijHfxk9ZZ2WgAkbhK8-pKgBkBAG-c6PgwoeriDtLuS8PB6cnxk14DB-oLhjHA4-XxBngDxP5Iv0GoHJf-_kskVQ1JLQBIlJw_5wxMLRff1grKbEpL1jw4S2L6uQKiM8mu4Hp7SClN6mC8S34GtM01WFmaYNLR-mpqgz0BQiSg32JIMmmxmyohdbY2WecxkEgzf3_fo0FHVXb3OupUrhTsGCDlgniTS9R2CmwnU"/>
+<div class="absolute inset-0 z-15 pointer-events-none">
+<div class="steam-particle w-32 h-32 top-[60%] left-[45%] opacity-20"></div>
+<div class="steam-particle w-40 h-40 top-[70%] left-[50%] opacity-10" style="animation-delay: -2s; animation-duration: 12s;"></div>
+<div class="steam-particle w-24 h-24 top-[65%] left-[52%] opacity-15" style="animation-delay: -5s; animation-duration: 10s;"></div>
+</div>
+</div>
+<nav class="fixed top-0 left-0 w-full z-50 p-8 flex justify-between items-center mix-blend-difference">
+<div class="text-xl font-bold tracking-tighter uppercase">
+        Midnight <span class="text-primary">Brew</span>
+</div>
+<button class="flex items-center space-x-4 group">
+<span class="text-xs tracking-[0.3em] uppercase opacity-70 group-hover:opacity-100 transition-opacity">Menu</span>
+<div class="flex flex-col space-y-1.5">
+<div class="w-8 h-px bg-white group-hover:bg-primary transition-colors"></div>
+<div class="w-5 h-px bg-white self-end group-hover:bg-primary transition-colors"></div>
+</div>
+</button>
+</nav>
+<main class="relative z-10">
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="relative z-20 text-center px-6">
+<div class="transform translate-y-[-10%] transition-transform duration-1000">
+<span class="text-xs uppercase tracking-[0.5em] text-primary mb-8 block font-light">Est. 1982 — Small Batch</span>
+<h1 class="text-7xl md:text-9xl font-light leading-none tracking-tighter max-w-5xl mx-auto">
+                    The Art of the <br/>
+<span class="italic font-normal">Slow Pour</span>
+</h1>
+<p class="mt-8 text-lg md:text-xl opacity-60 font-light tracking-wide max-w-xl mx-auto">
+                    Experience the depths of midnight. A ritual for those who find beauty in the pause.
+                </p>
+<div class="mt-12">
+<button class="border border-white/20 hover:border-primary px-12 py-4 rounded-full text-sm uppercase tracking-widest transition-all hover:bg-primary hover:text-black">
+                        Explore the Ritual
+                    </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
+<span class="text-[10px] uppercase tracking-[0.4em] opacity-40 mb-4">Scroll</span>
+<div class="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<section class="relative py-32 px-6 md:px-24 bg-background-dark/80 backdrop-blur-sm">
+<div class="editorial-grid gap-8">
+<div class="col-span-12 md:col-span-7 relative group transform translate-y-0 hover:-translate-y-4 transition-transform duration-700">
+<div class="overflow-hidden rounded-lg">
+<img alt="Coffee Beans" class="w-full aspect-[4/5] object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyK0SeQCTddWBS2FeaLWt50DS5fF0otu1iFT93alAACh6UFJZVAgY6GCUJmBK46aYmwShPCW_aE9rjTTI5YqQgJQyr7krrA3gB33Fb0hh1FENRCBnxZK-0waZXett8aDBrh2qFOPfNJe9JnAZIB59JgJFJhf7VZ83mfBGZtn7T4OXpqmKQHWXTXnnej15oOTDmDpZ5UDGUU1tVcrmI-LbrCggEyzOzbQw8TvuBuVTFARshtHoV87RUo4gjgNkba0miSI060Nu-C84"/>
+</div>
+<div class="absolute -bottom-12 -right-12 bg-charcoal p-12 hidden md:block border border-white/5 shadow-2xl z-20">
+<h3 class="text-3xl mb-4 italic">The Obsidian Roast</h3>
+<p class="text-sm opacity-50 max-w-[250px] leading-relaxed">
+                        Forged in the heart of the shadow, our darkest roast reveals notes of smoke and black cherry.
+                    </p>
+<a class="inline-block mt-6 text-xs tracking-widest text-primary border-b border-primary/30 pb-1" href="#">DISCOVER</a>
+</div>
+</div>
+<div class="hidden md:flex col-span-1 items-center justify-center">
+<span class="vertical-text text-[10px] uppercase tracking-[1em] opacity-20">MIDNIGHT CRAFT • SERIES 001</span>
+</div>
+<div class="col-span-12 md:col-span-4 mt-24">
+<div class="space-y-12">
+<div class="relative transform translate-y-12">
+<img alt="Brewing kit" class="w-full aspect-[3/4] object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRy-BIkQBFtQcifZJDarf4NBtLU0Gn1Wh76v87jriIphTVG2uUsruSXDdWROHp61lwcuexsZM3wqXrQMDrMK3569QX9TQPJFU6kiuKO0ZX_EbsLMBs9M0md_vTguGnSTz9ONepWKcILK8AdzBRCJWjE4DPBFq1frlhiANqcxJUX-7I2z0z2iHbh2xj4h7sEtXmycfoy603CNV7-hPlULzPmSFMnlxpI5GZpNU2Ih3BVs6hDymc6pf_kDRdwmHDjgfbKoTnHQpk-SA"/>
+<h4 class="mt-6 text-xl tracking-tight">Velvet Crema</h4>
+<p class="text-sm opacity-50 mt-2">Smooth, buttery, and hauntingly rich.</p>
+</div>
+<div class="pt-12 border-t border-white/10">
+<blockquote class="text-2xl font-light leading-snug italic">
+                            "Coffee is the silence that allows the day to begin."
+                        </blockquote>
+<cite class="block mt-4 text-xs uppercase tracking-widest text-primary not-italic">— The Roaster's Note</cite>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-dark relative overflow-visible z-30">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-20 border-b border-white/10 pb-8">
+<h2 class="text-5xl font-light italic">The Curation</h2>
+<a class="text-sm tracking-widest opacity-60 hover:opacity-100 hover:text-primary transition-all" href="#">VIEW ALL RELEASES</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group cursor-pointer transform hover:-translate-y-6 transition-transform duration-500">
+<div class="relative overflow-hidden mb-6 aspect-[4/5]">
+<img alt="Coffee bag" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZCY4pfaajswvS17yO-1MmG4LA7WkqRPLL6MrEYpL_UnkgCokmGq2nHRGhV9a-L5hv_4Jv2dbLVGZQZ1tmHbf52SbJi-htWx89ByIH06naefkfqXDBbeuIAgjsImF1Yty7SK2YgFSeWw_o_PcuUmNzb3VB_OzN3QDRynd_aoVAQNJgRJhVNXA5sy7AWDVhMshgB9Cjw6X3G1U2m0fyQTsjMdTo2CWE9IFb0TfIti9bfCuu49aQPdc6EDbLcsmqsNUn5K4dEHbVPNo"/>
+<div class="absolute top-4 left-4 bg-primary text-black text-[10px] px-3 py-1 font-bold tracking-widest uppercase">Rare</div>
+</div>
+<h3 class="text-2xl font-light">Moonlight Bourbon</h3>
+<p class="text-primary font-light mt-1">$48.00</p>
+</div>
+<div class="group cursor-pointer md:translate-y-24 transition-transform duration-700">
+<div class="relative overflow-hidden mb-6 aspect-[4/5]">
+<img alt="Coffee bag" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBT9oi819NMGOzFUfaucha3NnV-jdrNPCmEYH_0FYA2Z6kFj6r4ne98HRpoX0F_O2tKd1BDvVoR9-V5dPdGqJts9zMbhkTDk2zKkGRyAO11wP5v2kfbKIM0enl8TcOGyuK1gKPGdXRn601ivF1c0qte7rTC-f1ajqlHxYXdTS1MseNJ5chJJzC0kBSMcZz8GDCCYzeidXBZZ0ElwYeJ4pE9V_fOnBkqDtAFNfnsoreNV4Y1Vmmahm_d_5spqQeRI8XIi-3XlCtboc"/>
+</div>
+<h3 class="text-2xl font-light">Shadow Blend No. 9</h3>
+<p class="text-primary font-light mt-1">$35.00</p>
+</div>
+<div class="group cursor-pointer transform md:-translate-y-12 hover:-translate-y-16 transition-transform duration-500">
+<div class="relative overflow-hidden mb-6 aspect-[4/5]">
+<img alt="Coffee bag" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS82KBcCpIAp9HQxxsezsmZUR9fkkMO3XAW8HHaDNTSE97ayKLcPFcHcPevQkIjLc8gbRAUlTQkj6ZRD5tdWO8kIlMMTp1jhghZR1RoV-fYsjMyVe4BJ-KdbgL68pwtUgI3L39T0vhCI7Gw7WOP2W7mWxUop8GhoZJBkFazZETmh78onmP7p-8udIbZENURmK-Ak0qrOIcKsz7JsNPNcPrE78CkEWNXgYeDQan0MpJCmfOwLU8A2gT0aOAwrbTK61o4dTw7jkNjvE"/>
+</div>
+<h3 class="text-2xl font-light">Eclipse Single Origin</h3>
+<p class="text-primary font-light mt-1">$52.00</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-charcoal py-56 border-y border-white/5 relative overflow-hidden z-20">
+<div class="absolute top-1/2 right-[-5%] -translate-y-1/2 w-1/2 h-full opacity-5 pointer-events-none">
+<span class="text-[25rem] font-bold text-outline select-none leading-none tracking-widest">NOIR</span>
+</div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="text-4xl md:text-6xl mb-24 font-light tracking-tight">The Midnight Philosophy</h2>
+<div class="grid md:grid-cols-2 gap-24 text-left items-center">
+<div class="space-y-8">
+<p class="text-xl opacity-70 leading-relaxed font-light">
+                        In an age of haste, we choose the deliberate. Every bean is selected for its ability to tell a story under the cover of night. Our roasting process is a dialogue between the flame and the grain.
+                    </p>
+<p class="text-xl opacity-70 leading-relaxed font-light">
+                        We don't just brew; we compose. The result is a cup that demands your presence and rewards your patience.
+                    </p>
+<div class="pt-8">
+<button class="text-xs tracking-[0.4em] uppercase text-primary border-b border-primary/20 pb-2 hover:border-primary transition-all">Our Process</button>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="philosophy-circle aspect-square w-full max-w-[350px] bg-gradient-to-tr from-primary/20 to-transparent rounded-full flex items-center justify-center border border-primary/20 hover:scale-110 hover:rotate-12 duration-1000 transition-transform">
+<div class="p-12 text-center">
+<span class="block text-6xl font-light mb-4 tracking-tighter">12:00</span>
+<span class="text-[10px] uppercase tracking-[0.4em] opacity-50 block leading-loose">Optimal Extraction<br/>Duration</span>
+</div>
+</div>
+<div class="absolute inset-0 animate-[spin_20s_linear_infinite] opacity-20 pointer-events-none">
+<svg class="w-full h-full" viewBox="0 0 100 100">
+<path d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="transparent" id="circlePath"></path>
+<text class="text-[6px] uppercase tracking-[1.2em] fill-primary">
+<textPath xlink:href="#circlePath">Patience • Precision • Passion • Midnight •</textPath>
+</text>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-black py-20 px-6 border-t border-white/5 relative z-40">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-bold tracking-tighter uppercase mb-6">
+                    Midnight <span class="text-primary">Brew</span>
+</div>
+<p class="text-xs opacity-40 leading-relaxed uppercase tracking-widest">
+                    Crafted in the dark. <br/>
+                    Brewed for the quiet.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="text-xs font-bold uppercase tracking-[0.3em] text-primary">Journal</h4>
+<ul class="space-y-2 text-sm opacity-60">
+<li class="hover:opacity-100 cursor-pointer transition-opacity">The Roast Process</li>
+<li class="hover:opacity-100 cursor-pointer transition-opacity">Sourcing Ethos</li>
+<li class="hover:opacity-100 cursor-pointer transition-opacity">Brewing Guides</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-xs font-bold uppercase tracking-[0.3em] text-primary">Social</h4>
+<ul class="space-y-2 text-sm opacity-60">
+<li class="hover:opacity-100 cursor-pointer transition-opacity">Instagram</li>
+<li class="hover:opacity-100 cursor-pointer transition-opacity">Vimeo</li>
+<li class="hover:opacity-100 cursor-pointer transition-opacity">Spotify</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-xs font-bold uppercase tracking-[0.3em] text-primary">Dispatch</h4>
+<p class="text-sm opacity-60">Sign up for private releases.</p>
+<div class="flex border-b border-white/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full p-0" placeholder="Email Address" type="email"/>
+<button class="material-icons text-primary scale-75">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.4em] opacity-30">
+<span>© 2024 Midnight Brew Co.</span>
+<span class="mt-4 md:mt-0">Design for the Deep Night</span>
+</div>
+</footer>
+</main>
+<div class="hidden lg:block fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 border border-primary rounded-full pointer-events-none z-50 mix-blend-difference"></div>
+
+<script src="../../assets/js/global-enhancement.js" defer></script>
+</body></html>

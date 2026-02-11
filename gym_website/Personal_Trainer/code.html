@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Mira - Personal Trainer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#197fe6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                        "neutral-light": "#e2e8f0",
+                        "neutral-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #197fe6, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-neutral-dark dark:text-neutral-light transition-colors duration-300">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-800 tracking-tighter text-primary">MIRA<span class="text-neutral-dark dark:text-white">COACH</span></span>
+</div>
+<div class="hidden md:flex items-center gap-10 font-medium">
+<a class="hover:text-primary transition-colors" href="#about">About</a>
+<a class="hover:text-primary transition-colors" href="#results">Results</a>
+<a class="hover:text-primary transition-colors" href="#packages">Packages</a>
+<a class="bg-primary text-white px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20" href="#contact">Book a Call</a>
+</div>
+<div class="md:hidden">
+<span class="material-icons text-3xl">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="relative z-10">
+<span class="inline-block py-1 px-3 bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase rounded-full mb-6">Certified Performance Specialist</span>
+<h1 class="text-5xl lg:text-7xl font-800 leading-[1.1] mb-8">
+                    Custom coaching for <span class="text-gradient">real life.</span>
+</h1>
+<p class="text-xl text-neutral-dark/70 dark:text-neutral-light/70 mb-10 max-w-lg leading-relaxed">
+                    Stop the guesswork. Achieve sustainable strength and mobility with a science-based approach tailored to your unique schedule and goals.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform text-center shadow-xl shadow-primary/25" href="#contact">Book a Free Call</a>
+<a class="bg-white dark:bg-neutral-dark border border-primary/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-background-light dark:hover:bg-neutral-dark/80 transition-all text-center" href="#results">View Results</a>
+</div>
+<div class="mt-12 flex items-center gap-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark" data-alt="Client profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRwB0tCs2ITnJeY2odsorUKjgVbPEBiEzSq3_n4FauiPBTYzg6QSWT_c1cYyeB7b6OJW4zZxE5lBq9ofV2lv4eoe63W2FQAQPiWOwaSeE3RSRgRgvcWtuOvNYiTIMfzE_cansPJlhhhuPfW6DqfKXzfXlcb40-jv4jAjgrRXh-nNvnGHuyhi7MMUYTteqfdOdiO5UqJC_3fLI8Gdh28kp94Ely4elvepNZkx89u7_t_ZLxYzzYwCSKQB1xHjWDjeWjQguCVo_iWvw"/>
+<img class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark" data-alt="Client profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmuLtyBa14m_QFyWXnRsxlG07AdbAurWBbDbKw25KI9wfgIW2_nQ1ajiQ7B5TaHTiqSry4ZX0fEDWlC_hFKjCaeWM52RymW3NndGVcu2z-QaCtKKmN5JCcxhPuOybmPRNWhRKFxfLC4B_I5urp-klm98RzjFnePeAFWZ0LqGM7ng4FqDR7jpFT79VmH31I-FdkQWezZRZTDgpxF7pSmz8dgIQ817XFY6hwsX4oy9pw98lFxnWCX0fBerQDeSGVCXO8H6oeAKmj-V4"/>
+<img class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark" data-alt="Client profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVyecXWC7tf696Z7uISh5qFx9m0nPXK4mfPLSMK9r7mpSzuoUyMu48PCmFnQS0zy5TfaNthn_NXqhHMB0AYOUnDd2UpfrNz6xDWVcf3Hg56yl96gQKR6FeLJRJ-H2Tt_xsjsr5m94-1-xMxbK0wknobt52Q0CykeE6umL948XI_KRpJ3rf6B21Hu_T8-LAqUeLGJw3-FCXFH15dqqF4vOCJ5e5YfIuYiTyv9HHrBeLmTzeNwfAumexyn6YeHOXJmp47bgKeO3D1io"/>
+</div>
+<p class="text-sm font-medium"><span class="font-bold text-primary">500+</span> success stories this year</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary/20 blur-[120px] rounded-full -z-10 translate-x-1/4 scale-110"></div>
+<div class="rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Coach Mira performing a workout movement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJGVG-yhQQakRiXN9QVgccIGSI6cFYdjBaQAtleF7BGU_CGRk3Mp-tx4geelmbXtg0QiMQ0PSbTAvG3jBWeEEgKPca_iHCrC-MfnHy1xJXC4RcNmDXhphOUDzKONe93n7JUCF3SEFtpba_UkztewRXQzgKoHs3w9XFoWnDiR1K06bDESCU3rrjCAzeq1haaBrzqG74OTksdbwxdJerRQUYNpREfM67agarSjvn18nirJQv1MF20Au57hr6wxQnsavJtJLxe3SawTg"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-neutral-dark p-6 rounded-2xl shadow-xl max-w-[200px]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-icons text-primary">verified</span>
+<span class="font-bold">Expert Coach</span>
+</div>
+<p class="text-xs opacity-70">10+ Years of experience in metabolic conditioning and injury prevention.</p>
+</div>
+</div>
+</div>
+</header>
+<!-- About & Credentials -->
+<section class="py-24 bg-white dark:bg-background-dark/50" id="about">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-3xl md:text-4xl font-800 mb-4">Authority &amp; Expertise</h2>
+<div class="h-1 w-20 bg-primary mx-auto mb-6"></div>
+<p class="text-lg opacity-70">Guided by science, driven by empathy. My credentials ensure you train safely and effectively for long-term health.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-8 rounded-2xl bg-background-light dark:bg-neutral-dark/40 border border-primary/5 hover:border-primary/20 transition-all">
+<span class="material-icons text-primary text-4xl mb-4">workspace_premium</span>
+<h3 class="text-xl font-bold mb-2">NASM Certified</h3>
+<p class="text-sm opacity-70 leading-relaxed">National Academy of Sports Medicine Master Personal Trainer.</p>
+</div>
+<div class="p-8 rounded-2xl bg-background-light dark:bg-neutral-dark/40 border border-primary/5 hover:border-primary/20 transition-all">
+<span class="material-icons text-primary text-4xl mb-4">restaurant_menu</span>
+<h3 class="text-xl font-bold mb-2">PN Nutrition</h3>
+<p class="text-sm opacity-70 leading-relaxed">Precision Nutrition Level 1 Coach specializing in sustainable habits.</p>
+</div>
+<div class="p-8 rounded-2xl bg-background-light dark:bg-neutral-dark/40 border border-primary/5 hover:border-primary/20 transition-all">
+<span class="material-icons text-primary text-4xl mb-4">fitness_center</span>
+<h3 class="text-xl font-bold mb-2">Strength First</h3>
+<p class="text-sm opacity-70 leading-relaxed">Advanced strength and conditioning methodologies for all levels.</p>
+</div>
+<div class="p-8 rounded-2xl bg-background-light dark:bg-neutral-dark/40 border border-primary/5 hover:border-primary/20 transition-all">
+<span class="material-icons text-primary text-4xl mb-4">psychology</span>
+<h3 class="text-xl font-bold mb-2">Mental Gains</h3>
+<p class="text-sm opacity-70 leading-relaxed">Focusing on mindset, resilience, and behavioral psychology in fitness.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories -->
+<section class="py-24 overflow-hidden" id="results">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-3xl md:text-5xl font-800 mb-6 italic">Real People, Real Progress</h2>
+<p class="text-lg opacity-70">Transformation isn't just about the scale. It's about confidence, energy, and reclaiming your physical freedom.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-icons">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-icons">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Transformation 1 -->
+<div class="group bg-white dark:bg-neutral-dark/40 rounded-3xl overflow-hidden shadow-lg border border-primary/5">
+<div class="relative aspect-[4/5]">
+<img class="w-full h-full object-cover" data-alt="Client before and after side by side comparison" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDim3P9tLFZPcK7Ajz_wPvTUcnpP1_I9UVoE3gBciCLdc6RLV4oPf-G8CagHeuJ4dDGfkGUqEWRtDnkCS0jTJj0CRMmQGW_IJ-xtddDXMiufxA_zagTgRIkFNzbMVJR6hgLWqSe0iy2aof5iuaz5pv9jw5u4FziqP_403rj1jismjY-baYtWhDzCmmv-FfGvxLPSRaAwmAGT_1HJt13K3KCZw5eoFe9sYbxuQwT3CtOSeJFgJcrbSejWzp10I5utwEGqsyfxdf4yoc"/>
+<div class="absolute bottom-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase">12 Weeks</div>
+</div>
+<div class="p-8">
+<p class="text-neutral-dark/80 dark:text-neutral-light italic mb-4 leading-relaxed">"Mira helped me find a sustainable routine that actually fits into my busy life as a lawyer. I've never felt stronger."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">SC</div>
+<div>
+<h4 class="font-bold">Sarah C.</h4>
+<p class="text-xs opacity-60">Lost 15lbs &amp; Gained Confidence</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Transformation 2 -->
+<div class="group bg-white dark:bg-neutral-dark/40 rounded-3xl overflow-hidden shadow-lg border border-primary/5 transform lg:translate-y-8">
+<div class="relative aspect-[4/5]">
+<img class="w-full h-full object-cover" data-alt="Male client showing fitness transformation progress" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqZ7XwrXcUKllJSQ6rKuUwbLbHQgA0McqBHDoQwXewGfD_hp_Q_ZOAoXBqagNvbcg4QIHN7YkP4grxT6hKLmJpC7Z7HyxWLp6H24yaiw-qk-HD2dhJUNG33q9zlYM31xLirZrvkHYwWEhVqjo5UlnZXn3laURJKLL1T7JUlzzSYbXGj874dLbzZY8kbKVgu89G2WdgSTgYakGwvj9LBgPMa5vviFyrLxMqFlNCe_uaR4ZuR8m0_wR_O98RIREiTL9nfAhGFa-ZOPg"/>
+<div class="absolute bottom-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase">6 Months</div>
+</div>
+<div class="p-8">
+<p class="text-neutral-dark/80 dark:text-neutral-light italic mb-4 leading-relaxed">"The mobility work was the game changer. My back pain is gone and my deadlift has doubled. Truly elite coaching."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">JM</div>
+<div>
+<h4 class="font-bold">James M.</h4>
+<p class="text-xs opacity-60">Posture Correction &amp; Strength</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Transformation 3 -->
+<div class="group bg-white dark:bg-neutral-dark/40 rounded-3xl overflow-hidden shadow-lg border border-primary/5">
+<div class="relative aspect-[4/5]">
+<img class="w-full h-full object-cover" data-alt="Female client showing muscle definition after training" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqEIl3xrTrwkcfSQp5wt1ofoEsu-B2alln7qm7Y3A1C9zZdI0US-jkSD18JNYqSzxz2VL8K9BDHE9AardEmTswHG3a_BQpIFlFQTrwPhSduPgBm2Ph3njhi9c1sDJU9WRf4WJoxbJllMpvc0fO91s7HWlldtCR2Lvl13Q2whwgq1abTKO65seQfU4o0Q8eFiD6dg99fdKwry7eSoKEhHHDsq4SH-PqPEdWTejkMwyjVZaYc5q3eeB_McYMoItXFZnsdd11KlB4dTU"/>
+<div class="absolute bottom-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase">20 Weeks</div>
+</div>
+<div class="p-8">
+<p class="text-neutral-dark/80 dark:text-neutral-light italic mb-4 leading-relaxed">"I used to fear the gym. Mira made it my happy place. I understand nutrition now without feeling restricted."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">EL</div>
+<div>
+<h4 class="font-bold">Emma L.</h4>
+<p class="text-xs opacity-60">Athletic Performance Focus</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing/Packages -->
+<section class="py-24 bg-background-light dark:bg-background-dark/30" id="packages">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-800 mb-4 italic">Coaching Programs</h2>
+<p class="text-lg opacity-70">Select the level of support you need to reach your peak potential.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Basic -->
+<div class="bg-white dark:bg-neutral-dark/50 p-10 rounded-3xl border border-primary/5 shadow-sm">
+<h3 class="text-xl font-bold mb-2">Foundations</h3>
+<div class="mb-6">
+<span class="text-4xl font-800">$199</span>
+<span class="text-sm opacity-60">/month</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Customized Workout Plan</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Nutritional Guidelines</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Monthly Video Check-in</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Mobile App Access</span>
+</li>
+</ul>
+<a class="block w-full text-center py-4 rounded-xl border-2 border-primary/20 font-bold hover:bg-primary hover:text-white transition-all" href="#contact">Get Started</a>
+</div>
+<!-- Featured -->
+<div class="bg-white dark:bg-neutral-dark/50 p-10 rounded-3xl border-2 border-primary shadow-xl relative transform scale-105">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
+<h3 class="text-xl font-bold mb-2">Performance</h3>
+<div class="mb-6">
+<span class="text-4xl font-800">$349</span>
+<span class="text-sm opacity-60">/month</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3 font-medium">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-left">Everything in Foundations</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Weekly Bio-feedback Audits</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Priority Messaging Support</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Form Video Analysis</span>
+</li>
+</ul>
+<a class="block w-full text-center py-4 rounded-xl bg-primary text-white font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-primary/30" href="#contact">Get Started</a>
+</div>
+<!-- Elite -->
+<div class="bg-white dark:bg-neutral-dark/50 p-10 rounded-3xl border border-primary/5 shadow-sm">
+<h3 class="text-xl font-bold mb-2">Elite 1-on-1</h3>
+<div class="mb-6">
+<span class="text-4xl font-800">$599</span>
+<span class="text-sm opacity-60">/month</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3 font-medium">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-left">Everything in Performance</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">2x In-Person Sessions Weekly</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Bloodwork Analysis Integration</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm opacity-80 text-left">Supplementation Protocol</span>
+</li>
+</ul>
+<a class="block w-full text-center py-4 rounded-xl border-2 border-primary/20 font-bold hover:bg-primary hover:text-white transition-all" href="#contact">Get Started</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Lead Gen Form Section -->
+<section class="py-24 relative overflow-hidden" id="contact">
+<div class="absolute inset-0 bg-primary/5 -skew-y-6 transform origin-top-left -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl md:text-5xl font-800 mb-8 italic">Ready to start your journey?</h2>
+<p class="text-lg opacity-70 mb-10 max-w-lg">Let’s chat about your goals. This isn't a high-pressure sales call—it's a 15-minute discovery session to see if we're the right fit for your lifestyle.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white dark:bg-neutral-dark rounded-xl flex items-center justify-center shadow-md">
+<span class="material-icons text-primary">mail_outline</span>
+</div>
+<div>
+<p class="text-sm font-bold opacity-60 uppercase">Email Me</p>
+<p class="font-medium">mira@coachmira.fit</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white dark:bg-neutral-dark rounded-xl flex items-center justify-center shadow-md">
+<span class="material-icons text-primary">location_on</span>
+</div>
+<div>
+<p class="text-sm font-bold opacity-60 uppercase">Studio Location</p>
+<p class="font-medium">Downtown Performance Lab, Austin TX</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-neutral-dark p-8 md:p-12 rounded-[2rem] shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold mb-2 uppercase tracking-wide opacity-60">Full Name</label>
+<input class="w-full bg-background-light dark:bg-neutral-dark/50 border-transparent focus:border-primary focus:ring-0 rounded-xl py-4 px-6 transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2 uppercase tracking-wide opacity-60">Email Address</label>
+<input class="w-full bg-background-light dark:bg-neutral-dark/50 border-transparent focus:border-primary focus:ring-0 rounded-xl py-4 px-6 transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2 uppercase tracking-wide opacity-60">Your Primary Goal</label>
+<select class="w-full bg-background-light dark:bg-neutral-dark/50 border-transparent focus:border-primary focus:ring-0 rounded-xl py-4 px-6 transition-all">
+<option>Fat Loss &amp; Toning</option>
+<option>Muscle Hypertrophy</option>
+<option>Mobility &amp; Longevity</option>
+<option>Athletic Performance</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2 uppercase tracking-wide opacity-60">Tell me a bit about yourself</label>
+<textarea class="w-full bg-background-light dark:bg-neutral-dark/50 border-transparent focus:border-primary focus:ring-0 rounded-xl py-4 px-6 transition-all" placeholder="Mention your experience, injury history, or what you're struggling with..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-5 rounded-xl font-800 text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/30" type="submit">Book My Free Discovery Call</button>
+<p class="text-center text-xs opacity-50">I typically respond within 12 business hours.</p>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-12 border-t border-primary/10">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div>
+<span class="text-xl font-800 tracking-tighter text-primary">MIRA<span class="text-neutral-dark dark:text-white">COACH</span></span>
+<p class="text-sm opacity-60 mt-2 max-w-xs">Building resilient bodies and minds through high-performance habit coaching.</p>
+</div>
+<div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">TikTok</a>
+</div>
+<p class="text-xs opacity-40">© 2024 Coach Mira. All Rights Reserved. Privacy Policy.</p>
+</div>
+</footer>
+</body></html>

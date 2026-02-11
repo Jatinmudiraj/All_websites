@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Executive Modernist - B2B Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(242, 185, 13, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(242, 185, 13, 0.2);
+        }
+        .ticker-scroll {
+            display: flex;
+            width: fit-content;
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full bg-background-dark"></div>
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 px-6 py-4 flex justify-between items-center bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="text-xl font-bold tracking-tight text-primary uppercase">
+            Aurelius <span class="font-light text-white">Group</span>
+</div>
+<button class="p-2">
+<span class="material-icons text-primary">menu</span>
+</button>
+</nav>
+<!-- Hero Section -->
+<section class="relative px-6 pt-16 pb-12 overflow-hidden bg-background-dark">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest text-primary uppercase border border-primary/30 rounded">
+                Established Authority
+            </span>
+<h1 class="text-5xl md:text-6xl font-medium leading-[1.1] mb-6 text-white italic">
+                Legacy Built on <span class="text-primary not-italic">Performance.</span>
+</h1>
+<p class="text-lg text-slate-400 max-w-sm mb-10 leading-relaxed font-light">
+                Strategic B2B growth for industry leaders who demand precision over promises.
+            </p>
+<div class="flex flex-col gap-4">
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-4 px-8 rounded-lg shadow-lg shadow-primary/20 transition-all flex justify-between items-center">
+                    Request Executive Briefing
+                    <span class="material-icons">arrow_forward</span>
+</button>
+<button class="bg-transparent border border-white/20 text-white font-medium py-4 px-8 rounded-lg transition-all">
+                    View Case Studies
+                </button>
+</div>
+</div>
+</section>
+<!-- Results Ticker -->
+<div class="bg-primary/10 border-y border-primary/20 py-4 overflow-hidden whitespace-nowrap">
+<div class="ticker-scroll flex items-center gap-12">
+<div class="flex items-center gap-12 text-sm font-semibold tracking-wider text-primary uppercase">
+<span>Revenue Generated: $24.8M</span>
+<span class="text-white/20">|</span>
+<span>Client Growth: +142%</span>
+<span class="text-white/20">|</span>
+<span>Retention Rate: 98.4%</span>
+<span class="text-white/20">|</span>
+<span>Global Reach: 14 Nations</span>
+<span class="text-white/20">|</span>
+</div>
+<!-- Duplicated for seamless loop -->
+<div class="flex items-center gap-12 text-sm font-semibold tracking-wider text-primary uppercase">
+<span>Revenue Generated: $24.8M</span>
+<span class="text-white/20">|</span>
+<span>Client Growth: +142%</span>
+<span class="text-white/20">|</span>
+<span>Retention Rate: 98.4%</span>
+<span class="text-white/20">|</span>
+<span>Global Reach: 14 Nations</span>
+<span class="text-white/20">|</span>
+</div>
+</div>
+</div>
+<!-- Trusted By -->
+<section class="py-12 px-6 bg-background-dark">
+<p class="text-center text-xs font-bold tracking-widest text-slate-500 uppercase mb-8">Trusted by Global Enterprise Leaders</p>
+<div class="grid grid-cols-3 gap-8 items-center opacity-40 grayscale contrast-125">
+<img alt="Client Logo" class="h-6 mx-auto" data-alt="Corporate logo of Goldman Sachs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLsXzuPfe7_l59vf2tLp843AAFYC2T4O7osxvThmp4d_C1avvQKFL5QOTZKSZhXw8p-bYn0fmGsN_5qRJlwWUFmCWBIVFRA3SY_22p9iWkrebMEpBP28njVwXrC06OovfTsYDdK4aupFrOz-3hGa2TZqniXpMfiX1SsEOyrA02FXBRJwhOTRoIJzRXtBPW2eIlwR1uZTmuiJrefB0UPDIcTrSHq0cDXOCEF8dOct0P-KQ5R_OtU67YYh1StgwxiTCp5n-eXxdGAMr0"/>
+<img alt="Client Logo" class="h-6 mx-auto" data-alt="Corporate logo of McKinsey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05Dm8ThAFM1zqmMwMEBobDDaxoB6_JWljzn5hYvDZ-qzl_tvBv1Mw5MLKn8RqEHT1DJQj7nj4IYfUwNxjl7Xjtmcmn31G0n52NSDOIzqjmgJUGnsf8pa14sj1GaSq1f8y06HQXh9IVXNKg1ZAuwzG8H-jJNzYFjV_LafSld_oNcQQYwIwB-Tw-esyzBv0WO5L7lPmffXfK1VZ6M3Vc_bwCCMEK8Xveoo4cT6AyiGckJQQ8U33RDExqMIGJUzAPkka-g3swHnxo2Ez"/>
+<img alt="Client Logo" class="h-6 mx-auto" data-alt="Corporate logo of Deloitte" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsCWjbJ5WSKqfEFI3Xzyy7K2V5BAhHxiBu2pGWlS1ONpMVafoeF4AcJNmJwhF5w4jYeVsE-iLXs2LIdSB3UxuvGMweu4tAMu-AzmvBm7UsxMDfeoPFj3ijYfVEcn1RDVccTaeWYBZy9OHovKvwBWwv_PzBCqrqOrnBuzzBuvNfe5nuvtSpFz2FyKlxVJwiVXAvSNbXWE91vvrfSiYyZb2scHC9FkJ2WkysP1w34N9oYLOUf-X3BeiM9h0gdyb-NYPziiaGvHIli8P9"/>
+</div>
+</section>
+<!-- Services Section -->
+<section class="px-6 py-20 bg-background-dark">
+<div class="mb-12">
+<h2 class="text-3xl font-medium text-white mb-4 italic">Core Disciplines</h2>
+<div class="h-1 w-12 bg-primary"></div>
+</div>
+<div class="space-y-6">
+<!-- Card 1 -->
+<div class="glass-card p-8 rounded-xl relative group">
+<span class="material-icons text-primary mb-4 text-3xl">architecture</span>
+<h3 class="text-xl font-bold text-white mb-3">Strategic Consulting</h3>
+<p class="text-slate-400 font-light leading-relaxed">
+                    Bespoke market entry and scaling frameworks designed for high-barrier industries.
+                </p>
+<div class="mt-6 flex items-center text-primary font-bold text-sm tracking-widest uppercase">
+                    Learn More <span class="material-icons text-xs ml-2">east</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-8 rounded-xl relative">
+<span class="material-icons text-primary mb-4 text-3xl">insights</span>
+<h3 class="text-xl font-bold text-white mb-3">Revenue Operations</h3>
+<p class="text-slate-400 font-light leading-relaxed">
+                    Optimization of the entire sales cycle using proprietary AI-driven data analysis.
+                </p>
+<div class="mt-6 flex items-center text-primary font-bold text-sm tracking-widest uppercase">
+                    Learn More <span class="material-icons text-xs ml-2">east</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-8 rounded-xl relative">
+<span class="material-icons text-primary mb-4 text-3xl">verified</span>
+<h3 class="text-xl font-bold text-white mb-3">Brand Authority</h3>
+<p class="text-slate-400 font-light leading-relaxed">
+                    Establishing your leadership team as the definitive voice in your vertical.
+                </p>
+<div class="mt-6 flex items-center text-primary font-bold text-sm tracking-widest uppercase">
+                    Learn More <span class="material-icons text-xs ml-2">east</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Results/Legacy Section -->
+<section class="relative py-24 px-6 bg-primary/5">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-10 mix-blend-overlay" data-alt="Sophisticated modern corporate architecture detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUJ73ogwTn-ZhL_V8_5Ke57Wez0taobZ4LMvPE5HeJRU3hTU3-ENzfI08ZwyK6dizbiy7x94jnghlv46UxvawFatl0Mikqf6IYIGbj0Oslb6WLPLHjtbZhRmVnFKdAw0ioj1pdz-o9C_b7IUc6w8PaEhCX9Ef4qxaCU_Qj7NJv0114mVnfUQs49GLW2-ZfnFSrBI9rfJJgX4kUJFE166xx_0SPWHXAcWedvQNWippG39ca_bXkcsUPlTJVEGqpPHmeTqAxJjd4IsR"/>
+</div>
+<div class="relative z-10 text-center">
+<h2 class="text-4xl font-medium text-white mb-8 italic">The Aurelius Standard</h2>
+<div class="grid grid-cols-2 gap-8">
+<div class="text-center">
+<div class="text-3xl font-bold text-primary mb-1">12+</div>
+<div class="text-xs tracking-widest text-slate-500 uppercase">Years Legacy</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-primary mb-1">$4B</div>
+<div class="text-xs tracking-widest text-slate-500 uppercase">AUM Guided</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lead Generation Footer -->
+<footer class="bg-background-dark px-6 py-20 border-t border-primary/20">
+<div class="mb-12">
+<h2 class="text-3xl font-medium text-white mb-4 italic">Begin the Partnership.</h2>
+<p class="text-slate-400 font-light">Join the ranks of the world's most innovative B2B organizations.</p>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block text-xs font-bold tracking-widest text-primary uppercase mb-2">Professional Email</label>
+<input class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder:text-white/20 focus:border-primary focus:ring-0" placeholder="executive@company.com" type="email"/>
+</div>
+<button class="w-full bg-primary text-background-dark font-bold py-4 rounded-lg flex justify-center items-center gap-2">
+                Download Executive Portfolio
+                <span class="material-icons text-sm">download</span>
+</button>
+</form>
+<div class="mt-20 pt-10 border-t border-white/5 text-center">
+<div class="text-xl font-bold tracking-tight text-primary uppercase mb-6">
+                Aurelius <span class="font-light text-white">Group</span>
+</div>
+<div class="flex justify-center gap-6 mb-8 text-slate-500">
+<span class="material-icons text-xl">public</span>
+<span class="material-icons text-xl">work</span>
+<span class="material-icons text-xl">gavel</span>
+</div>
+<p class="text-[10px] text-slate-600 tracking-[0.2em] uppercase">
+                © 2024 Aurelius Strategic Partners. All Rights Reserved.
+            </p>
+</div>
+<!-- iOS Home Indicator Spacer -->
+<div class="h-8"></div>
+</footer>
+</body></html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Renewables &amp; Energy Export Page V3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #102210;
+        }
+        .glass {
+            background: rgba(16, 34, 16, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(19, 236, 19, 0.1);
+        }
+        .glow-shadow {
+            box-shadow: 0 0 20px rgba(19, 236, 19, 0.15);
+        }
+        .spec-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(19, 236, 19, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 glass border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+<span class="material-icons-round text-background-dark font-bold">bolt</span>
+</div>
+<span class="text-xl font-bold tracking-tight">V-TRX <span class="text-primary">ENERGY</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Infrastructure</a>
+<a class="hover:text-primary transition-colors" href="#">Trade Routes</a>
+<a class="hover:text-primary transition-colors" href="#">EPC Support</a>
+<a class="hover:text-primary transition-colors" href="#">Certifications</a>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-2 px-6 rounded transition-all flex items-center gap-2">
+<span class="material-icons-round text-sm">language</span>
+                GLOBAL PORTAL
+            </button>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-8">
+<div class="grid grid-cols-12 gap-8">
+<!-- Sidebar: Performance & Support -->
+<aside class="col-span-12 lg:col-span-3 space-y-6 order-2 lg:order-1">
+<div class="glass p-6 rounded-xl space-y-6">
+<div class="flex items-center gap-3 text-primary border-b border-primary/20 pb-4">
+<span class="material-icons-round">verified_user</span>
+<h3 class="font-bold uppercase tracking-wider">Performance Guarantee</h3>
+</div>
+<div class="space-y-4">
+<div class="bg-primary/5 p-4 rounded border border-primary/10">
+<p class="text-xs text-primary/60 uppercase mb-1">Linear Warranty</p>
+<p class="text-lg font-bold">30 Years</p>
+<div class="w-full bg-primary/20 h-1 mt-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<p class="text-[10px] mt-1 opacity-60">85% Minimum Output Retention</p>
+</div>
+<div class="bg-primary/5 p-4 rounded border border-primary/10">
+<p class="text-xs text-primary/60 uppercase mb-1">Product Warranty</p>
+<p class="text-lg font-bold">15 Years</p>
+</div>
+</div>
+</div>
+<div class="glass p-6 rounded-xl space-y-6 border-l-4 border-primary">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-icons-round">engineering</span>
+<h3 class="font-bold uppercase tracking-wider">EPC Support</h3>
+</div>
+<p class="text-sm leading-relaxed opacity-70">
+                        Full-spectrum engineering, procurement, and construction support for large-scale utility projects. 
+                    </p>
+<ul class="space-y-3 text-xs">
+<li class="flex items-center gap-2"><span class="material-icons-round text-primary text-sm">check_circle</span> SITE SURVEYS</li>
+<li class="flex items-center gap-2"><span class="material-icons-round text-primary text-sm">check_circle</span> GRID SYNCHRONIZATION</li>
+<li class="flex items-center gap-2"><span class="material-icons-round text-primary text-sm">check_circle</span> LOGISTICS OPTIMIZATION</li>
+</ul>
+<button class="w-full py-3 border border-primary/30 rounded font-bold hover:bg-primary/10 transition-colors uppercase text-xs tracking-widest">
+                        Access Engineer Toolkit
+                    </button>
+</div>
+<!-- Shipping / Incoterms -->
+<div class="bg-primary/10 p-6 rounded-xl border border-primary/20">
+<h4 class="text-xs font-bold text-primary mb-4 tracking-tighter uppercase">Export Logistics</h4>
+<div class="space-y-3">
+<div class="flex justify-between text-sm">
+<span class="opacity-60">Incoterms</span>
+<span class="font-bold">CIF, FOB, DDP</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="opacity-60">Lead Time</span>
+<span class="font-bold text-primary">4-6 Weeks</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="opacity-60">Port of Loading</span>
+<span class="font-bold">Ningbo / Shanghai</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="col-span-12 lg:col-span-9 space-y-8 order-1 lg:order-2">
+<!-- Hero Section -->
+<section class="relative h-[500px] rounded-xl overflow-hidden group">
+<img alt="Industrial Solar Array" class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700" data-alt="High efficiency solar panels in a professional field installation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA484bl0_URgDyiOOL7GwuktlMKNuMeKeaQjXl2AjqfAgMThY7QzcjdBranLzIa1U2Eo-ZNBUgpyNG7689QOFN_rY91jZo-8zHiSilqjc1d--aFo6lR6P13eLKWD5PsliSNJyX5CGqbMYQvvV1_xhoeUOK2fvUMvQ-otVClV_0zSSc5o0HfYevzsxLCQAm0JOdZ64jIw4U1a-qHvuMoRzkaIKWE1HOnKmbb0Ha_ap9fvFKC3P0Nwa1mkuRHk0k5fOX_rIimTEzyoE94"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/60 to-transparent"></div>
+<div class="absolute inset-0 p-12 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-6 border border-primary/30 w-fit">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                            EXPORT READY: SERIES-X7 MODULES
+                        </div>
+<h1 class="text-5xl md:text-6xl font-bold max-w-2xl leading-tight mb-6 uppercase">
+                            Bifacial N-Type <br/><span class="text-primary">670W+ Efficiency</span>
+</h1>
+<p class="text-lg opacity-80 max-w-xl mb-8 leading-relaxed">
+                            Engineered for high-yield utility scale projects. Tier 1 certified manufacturing with integrated smart-cooling architecture and low-light optimization.
+                        </p>
+<div class="flex gap-4">
+<button class="bg-primary text-background-dark px-8 py-4 rounded font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+                                Download Datasheet
+                            </button>
+<button class="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded font-bold border border-white/20 uppercase tracking-widest hover:bg-white/20 transition-all">
+                                Project Estimate
+                            </button>
+</div>
+</div>
+<!-- Technical Floating Spec -->
+<div class="absolute bottom-8 right-8 glass p-6 rounded-lg hidden md:block glow-shadow border border-primary/30">
+<div class="text-[10px] text-primary uppercase font-bold mb-2">Live Technical Data</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-xs opacity-50 uppercase">Module Efficiency</p>
+<p class="text-2xl font-bold">22.8%</p>
+</div>
+<div>
+<p class="text-xs opacity-50 uppercase">Temp Coeff.</p>
+<p class="text-2xl font-bold">-0.30%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tier 1 Badges -->
+<div class="flex flex-wrap items-center justify-between gap-6 py-6 border-y border-primary/10">
+<div class="flex flex-col items-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-help">
+<img alt="Tier 1" class="h-10 w-auto object-contain mb-2" data-alt="BloombergNEF Tier 1 Certification Logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOzaVywb24xFkdm3gYFpwseaLhYJG2IU6y9jisnGbxxb5liC_MCoq6NHfJen6ERjiAZhdMR0zPTdcTqNnheMdMn28cJyKsK372m4pEUODCyfrg8HO3K1FbiV1ZWO5lJY3y0R_oISi9Pq_aeVYt2iDXHkOaIqdQyrg-C95_KwGHos_asyxmRpmIrpRXdjlvVlHtzw7jCC3W-YmdCDK5983Q2RxSXb8QyaTq9_bVSc3shFW50W-4n5sr7CWZfo1OrQRfw6kKbcfU_fXU"/>
+<span class="text-[10px] uppercase font-bold tracking-widest">BloombergNEF Tier 1</span>
+</div>
+<div class="flex flex-col items-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+<span class="material-icons-round text-3xl mb-1">workspace_premium</span>
+<span class="text-[10px] uppercase font-bold tracking-widest">ISO 9001:2015</span>
+</div>
+<div class="flex flex-col items-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+<span class="material-icons-round text-3xl mb-1">eco</span>
+<span class="text-[10px] uppercase font-bold tracking-widest">Low Carbon Footprint</span>
+</div>
+<div class="flex flex-col items-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+<span class="material-icons-round text-3xl mb-1">bolt</span>
+<span class="text-[10px] uppercase font-bold tracking-widest">TUV Rheinland Certified</span>
+</div>
+<div class="flex flex-col items-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+<span class="material-icons-round text-3xl mb-1">public</span>
+<span class="text-[10px] uppercase font-bold tracking-widest">IEC 61215 Standard</span>
+</div>
+</div>
+<!-- Simulation Module -->
+<section class="glass p-8 rounded-xl spec-grid">
+<div class="flex justify-between items-start mb-10">
+<div>
+<h2 class="text-2xl font-bold uppercase tracking-tight mb-2">Energy Yield Simulation</h2>
+<p class="text-sm opacity-60">Interactive performance forecasting based on PVSyst algorithms</p>
+</div>
+<div class="bg-primary/20 p-2 rounded">
+<span class="material-icons-round text-primary">analytics</span>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="space-y-8">
+<div>
+<div class="flex justify-between mb-4">
+<label class="text-sm font-bold uppercase tracking-widest">Project Capacity (MW)</label>
+<span class="text-primary font-bold">50 MW</span>
+</div>
+<input class="w-full accent-primary bg-primary/20 rounded-full h-2 appearance-none" type="range"/>
+</div>
+<div>
+<div class="flex justify-between mb-4">
+<label class="text-sm font-bold uppercase tracking-widest">Irradiance Profile (kWh/m²)</label>
+<span class="text-primary font-bold">1,850</span>
+</div>
+<input class="w-full accent-primary bg-primary/20 rounded-full h-2 appearance-none" type="range"/>
+</div>
+<div class="pt-4 grid grid-cols-2 gap-4">
+<div class="bg-background-dark p-4 rounded border border-primary/10">
+<p class="text-[10px] opacity-60 uppercase mb-1">Annual Production</p>
+<p class="text-xl font-bold">92.5 <span class="text-xs text-primary">GWh</span></p>
+</div>
+<div class="bg-background-dark p-4 rounded border border-primary/10">
+<p class="text-[10px] opacity-60 uppercase mb-1">CO2 Savings</p>
+<p class="text-xl font-bold">65.2k <span class="text-xs text-primary">Tons</span></p>
+</div>
+</div>
+</div>
+<div class="bg-background-dark/50 rounded-lg p-6 flex items-end relative overflow-hidden h-64 border border-primary/10">
+<!-- Visualizing a graph with simple divs -->
+<div class="flex items-end justify-between w-full h-full gap-2 relative z-10">
+<div class="bg-primary/20 w-full rounded-t" style="height: 40%"></div>
+<div class="bg-primary/30 w-full rounded-t" style="height: 55%"></div>
+<div class="bg-primary/40 w-full rounded-t" style="height: 75%"></div>
+<div class="bg-primary/60 w-full rounded-t" style="height: 90%"></div>
+<div class="bg-primary w-full rounded-t shadow-[0_0_15px_rgba(19,236,19,0.5)]" style="height: 100%"></div>
+<div class="bg-primary/80 w-full rounded-t" style="height: 85%"></div>
+<div class="bg-primary/50 w-full rounded-t" style="height: 70%"></div>
+<div class="bg-primary/30 w-full rounded-t" style="height: 45%"></div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-between p-4 pointer-events-none opacity-20">
+<div class="border-t border-primary/50 w-full"></div>
+<div class="border-t border-primary/50 w-full"></div>
+<div class="border-t border-primary/50 w-full"></div>
+</div>
+<div class="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-widest text-primary/60">Yield Curve (24h Pulse)</div>
+</div>
+</div>
+</section>
+<!-- Project Portfolio -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold uppercase">Project Portfolio</h2>
+<a class="text-xs text-primary font-bold uppercase tracking-widest flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                            View All Case Studies <span class="material-icons-round text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="relative group rounded-xl overflow-hidden h-64 border border-white/10">
+<img alt="Atacama Solar" class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" data-alt="Aerial view of a massive solar farm in the desert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgCMXih0IAS4Fpj19onXbEM4sb3etyRrm4GHU37TrXOIoTZMjxld4UGELe658hYSwbQd3TnKGnKbR6ktsXxlOB9uT5CoKL3_kUkZDNLUTsuVf-08QcDDPFUN1xq3_SiG7sg_vfhBZY8TXsHOGOOz1WCGwZI40k2iqPkIEiEzHi_vQDEra--qny5QA7SQ08kwrOLo02kSoxuxggB2N383x1o_2h8jZeDrKktdWkmQUw09jYr4Ui0DZwxiNnyTLl8K9nIC3wj1srrecv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-[10px] text-primary font-bold">ATACAMA DESERT, CL</p>
+<p class="text-lg font-bold">250MW PV Plant</p>
+</div>
+</div>
+<div class="relative group rounded-xl overflow-hidden h-64 border border-white/10">
+<img alt="Dubai Solar" class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" data-alt="Modern solar panels in a city infrastructure setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxpV9LneELiXYKGF1Oes-QsVbznIAojnaRk_4dPwZeflqNtEGmz0SiKVX7ID5MQF3eMAfP-jW__u3fpVxXorgdXadF1eH6LCbRYujGJy1RyT_TFVMCFwkNaalngdr6Mgm2uwf5ZbXz7i4x9niasRmhpKJCd2QLkgf-2wy8Ufz3oWWsAJgY3c0Iq_6QvIw1Xgawp1LiB1hVHXJihSJpzBPeMGcruBnh7ZDo-kf-8BiLHvcacZv4MzQpJ8B4gXW1QJVZ_4axuI5EkPcV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-[10px] text-primary font-bold">DUBAI, UAE</p>
+<p class="text-lg font-bold">Al Maktoum Phase III</p>
+</div>
+</div>
+<div class="relative group rounded-xl overflow-hidden h-64 border border-white/10">
+<img alt="Nordic Wind" class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" data-alt="Offshore wind farm in the cold North Sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-BZ3pk0NnkUa5WR1F5UTrLYY_Qc5yaHNPNzrRWL0RqukHpiETAXJSQWD2IrcRgUXDZog8ktkt9OWUAGV17batk-pXxnJgvMj2bG3tHQpJmgYma5uFCzzQ5XeKRKPP4mHo7uNqhq7N1QUYL7uEqv1qDnRzR4SMHrFcnyveiuyJO0PAYS81MRr7oTSmZBh_YD3ipJfVbRhkCOC61wG7JAJIwxUshBbL7nI6x5TiDCxmpyDTWtrj0gNkvwVYPZijzXz8sS8eYwB5hUwi"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-[10px] text-primary font-bold">NORTH SEA, DK</p>
+<p class="text-lg font-bold">HVDC Interconnect</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Map Section -->
+<section class="mt-20 border-y border-primary/10 py-16 bg-background-dark/50 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl font-bold uppercase mb-6 leading-tight">Global Trade <br/><span class="text-primary">&amp; Supply Chain</span></h2>
+<p class="text-lg opacity-70 mb-8">Strategically positioned distribution hubs across 5 continents ensures seamless delivery of critical energy infrastructure.</p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center shrink-0">
+<span class="material-icons-round text-primary">inventory_2</span>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-wide">Bonded Warehousing</h4>
+<p class="text-sm opacity-60">Over 50,000 sqm of ready-to-ship stock in Rotterdam and Singapore.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center shrink-0">
+<span class="material-icons-round text-primary">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-wide">24/7 Logistics Monitoring</h4>
+<p class="text-sm opacity-60">Real-time GPS tracking for every container from factory gate to site arrival.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-primary/5 rounded-full absolute -inset-10 animate-pulse"></div>
+<img alt="Global Supply Map" class="w-full rounded-2xl grayscale border border-primary/20 relative z-10" data-alt="Abstract world map with glowing nodes representing trade routes" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH-SwXZLLcBzyjiN92NWvekY9-Mdf6la5ejoii55ul4tKN7K_4JD4PdU49VqjmtyTFZSe16CKk16p8P4jCUtVmGaVu_6_1ifbq4t0Ex9u57GAnhXHEtA199t1iblXdhBivgpwkfPBRormaSM31CWtKUxV7BBhlD9WtyvbnoZzGTn7t-4mJ-jiMmfEF3yB0wTk9_5hmHj8sIBbmFO1IvyCMpLU2DQyJyyR4leYPrmgAKnRhWxKejAwte3jyBoLVHnLYQn2PDysrpbyX"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Footer RFQ -->
+<div class="fixed bottom-0 left-0 right-0 z-[60] py-4 px-6 glass border-t border-primary/30">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<div class="hidden md:block">
+<p class="text-[10px] text-primary font-bold uppercase">Pricing Level</p>
+<p class="text-sm font-bold">Wholesale Tier A</p>
+</div>
+<div class="h-8 w-[1px] bg-primary/20 hidden md:block"></div>
+<div>
+<p class="text-[10px] opacity-60 uppercase">Bulk Availability</p>
+<p class="text-sm font-bold text-white">1.2 GW In Stock</p>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<div class="flex-grow md:w-64">
+<input class="w-full bg-background-dark border border-primary/30 rounded px-4 py-2 text-sm focus:ring-1 focus:ring-primary focus:border-primary" placeholder="Enter Business Email" type="email"/>
+</div>
+<button class="bg-primary text-background-dark font-bold px-8 py-2 rounded uppercase text-sm tracking-widest whitespace-nowrap shadow-[0_0_20px_rgba(19,236,19,0.3)]">
+                    Request Quote
+                </button>
+</div>
+</div>
+</div>
+<!-- Padding for sticky footer -->
+<div class="h-24"></div>
+<footer class="bg-background-dark border-t border-white/5 py-12 text-sm opacity-50">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-primary text-lg">bolt</span>
+<span class="font-bold tracking-tight text-white opacity-100">V-TRX ENERGY SYSTEMS</span>
+</div>
+<div class="flex gap-8">
+<a class="hover:text-primary" href="#">Legal</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Incoterms 2024</a>
+<a class="hover:text-primary" href="#">Documentation</a>
+</div>
+<p>© 2024 V-TRX Global Trade Infrastructure. All technical specs subject to change.</p>
+</div>
+</footer>
+</body></html>

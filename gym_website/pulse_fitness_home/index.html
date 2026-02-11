@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PULSE FITNESS | High Energy Urban Gym</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25f46a",
+                        "accent-blue": "#0ea5e9",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(37, 244, 106, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(37, 244, 106, 0.15);
+        }
+        .glass-nav {
+            background: rgba(16, 34, 22, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(37, 244, 106, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(37, 244, 106, 0.5);
+        }
+        .neon-border {
+            box-shadow: 0 0 15px rgba(37, 244, 106, 0.3);
+        }
+    </style>
+<link rel="stylesheet" href="../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 selection:bg-primary selection:text-background-dark">
+<!-- Sticky Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-background-dark font-bold">bolt</span>
+</div>
+<span class="text-2xl font-bold tracking-tighter uppercase italic">Pulse<span class="text-primary">Fitness</span></span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium tracking-widest hover:text-primary transition-colors" href="#">CLASSES</a>
+<a class="text-sm font-medium tracking-widest hover:text-primary transition-colors" href="#">TRAINERS</a>
+<a class="text-sm font-medium tracking-widest hover:text-primary transition-colors" href="#">PRICING</a>
+<a class="text-sm font-medium tracking-widest hover:text-primary transition-colors" href="#">LOCATIONS</a>
+</div>
+<button class="bg-primary text-background-dark px-6 py-2.5 rounded font-bold text-sm tracking-widest hover:scale-105 transition-transform uppercase neon-border">
+                Book Free Trial
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Athlete Training" class="w-full h-full object-cover opacity-50 dark:opacity-40 grayscale" data-alt="Athletic man lifting weights in a dark urban gym setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpk8obKcn1hphxrqEKR0-McHMRuPaYvGspJBAZF-MnyaFumx9Dgye00RdtqC2velzUxUggQuNKcarJp3QbcEXE46eO406xEonwCb9xgZW0-zWr5UZWE1N0QaNz0TEWXK1d6kadcrW7k9zWiaZDLSu0W8Mfc2q5InTGSSL2hTiIBW164xD64j8uFC0J52rpM_vejucjQWUmImOQXcRihhdqV_FRPmTdY18LfuTYzL8A1VOLdGxO3c8UbUopF4bGaiaCsepA8L2zrAE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-background-dark to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold tracking-[0.2em] mb-6 uppercase">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Join the Movement
+                </div>
+<h1 class="text-6xl md:text-8xl font-bold leading-tight uppercase italic mb-6">
+                    Train <span class="text-primary text-glow">Smarter.</span><br/>
+                    Get Stronger.
+                </h1>
+<p class="text-xl text-slate-400 max-w-lg mb-10 font-light leading-relaxed">
+                    Experience the next generation of urban fitness. High-intensity environments designed to push your limits and redefine your potential.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-background-dark px-8 py-4 rounded font-bold text-lg tracking-widest hover:bg-primary/90 transition-all uppercase">
+                        Get Started
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 px-8 py-4 rounded font-bold text-lg tracking-widest hover:bg-white/20 transition-all uppercase">
+                        View Classes
+                    </button>
+</div>
+</div>
+</div>
+<!-- Quick Stats Row -->
+<div class="absolute bottom-10 w-full z-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="glass-card rounded-xl p-6 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-primary/20">
+<div class="text-center px-4">
+<div class="text-3xl font-bold text-primary">2,400+</div>
+<div class="text-xs uppercase tracking-widest opacity-60">Active Members</div>
+</div>
+<div class="text-center px-4">
+<div class="text-3xl font-bold text-primary">45+</div>
+<div class="text-xs uppercase tracking-widest opacity-60">Weekly Classes</div>
+</div>
+<div class="text-center px-4">
+<div class="text-3xl font-bold text-primary">12</div>
+<div class="text-xs uppercase tracking-widest opacity-60">Elite Trainers</div>
+</div>
+<div class="text-center px-4">
+<div class="text-3xl font-bold text-primary">82%</div>
+<div class="text-xs uppercase tracking-widest opacity-60">Avg. Capacity</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Class Categories -->
+<section class="py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-end justify-between mb-16">
+<div>
+<h2 class="text-sm font-bold text-primary tracking-[0.3em] uppercase mb-4">Categories</h2>
+<h3 class="text-4xl md:text-5xl font-bold uppercase italic">Choose Your <span class="text-primary">Discipline</span></h3>
+</div>
+<div class="hidden md:block">
+<button class="flex items-center gap-2 text-sm font-bold tracking-widest uppercase group transition-all">
+                        View All Classes 
+                        <span class="material-icons text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- HIIT Card -->
+<div class="group relative h-[450px] rounded-xl overflow-hidden glass-card border-none">
+<img alt="HIIT Class" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-60 group-hover:opacity-80" data-alt="Intense HIIT workout group in action" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5pwwsMnBwiZhcpt_OfYV6QBLDJ4hctyBFyLJ3ghtLhXHJNrEdnj9PZK9q4FKpGPq8yjnzkTKXlPdJbDjsL_TIkOX9t1utjnoMMWUgjpwNuTZcThPVH0w1JTrtHs0dXA0irbDLJrAiYyytqRpsOh0RpWK8sq5Wtn-MCJBJrml427CQGaNczN4yyEXToUd0Xw4yxHRGL2_cN0oVIPnCxc0aKYi4JoVdNLyaLV1UQ48oNXFZR7_E7wmscVn8t_Bh2yOc0TkOqq1wY8A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<div class="bg-primary text-background-dark text-[10px] font-bold px-2 py-1 rounded inline-block mb-3 tracking-widest">HI-INTENSITY</div>
+<h4 class="text-3xl font-bold uppercase italic mb-2">HIIT</h4>
+<p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fast-paced, high-burn functional training.</p>
+</div>
+</div>
+<!-- Boxing Card -->
+<div class="group relative h-[450px] rounded-xl overflow-hidden glass-card border-none">
+<img alt="Boxing Class" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-60 group-hover:opacity-80" data-alt="Person hitting heavy bag in dark boxing gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg-fIRIVle2wHs0aLq_qAupEEI26Hy7-ONDgnvtzOPV2sfiYecYC5GnU3xPBnwdKq0I0juiGcjzoGDKEzqnkIFKHX5aybDYTWYrIaZ9wmTDsDcUJe3zpqwvzsvTJLa6atpmHzg-eSR5PLDj_m4CapzbO1jER4FaV5Nvq1OCwc75O6e0E6rLB1gCsvwl0oGmghHsksevq4FzMy9OV6Bc1bvaL-EJ7aVw5S0f1NZoZ3ZxfWaHJET16bA8tkt62agX1b_wEErbvGU1Bs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<div class="bg-accent-blue text-white text-[10px] font-bold px-2 py-1 rounded inline-block mb-3 tracking-widest">STAMINA</div>
+<h4 class="text-3xl font-bold uppercase italic mb-2">Boxing</h4>
+<p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Technical combat training and cardio focus.</p>
+</div>
+</div>
+<!-- Strength Card -->
+<div class="group relative h-[450px] rounded-xl overflow-hidden glass-card border-none">
+<img alt="Strength Training" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-60 group-hover:opacity-80" data-alt="Close up of weightlifting plate and rack" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC173v-ehPM1DTo6TVeBDBzG0jTPTCaCVU_T0b12a1-SdoU850RYSuDWh7bx4ukE4Jd957nIfqXn47EGB27CiGgZAjK69zC9mYvbSTfSivMlYiKS9HvRu25dwWLC77s9M_ZE01HdgqVKIPpwzENtdb2r4PESlBzFG8jx9kvQioB_IC2OeevKEb7HWG3LAdEHC-CbyQ3pWJHcBdjspZKZZ2e4KmQt-sgTia1Z1tbRJ0Xpy0ZLh0rwKtE2pkLDdAE6c3HtVn7dLJa9hc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<div class="bg-primary text-background-dark text-[10px] font-bold px-2 py-1 rounded inline-block mb-3 tracking-widest">POWER</div>
+<h4 class="text-3xl font-bold uppercase italic mb-2">Strength</h4>
+<p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Heavy lifting and compound muscle growth.</p>
+</div>
+</div>
+<!-- Recovery Card -->
+<div class="group relative h-[450px] rounded-xl overflow-hidden glass-card border-none">
+<img alt="Recovery Class" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-60 group-hover:opacity-80" data-alt="Yoga practitioner in a peaceful dark studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXvJFQrPiHDakjmNANt5bZFF88Sl2W4TEgYteZesHVxZmZhrrV6fRR9xqWU1qJbMwGanQYScRr3jI-cc5klKGGp9UOhOjovTrXeAqErW9qrgnLmBqZacHxte-PpVpC1kJfxmFCtwP4DbLuPdCYGjJ4fd-EPnqoTS2mKMzAYDCMMq3nxmlspeEEFDtb7KTY1PcNSHOrNF0-ksMOfnvOk0GrB-RNy6SulUiUD-GgpFPUnFzpuPvkTNNcxrl60UwHl5knlSaMEJLV05o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<div class="bg-white/20 text-white text-[10px] font-bold px-2 py-1 rounded inline-block mb-3 tracking-widest">BALANCE</div>
+<h4 class="text-3xl font-bold uppercase italic mb-2">Recovery</h4>
+<p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Yoga, mobility, and foam rolling sessions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Weekly Schedule -->
+<section class="py-24 bg-primary/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-sm font-bold text-primary tracking-[0.3em] uppercase mb-4">The Schedule</h2>
+<h3 class="text-5xl font-bold uppercase italic mb-8">Weekly <span class="text-primary">Pulse</span></h3>
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="px-6 py-2 rounded-full bg-primary text-background-dark font-bold text-xs uppercase tracking-widest">All</button>
+<button class="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-white font-bold text-xs uppercase tracking-widest hover:border-primary transition-colors">HIIT</button>
+<button class="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-white font-bold text-xs uppercase tracking-widest hover:border-primary transition-colors">Strength</button>
+<button class="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-white font-bold text-xs uppercase tracking-widest hover:border-primary transition-colors">Boxing</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-7 gap-4">
+<!-- Days of Week -->
+<div class="lg:col-span-7 grid grid-cols-7 text-center mb-4 hidden lg:grid">
+<div class="text-xs font-bold text-primary tracking-widest">MON</div>
+<div class="text-xs font-bold text-slate-500 tracking-widest">TUE</div>
+<div class="text-xs font-bold text-slate-500 tracking-widest">WED</div>
+<div class="text-xs font-bold text-slate-500 tracking-widest">THU</div>
+<div class="text-xs font-bold text-slate-500 tracking-widest">FRI</div>
+<div class="text-xs font-bold text-slate-500 tracking-widest">SAT</div>
+<div class="text-xs font-bold text-slate-500 tracking-widest">SUN</div>
+</div>
+<!-- Schedule Grid Container -->
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4">
+<!-- Monday Col Sample -->
+<div class="space-y-4">
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-primary">
+<div class="text-[10px] text-primary font-bold mb-1">06:00 AM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Morning Blitz</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] opacity-50 uppercase tracking-widest">Intensity</span>
+<div class="flex gap-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+</div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-accent-blue">
+<div class="text-[10px] text-accent-blue font-bold mb-1">12:30 PM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Power Hour</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] opacity-50 uppercase tracking-widest">Intensity</span>
+<div class="flex gap-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-accent-blue"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-accent-blue"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-slate-700"></div>
+</div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-primary">
+<div class="text-[10px] text-primary font-bold mb-1">06:00 PM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Afterburn</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] opacity-50 uppercase tracking-widest">Intensity</span>
+<div class="flex gap-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tuesday Sample -->
+<div class="space-y-4">
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-slate-400">
+<div class="text-[10px] text-slate-400 font-bold mb-1">07:00 AM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Flex &amp; Flow</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] opacity-50 uppercase tracking-widest">Intensity</span>
+<div class="flex gap-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-slate-700"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-slate-700"></div>
+</div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-primary">
+<div class="text-[10px] text-primary font-bold mb-1">05:30 PM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Savage HIIT</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] opacity-50 uppercase tracking-widest">Intensity</span>
+<div class="flex gap-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Wednesday Sample -->
+<div class="space-y-4">
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-accent-blue">
+<div class="text-[10px] text-accent-blue font-bold mb-1">06:00 AM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Iron Mastery</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] opacity-50 uppercase tracking-widest">Intensity</span>
+<div class="flex gap-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-accent-blue"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-accent-blue"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-accent-blue"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Repeating mock columns for layout -->
+<div class="hidden lg:block space-y-4">
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-primary opacity-50">
+<div class="text-[10px] font-bold mb-1 italic">TBD</div>
+<div class="font-bold uppercase tracking-tight">Open Gym</div>
+</div>
+</div>
+<div class="hidden lg:block space-y-4">
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-primary">
+<div class="text-[10px] text-primary font-bold mb-1">06:00 PM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Pulse Cycle</div>
+</div>
+</div>
+<div class="hidden lg:block space-y-4">
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-accent-blue">
+<div class="text-[10px] text-accent-blue font-bold mb-1">10:00 AM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Weekend Warrior</div>
+</div>
+</div>
+<div class="hidden lg:block space-y-4">
+<div class="glass-card p-4 rounded-lg border-l-4 border-l-slate-400">
+<div class="text-[10px] text-slate-400 font-bold mb-1">09:00 AM</div>
+<div class="font-bold uppercase tracking-tight leading-none mb-2">Recovery Sun</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trainer Spotlight -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<h2 class="text-sm font-bold text-primary tracking-[0.3em] uppercase mb-4">The Team</h2>
+<h3 class="text-5xl font-bold uppercase italic">Elite <span class="text-primary">Coaches</span></h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Trainer 1 -->
+<div class="relative group aspect-[3/4] overflow-hidden rounded-xl">
+<img alt="Trainer Sarah" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Professional female gym trainer with confident pose" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVoI3vAo70vrQyXyaXfwi73aUUY_hCboVvcNQ5iAHdmLZqiEzDcnWCU1MPlEkav3f6q3sfKZEYAlo2RoJYlvjcD-5cuR2UjQuazvwqdOfq_idRNn2xHWtC7aRKFWy38UL8X2fLPt6zguBTD_bGuE6BJBDENokWo1d4tBaOXcDp-KjAKD9-X79mFh3qKJpWQlpBuoK7IA4at77rJFRLDo15p__AtbEK19IfI3mWcPQ4YFOqNkMP0Oo0C_sYAb8g5YeSkrnXTww-b58"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+<div class="mb-4">
+<span class="text-xs text-primary font-bold tracking-widest uppercase">HIIT &amp; Nutrition</span>
+<h4 class="text-3xl font-bold uppercase italic">Sarah "Nova" Chen</h4>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity delay-100 space-y-3">
+<p class="text-sm text-slate-300">10+ years experience in metabolic conditioning and performance athletic training.</p>
+<div class="flex gap-4">
+<span class="material-icons text-xl hover:text-primary cursor-pointer transition-colors">facebook</span>
+<span class="material-icons text-xl hover:text-primary cursor-pointer transition-colors">camera_alt</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Trainer 2 -->
+<div class="relative group aspect-[3/4] overflow-hidden rounded-xl">
+<img alt="Trainer Jax" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Muscular male boxing coach in gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoEyeHaoZKrzj_ox35_Nhir_SKL1lE0RI3KEn0z5435eJI6cYiYwcNoRgeewhH6A88b1_2iiWwOymN_JJ5TT1EVDzF7eElvityNF4XD7zKN7bppok89gu1lmcRHJTrzTkHZlrj6NMUUE1zF2oFhtb_FuszjRfyo4C3xfSwHm9NNbt3rvk6bhxrcofnN7Pr_wl12_X71sdQNUnvMPKHmvqnl3sLrxVhlAHd1Lc6RXyhkreZVOku47ub4rYW7eEUWSX7SeE842dF44g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+<div class="mb-4">
+<span class="text-xs text-primary font-bold tracking-widest uppercase">Combat &amp; Boxing</span>
+<h4 class="text-3xl font-bold uppercase italic">Jaxson Thorne</h4>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity delay-100 space-y-3">
+<p class="text-sm text-slate-300">Former heavyweight champion focused on explosive power and technical precision.</p>
+<div class="flex gap-4">
+<span class="material-icons text-xl hover:text-primary cursor-pointer transition-colors">facebook</span>
+<span class="material-icons text-xl hover:text-primary cursor-pointer transition-colors">camera_alt</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Trainer 3 -->
+<div class="relative group aspect-[3/4] overflow-hidden rounded-xl">
+<img alt="Trainer Elena" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Athletic trainer posing in modern gym background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCJx9uH08xxlf7kr5_SV0suVhBhse2QxX6EUUn0kQ8vC9k_N8B1QwrM3nDR94pE4YtMTdwd1Xp5-TtRPwlCpCkYVaYmj4WplImXVSloAQvu4RyBtd1Q_v8B2eP0ydRcXRVvh0XCoCW3EoRyIsoJT-ov9MXnJJjdSl4QB-3lwOfhSpwbd6U0vips828_-VXG6U2FGMIt2UY7yvNV-BB_eRUghojL1Teh4TUzg8yIbVQ9nqYWofRJTuTN7NkHcsoK-C_WQu9fcWY99Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+<div class="mb-4">
+<span class="text-xs text-primary font-bold tracking-widest uppercase">Strength &amp; Mobilty</span>
+<h4 class="text-3xl font-bold uppercase italic">Elena Vance</h4>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity delay-100 space-y-3">
+<p class="text-sm text-slate-300">Specialist in functional strength and correctional movement patterns.</p>
+<div class="flex gap-4">
+<span class="material-icons text-xl hover:text-primary cursor-pointer transition-colors">facebook</span>
+<span class="material-icons text-xl hover:text-primary cursor-pointer transition-colors">camera_alt</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black py-20 border-t border-primary/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-8">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-background-dark text-lg font-bold">bolt</span>
+</div>
+<span class="text-xl font-bold tracking-tighter uppercase italic">Pulse<span class="text-primary">Fitness</span></span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        Downtown’s premier high-energy fitness collective. No excuses, just results.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<i class="material-icons text-sm">facebook</i>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<i class="material-icons text-sm">camera_alt</i>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<i class="material-icons text-sm">play_arrow</i>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-sm font-bold uppercase tracking-widest mb-8 text-primary">Explore</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">The Lab</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Membership</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">App Download</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pulse Shop</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-sm font-bold uppercase tracking-widest mb-8 text-primary">Support</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-sm font-bold uppercase tracking-widest mb-8 text-primary">Newsletter</h5>
+<p class="text-slate-500 text-sm mb-6">Get weekly training tips and early access to events.</p>
+<div class="flex">
+<input class="bg-white/5 border border-white/10 rounded-l px-4 py-2 w-full focus:outline-none focus:border-primary text-sm" placeholder="Your email" type="email"/>
+<button class="bg-primary text-background-dark px-4 py-2 rounded-r font-bold text-xs uppercase tracking-widest">Join</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 text-[10px] uppercase tracking-widest">
+<p>© 2024 Pulse Fitness. All Rights Reserved.</p>
+<div class="flex gap-8">
+<span>Designed for the Elite</span>
+<span>Built for Results</span>
+</div>
+</div>
+</div>
+</footer>
+<script src="../../assets/js/global-enhancement.js" defer></script>
+</body></html>

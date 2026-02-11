@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TRAINR - Your Coach in Your Pocket</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f425af",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#22101c",
+                        "accent-purple": "#8b5cf6",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .bg-mesh {
+            background-color: #ffffff;
+            background-image: radial-gradient(at 0% 0%, rgba(244, 37, 175, 0.05) 0px, transparent 50%),
+                              radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #f425af 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f425af 0%, #8b5cf6 100%);
+        }
+    </style>
+<link rel="stylesheet" href="../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">fitness_center</span>
+</div>
+<span class="text-2xl font-extrabold tracking-tight">TRAINR<span class="text-primary">.</span></span>
+</div>
+<div class="hidden md:flex items-center gap-10 font-semibold text-sm">
+<a class="hover:text-primary transition-colors" href="#features">Features</a>
+<a class="hover:text-primary transition-colors" href="#reviews">Reviews</a>
+<a class="hover:text-primary transition-colors" href="#pricing">Pricing</a>
+<a class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full transition-all shadow-lg shadow-primary/25" href="#">Download Now</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 px-6 bg-mesh">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 space-y-8 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest">
+<span class="material-icons text-sm">bolt</span> New v2.0 AI Coach is here
+                </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1]">
+                    Your coach in your <br/>
+<span class="gradient-text">pocket.</span>
+</h1>
+<p class="text-xl text-slate-600 dark:text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Master your fitness journey with personalized AI-driven workout plans and real-time progress tracking. Train anywhere, anytime with TRAINR.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+<a class="w-full sm:w-auto" href="#">
+<img alt="App Store" class="h-12 hover:opacity-80 transition-opacity" data-alt="Download on the Apple App Store button" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP5kuI-doYcY_P4KeYlsrDL4K2rN1td0q-ruffy88YbZEkcdkXKUgplN-TJdWIIuOaCxVExfa9327hIuz2_cLtpBGh_yJit3w-xNs-1pmWa98Ckv6MLJ5NhcFW1PnbDcs1I96BqiNC6PwRaC0GEy8Y4cwsxfUcmT5nXXnIY3bayUNla-eAFV8HjV79O_vWrbuIf5mi0MPemj7hVmAkIkEdeGVEtfCChQEsBdxWqpC0hH3LNzbMIRZe8fhmg_WkLHw--MBRCROTCQ8"/>
+</a>
+<a class="w-full sm:w-auto" href="#">
+<img alt="Google Play" class="h-12 hover:opacity-80 transition-opacity" data-alt="Get it on Google Play button" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKPSkQok28QZWvCM0y34bibbfYk-dnKsugddhTfnsGscWWp09b-5JUoCz0q1iXlF3ihghJi4MjpPJL7zjUo0qwXzdgiIURLs8isU6ZD7OQdFbJazkoDOqzhde77_kJGXVBeVh1vfA19Ifgpe8F80mqxm9DE0weAfcNp5rAHoH1mgtkQp7dMhUluxz36InXhdEaitp_PflBpeWY7z9XvvuBdSWs-zn4g-W-0sVmDVxbVfd794rNwvUj5iuFLn8gvLf5Gnl580ovvTg"/>
+</a>
+</div>
+<div class="flex items-center justify-center lg:justify-start gap-4 pt-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="Portrait of a female fitness user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlDQD-k6kPFgrHNVsIv_TIUtx5TNlokueiv4EyBtJwpeIPcgZGD_jbpztnGdXfWeKSr8V2Y9Eoc_VutAv1wYupb0VR1TZihZXIh6jhp6058S2l747Y4QuKvI1wnMF_PYFzdJU9oMjpUvoL5T5gsLkiRR-zaX7LHyUBC3LSe7TBXU2AQJuc0TzLUf7DYhijtp3kkmSXUbMgECOzbgQETfrPwnt-no45sxNtzrpwP55DogmcVJdzOXonwD6WAnHLiGWBQJhTx9Hl7Zk"/>
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="Portrait of a male fitness user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQflQ9ZWAIPHXlKq3MyNjCH-sRo47r5HpLddEJ6qAPtNxtXpj37R1fyWrbBK3KEJ1JtP_eq6nCWSoKfdVfqOJNkMswy7uQyQoyAoKAs5ue3h9BMgmkWG078-j4WMHuAHmV0E27gWLwBiV0wtxjQ6AqCo1oz9ajQhIPm-DvrRWTK-8pdFx0h-r9V4Rd8wEx00gp0oNd0PevKcEIT9tRVVyz7cEiWbFKkXQxiTGWht1nTj7XAIJF5HCYkrIYGDaA4fR8AmAwV3dcWLQ"/>
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="Portrait of a diverse male athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmcbDZQgajXlNRG2N_RD9bM57SpvmomUJ4G0deKx1NoAIAMhnnHsra5V4qYzVgx_ysKXUF0bzlqMsZyZqpbMlOgk2diQtTzgiAsEFBZo8tMvXXivQTfrwosinMgYjnbNE7uHsqE9u1lNWVPV0nSbxI5LRFYD_DDzWU3zJhTM_VygnXGlXPa1Y5mKVnwMRQ43abZRmscPWVNWUZKj807XGnVD8wu6LA_GiwinoM_q4q50O0p1rBX5nnCPOCGDxTH6TB-6dTSuB4lZE"/>
+</div>
+<p class="text-sm font-medium text-slate-500"><span class="font-bold text-slate-900">50k+</span> active TRAINRs today</p>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="relative z-10 flex gap-4">
+<div class="rounded-[2.5rem] p-3 bg-slate-900 shadow-2xl rotate-[-5deg] hover:rotate-0 transition-transform duration-500">
+<img class="rounded-[2rem] w-64 h-[500px] object-cover" data-alt="Mobile app screen showing workout statistics and heart rate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeK1XhmErEEIJ9gmOTiZFqdMaKUdLoXL8pkh5vpOf-CfxjZcYFHsnJ4I4YAZsExBT2S84XpoPLxUTi2DRfOhgFnPWshB2WJY1LtxIPTKIKka7TRo_zP82MhVYHDQXkND4jbbmyFAsSbJwdJ6FfVIB_ChYfTN2tyycbfpwvOmd9JGLWp31hR5TRKrXLL_yaO28ZgwG7dpILVTv8ko5dcGMkqPeyZN-iJcARWDMyC5IBJLvza4tzbgyLY_Q4Vi1eGJY1vDD9oh_rY7Y"/>
+</div>
+<div class="rounded-[2.5rem] p-3 bg-slate-900 shadow-2xl mt-12 rotate-[5deg] hover:rotate-0 transition-transform duration-500">
+<img class="rounded-[2rem] w-64 h-[500px] object-cover" data-alt="Mobile app screen showing a workout timer and exercises" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDgkbgyC9JCAZt4ppJYNVApKwZ_cB50-QoDiBkBSn_PFi4SgerZzxckTpP2s8PtaVE3NSz4zYs8ZpIeJIlf1Bd03SEzPMcovIKvO0hHtw9EeWGgxcRiR5mdeUTf4iRTLU_woPhe8UsH-P0hraj3tJyRU0pEb54dD-ZV8O80yPaVb214Ik-YVQByh2NuIfenLEHUA55Nw6cd5CfgrZ7o8z3c_Ny8522hzlQh7VVxXvWiUNuMfSTs0CyXWxfCKpnqeDSQIOUVavGIsY"/>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-accent-purple/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Feature Grid -->
+<section class="py-24 px-6 bg-white dark:bg-background-dark/50" id="features">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20 space-y-4">
+<h2 class="text-4xl font-extrabold tracking-tight">Everything you need to <span class="text-primary">evolve</span></h2>
+<p class="text-slate-500 max-w-2xl mx-auto">Our comprehensive toolset handles the planning so you can focus on the performance.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-primary/5 hover:border-primary/20 transition-all group">
+<div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons">psychology</span>
+</div>
+<h3 class="text-xl font-bold mb-3">AI Personalized Plans</h3>
+<p class="text-slate-500 leading-relaxed">Smart algorithms analyze your body type, goals, and available equipment to build the perfect routine every day.</p>
+</div>
+<!-- Feature 2 -->
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-primary/5 hover:border-primary/20 transition-all group">
+<div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons">insights</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Progress Tracking</h3>
+<p class="text-slate-500 leading-relaxed">Visual charts and heatmaps display your strength gains and endurance improvements with surgical precision.</p>
+</div>
+<!-- Feature 3 -->
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-primary/5 hover:border-primary/20 transition-all group">
+<div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons">videocam</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Expert Video Guidance</h3>
+<p class="text-slate-500 leading-relaxed">Over 500+ HD video tutorials led by world-class trainers to ensure your form is always spot-on and injury-free.</p>
+</div>
+<!-- Feature 4 -->
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-primary/5 hover:border-primary/20 transition-all group">
+<div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons">restaurant</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Nutrition Integration</h3>
+<p class="text-slate-500 leading-relaxed">Connect your favorite calorie trackers or use our built-in macro calculator to sync your fuel with your fire.</p>
+</div>
+<!-- Feature 5 -->
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-primary/5 hover:border-primary/20 transition-all group">
+<div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons">groups</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Community Challenges</h3>
+<p class="text-slate-500 leading-relaxed">Join global squads and compete in monthly challenges. Win gear, badges, and bragging rights with your team.</p>
+</div>
+<!-- Feature 6 -->
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-primary/5 hover:border-primary/20 transition-all group">
+<div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons">watch</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Seamless Sync</h3>
+<p class="text-slate-500 leading-relaxed">Native Apple Watch and Android Wear support. Leave your phone in the locker and keep the tracking on your wrist.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark overflow-hidden" id="reviews">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl font-extrabold tracking-tight text-center mb-16">Loved by thousands of <span class="gradient-text">Athletes</span></h2>
+<div class="flex flex-wrap lg:flex-nowrap gap-8">
+<div class="flex-1 bg-white dark:bg-white/5 p-8 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+<p class="text-lg italic text-slate-700 dark:text-slate-300 mb-6">"TRAINR changed how I look at my garage workouts. The AI coach actually adjusts when I'm tired. It's like having a real PT with me 24/7."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close up portrait of a woman athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQjVnU0bD-GRaVZcPOm1BV4y2ud47z4YD91q-FNLDlGUUWnK7S7SBJbPGM9T6R5p5CbnP5uU2fG0swn8GO4K3WY5a2DtxLR4kiV4yMFcGmHI65E7KLfxjBX9Yuxq3MU0PwbMZppI2fctzu4kz2mN1t0LsAS3gHk9Epj9fiNNZ_q2zVbqI1T9sroX2hABEBK4qGefkOThoKenVGsSNuRn3R4edz40k3g5JGOCrxTRucXzbnskIIdMyjqlTMGBxOgODhL_EC9grTd5g"/>
+<div>
+<p class="font-bold">Sarah Jenkins</p>
+<p class="text-sm text-slate-500">Crossfit Enthusiast</p>
+</div>
+</div>
+</div>
+<div class="flex-1 bg-white dark:bg-white/5 p-8 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5 lg:mt-12">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+<p class="text-lg italic text-slate-700 dark:text-slate-300 mb-6">"The data visualization is top-tier. I can see exactly where my weak points are and the app suggests exercises to fix them. Game changer."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a smiling professional athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTdJjO7_8qNitn8Z_i5w7LZzKyu9Bdn_LqBpB45BzbHkKFWHa8Y6UgtybJGjXO7dFxqLkU0Z9YAvCz1hW0toFSTXs9oONBN_W645lRkUAcL9uQ7z_xtdeVu-XVzye8yPGsAJBK_OH3W7C5Y1CDyjlVlDMiaH9nBobqGLmB-9jp3_lpczmiEYE27Vbq1t5GD1R8Bg91N9UekPM9CZvGGysLnVvJbyffU1H83KQILl6JFM88e5HIdQ7j5u0TQBYXi96pJ463jmCEyY8"/>
+<div>
+<p class="font-bold">Marcus Thorne</p>
+<p class="text-sm text-slate-500">Bodybuilder</p>
+</div>
+</div>
+</div>
+<div class="flex-1 bg-white dark:bg-white/5 p-8 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+<p class="text-lg italic text-slate-700 dark:text-slate-300 mb-6">"Best fitness investment I've made this year. The community aspect keeps me accountable, and the plans are actually fun to follow."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Candid portrait of a yoga practitioner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBzv6r5pIky3AIjYJxhChT2hT-sVMg7SZxNiYr0A0aImVwSJs7LiypAOw52z4Uw0xepY_PE3cG-7AHfov19yGRWhx6SrsUcy3z5q3gyf5g26NWIHsp3VN0bCO5ybiqPearuwfWlLEkxQzW2MrSP3bBJJuCp-DWDTqRjYgVqbbikIk8CkI2mBsrTwgiy64gwdm359fwSQlkPM2XYoDROG9qS4wdXZvc-qoQV4tAovXGo9Pkoh0E1tQLpLFPx3E9jmGa7O_cVqTfPEU"/>
+<div>
+<p class="font-bold">Elena Rodriguez</p>
+<p class="text-sm text-slate-500">Lifestyle Runner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 px-6 bg-white dark:bg-background-dark/50" id="pricing">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl font-extrabold">Simple <span class="text-primary">Pricing</span></h2>
+<p class="text-slate-500">Start for free, upgrade when you're ready to go pro.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Free Plan -->
+<div class="p-10 rounded-3xl bg-background-light dark:bg-background-dark/40 border border-slate-200 dark:border-slate-800 flex flex-col h-full">
+<div class="mb-8">
+<h3 class="text-2xl font-bold mb-2">Basic</h3>
+<p class="text-slate-500">Essential tracking for starters.</p>
+<div class="mt-6 flex items-baseline gap-1">
+<span class="text-4xl font-extrabold">$0</span>
+<span class="text-slate-500">/mo</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-icons text-green-500">check_circle</span>
+<span>Standard Workout Library</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons text-green-500">check_circle</span>
+<span>Daily Calorie Tracking</span>
+</li>
+<li class="flex items-center gap-3 text-slate-400">
+<span class="material-icons">cancel</span>
+<span class="line-through">AI Personalized Coaching</span>
+</li>
+<li class="flex items-center gap-3 text-slate-400">
+<span class="material-icons">cancel</span>
+<span class="line-through">Offline Mode</span>
+</li>
+</ul>
+<a class="block w-full text-center py-4 px-6 rounded-xl border-2 border-slate-200 dark:border-slate-700 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">Start Free</a>
+</div>
+<!-- Pro Plan -->
+<div class="p-10 rounded-3xl gradient-bg text-white shadow-2xl shadow-primary/20 flex flex-col h-full relative overflow-hidden">
+<div class="absolute top-6 right-6 px-3 py-1 bg-white/20 rounded-full text-xs font-bold uppercase">Popular</div>
+<div class="mb-8 relative z-10">
+<h3 class="text-2xl font-bold mb-2 text-white">Pro</h3>
+<p class="text-white/80">Advanced analytics &amp; AI coaching.</p>
+<div class="mt-6 flex items-baseline gap-1">
+<span class="text-4xl font-extrabold">$12.99</span>
+<span class="text-white/80">/mo</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow relative z-10">
+<li class="flex items-center gap-3">
+<span class="material-icons text-white">check_circle</span>
+<span>Unlimited Workout Programs</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons text-white">check_circle</span>
+<span>AI Personalized Daily Coaching</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons text-white">check_circle</span>
+<span>Advanced Performance Analytics</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons text-white">check_circle</span>
+<span>Offline Mode &amp; Watch Sync</span>
+</li>
+</ul>
+<a class="block w-full text-center py-4 px-6 rounded-xl bg-white text-primary font-bold hover:bg-slate-50 transition-colors relative z-10" href="#">Get TRAINR Pro</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto rounded-[3rem] gradient-bg p-12 lg:p-24 text-center text-white relative overflow-hidden">
+<div class="relative z-10 space-y-8">
+<h2 class="text-4xl lg:text-6xl font-extrabold">Ready to transform?</h2>
+<p class="text-xl opacity-90 max-w-2xl mx-auto">Download TRAINR today and join 50,000+ others achieving their peak performance.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all" href="#">Download App</a>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all" href="#">Watch Demo</a>
+</div>
+</div>
+<!-- Background Decals -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full -ml-48 -mb-48 blur-3xl"></div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-12 px-6 border-t border-primary/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
+<span class="material-icons text-white text-sm">fitness_center</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight">TRAINR<span class="text-primary">.</span></span>
+</div>
+<div class="flex gap-8 text-sm text-slate-500 font-medium">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<i class="material-icons text-xl">facebook</i>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<i class="material-icons text-xl">camera_alt</i>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<i class="material-icons text-xl">public</i>
+</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto text-center mt-8 text-xs text-slate-400">
+            © 2024 TRAINR Fitness SaaS. All rights reserved.
+        </div>
+</footer>
+<script src="../../assets/js/global-enhancement.js" defer></script>
+</body></html>

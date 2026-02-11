@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Business Homepage - Luxe Salon &amp; Spa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#38e07b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#122017",
+                        "charcoal": "#1a1f1c",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-charcoal dark:text-gray-100 antialiased">
+<!-- Mobile Screen Wrapper -->
+<div class="relative min-h-screen flex flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-2xl overflow-hidden pb-24">
+<!-- Hero Section -->
+<section class="relative h-80 w-full overflow-hidden">
+<img alt="Luxury Salon Interior" class="absolute inset-0 w-full h-full object-cover" data-alt="Premium hair salon interior with elegant lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB-3XiOhCHaLCCaTETlFiGMBVMZ0i4shG0R8xyuY6Va-JRU7gAX-jvqfbKfz8a39Aq1cRfm41Tz61j72Gjhmggr63ID2f79MXyq41PB07p8F_NeV4tpGf4B2ddLMzJOqi1xyPBxVKjmcoXndWKIBRoXCrO5xih9IG4x76z2w8VutOVFqnqHqrrjpSPV-zXdg_U_MYyoqKOYXlk1B9FCtS7F2QxSyicicO3RGxkIXqP1rchcRoMXCjPYBYtqgNntyzXIYi0-aAN3cs0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent"></div>
+<!-- Hero Content -->
+<div class="absolute bottom-0 left-0 right-0 p-6 space-y-4">
+<div class="space-y-1">
+<h1 class="text-3xl font-bold text-white tracking-tight">Luxe Salon &amp; Spa</h1>
+<div class="flex items-center text-white/80 text-sm">
+<span class="material-icons-round text-primary text-base mr-1">location_on</span>
+<span>Downtown District, 42nd Ave</span>
+</div>
+</div>
+<!-- Primary CTAs -->
+<div class="flex gap-3">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-charcoal font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
+<span class="material-icons-round text-xl">calendar_today</span>
+                        Book Now
+                    </button>
+<button class="flex-1 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors border border-white/20">
+<span class="material-icons-round text-xl">near_me</span>
+                        Directions
+                    </button>
+</div>
+</div>
+</section>
+<!-- Status & Quick Info Bar -->
+<section class="px-6 -mt-4 relative z-10">
+<div class="bg-white dark:bg-charcoal border border-gray-100 dark:border-white/5 rounded-xl shadow-lg p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</div>
+<div>
+<p class="text-sm font-bold text-charcoal dark:text-white">Open Now</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Closes at 8:00 PM</p>
+</div>
+</div>
+<div class="h-8 w-px bg-gray-100 dark:bg-white/10"></div>
+<div class="flex flex-col items-end">
+<p class="text-xs font-medium text-gray-400 uppercase tracking-wider">Contact</p>
+<p class="text-sm font-semibold text-charcoal dark:text-white">+1 (555) 012-3456</p>
+</div>
+</div>
+</section>
+<!-- Main Content -->
+<main class="mt-8 space-y-8">
+<!-- Today's Specials -->
+<section class="space-y-4">
+<div class="px-6 flex items-center justify-between">
+<h2 class="text-lg font-bold text-charcoal dark:text-white">Today's Specials</h2>
+<button class="text-sm font-semibold text-primary">View All</button>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar px-6 gap-4 pb-2">
+<!-- Special Card 1 -->
+<div class="flex-shrink-0 w-64 bg-white dark:bg-charcoal rounded-xl border border-gray-100 dark:border-white/5 overflow-hidden shadow-sm">
+<div class="relative h-36">
+<img alt="Hair Treatment" class="w-full h-full object-cover" data-alt="Professional hair treatment service" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJWwg8iVseY7zl8-H-cFOzgbd1AR_0-2HG34PsFaXiXyy0r4OXKtM2yxAYML4EtZMGBtGD04K1u0_f4sWBI4Ju6JWOhEJrmuufseHaNYXcrscBRRmVw9JFuMAD3IvauwWkQ6RiYrlGkw3UJC8PtE8OqZcSE6DlT324xuE6s9LDnW_PErQjPb5tSE3wn78z6FcRkGUFzhuYJVxfmYk5MA5NUDHBtEFSkF59IFRgbRm7z_a2HWlw8j8lfG66qfC-3LT-Wpt8tiGAGq_N"/>
+<div class="absolute top-3 right-3 bg-primary text-charcoal text-[10px] font-bold px-2 py-1 rounded-full uppercase">20% Off</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-charcoal dark:text-white">Signature Balayage</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="text-primary font-bold">$145</span>
+<span class="text-xs text-gray-400 line-through">$180</span>
+</div>
+</div>
+</div>
+<!-- Special Card 2 -->
+<div class="flex-shrink-0 w-64 bg-white dark:bg-charcoal rounded-xl border border-gray-100 dark:border-white/5 overflow-hidden shadow-sm">
+<div class="relative h-36">
+<img alt="Facial Treatment" class="w-full h-full object-cover" data-alt="Soothing facial spa treatment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Rwge7igi1PGDht6mtYxgDp6sCSl16TpB6F3aCdA-yS0PCaoKyegF8MFOupC7qPZZDgRBKErG4alwmgbaJqzxPfTDLb_wLR318AnIH9ywa7cfGmsH70Q85xPHEewl6eo5H7VJJaeanO0LN71Chab-5mmEIIEdhlz5HwYkmk9QzTmpJM3ASFYHv6jrL_Zq5ayNeomIKYP--Z3jdV_QUVLK-Ed4mSgTwLTkUklAl0O6d6WSQl4OqcxH1EfGix-FX2XQGSIE-Ieh9muJ"/>
+<div class="absolute top-3 right-3 bg-primary text-charcoal text-[10px] font-bold px-2 py-1 rounded-full uppercase">Today Only</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-charcoal dark:text-white">Hydra-Radiance Facial</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="text-primary font-bold">$85</span>
+<span class="text-xs text-gray-400 line-through">$110</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Quick Grid -->
+<section class="px-6 space-y-4">
+<h2 class="text-lg font-bold text-charcoal dark:text-white">Popular Services</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-primary/10 border border-primary/20 flex flex-col items-center gap-2 text-center group active:scale-95 transition-transform">
+<span class="material-icons-round text-primary text-3xl">content_cut</span>
+<span class="text-sm font-bold text-charcoal dark:text-white">Hair Styling</span>
+</div>
+<div class="p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 flex flex-col items-center gap-2 text-center active:scale-95 transition-transform">
+<span class="material-icons-round text-gray-400 text-3xl">face</span>
+<span class="text-sm font-bold text-charcoal dark:text-white">Skincare</span>
+</div>
+<div class="p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 flex flex-col items-center gap-2 text-center active:scale-95 transition-transform">
+<span class="material-icons-round text-gray-400 text-3xl">spa</span>
+<span class="text-sm font-bold text-charcoal dark:text-white">Massage</span>
+</div>
+<div class="p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 flex flex-col items-center gap-2 text-center active:scale-95 transition-transform">
+<span class="material-icons-round text-gray-400 text-3xl">brush</span>
+<span class="text-sm font-bold text-charcoal dark:text-white">Manicure</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/80 dark:bg-charcoal/80 backdrop-blur-xl border-t border-gray-100 dark:border-white/5 px-8 pt-3 pb-8 z-50">
+<div class="flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-icons-round">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-charcoal dark:hover:text-white transition-colors" href="#">
+<span class="material-icons-round">grid_view</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Services</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-charcoal dark:hover:text-white transition-colors" href="#">
+<span class="material-icons-round">photo_library</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Gallery</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-charcoal dark:hover:text-white transition-colors" href="#">
+<span class="material-icons-round">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Chat</span>
+</a>
+</div>
+<!-- Home Indicator (iOS Style) -->
+<div class="w-32 h-1.5 bg-gray-200 dark:bg-white/10 rounded-full mx-auto mt-6"></div>
+</nav>
+</div>
+</body></html>

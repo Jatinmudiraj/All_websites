@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MODA - Product-First Editorial Boutique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .editorial-overlay {
+            background: linear-gradient(0deg, rgba(33,17,17,0.4) 0%, rgba(33,17,17,0) 100%);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-background-dark dark:text-background-light transition-colors duration-300">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex gap-8 items-center">
+<button class="flex items-center gap-2 group">
+<span class="material-icons">menu</span>
+<span class="text-xs uppercase tracking-widest font-semibold hidden md:block">Menu</span>
+</button>
+<div class="hidden lg:flex gap-6 text-[10px] uppercase tracking-[0.2em] font-bold">
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<a class="hover:text-primary transition-colors" href="#">Editorial</a>
+<a class="hover:text-primary transition-colors" href="#">Bespoke</a>
+</div>
+</div>
+<a class="absolute left-1/2 -translate-x-1/2 text-2xl font-serif tracking-tighter italic" href="#">MODA</a>
+<div class="flex gap-6 items-center">
+<button class="hover:text-primary transition-colors"><span class="material-icons">search</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-icons">favorite_border</span></button>
+<button class="relative hover:text-primary transition-colors">
+<span class="material-icons">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Split-Screen Hero -->
+<section class="grid lg:grid-cols-2 min-h-[calc(100vh-80px)] overflow-hidden">
+<!-- Left: Video Lookbook Placeholder -->
+<div class="relative bg-zinc-200 dark:bg-zinc-800 group overflow-hidden">
+<img alt="Fashion Lookbook" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="Cinematic fashion model in high-end dress" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEMqmg9wbLddFmAYkNXMYEZeqkG8E0tghnfrRkJjSG5L_SRcQ9V_oWXQ44Va4sQZHmU-Fxpc891oUa7Z2V3lbJqH-MXtEHn_Dnon3TOGbmUXr0CUURgcYNtVDr-kku4trwAxQYBRnqQUCQ7FlhwCT-t_oCHgkL855b9uTElFE4h2Ckob-y-vyNByrtZeFfSycOCMMoZAs-NQoqCggzDj4Oz7qFmYzUCnS1XxQbSgBoYuPuauRWlDOQZb-lVmB4EKrm3q7UQ3nIwqs"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full border border-white/30 backdrop-blur-sm flex items-center justify-center text-white cursor-pointer hover:bg-white hover:text-background-dark transition-all">
+<span class="material-icons text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-10 left-10 text-white z-10">
+<span class="text-[10px] uppercase tracking-[0.3em] font-bold mb-2 block">Summer '24 Lookbook</span>
+<h2 class="text-3xl font-serif italic">Movement in Silk</h2>
+</div>
+</div>
+<!-- Right: Product Story -->
+<div class="flex flex-col justify-center px-8 lg:px-24 py-20 bg-background-light dark:bg-background-dark relative">
+<div class="max-w-md">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-4 block">New Chapter</span>
+<h1 class="text-5xl lg:text-7xl font-serif mb-8 leading-tight">The Modern <br/><span class="italic text-primary/80">Silhouette</span></h1>
+<p class="text-zinc-600 dark:text-zinc-400 mb-10 leading-relaxed font-light text-lg">
+                        Explore our latest collection where architecture meets fluid tailoring. Each piece is crafted from sustainable Italian mulberry silk.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-background-dark dark:bg-white text-white dark:text-background-dark px-10 py-5 rounded-none font-bold uppercase text-xs tracking-widest hover:bg-primary dark:hover:bg-primary dark:hover:text-white transition-all">
+                            Shop The Story
+                        </button>
+<button class="border border-background-dark/20 dark:border-white/20 px-10 py-5 rounded-none font-bold uppercase text-xs tracking-widest hover:border-primary transition-all">
+                            View Collection
+                        </button>
+</div>
+</div>
+<!-- Floating Small Image Element -->
+<div class="absolute -bottom-10 right-0 w-48 h-64 hidden xl:block border-8 border-background-light dark:border-background-dark z-20">
+<img alt="Product Detail" class="w-full h-full object-cover" data-alt="Close up of red luxury fabric texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDglSNx3I2slAURtkYGm6qAJWyuHi89ciixedbEY3ehbV_y_nd4Dy0frs0JGAsU88QWIaGdmNVfxyl-w6PhcYpavLCxWAoWyPNKXjnwtsfskYTj4PXnoA3Ec_zDUrtxqSsVY-hhglmkXZJdDELrH8P3ImjV5yzJC-muIYj023VtbkLn5bxeMSHLJJzAlQRuqCpt93ncSdsC2cU3aOP5ehqHVvFDqEkveiX1v2kb8hZ28aLzl_5gLO5HAadb2mS3XeFZ6j3My__sryE"/>
+</div>
+</div>
+</section>
+<!-- Trending Marquee -->
+<section class="py-12 border-y border-primary/10 overflow-hidden bg-background-light dark:bg-background-dark">
+<div class="marquee flex gap-12 items-center">
+<span class="text-4xl lg:text-6xl font-serif italic opacity-30 px-4">New Arrivals</span>
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="text-4xl lg:text-6xl font-serif italic opacity-30 px-4">Sustainable Silk</span>
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="text-4xl lg:text-6xl font-serif italic opacity-30 px-4">Paris Fashion Week</span>
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="text-4xl lg:text-6xl font-serif italic opacity-30 px-4">Limited Edition</span>
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<!-- Repeat for seamless loop -->
+<span class="text-4xl lg:text-6xl font-serif italic opacity-30 px-4">New Arrivals</span>
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="text-4xl lg:text-6xl font-serif italic opacity-30 px-4">Sustainable Silk</span>
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="text-4xl lg:text-6xl font-serif italic opacity-30 px-4">Paris Fashion Week</span>
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="text-4xl lg:text-6xl font-serif italic opacity-30 px-4">Limited Edition</span>
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+</div>
+</section>
+<!-- Editor's Picks Carousel -->
+<section class="py-32 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto mb-16 flex justify-between items-end">
+<div>
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-4 block">Curated Selection</span>
+<h2 class="text-4xl lg:text-6xl font-serif italic">Editor's Picks</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-icons">west</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-icons">east</span>
+</button>
+</div>
+</div>
+<div class="flex gap-12 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-20 px-4">
+<!-- Card 1 -->
+<div class="min-w-[300px] lg:min-w-[450px] snap-start group cursor-pointer relative pt-12">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="The Oversized Blazer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Editorial shot of a beige oversized luxury blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgadjSWofUb6jQVTVy1t9bCGanMHHLJiaVInr6UxRA8aT_jzVzc9X0gr3T6omeHKR9mFaLMgm3d2i1cT4bGurErO2DiutnNeho3H1QfLUJLh1qRkFptiWu19EMZDGR-J2SsTy1aJKoSMUlUQpCf7D8-4OL5XrTQen9nphiA7lQ-lX46mEbtf59h69Wj99jXJWAKogbUU15GrfXXHinJsdIBpJECLRE7uKmfnBVfCapsvGfx2FmSsb3FNQyWvXxHLGUDxO_nuBgJSE"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<button class="w-full bg-white text-background-dark py-4 font-bold text-xs uppercase tracking-widest">Add to Bag — $890</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h3 class="text-xl font-serif">The Structured Blazer</h3>
+<p class="text-xs uppercase tracking-widest text-zinc-500 mt-1">Wool Blend • Camel</p>
+</div>
+<span class="text-primary font-bold text-sm">$890</span>
+</div>
+</div>
+<!-- Card 2 (Overlapping offset) -->
+<div class="min-w-[300px] lg:min-w-[450px] snap-start group cursor-pointer relative -mt-12">
+<div class="aspect-[3/4] overflow-hidden relative shadow-2xl">
+<img alt="Sculptural Earring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a gold sculptural luxury earring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAECNvj-3JxHi7B1ZwPWIXjSnw-bsLyX8bPHZsSZ8Pu9VhYPRUj0wf3MkXwuJ97vbtpcykdJWmMxQjOOejcKXj7uBLnovUG9WIaQ7uW-fSH8BhJVRpgLDpzjdAOZOg8lfVxSBsrJP3ksppeVdbbi8oC0a6TGyVG3r_-8W31y4SMtNJlTs2Z1uZ3yrCJzfQ3jGelzTS_aAjGCC8iPw6W-9ArIsktB5cNGqBt6Ca1CGczHop-_XmG8mhCH-sy5KsJZG6PyC7kMBceehg"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<button class="w-full bg-white text-background-dark py-4 font-bold text-xs uppercase tracking-widest">Add to Bag — $320</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h3 class="text-xl font-serif">Gilded Orbit Earring</h3>
+<p class="text-xs uppercase tracking-widest text-zinc-500 mt-1">18k Gold Plated</p>
+</div>
+<span class="text-primary font-bold text-sm">$320</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[300px] lg:min-w-[450px] snap-start group cursor-pointer relative pt-8">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="Silk Trousers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Wide leg silk trousers in cream color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ztmiaOuQ0lrDDnHSWCBNKmjMSDI97VHa4oG6JDOQjRPejMZYfjAnkz_Ehtoj0C0rwKPmT8a8lxPecxCTv2KdgC2ohQcdndcNORBXM_Jr7reTjbYO-lK5UEGIBxTHZ-JO7oO_nH0DiNG6I_dOIIRAkIsTNrE7cPRUCVSwbdSptISjxE6xXbtwrVREUyPHt0RQ0k5065vA7dlaaFdVCX09880AuloH8nWNLFLjglJ1NR-yaGrnOSgI6jHVfRLw0ct9mwE86dYvg0Q"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<button class="w-full bg-white text-background-dark py-4 font-bold text-xs uppercase tracking-widest">Add to Bag — $550</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h3 class="text-xl font-serif">Fluid Silk Trousers</h3>
+<p class="text-xs uppercase tracking-widest text-zinc-500 mt-1">100% Mulberry Silk • Cream</p>
+</div>
+<span class="text-primary font-bold text-sm">$550</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="min-w-[300px] lg:min-w-[450px] snap-start group cursor-pointer relative">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="Minimalist Bag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Small black leather designer handbag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl6SugOUHBH6aZC1jucZM42Xl7TSIqedkLwS0gmYr7jSyMWQ3ITWeykoodymHAxLntTjNPvdTHnOVgFiVd1p4AzRHr1JW-Prd8i9lp1q8sf9aVBeJ_r1aEq4Q53VEZLqQ7-Y8R9KXVqjBDKwXtW24MiSIxvPqNuQQOcSfNWmJxWAj2mlvmRObTEmXYRgxSS_DmigXgbyQoqYhhVLm_JHZ5vpfaV1UxHps1o9Y62iglvuBnshTnYBqq2-f3qf7BmpTOUpsESCafX4w"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<button class="w-full bg-white text-background-dark py-4 font-bold text-xs uppercase tracking-widest">Add to Bag — $1,250</button>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h3 class="text-xl font-serif">Arch Leather Tote</h3>
+<p class="text-xs uppercase tracking-widest text-zinc-500 mt-1">Calfskin Leather • Onyx</p>
+</div>
+<span class="text-primary font-bold text-sm">$1,250</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Spotlight Section -->
+<section class="grid lg:grid-cols-12 gap-0 border-t border-primary/10">
+<div class="lg:col-span-7 bg-zinc-900 text-white p-12 lg:p-24 flex flex-col justify-center">
+<span class="text-primary text-[10px] uppercase tracking-[0.4em] font-bold mb-6 block">The Journal / Issue 04</span>
+<h2 class="text-5xl lg:text-7xl font-serif italic mb-10 leading-tight">Ethics of <br/>Modern Craft</h2>
+<p class="text-zinc-400 text-lg font-light leading-relaxed max-w-xl mb-12">
+                    In conversation with our artisans in Milan, exploring the balance between traditional techniques and contemporary design philosophy.
+                </p>
+<a class="inline-flex items-center gap-4 group" href="#">
+<span class="text-xs uppercase tracking-widest font-bold group-hover:text-primary transition-colors">Read The Full Feature</span>
+<span class="w-12 h-px bg-white group-hover:bg-primary transition-all"></span>
+</a>
+</div>
+<div class="lg:col-span-5 aspect-square lg:aspect-auto">
+<img alt="Artisan at work" class="w-full h-full object-cover grayscale" data-alt="Hands of an artisan working with fine fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHdJ5H6hA8CVJRqz6-4dVXTYYluCl0md4F2DUj2VUKCrY__8k1qDuoGFGJDmkF4-YndRp-zRILU9R-vt1L5OKKcp7U4dajJxVyaqu1MjAXPlOpqnjE3_SArMCiiy0ZkCTODnX-Dk0KoRQVXBNdOZBw2VNWmpI7czeHpkMsJOm64u6aLfExUZkt5nCD-MhJmmB0svmvI5LPrYrhCgPKqRNvvp7lS-m-sL7oTJchh9_8ysFOwtCwnvtyNmxNFnTm2_bFV9Gyf1mzvlU"/>
+</div>
+</section>
+<!-- Newsletter / Community -->
+<section class="py-32 px-6 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl lg:text-5xl font-serif italic mb-6">Join The Inner Circle</h2>
+<p class="text-zinc-500 mb-12 max-w-lg mx-auto">Be the first to receive exclusive access to private sales, new collection drops, and editorial features.</p>
+<form class="flex flex-col md:flex-row gap-0 max-w-xl mx-auto border-b-2 border-background-dark dark:border-white group">
+<input class="flex-1 bg-transparent border-none py-4 px-0 focus:ring-0 placeholder:text-zinc-400 dark:text-white" placeholder="Your email address" type="email"/>
+<button class="py-4 px-6 uppercase text-[10px] font-bold tracking-widest hover:text-primary transition-colors" type="submit">Join Now</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/10 pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12">
+<div class="col-span-2">
+<a class="text-3xl font-serif italic tracking-tighter mb-8 block" href="#">MODA</a>
+<p class="text-sm text-zinc-500 leading-relaxed max-w-xs mb-8">
+                    Elevating the modern wardrobe through intentional design and sustainable luxury since 2018.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center hover:text-primary transition-colors" href="#">
+<i class="material-icons text-lg">public</i>
+</a>
+<a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center hover:text-primary transition-colors" href="#">
+<i class="material-icons text-lg">alternate_email</i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-[10px] uppercase tracking-widest font-bold mb-6">Shop</h4>
+<ul class="space-y-4 text-sm text-zinc-500">
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Collections</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gifting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[10px] uppercase tracking-widest font-bold mb-6">Support</h4>
+<ul class="space-y-4 text-sm text-zinc-500">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 lg:text-right">
+<h4 class="text-[10px] uppercase tracking-widest font-bold mb-6">Flagship Store</h4>
+<p class="text-sm text-zinc-500 mb-2">245 Rue de Rivoli</p>
+<p class="text-sm text-zinc-500 mb-8">75001 Paris, France</p>
+<p class="text-sm text-zinc-500">+33 1 42 60 38 60</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-24 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] uppercase tracking-widest text-zinc-400">© 2024 MODA ARCHIVE. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8 text-[10px] uppercase tracking-widest text-zinc-400">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+<!-- Location for data-location requirement -->
+<div data-location="Paris" style="display:none"></div>
+</body></html>

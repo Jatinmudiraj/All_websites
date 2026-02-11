@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Integrated Care Solutions - Variant 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6ee619",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#182111",
+                        "sage": {
+                            "50": "#f4f7f2",
+                            "100": "#e6ede1",
+                            "200": "#cedbc7",
+                            "600": "#607d53",
+                            "800": "#3d4f35"
+                        },
+                        "wood": {
+                            "100": "#f5f2ed",
+                            "200": "#e7dfd1",
+                            "800": "#5c4d3c"
+                        }
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .wood-texture-bg {
+            background-color: #f5f2ed;
+            background-image: radial-gradient(rgba(92, 77, 60, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-sage-800 dark:text-background-light">
+<!-- Sticky Request Button -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-primary hover:bg-opacity-90 text-background-dark font-bold py-4 px-8 rounded-full shadow-2xl flex items-center gap-3 transition-all transform hover:scale-105">
+<span class="material-icons">event_available</span>
+            Request an Interview
+        </button>
+</div>
+<!-- Navigation -->
+<nav class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-sage-200 dark:border-sage-800">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-background-dark">spa</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Integrated Care</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Our Philosophy</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Safety</a>
+<button class="bg-sage-100 dark:bg-sage-800 px-5 py-2.5 rounded-full text-sm font-bold">Client Login</button>
+</div>
+</div>
+<!-- Sub-Navigation -->
+<div class="flex justify-center gap-1 md:gap-4 pb-4 overflow-x-auto no-scrollbar">
+<button class="flex items-center gap-2 px-6 py-2 rounded-full bg-primary text-background-dark text-sm font-bold whitespace-nowrap">
+<span class="material-icons text-sm">medical_services</span> Doctors
+                </button>
+<button class="flex items-center gap-2 px-6 py-2 rounded-full bg-sage-50 dark:bg-sage-800 hover:bg-sage-100 dark:hover:bg-sage-700 text-sm font-bold transition-all whitespace-nowrap">
+<span class="material-icons text-sm text-sage-600">health_and_safety</span> Nurses
+                </button>
+<button class="flex items-center gap-2 px-6 py-2 rounded-full bg-sage-50 dark:bg-sage-800 hover:bg-sage-100 dark:hover:bg-sage-700 text-sm font-bold transition-all whitespace-nowrap">
+<span class="material-icons text-sm text-sage-600">child_care</span> Babysitters
+                </button>
+<button class="flex items-center gap-2 px-6 py-2 rounded-full bg-sage-50 dark:bg-sage-800 hover:bg-sage-100 dark:hover:bg-sage-700 text-sm font-bold transition-all whitespace-nowrap">
+<span class="material-icons text-sm text-sage-600">elderly</span> Elder Care
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-12 pb-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-sage-800 dark:text-primary text-xs font-extrabold uppercase tracking-widest mb-6">Premium Caregiving Platform</span>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-sage-800 dark:text-white leading-[1.1] mb-8">
+                    Quality Care for <br/><span class="text-primary">Every Family</span> Member.
+                </h1>
+<p class="text-xl text-sage-600 dark:text-sage-200 mb-10 max-w-xl leading-relaxed">
+                    Bridging professional medical excellence with the warmth of home. We provide vetted specialists for your loved ones, from newborns to grandparents.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-background-dark text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all">
+                        Find a Caregiver <span class="material-icons">arrow_forward</span>
+</button>
+<button class="bg-wood-200 dark:bg-sage-800 text-wood-800 dark:text-white px-8 py-4 rounded-xl font-bold hover:bg-wood-100 transition-all">
+                        View Services
+                    </button>
+</div>
+<div class="mt-12 flex items-center gap-6">
+<div class="flex -space-x-3">
+<img alt="" class="w-12 h-12 rounded-full border-4 border-background-light" data-alt="Portrait of a female doctor smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKRMzrfUkxYfQ-5fdK3fUFI5E5oAed5kCXsvD-pfovkz9m2FHa2BzqgpsxCTY7uDBLRFj-zhqJ3iQWJEGVw3AfOA0s7ODZFJ0oh5r_JNsVrhMlQKrW_wIfdYets-u8rr5O03vliMzIx9GX5wOERmLWrCsYHyeVI3GfRLWaFxZJkfMIOLNOYNhkxcmIfD4CoSRLTkWpJvsDH3fXF9fGNr0Yzj-j3iyAv8TGei11FByLfKu1vpUpuz-6H9UFw1JoJhaZnCcnpOiOhgAW"/>
+<img alt="" class="w-12 h-12 rounded-full border-4 border-background-light" data-alt="Portrait of a young professional babysitter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMhO3_rCPd7aa-wmXhm5svWTQJ8dZsQ1J4uwjso28Ix1m7SppRfTjWkapYmmExHdMYZ6iS5XcfatERzpmyhingu9QerpYiQT3tB8wwi7kFS4zGKvTLY5NiIq1AN1t1bQ5TwwEVfHeIyGwGGpKvSCD4Cu-S5yC2cc0BUymQFojraD9XRFz1E3jT0kuxIs9wXCKKbpQH51lMu05Ig9yNS_zW84rGAdhGJzDMTm5iGj1GLrIHT1DEul1TD2Zg8hQQdX-6CWiivMbJpQwV"/>
+<img alt="" class="w-12 h-12 rounded-full border-4 border-background-light" data-alt="Portrait of a male specialized nurse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE-hQSR-Czar4A_gy6Q3SlhdEYhjTvy1_iPghQYeCjRsFL0MpuGcS8ZYnTnzemi-hPcN1N1JETJKplkxRIKYV21I4Z5ED-uIcy0f90kbM__Ny_Ev7PEeCyE1uQicBBxOO6lzAFset1cccRWS487RVMr0cJHuMq9hD-NT0zfE1jkXMT2vR6V2uGiY11PqgCh6Bf9jAEgfw6m0BacbGjffeVmA1SaR6X0SUrhUL3dB7PYL9osyjZNZygvaiiyDP6GRffzQos6V3sH656"/>
+</div>
+<div>
+<p class="text-sm font-bold text-sage-800 dark:text-white">Trusted by 2,000+ families</p>
+<div class="flex text-primary">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-wood-200/50 rounded-full blur-3xl"></div>
+<div class="relative rounded-[2rem] overflow-hidden shadow-2xl">
+<img alt="" class="w-full h-[600px] object-cover" data-alt="A nurse holding an elderly woman's hand in a sunny room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxCquMJUux36m6U0DkQAj95tYvs2V1zlmE-qnJ0dYwtcFxaVCVM19hctdfmzwDSHrVOl5fBUcmC1S8UMnWm1yLPGRUy58OHqxIsettLMuOlt0XX3IWQBJ5NhXqEqrc0K94l28yuDsiiXHnBfff3tLamihfCCmBqznjUKxG7cfw2jR_rtAgZo_SpBwga3MJHmWw3mJZVZOC_49K96PjhSXLjdVMe9rdu3o9V0VQlM4D3XHS5BkxUgX850YFsP9vUKZaKOYcDJullL6b"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center">
+<span class="material-icons text-sage-600">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-sage-800">Certified In-Home Care</h4>
+<p class="text-xs text-sage-500 uppercase font-semibold">Medical Staff &amp; Childcare</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-sage-50 dark:bg-sage-800/20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold text-sage-800 dark:text-white mb-4">Personalized Professional Care</h2>
+<p class="text-lg text-sage-600 dark:text-sage-400 max-w-2xl mx-auto">We connect you with high-caliber professionals who share our commitment to compassion and excellence.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="group bg-white dark:bg-background-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-sage-100 dark:border-sage-800">
+<div class="h-64 overflow-hidden relative">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A doctor in clinical attire talking warmly to a patient" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpWZQEslm-WDzQsbfP1pdINXnjvNI_hzdaJzbrcaGlMGrkNvftRLgDIEl9Xw44pl0Uf69wVruRxNIsg7JYvFZngGW41SN0pxstawVkIJakftLYXoQuDj4pg7rv-4XXpto8Q2s8x9iGO4uWjSm_pVXgMz_NwN97GHSeu4owUp4FxNjHPrLU1cfzth0D_nBswcK0E7B9EQyUEm2IkIeyzacUu1OVq4UNDZxNqExFI05yKD-CMNiRspr_f73l2-rndrBlVvElaFqagV2"/>
+<div class="absolute top-4 left-4 bg-primary text-background-dark px-3 py-1 rounded-full text-xs font-bold uppercase">On-Call</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-icons text-sage-600">medical_services</span>
+<h3 class="text-2xl font-bold">Specialized Doctors</h3>
+</div>
+<p class="text-sage-600 dark:text-sage-400 mb-6">Expert medical consultations and home visits for chronic conditions or acute needs.</p>
+<a class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-icons ml-1 text-sm">arrow_forward_ios</span>
+</a>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-white dark:bg-background-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-sage-100 dark:border-sage-800">
+<div class="h-64 overflow-hidden relative">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A nurse smiling while checking patient records" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVOiF64kor7pfEyBflCrTteLUq3OYwNKUIuhmKaVO9qIs0cJNREbPfiRI3QP0fTNOFGOM6kgZzR4luM9QehpkVhqKSHHM0kZ5ZWYuzK3cVnVfmGW1mC4t3gfDFt0q3Uo7I5uADveskJKPnq_QcZ2-G000j1TZLfSngLv7msJfqDG1PUl4YkbpSNnFaxiE7p1pQ96QEbtcvvBjrTVF7yEfPbGQkTqzYrV2Bscu27j3yhUsCu84u2VoMb9i-hQVSKH1F9urV7s7cBHN9"/>
+<div class="absolute top-4 left-4 bg-primary text-background-dark px-3 py-1 rounded-full text-xs font-bold uppercase">24/7 Support</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-icons text-sage-600">health_and_safety</span>
+<h3 class="text-2xl font-bold">Post-Op Nurses</h3>
+</div>
+<p class="text-sage-600 dark:text-sage-400 mb-6">Certified clinical nursing care focused on recovery, medication management, and comfort.</p>
+<a class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-icons ml-1 text-sm">arrow_forward_ios</span>
+</a>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-white dark:bg-background-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-sage-100 dark:border-sage-800">
+<div class="h-64 overflow-hidden relative">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A babysitter reading a book to two young children" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0keI6tj_sUN3qvgtrnLZuet9ak5nG5_HJVGI7DTheqEiJLgHIMXBUdKUzq8AWoLFEO7Z3MQ0UaUyle7ikBzr8NQmAh42Pv69ou8OqlXfwSkeD67yNF3bgfkvdaPxxYirYfZWUAnpfUum1t23QKtgbyQ1KXJN-Z9N5GqCmkAmz7jgsroGM8vo5osduGZtKoZb1ZZRuLuc95kmVdXye1LqIcRMevZf5uK_i4rY8DK-NXSsrPNYDFPJqGjS3CC9pLDCeysXF6sO-Nxs1"/>
+<div class="absolute top-4 left-4 bg-primary text-background-dark px-3 py-1 rounded-full text-xs font-bold uppercase">Background Vetted</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-icons text-sage-600">child_care</span>
+<h3 class="text-2xl font-bold">Premium Sitters</h3>
+</div>
+<p class="text-sage-600 dark:text-sage-400 mb-6">More than just supervision. Certified sitters who engage in educational and creative play.</p>
+<a class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all" href="#">
+                            Learn more <span class="material-icons ml-1 text-sm">arrow_forward_ios</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-24 bg-white dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="wood-texture-bg dark:bg-sage-800/30 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 opacity-10">
+<span class="material-icons text-[150px] text-wood-800">verified</span>
+</div>
+<div class="relative z-10">
+<div class="max-w-xl mb-16">
+<h2 class="text-4xl font-extrabold text-wood-800 dark:text-white mb-6">Our Vetting Process</h2>
+<p class="text-lg text-wood-800/70 dark:text-sage-200">Safety is our foundation. Every professional on our platform undergoes a rigorous 5-step verification process before meeting your family.</p>
+</div>
+<div class="grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-background-dark">
+<span class="material-icons">badge</span>
+</div>
+<h4 class="font-bold text-xl text-wood-800 dark:text-white">ID Verification</h4>
+<p class="text-wood-800/60 dark:text-sage-300 text-sm leading-relaxed">Multi-level identity and address authentication checks.</p>
+</div>
+<div class="space-y-4">
+<div class="w-14 h-14 bg-white dark:bg-sage-700 rounded-2xl flex items-center justify-center text-sage-600 dark:text-primary shadow-sm">
+<span class="material-icons">gavel</span>
+</div>
+<h4 class="font-bold text-xl text-wood-800 dark:text-white">Background Checks</h4>
+<p class="text-wood-800/60 dark:text-sage-300 text-sm leading-relaxed">Comprehensive criminal and behavioral history scanning.</p>
+</div>
+<div class="space-y-4">
+<div class="w-14 h-14 bg-white dark:bg-sage-700 rounded-2xl flex items-center justify-center text-sage-600 dark:text-primary shadow-sm">
+<span class="material-icons">school</span>
+</div>
+<h4 class="font-bold text-xl text-wood-800 dark:text-white">Certifications</h4>
+<p class="text-wood-800/60 dark:text-sage-300 text-sm leading-relaxed">Mandatory medical license and training verification.</p>
+</div>
+<div class="space-y-4">
+<div class="w-14 h-14 bg-white dark:bg-sage-700 rounded-2xl flex items-center justify-center text-sage-600 dark:text-primary shadow-sm">
+<span class="material-icons">groups</span>
+</div>
+<h4 class="font-bold text-xl text-wood-800 dark:text-white">In-Person Interview</h4>
+<p class="text-wood-800/60 dark:text-sage-300 text-sm leading-relaxed">Final psychological and professional assessment by our team.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-3 gap-12 items-center">
+<div class="lg:col-span-1">
+<h2 class="text-4xl font-extrabold text-sage-800 dark:text-white mb-6">Trusted by Families</h2>
+<p class="text-lg text-sage-600 dark:text-sage-400 mb-8 leading-relaxed">Read stories from families who found the perfect care match through our platform.</p>
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 rounded-full border border-sage-200 dark:border-sage-800 flex items-center justify-center hover:bg-white dark:hover:bg-sage-800 transition-all">
+<span class="material-icons">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-sage-200 dark:border-sage-800 flex items-center justify-center hover:bg-white dark:hover:bg-sage-800 transition-all">
+<span class="material-icons">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+<div class="bg-wood-100 dark:bg-sage-800/40 p-10 rounded-[2rem] border border-wood-200 dark:border-sage-800">
+<div class="flex text-primary mb-6">
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+</div>
+<p class="text-wood-800 dark:text-sage-200 italic mb-8">"Finding a specialized nurse for my father was incredibly stressful until we used Integrated Care. Sarah has been a godsend."</p>
+<div class="flex items-center gap-4">
+<img alt="" class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a male client" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZkzgOpMTNBcf8KuK_-WU9Y0MlpeiiRdJ8c9aWCuk3W-6h_6dzxE-mWRlYM6vdVEsJb217FPkzrq_UgetwC977U4C8fl9ZCiKIlhhOeq7Pwr3CqeaRL06Tc2BmiTeOWPa8SlbiDTijj3dZI6EAy3kkNmXCPQ04XDRlbbSsLRhErVdc-zxgorHddfNQaA_rE6Vf5SFPbcw8CmIPTdDwGDv3L82Al1YXCbPGWxKCtWK995JqBTQ_N-9RWlEtZjt789UEw53HALxRIa1J"/>
+<div>
+<h5 class="font-bold">Mark Stevenson</h5>
+<p class="text-xs text-wood-800/50 dark:text-sage-400 uppercase tracking-wider">Son &amp; Caregiver</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-sage-800/40 p-10 rounded-[2rem] border border-sage-100 dark:border-sage-800 shadow-sm">
+<div class="flex text-primary mb-6">
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+</div>
+<p class="text-sage-600 dark:text-sage-200 italic mb-8">"The babysitters here are on another level. They didn't just watch my kids; they taught them basic coding!"</p>
+<div class="flex items-center gap-4">
+<img alt="" class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a female client" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-5zR-J9DQ-wjsehoklQji7KocvDW7JT-aqULWfZSKsHB6gynyZjKepO7S56Nn_Ga-15Kx5XFpncO5_AWFPPsfNFA6SfDrDDR1uY1w0L0HOiM93wSGjfgeUUtEP_MesKWY-GDp5F9vR6koDwOWygW7Tb40Qc-dQ6b0Hxh-4ELWYTDNN79tXNXvVsLfyVGV0tpVPv9Ugdob2Vu8NCa4_EZhx2UOL1M6BedBqQ9XJz4kHg-YHJa8osbHyKGFRARhXYG8ls6pVSWzqh3N"/>
+<div>
+<h5 class="font-bold">Emily Chen</h5>
+<p class="text-xs text-sage-500 dark:text-sage-400 uppercase tracking-wider">Working Mom</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-sage-800 text-white pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-8">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-background-dark">spa</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Integrated Care</span>
+</div>
+<p class="text-sage-200/60 leading-relaxed mb-8">
+                        The gold standard in integrated family caregiving. Bringing medical staffing and childcare under one trusted umbrella.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="" class="w-5 h-5 invert" data-alt="Facebook logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAETgFsslGhHco4EhuMvwR_6QCD_srHO08rlTa01HYDmqjVMsjcObv8GyktY-mT1Jn30JVCfFBa99UnWMzdpUCQ9myArB6oh9zJuLeMQB2wQnSxh8XvAt6GUByuHa9mQkswZ4mrwzI2fVyYOpUJgSj3XDsheWKGWf-AWTkOiJkNxu_dz2K_2lT9r0tj6cXdVu2ttIGi0_5v5Rzqf7SbWjEZXb5ISQ7uC4Mpojb5HNKy1Tb0pmyKM_CWPNU6A-KNncJZgWxyp0_3JFq2"/>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="" class="w-5 h-5 invert" data-alt="Instagram logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC30MXjE_HI-OkiKNZ6pNBT_JJvfiGah8X8ZYoMBC4r52-EVO5aMNtX1VpLJAmQcYZ2NfPvRbIseoPZ-6DvZjXord1YjVTCx7jfkmMCmMBUzws4RMTLv3J2jD7_mbUEGVkDRL_nCw7b6jkg1GimPgesPAM1jo1Csn2q0-iwsWDTcg0H3ET10wTIMhTfe1joUX_hdWRtAIiE5zB32a3-g1ASCWWrjqcwyFVXRutQHT2p9unLS5coJokMb-GtsHsqDh8oLK-9vtGN3fuX"/>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="" class="w-5 h-5 invert" data-alt="Twitter logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhUUUKttcQB9ybZmcHu-FBi8AGVJmb9vjhsV_RzyWojvhIlzeI_ekdrTrf_7XMHxgxGKZP2qoYU0Du0nU6Sg9gvPNPCaJgu4Ou53q0jHLNcuMTxdTFqwOwzpUC-SgKfykuqIFAFxoksca-tGYhoMsti3S0l5nk5DVr7louli8Vx7r_VBApz7VUdGGa9yNPNdaQ6cfgwD2oTyF-LLdLJmMQIG0LUaRclalRRE4V_pY-z3ag7wQzNuJEITrUeaY9-dVncv3UhalMwu4m"/>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Services</h5>
+<ul class="space-y-4 text-sage-200/60">
+<li><a class="hover:text-primary transition-colors" href="#">Medical Staffing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">In-Home Nursing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nanny Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Elder Care</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Post-Op Support</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Company</h5>
+<ul class="space-y-4 text-sage-200/60">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Vetting</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Trust &amp; Safety</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Newsletter</h5>
+<p class="text-sage-200/60 text-sm mb-4">Join 5,000+ families receiving caregiving tips.</p>
+<div class="relative">
+<input class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-0" placeholder="Your email" type="email"/>
+<button class="absolute right-2 top-2 bg-primary text-background-dark w-8 h-8 rounded-lg flex items-center justify-center">
+<span class="material-icons text-sm">send</span>
+</button>
+</div>
+<div class="mt-8 p-4 bg-white/5 rounded-xl border border-white/10">
+<p class="text-xs text-sage-200/40 uppercase font-bold tracking-widest mb-2">Emergency Hotline</p>
+<p class="text-xl font-bold text-primary">1-800-CARE-NOW</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:row items-center justify-between gap-4 text-sage-200/40 text-xs">
+<p>© 2024 Integrated Care Solutions. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Cookie Settings</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

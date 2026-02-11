@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Arrivals | Premium Editorial Fashion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .product-card:hover .quick-add {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-stone-100 font-display">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
+<div class="max-w-[1600px] mx-auto px-8 h-20 flex items-center justify-between">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-bold tracking-tighter uppercase" href="#">Lumière</a>
+<div class="hidden md:flex gap-8 text-xs font-medium uppercase tracking-[0.2em]">
+<a class="hover:text-primary transition-colors" href="#">Collection</a>
+<a class="text-primary" href="#">New Arrivals</a>
+<a class="hover:text-primary transition-colors" href="#">Editorial</a>
+<a class="hover:text-primary transition-colors" href="#">Archive</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="p-2 hover:text-primary transition-colors"><span class="material-icons text-[20px]">search</span></button>
+<button class="p-2 hover:text-primary transition-colors relative">
+<span class="material-icons text-[20px]">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 hover:text-primary transition-colors"><span class="material-icons text-[20px]">menu</span></button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1600px] mx-auto px-8 py-12">
+<!-- Page Header -->
+<header class="mb-16">
+<nav class="flex text-[10px] uppercase tracking-[0.2em] text-stone-400 mb-4">
+<a class="hover:text-stone-900 dark:hover:text-white transition-colors" href="#">Home</a>
+<span class="mx-2">/</span>
+<span class="text-stone-900 dark:text-white">New Arrivals</span>
+</nav>
+<div class="flex justify-between items-end">
+<div>
+<h1 class="text-5xl font-extralight tracking-tight mb-2">New Arrivals</h1>
+<p class="text-stone-500 dark:text-stone-400 text-sm">Curated seasonal essentials for the modern wardrobe. (124 Items)</p>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium uppercase tracking-widest">
+<span class="text-stone-400">Sort By:</span>
+<select class="bg-transparent border-none focus:ring-0 cursor-pointer pr-8 py-0 text-xs font-medium uppercase tracking-widest">
+<option>Recommended</option>
+<option>Newest</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div>
+</header>
+<div class="flex gap-16">
+<!-- Sidebar Filters -->
+<aside class="w-64 flex-shrink-0 hidden lg:block sticky top-32 h-fit max-h-[calc(100vh-160px)] overflow-y-auto custom-scrollbar">
+<div class="space-y-10">
+<!-- Category Filter -->
+<div>
+<h3 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-6 text-stone-400">Category</h3>
+<ul class="space-y-3 text-sm">
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="group-hover:text-primary transition-colors">All Apparel</span>
+<span class="text-[10px] text-stone-400">84</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer text-primary">
+<span class="font-medium">Outerwear</span>
+<span class="text-[10px]">22</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="group-hover:text-primary transition-colors">Knitwear</span>
+<span class="text-[10px] text-stone-400">18</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="group-hover:text-primary transition-colors">Tailoring</span>
+<span class="text-[10px] text-stone-400">14</span>
+</li>
+</ul>
+</div>
+<!-- Size Filter -->
+<div>
+<h3 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-6 text-stone-400">Size</h3>
+<div class="grid grid-cols-4 gap-2">
+<button class="aspect-square border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[10px] hover:border-primary hover:text-primary transition-all rounded">XS</button>
+<button class="aspect-square border border-primary bg-primary/10 text-primary flex items-center justify-center text-[10px] transition-all rounded">S</button>
+<button class="aspect-square border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[10px] hover:border-primary hover:text-primary transition-all rounded">M</button>
+<button class="aspect-square border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[10px] hover:border-primary hover:text-primary transition-all rounded">L</button>
+<button class="aspect-square border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[10px] hover:border-primary hover:text-primary transition-all rounded">XL</button>
+</div>
+</div>
+<!-- Color Filter -->
+<div>
+<h3 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-6 text-stone-400">Color</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-6 h-6 rounded-full bg-stone-100 border border-stone-200 dark:border-stone-700 ring-2 ring-offset-2 ring-primary dark:ring-offset-background-dark"></button>
+<button class="w-6 h-6 rounded-full bg-stone-900 border border-stone-200 dark:border-stone-700"></button>
+<button class="w-6 h-6 rounded-full bg-stone-400 border border-stone-200 dark:border-stone-700"></button>
+<button class="w-6 h-6 rounded-full bg-[#D4C3A3] border border-stone-200 dark:border-stone-700"></button>
+<button class="w-6 h-6 rounded-full bg-[#2C3E50] border border-stone-200 dark:border-stone-700"></button>
+</div>
+</div>
+<!-- Price Filter -->
+<div>
+<h3 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-6 text-stone-400">Price Range</h3>
+<div class="px-2">
+<input class="w-full accent-primary bg-stone-200 dark:bg-stone-800 h-1 rounded-full appearance-none cursor-pointer" type="range"/>
+<div class="flex justify-between mt-4 text-[10px] font-medium tracking-widest text-stone-500">
+<span>$0</span>
+<span>$2,500</span>
+</div>
+</div>
+</div>
+<!-- Style Filter -->
+<div>
+<h3 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-6 text-stone-400">Style</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-stone-300 text-primary focus:ring-primary dark:bg-stone-800 dark:border-stone-700" type="checkbox"/>
+<span class="text-sm group-hover:text-stone-600 transition-colors">Minimalist</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded-sm border-stone-300 text-primary focus:ring-primary dark:bg-stone-800 dark:border-stone-700" type="checkbox"/>
+<span class="text-sm group-hover:text-stone-600 transition-colors">Contemporary</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-stone-300 text-primary focus:ring-primary dark:bg-stone-800 dark:border-stone-700" type="checkbox"/>
+<span class="text-sm group-hover:text-stone-600 transition-colors">Avant-Garde</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Product 1 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-stone-100 dark:bg-stone-900 rounded-lg mb-4">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist wool coat in ivory white on light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2T-Zi0BX050Ir1Huo4jrTiD6hNsWNRDZJr_sAPNviki8NsPJ7Q5aeVppxN03Z-Q9isX-Lrpxbn19_FpClTHG9R_fSI-r6UEGdktebWKPvnVSSnb3faWloHA_ScF3C-l70u65LIAYiQLp1pOyIC9BLanMmq1wqLt0gRd5Vhm2PuVo2soHSUunmWSDL5FzpwcC6eKlH-2mJc8fDOFjHmXF4fTy36neCct3khBPnJAoM2NEBhg-6nxrJBwcx7FTh40j61J5j11kpu5Q"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="quick-add absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-red-700 transition-colors rounded-lg">Quick Add — $890</button>
+</div>
+<span class="absolute top-4 left-4 bg-white/90 dark:bg-stone-900/90 backdrop-blur px-2 py-1 text-[8px] uppercase tracking-widest font-bold">New Arrival</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 mb-1">Aethelred</h4>
+<h3 class="text-sm font-medium mb-1">Sculpted Wool Overcoat</h3>
+<p class="text-xs font-light text-stone-500">$890.00</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-stone-100 dark:bg-stone-900 rounded-lg mb-4">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Elegant beige silk blouse on a model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcJOeA6pq93yb3HUFU0-kOXEws1pYQeRdDt8vWLFnrIbeej79Ny665ji5H-8SqhiHxMLBDNJTcVjHDM0QdHEijqJtm9Z1cDNHbmi0Suduv8gIcn5VH81_ZbVE63VsjVo5qAvl-uAZJmYKvEcWZeZnFwy8UixyduguZcud56rwgHqiP8ERnKdq4Bz1HGgbAfSUY7ixyby9wvjd1F9Qv2s3VPnRzZfhWuEklMWRHAOsppYz9ySgzvoFVNrxiu2HkC5OS1BJQuDJHfdw"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="quick-add absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-red-700 transition-colors rounded-lg">Quick Add — $450</button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 mb-1">Studio N</h4>
+<h3 class="text-sm font-medium mb-1">Heavy Silk Drape Blouse</h3>
+<p class="text-xs font-light text-stone-500">$450.00</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-stone-100 dark:bg-stone-900 rounded-lg mb-4">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Tailored black trousers with high waist detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXv4dmldiLftjRdS7TAJcUXAHMSMIGMqNcnr2AbBpfRuTBTvPbv0T3qFEekaMTaynPQIYyUzj8MPOzEM0UB-4iNwEKTGychhMFObpDJS3hZ9FRQLSf_Nb3SwTzibw2o_3Ws9iSw2lD9G90Nh84YZDAwhOYvHc4FT5mlZrvz9qtN1tk1LtU-EgEC-CDbOwiw_wkoCNe7JYcL__D__7V8RWMQsW6-0QuRz6fhnfPEkbd2kkBmQFZ_GwjwC3BZ2JSQuSqBtP69mn9F7U"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="quick-add absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-red-700 transition-colors rounded-lg">Quick Add — $320</button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 mb-1">Monolith</h4>
+<h3 class="text-sm font-medium mb-1">Relaxed Pleat Trousers</h3>
+<p class="text-xs font-light text-stone-500">$320.00</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-stone-100 dark:bg-stone-900 rounded-lg mb-4">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Grey cashmere turtleneck sweater studio shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVPEAu2NdcwnxAARCr3HFPJju5VixxmFk2SK6rPUuCKtMYrhVsTrsNcLqiVY6lxQdhgmQ-CPossZcf2s6k388mGF34jkHE32bNdRJVPfhNViZ9iJmRUMITwYDuMXcKrG-SemImEOcMd6TAEOzzl3tV3hbUWZGKgKR2hqoRSjDZm8YI3T_W8VZykOOMqSU-SpLufiHbT4LIKBPUI3TUxlOdiFlAL7c-p_96OeUr1Oc_S7JlWevk5KUCVjadjEZVilxRk79xtR23RY0"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="quick-add absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-red-700 transition-colors rounded-lg">Quick Add — $580</button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 mb-1">Aethelred</h4>
+<h3 class="text-sm font-medium mb-1">Essential Cashmere Knit</h3>
+<p class="text-xs font-light text-stone-500">$580.00</p>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-stone-100 dark:bg-stone-900 rounded-lg mb-4">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Structural leather tote bag in deep brown" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHWBUQwtoQs7-P7eDDRnVCRGvwG0OpkiG4IJ55SbtpVelOF8EpB5AOqvGN7Q7HHE7J7Ot-v_XBgT3F6wRpHzEOltK4C7d6AymdxyC6EOzOQhYBEm79fhB0vSVnNZ2cOWimaFhWJP9JKkJBFGprgX7gwi9QduAB7BpHVh2nNlFZVnd6BKNspEd4Z6185TEq4znt5SAxo2YyMPQupewrdDfUimr9qpw4SN0V7tnKGqSNLPRtm7RYkMWA1b5F8WW5COVBSjqHwFRW8Q0"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="quick-add absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-red-700 transition-colors rounded-lg">Quick Add — $1,200</button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 mb-1">Objét</h4>
+<h3 class="text-sm font-medium mb-1">Structured Leather Tote</h3>
+<p class="text-xs font-light text-stone-500">$1,200.00</p>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-stone-100 dark:bg-stone-900 rounded-lg mb-4">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Flowing midi dress with floral minimalist print" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMQhJmSHwjeoMNOePYSzLskulu-4bGcBwcYVM43xiRRBpvgRvWdKamXNVEAdiGIJ66eLFwsPxcXMdHsbrGnVjaSTRO7mzkzpUfKYAvdrsOkauVQI16P06fovWb9PJTQoBua0Srdq5D3kKPkbzmtdZs5sTU4SFszC-qgzMyi2JBZoFlRZVEHaQBgH5hRS4dmYZHIC1b070sZ0PBt7z4Zw02d9Ht0zmlMMlWZwCmEyBDzFnPCBMUrrDPzhZnA-qBNkZtERpYHFto1d0"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="quick-add absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-red-700 transition-colors rounded-lg">Quick Add — $690</button>
+</div>
+<span class="absolute top-4 left-4 bg-primary text-white px-2 py-1 text-[8px] uppercase tracking-widest font-bold">Sold Out</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 mb-1">Studio N</h4>
+<h3 class="text-sm font-medium mb-1">Shadow Print Midi Dress</h3>
+<p class="text-xs font-light text-stone-500 italic opacity-50">Join Waitlist</p>
+</div>
+</div>
+</div>
+<!-- Load More Section -->
+<div class="mt-24 text-center">
+<button class="px-12 py-4 border border-stone-200 dark:border-stone-800 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-stone-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all rounded-lg">
+                        Load More Arrivals
+                    </button>
+<p class="mt-6 text-[10px] text-stone-400 uppercase tracking-widest">Showing 6 of 124</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-32 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950">
+<div class="max-w-[1600px] mx-auto px-8 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<h2 class="text-xl font-bold tracking-tighter uppercase mb-6">Lumière</h2>
+<p class="text-sm text-stone-500 leading-relaxed">Redefining modern elegance through curated collections and artisanal craftsmanship since 2014.</p>
+</div>
+<div>
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Support</h4>
+<ul class="space-y-4 text-xs text-stone-500">
+<li><a class="hover:text-primary transition-colors" href="#">Client Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Order Tracking</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Legal</h4>
+<ul class="space-y-4 text-xs text-stone-500">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Newsletter</h4>
+<form class="flex border-b border-stone-300 dark:border-stone-700 py-2">
+<input class="bg-transparent border-none focus:ring-0 text-xs w-full" placeholder="Email Address" type="email"/>
+<button class="text-xs uppercase tracking-widest font-bold hover:text-primary transition-colors" type="submit">Join</button>
+</form>
+<div class="mt-8 flex gap-4">
+<a class="text-stone-400 hover:text-stone-900 transition-colors" href="#"><span class="material-icons text-lg">facebook</span></a>
+<a class="text-stone-400 hover:text-stone-900 transition-colors" href="#"><span class="material-icons text-lg">camera_alt</span></a>
+<a class="text-stone-400 hover:text-stone-900 transition-colors" href="#"><span class="material-icons text-lg">alternate_email</span></a>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-stone-200 dark:border-stone-800 flex justify-between items-center text-[10px] uppercase tracking-widest text-stone-400">
+<p>© 2024 Lumière Boutique. All rights reserved.</p>
+<div class="flex gap-4">
+<span>Payment Methods:</span>
+<span class="text-stone-600">VISA</span>
+<span class="text-stone-600">MASTERCARD</span>
+<span class="text-stone-600">AMEX</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Golden Crust Bakery &amp; Cafe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&amp;family=Caveat:wght@400;700&amp;family=Material+Icons&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec9213",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"],
+                        "handwriting": ["Caveat", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link rel="stylesheet" href="../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-100 min-h-screen pb-24">
+<!-- Status Bar Spacer (iOS) -->
+<div class="h-12 bg-transparent"></div>
+<!-- Header / Navigation -->
+<header class="px-6 flex justify-between items-center mb-6">
+<div class="flex flex-col">
+<span class="font-handwriting text-primary text-2xl font-bold">Golden Crust</span>
+<span class="text-[10px] uppercase tracking-widest opacity-60 font-semibold">Artisan Bakery &amp; Cafe</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">notifications_none</span>
+</button>
+</header>
+<!-- Hero Section -->
+<section class="px-4 mb-8">
+<div class="relative h-[420px] rounded-xl overflow-hidden shadow-xl shadow-primary/10">
+<img alt="Fresh sourdough bread on a wooden table" class="w-full h-full object-cover" data-alt="Close up of freshly baked sourdough bread with flour dust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqn2NyCOjspiowX3lRFC7lYJOPdGzqtzSYYrNZmLA85PTJFw_Z0xmLDi8-p6Fy8YXBjgQHW1KDEEKVZ2uHQ7utuOnuqjNQKq59m4PFXF3scr3409LMOVHujDQBQ-nAxfkRLpNJossWT4V7xjzxOL2jF442lHiDcHJibEWdnrCdrSVjLUOs9PifaRvhjn1tLk8qAZ-7U76vz8FHqyGE6nf-mlmOD1nvTmHMXGgw1gJLCrFmf5xrWfJLzb1XaMCJta8UkY2DPDgoz6Qu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="font-handwriting text-primary text-3xl mb-2 block">Warm by Choice.</span>
+<h1 class="text-white text-3xl font-bold mb-4 leading-tight">Handcrafted Daily, Just for You.</h1>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-icons text-sm">shopping_bag</span>
+                    ORDER FOR PICKUP
+                </button>
+</div>
+</div>
+</section>
+<!-- Freshly Baked Live Feed -->
+<section class="mb-8">
+<div class="px-6 flex items-center gap-2 mb-3">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<h2 class="text-xs font-bold uppercase tracking-wider opacity-70">Just Out of the Oven</h2>
+</div>
+<div class="flex overflow-x-auto gap-4 px-6 hide-scrollbar">
+<div class="flex-none w-48 bg-white dark:bg-stone-800 p-4 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-primary">JUST NOW</span>
+<span class="material-icons text-stone-300">timer</span>
+</div>
+<h3 class="font-bold text-lg leading-tight mb-1">Classic Sourdough</h3>
+<p class="text-[10px] opacity-60">5 loaves remaining</p>
+</div>
+<div class="flex-none w-48 bg-white dark:bg-stone-800 p-4 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-primary">8 MINS AGO</span>
+<span class="material-icons text-stone-300">timer</span>
+</div>
+<h3 class="font-bold text-lg leading-tight mb-1">Butter Croissants</h3>
+<p class="text-[10px] opacity-60">Full batch available</p>
+</div>
+<div class="flex-none w-48 bg-white/50 dark:bg-stone-800/50 p-4 rounded-xl border border-primary/5">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold opacity-40 uppercase">Soon...</span>
+</div>
+<h3 class="font-bold text-lg leading-tight mb-1 opacity-50">Cinnamon Rolls</h3>
+<p class="text-[10px] opacity-40 italic">Expected in 12 mins</p>
+</div>
+</div>
+</section>
+<!-- Loyalty Card Preview -->
+<section class="px-4 mb-8">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-6 border border-primary/20 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-bold text-lg">Your Loyalty Card</h3>
+<p class="text-sm opacity-70">3 more treats to a free coffee!</p>
+</div>
+<div class="bg-primary text-white p-2 rounded-lg font-bold text-xl">
+                    7/10
+                </div>
+</div>
+<div class="flex justify-between gap-1 mb-2">
+<!-- Stamps -->
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs"><span class="material-icons text-[16px]">grade</span></div>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs"><span class="material-icons text-[16px]">grade</span></div>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs"><span class="material-icons text-[16px]">grade</span></div>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs"><span class="material-icons text-[16px]">grade</span></div>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs"><span class="material-icons text-[16px]">grade</span></div>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs"><span class="material-icons text-[16px]">grade</span></div>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs"><span class="material-icons text-[16px]">grade</span></div>
+<div class="w-8 h-8 rounded-full border-2 border-dashed border-primary/30 flex items-center justify-center text-primary/30"></div>
+<div class="w-8 h-8 rounded-full border-2 border-dashed border-primary/30 flex items-center justify-center text-primary/30"></div>
+<div class="w-8 h-8 rounded-full border-2 border-dashed border-primary/30 flex items-center justify-center text-primary/30"></div>
+</div>
+</div>
+</section>
+<!-- Find Us Section -->
+<section class="px-4 mb-4">
+<div class="bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-sm">
+<div class="relative h-32 w-full bg-stone-200">
+<img alt="Map showing location" class="w-full h-full object-cover grayscale contrast-125 opacity-80" data-alt="Stylized map showing a street grid and pin" data-location="Brooklyn, New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQjeaQcrQ0XjSQ1joI6qAMYmOOj9Wn9t3Oqi4KQCG7fjhXLf7AuC7lv3fZIPtn3jedXoTfGuIH_bHXyVbztVurNZhE4m3JEpfFIXC1z8Tu7BuCIlbowOQa4GR514W3CTQwXR-XyhkObnY_RDbqayYOfBmwzsHSTp1HLzIpUgWv3ohrapgTzGog6V-S6oODDZJay_60lCEnnPEsye5bYxehyv1IMwCKeYv3R4K1v3HUUhwLQr-CpOzVx7DUIcSekNzfF4WQFylEQwn9"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-8 h-8 bg-primary rounded-full border-4 border-white flex items-center justify-center shadow-lg">
+<span class="material-icons text-white text-sm">storefront</span>
+</div>
+</div>
+</div>
+<div class="p-4 flex justify-between items-center">
+<div>
+<h3 class="font-bold">123 Artisan Alley, BK</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-icons text-sm text-primary">directions_walk</span>
+<span class="text-sm font-medium text-primary">4 min walk from you</span>
+</div>
+</div>
+<button class="bg-stone-100 dark:bg-stone-800 p-3 rounded-lg text-stone-600 dark:text-stone-300 transition-colors active:bg-stone-200">
+<span class="material-icons">near_me</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl border-t border-stone-200 dark:border-stone-800 px-6 pt-3 pb-8 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">home</span>
+<span class="text-[10px] font-bold">HOME</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-stone-400">
+<span class="material-icons">restaurant_menu</span>
+<span class="text-[10px] font-bold">MENU</span>
+</button>
+<div class="relative -top-6">
+<button class="w-14 h-14 bg-primary rounded-full shadow-lg shadow-primary/30 flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-icons text-3xl">add_shopping_cart</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-stone-400">
+<span class="material-icons">receipt_long</span>
+<span class="text-[10px] font-bold">ORDERS</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-stone-400">
+<span class="material-icons">person_outline</span>
+<span class="text-[10px] font-bold">PROFILE</span>
+</button>
+</nav>
+<!-- Bottom Home Indicator Area -->
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-stone-300 dark:bg-stone-700 rounded-full z-50"></div>
+<script src="../../assets/js/global-enhancement.js" defer></script>
+</body></html><!-- End of generation -->

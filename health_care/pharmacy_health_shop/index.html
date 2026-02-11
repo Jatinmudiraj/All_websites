@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthPlus Pharmacy | Integrated Wellness &amp; Prescription Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+<link rel="stylesheet" href="../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons text-white text-2xl">local_pharmacy</span>
+</div>
+<span class="text-xl font-bold tracking-tight">HealthPlus <span class="text-primary">Pharmacy</span></span>
+</div>
+<!-- Search Bar -->
+<div class="hidden md:flex flex-1 max-w-lg mx-8">
+<div class="relative w-full">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-icons text-sm">search</span>
+</span>
+<input class="block w-full pl-10 pr-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-800/50 focus:ring-primary focus:border-primary sm:text-sm" placeholder="Search medicine, vitamins, or brands..." type="text"/>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+<span class="material-icons text-sm">cloud_upload</span>
+<span>Upload Prescription</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="relative p-2 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">shopping_cart</span>
+<span class="absolute top-0 right-0 h-4 w-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full">3</span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">person_outline</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Layout -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Navigation & Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="space-y-8 sticky top-24">
+<!-- Categories -->
+<section>
+<h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Categories</h3>
+<nav class="space-y-1">
+<a class="flex items-center justify-between px-3 py-2 text-sm font-medium text-primary bg-primary/10 rounded-lg group" href="#">
+<span class="flex items-center gap-3">
+<span class="material-icons text-lg">medical_services</span>
+                                    Vitamins &amp; Supplements
+                                </span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg group transition-colors" href="#">
+<span class="flex items-center gap-3">
+<span class="material-icons text-lg">medication</span>
+                                    Over-the-Counter
+                                </span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg group transition-colors" href="#">
+<span class="flex items-center gap-3">
+<span class="material-icons text-lg">face</span>
+                                    Personal Care
+                                </span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg group transition-colors" href="#">
+<span class="flex items-center gap-3">
+<span class="material-icons text-lg">healing</span>
+                                    First Aid
+                                </span>
+</a>
+</nav>
+</section>
+<!-- Health Concern Filters -->
+<section>
+<h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Health Concerns</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Immunity Boost</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Digestive Health</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Stress &amp; Sleep</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Heart Health</span>
+</label>
+</div>
+</section>
+<!-- Price Range -->
+<section>
+<h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Price Range</h3>
+<div class="px-2">
+<input class="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex justify-between mt-2 text-xs text-slate-500">
+<span>$0</span>
+<span>$500+</span>
+</div>
+</div>
+</section>
+</div>
+</aside>
+<!-- Product Display Area -->
+<div class="flex-1">
+<!-- Promo Banner -->
+<div class="relative overflow-hidden rounded-2xl bg-primary mb-10 h-48 sm:h-64 flex items-center">
+<div class="absolute inset-0 opacity-20">
+<div class="absolute -top-12 -left-12 w-64 h-64 rounded-full bg-white"></div>
+<div class="absolute -bottom-12 -right-12 w-96 h-96 rounded-full bg-white"></div>
+</div>
+<div class="relative z-10 px-8 sm:px-12">
+<span class="inline-block px-3 py-1 bg-white/20 text-white text-xs font-semibold rounded-full mb-4 backdrop-blur-md">Featured Recommendation</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Advanced Immune Support</h2>
+<p class="text-blue-100 max-w-md mb-6 hidden sm:block">Pharmacist-curated selection of premium vitamins to keep your body resilient year-round.</p>
+<button class="px-6 py-2 bg-white text-primary rounded-lg font-semibold hover:bg-slate-50 transition-colors">Explore Selection</button>
+</div>
+<img alt="Vitamins display" class="absolute right-0 bottom-0 h-full w-1/3 object-contain object-bottom mix-blend-overlay hidden md:block" data-alt="Clear bottles of vitamins on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzVERF20QCamxN1Oj1sugMb71M2RaFUFJnC6IeXUmVqxZ2dkRgpMkfbQYj94su_-mojpHNQzdf-x8YS3R25GpEEpdYnPhebqcNf9GVtcl7Vn8CdrBgK9E00dXXPG-2MBZal4k4NgZoRtOGQ0jkEuE7GKNDVZMt1X3dLGQj09tRlsywZXsWuPHh29fihqriHsPzx4N7NLNdcU0n7gJR8oUUe5TLNvEZVYhEFjhFZEhOY_XV6aAX6BuIxO1qjM7e20pmk-VStaBOURNl"/>
+</div>
+<!-- Product Header -->
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
+<div>
+<h1 class="text-2xl font-bold">Vitamins &amp; Supplements</h1>
+<p class="text-sm text-slate-500">Showing 1-12 of 84 products</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm text-slate-500 whitespace-nowrap">Sort by:</span>
+<select class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-lg text-sm focus:ring-primary focus:border-primary">
+<option>Most Popular</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Customer Rating</option>
+</select>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="group bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-none transition-all duration-300">
+<div class="relative h-48 bg-slate-50 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="Multi-Vitamin" class="h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300" data-alt="Modern pharmaceutical bottle with multi-vitamins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDftLX5JS4SkxffaQ_l_9UhBQpWrwPcwx-NCjw9-Jnjm21aP6ZZfZmpKpwPlIKdWK4u33BUJTrJiWKC1NoAeeBNrckHJwjY2fRoAZz5WRi7Nd8U69WObJ8WVRa9_5Qx9KMRNsNOr2eoxVoRukamSxywW_Z2aPwuZPULYxbHSc4vYUYm-2FO7olMp5jZ9pJ_lyLA1WhTxrnlEq9_fg4CfQc6H3R1XpzEo2n7sQQCVDdw9GrkDjRCKbTl_GPWz1gHalX2IIiHSgv-FCxw"/>
+<span class="absolute top-3 left-3 px-2 py-1 bg-green-500 text-white text-[10px] font-bold rounded uppercase">In Stock</span>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star_half</span>
+<span class="text-xs text-slate-400 ml-1">(4.8)</span>
+</div>
+<h3 class="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">Daily Wellness Complex</h3>
+<p class="text-sm text-slate-500 mb-4 line-clamp-1">60 Capsules | Essential daily nutrients</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-white">$24.99</span>
+<button class="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-icons text-base">add_shopping_cart</span>
+<span class="text-sm font-medium pr-1">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-none transition-all duration-300">
+<div class="relative h-48 bg-slate-50 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="Fish Oil" class="h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300" data-alt="Omega-3 fish oil gel capsules in glass jar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPRUgayEaG9pB8LfvcZKnLp-vQuu-mSYtS7Fz2ZMcjwV9GreIE8btu_QSMX7lL6i5fCbDOen5LVpqQ8H-rjUwvLGkcJPlOytZ2yCz1WM-IJJDtr-HgWgFn69XwH5XWa0D7vQPZLYvNLZ2Z9XhPa5YnSqI_TqKnbiXBRAdyO92j52KuNF9WBhNCmcdOtbEwZo6Vv8wjYV7-Op7ixRbQcutHjO369TjsaWTgp67JlA52jB3i6nGniPC0d6AgdZo7wic9MbJWElTk1zs3"/>
+<span class="absolute top-3 right-3 px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Best Seller</span>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm)">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="text-xs text-slate-400 ml-1">(5.0)</span>
+</div>
+<h3 class="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">Omega-3 High Potency</h3>
+<p class="text-sm text-slate-500 mb-4 line-clamp-1">120 Softgels | Supports heart health</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-white">$32.50</span>
+<button class="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-icons text-base">add_shopping_cart</span>
+<span class="text-sm font-medium pr-1">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-none transition-all duration-300">
+<div class="relative h-48 bg-slate-50 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="Vitamin C" class="h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300" data-alt="Bright orange vitamin C tablets in modern packaging" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcFSeKjnKe7_WbXMnNsYARR5cefGE2NyqBXY1waQsOjIIJ98_BgqwNs8qzIUH1QxlxT3FLnaZBh5KyuXyCRndCi_vzhjxqaad6IqFRr2GGX34wZkqK7eIuE_bCHtBKT8qo5wK5Uf79NQIKLfB-WTrN7ZVZQn8NBVSN3FkcC2qcon_LheVw1vvnNAvL556XsyeCIo0u38SAxlMc_s0qRZp-gopVpaxuyoIRNQrUP-Zto3vkbZYtqnUbuL7YkZ3oeGtXbsHTfqsqZRAW"/>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-slate-200 text-sm">star</span>
+<span class="text-xs text-slate-400 ml-1">(4.2)</span>
+</div>
+<h3 class="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">Vitamin C 1000mg</h3>
+<p class="text-sm text-slate-500 mb-4 line-clamp-1">90 Tablets | Natural immune defense</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-white">$18.99</span>
+<button class="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-icons text-base">add_shopping_cart</span>
+<span class="text-sm font-medium pr-1">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-none transition-all duration-300">
+<div class="relative h-48 bg-slate-50 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="Magnesium" class="h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300" data-alt="Blue bottle of magnesium health supplements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADEjFJPQ3d9OrMsXCdbi7OrbgnhJl1BVTtE212kfU0HQL5AKJlc5AZ0oG38fcqVSshP77CCYILo4i4NwiSVUG55wt7n2pccj9b-AKruOeA_99fqNU6kkDLLlLPyRL-APCn_IL7v5xYNy3S7p8xz2TBvhIe5sL98DuAfmbhIuIj8GmaubhPSNa1LoS6w8j6hZ3Ue_Y9yPcqaTSgWmZzcr5C7_a12mU8z3w_-VeJ4LAWoQ-EyGmSrgq6jGEOBn_RNbsCtMds7OJogJ9I"/>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star_half</span>
+<span class="text-xs text-slate-400 ml-1">(4.6)</span>
+</div>
+<h3 class="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">Magnesium Citrate</h3>
+<p class="text-sm text-slate-500 mb-4 line-clamp-1">100 Capsules | Muscle &amp; nerve support</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-white">$15.45</span>
+<button class="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-icons text-base">add_shopping_cart</span>
+<span class="text-sm font-medium pr-1">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-none transition-all duration-300">
+<div class="relative h-48 bg-slate-50 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="Zinc" class="h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300" data-alt="Pills scattered next to a pharmaceutical container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIMZzIsgjLQhLACzxoVi_aY1WB82f3wTZolZmf52hx5hB5neiZkQXNnBiaFcV49MlRVlLRYIXYCEsv98CqnMzVqcgF8ikPoxIWImwrXo4D2OVPWbs1eg4Mv15ml9WijFMwYRzeHIKPWhIFAzV7ohRCG0WDo2bgePQIoYn_rHn3LzrEUMrXvZnQLVwmiH0tpz7oazpQ5A3J9-_TJrajNNvhdQC26jHZDxvFepvH16smLzBfyZaX2oVROKtKch_1bAq5LmIFXuKEs1vB"/>
+<span class="absolute top-3 left-3 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded uppercase">Limited</span>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-slate-200 text-sm">star</span>
+<span class="text-xs text-slate-400 ml-1">(4.0)</span>
+</div>
+<h3 class="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">Zinc Picolinate</h3>
+<p class="text-sm text-slate-500 mb-4 line-clamp-1">50mg | Optimal absorption</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-white">$12.99</span>
+<button class="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-icons text-base">add_shopping_cart</span>
+<span class="text-sm font-medium pr-1">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-none transition-all duration-300">
+<div class="relative h-48 bg-slate-50 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="Probiotics" class="h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300" data-alt="Bottles of health supplements on a clinical desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVqREHSkfOmI2v2RH4gTrj8Soprvb7P3dZkpby617K8KGVvu3drZ7kM_2B7KIcgCjMxSqWLik_asLsDc5rb9FZEHt0QfHG2TeHYYbyiDk5PnvIw_Htt4QAO609GXck5VL0aohsfJ5bBY18k2i8OnOTQCHAJhwc6wxbvd9RJmqfS96enGEXRf0cupq44HdDAlsphnxYYq4UOkDa4pGDgSWUjZztGsZH9CRswWo7tuDPW3UdUBDe4sl5OCKIfHonWwY_D71wWJ9uR09P"/>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="material-icons text-yellow-400 text-sm">star</span>
+<span class="text-xs text-slate-400 ml-1">(4.9)</span>
+</div>
+<h3 class="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">Probiotic-10 25 Billion</h3>
+<p class="text-sm text-slate-500 mb-4 line-clamp-1">30 Capsules | Digestive flora balance</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-white">$28.00</span>
+<button class="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-icons text-base">add_shopping_cart</span>
+<span class="text-sm font-medium pr-1">Add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-12">
+<nav class="flex items-center gap-2">
+<button class="p-2 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-50" disabled="">
+<span class="material-icons">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-medium">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">3</button>
+<span class="px-2 text-slate-400">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">8</button>
+<button class="p-2 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-icons">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<!-- Support Bar -->
+<div class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-xl">
+<span class="material-icons text-primary">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Pharmacist Verified</h4>
+<p class="text-sm text-slate-500">Every prescription is checked by our licensed pharmacists.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-xl">
+<span class="material-icons text-primary">local_shipping</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Same-Day Delivery</h4>
+<p class="text-sm text-slate-500">Fast home delivery for local prescription orders.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-xl">
+<span class="material-icons text-primary">lock</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Secure Payments</h4>
+<p class="text-sm text-slate-500">HIPAA compliant data protection and secure checkout.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-xl">
+<span class="material-icons text-primary">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Expert Consultation</h4>
+<p class="text-sm text-slate-500">Chat with our health experts for personalized advice.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons text-white text-xl">local_pharmacy</span>
+</div>
+<span class="text-xl font-bold tracking-tight">HealthPlus</span>
+</div>
+<p class="text-slate-500 max-w-sm mb-6 leading-relaxed">Your trusted partner in health and wellness. Providing high-quality medical products and pharmacist-led care directly to your door.</p>
+<div class="flex gap-4">
+<a class="h-10 w-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:text-primary transition-colors shadow-sm" href="#">
+<span class="material-icons text-lg">facebook</span>
+</a>
+<a class="h-10 w-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:text-primary transition-colors shadow-sm" href="#">
+<span class="material-icons text-lg">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-slate-900 dark:text-white">Shop By Concern</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Immunity &amp; Cold</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pain &amp; Fever</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Digestive Care</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Weight Management</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-slate-900 dark:text-white">Customer Service</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Prescription Help</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Refunds</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-slate-900 dark:text-white">Legal</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Compliance</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+<p>© 2024 HealthPlus Multi-specialty Clinic &amp; Pharmacy. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<img class="h-6 opacity-60 grayscale hover:grayscale-0 transition-all" data-alt="Trusted payment badges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WoNLpTSfu2PU_Y5zcSir-1zvy2MLvATxiaqQXte3XXmP2JrgVaNhOt3Hm8jA6bNPB8hPXPfzJ39c9mRcC9AiSZ2v0oA_8qdz4VkA0nPGhcEXBw4R3sRn-960Z9SeP8NIYC6Q4eEt_5SC_A98Yz0q2LvKFBmxUtnIEtuKQGYSpfzfARb8qVdpa782l-PSXyjS4evKFsxZ0iFdz1ucYSIlWR4ps2-PqeFhWCsqSWELtgaPgnaev0EP14ACmh3Bwy0BtBKngoJi4uku"/>
+</div>
+</div>
+</div>
+</footer>
+<script src="../../assets/js/global-enhancement.js" defer></script>
+</body></html>

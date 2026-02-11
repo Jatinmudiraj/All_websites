@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Morning Light | Minimalist Home Coffee</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#df8020",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#211911",
+                        "oatmeal": "#e5ded4",
+                        "cream": "#fcf9f5",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: "Noto Serif", serif;
+            scroll-behavior: smooth;
+        }
+        .grainy-overlay {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBQX5cWTk59RquzbE6vopeKLJsrg1H6uTjuhAtDngR5M5gJSfUon-H8irDtISCKto_2sDxMT5z-xbSUrYLWCXPvfXBhxC0TT2VY9c5-R3vkxlIyNRoigG14VdgSRHasv2opw-H22MJfn8b7y1JykIykLXuybTIrzq8Z1wWi1dhgjeok8lSBQjhUwfSDs6dbXV2hjKs7EBfXWQrNd99BCzYYhjKCx3aR26qfqHfFeKyursjxckppp_Xit79kATI_VEsoBCmsfTTTttQ);
+            pointer-events: none;
+        }
+        .story-strip-container::-webkit-scrollbar {
+            display: none;
+        }
+        .story-strip-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.parallax-container {
+            perspective: 1000px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }@keyframes hero-zoom {
+            to {
+                transform: scale(1.15) translateY(5%);
+            }
+        }
+        .hero-parallax-img {
+            animation: hero-zoom linear both;
+            animation-timeline: scroll();
+            animation-range: 0vh 100vh;
+        }@keyframes card-float-up-fast {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(-50px); opacity: 1; }
+        }
+        @keyframes card-float-up-medium {
+            from { transform: translateY(150px); opacity: 0; }
+            to { transform: translateY(-20px); opacity: 1; }
+        }
+        @keyframes card-float-up-slow {
+            from { transform: translateY(200px); opacity: 0; }
+            to { transform: translateY(0px); opacity: 1; }
+        }
+        .card-parallax-1 {
+            animation: card-float-up-fast linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        .card-parallax-2 {
+            animation: card-float-up-medium linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 45%;
+        }
+        .card-parallax-3 {
+            animation: card-float-up-slow linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 50%;
+        }
+        .card-parallax-4 {
+            animation: card-float-up-medium linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 55%;
+        }@keyframes kitchen-depth {
+            from { transform: scale(1.2) translateY(-10%); }
+            to { transform: scale(1) translateY(10%); }
+        }
+        .kitchen-parallax {
+            animation: kitchen-depth linear both;
+            animation-timeline: view();
+            animation-range: entry 0% exit 100%;
+        }
+    </style>
+<link rel="stylesheet" href="../../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-200 font-display">
+<div class="fixed inset-0 grainy-overlay opacity-30 z-50"></div>
+<nav class="fixed top-0 w-full z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="text-xl font-bold tracking-widest uppercase text-primary">Morning Light</div>
+<div class="hidden md:flex space-x-12 text-sm tracking-widest uppercase">
+<a class="hover:text-primary transition-colors" href="#">Origins</a>
+<a class="hover:text-primary transition-colors" href="#">The Ritual</a>
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<a class="hover:text-primary transition-colors" href="#">Journal</a>
+</div>
+<div class="flex items-center space-x-6">
+<span class="material-icons text-xl cursor-pointer">search</span>
+<span class="material-icons text-xl cursor-pointer">shopping_bag</span>
+</div>
+</div>
+</nav>
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 dark:opacity-40 grayscale-[20%] hero-parallax-img" data-alt="Soft focus close up of coffee steam and ceramic mug" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvrK50r7zXkubS2eaj1iJgjqVZkb8kInpGFDAT-QyLUmUMGeTXTTawBZVmG5W5TYyxyRGuk77-DwZtWkEUmQQBUPiFFE8kqwufxxQDSWHHPPhTi9KwksOaD6TjWQ_USMJiwk3JvjKadZ4-JN6teNskP19zzdfMYs2Qot3077H36YKXr_sWSlgGN9eMWjbI1hakr24ypv-R_5XAU8JAy_6n1f7OdXkGMJO-JCCNKVGrJe648ySdzWUT7QtiZEajiANoF_xC2VkPo1Q"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background-light/20 via-transparent to-background-light dark:from-background-dark/20 dark:to-background-dark"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<h1 class="text-5xl md:text-7xl font-light mb-8 tracking-tight leading-tight">
+            The Art of the <br/><span class="italic">Slow Pour.</span>
+</h1>
+<p class="text-lg md:text-xl font-light mb-10 text-stone-600 dark:text-stone-400 max-w-2xl mx-auto leading-relaxed">
+            Crafted for the quiet moments. Ethically sourced, small-batch beans delivered to your sanctuary.
+        </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+<button class="bg-primary text-white px-10 py-4 rounded-full tracking-widest uppercase text-xs font-bold hover:bg-opacity-90 transition-all">
+                Explore The Collection
+            </button>
+<button class="border border-stone-300 dark:border-stone-700 px-10 py-4 rounded-full tracking-widest uppercase text-xs font-bold hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                Our Story
+            </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+<span class="material-icons">expand_more</span>
+</div>
+</section>
+<section class="py-32 bg-oatmeal/30 dark:bg-stone-900/50 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 mb-16">
+<h2 class="text-sm tracking-[0.3em] uppercase text-primary font-bold mb-4 text-center">The Ritual Process</h2>
+<p class="text-3xl font-light text-center max-w-2xl mx-auto">A cinematic journey from soil to sanctuary.</p>
+</div>
+<div class="story-strip-container flex flex-nowrap overflow-x-auto space-x-8 px-6 pb-20 snap-x snap-mandatory">
+<div class="flex-none w-[80vw] md:w-[400px] snap-center card-parallax-1">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-6 relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Macro shot of raw green unroasted coffee beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL6nKPmC46NsjHhicpJVTEFO18IQCkr-K9hDmzwITnRN5NCuqHHU-EG_FR0fw7SVqi97-EkuMy2k3Cs7gDc6OQNMgJt9aFHqPc91gXKPXE1sHcD7KOKpr2aSwsTX5xb10PBjM5dFrNpUq8HZdJJNhIObnZ5gUtvj0KJMZphgnwuB_bqdFOSBP2IQGaxBGrB7t-ksygspFhN26eoOIRIUlqpw62Akyu-GrSI3lERv5RTywP56NUn-93OKvAaDIMNAsy8qmS32BaIco"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-light mb-2 italic">01. The Harvest</h3>
+<p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed">Selecting only the most vibrant cherries from sustainable high-altitude farms.</p>
+</div>
+<div class="flex-none w-[80vw] md:w-[400px] snap-center card-parallax-2">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-6 relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Coffee beans roasting with light smoke texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWHL2rBx7F9ETruHIFYHo2ZcojCqWKdzoYv6rPEMnB5GLo4MUXwRV2fsOBRq6QH2_Qo9XCCQyP3MzE0Lr7Q6H_6c5IHHXUAYuddwxhXC-DSC9GY2Jd7rLNlYLcRfHttHD82mNpHVxr4jwCvu6JMRUy7MsKAOt4PpE1lWmBZQTMka-D6IbPWP3kiXI-6q0Ir9a1mJ17N-cSkr3atjVrGXsBYBPFTo1gUHkb8pDn1ijTN2PYNhthFIuqNYAHr9_NPGYKz5Kt8TfwPIE"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-light mb-2 italic">02. The Roast</h3>
+<p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed">Small-batch roasting to preserve the delicate, organic profile of every origin.</p>
+</div>
+<div class="flex-none w-[80vw] md:w-[400px] snap-center card-parallax-3">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-6 relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Hand pouring water from a gooseneck kettle into a dripper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdBym9q35QBsiXfKv7UXjfEhM2Q3Q7q8F41kWqkU1z5qppaTTw1pEzRf2ugXCXNu3wj9lfv-J54YO0JtThtGpJnOfY6TmEB_jSjyIYDJXFhuD1FzA2ijbHmFtprkAK-9MTS3PCu7JgI0P9p-GgDAVyJWVq-svkx9qba_swxFHea4QB_vpbDh4zGvbzb0In-KGN0fPEFzeYRFJpBbqQ11-i52K7lGKukGS5YQA2O_KNLiNr9UV_2hrk21_r_lhl5bSY6cMgO-AyBTw"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-light mb-2 italic">03. The Ritual</h3>
+<p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed">A slow, intentional process that honors the bean and the brewer's focus.</p>
+</div>
+<div class="flex-none w-[80vw] md:w-[400px] snap-center card-parallax-4">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-6 relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern minimalist home interior with a coffee cup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt2ZCnPhuMl1_qN89CK3SH25x7lRF-clhVG_gnJO2ORFnElZ50X_mDXtdSyEdVaqXFc46O9MNf2Fxk1pJk2xU99tHKhZxnrOxNIp4sxVhH6TZ7SVDoTolDNA4KXrnCZxrb14GuL4usPr5czo8GBWxZnBX99xt4Goh4_lF_gYS3vay7RPIZwak8F8IxxHFlNktmDOZYdfJcTVdSZTm_MxHujj4dwBTajhAR2rQVxqPn-62dGwm9wWDqDVLFDMtzOmszuX2PRnhgiqc"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-light mb-2 italic">04. The Experience</h3>
+<p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed">Finding serenity in the steam and the soft light of your own sanctuary.</p>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-sm tracking-[0.3em] uppercase text-primary font-bold mb-4">The Dawn Series</h2>
+<h3 class="text-4xl md:text-5xl font-light">Ethereal Blends for Early Risers.</h3>
+</div>
+<a class="text-sm tracking-widest uppercase border-b border-primary pb-1 font-bold" href="#">View All Roasts</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="group cursor-pointer">
+<div class="bg-oatmeal/20 dark:bg-stone-800/40 aspect-[4/5] mb-8 rounded-xl flex items-center justify-center p-12 transition-all group-hover:bg-oatmeal/40">
+<img class="max-w-full h-auto drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist white coffee bag packaging on beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKRBI_kjDebcRkay6yhozgpGoU3m1MVV5syBwAAIEOfmqGVKrETky22owufMiLp-ofv7l2jqRKQZtftOPganaqema2HvFWIug55aOiGPyRLvSejNq4gzGn1geo9qmaylLE2GuaUSLgBBhtbTu6BOg-YEjFovam_Xckeg0CR2jUwjrJQMddmfTDJQqfQ01O4CMW0W-8kQ7rQZmX3-7wgzyQpezZ0w6stQhCWEChvB_eo4Mfjw7yAeE75rSICsSmYjrRGei1Mf9HMMs"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-xl font-light mb-1 italic">Misty Valley</h4>
+<p class="text-sm text-stone-500 dark:text-stone-400">Light Roast | Notes of Jasmine &amp; Citrus</p>
+</div>
+<span class="text-lg font-light">$28</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-oatmeal/20 dark:bg-stone-800/40 aspect-[4/5] mb-8 rounded-xl flex items-center justify-center p-12 transition-all group-hover:bg-oatmeal/40">
+<img class="max-w-full h-auto drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist brown paper coffee bag on cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiSE0myYdupKSJkFMgJEwruKcApU_RVOOClsQGHeYpLpZTZOhYYd1peEg22ERFTMG3I9xUa-wcNOm6a3NQo2YcTbR15WFuvqd4Nt4QTw2zCG40uOG-OTpfcw_qECy4CeatRrzmNRdLFPC6Yfs9adso9hXG2ymYrJYyMqmIXDstf7ZDlLP4buLkY6_xpvcghA1cWCCzQ9_ujvULHoKMRgj4biZFWRScZcA2bAwAartMk1geEEvDZ_fKlSRMsVyYowMCibWVujQkk4"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-xl font-light mb-1 italic">Obsidian Bloom</h4>
+<p class="text-sm text-stone-500 dark:text-stone-400">Medium-Dark Roast | Cacao &amp; Stone Fruit</p>
+</div>
+<span class="text-lg font-light">$32</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-oatmeal/20 dark:bg-stone-800/40 aspect-[4/5] mb-8 rounded-xl flex items-center justify-center p-12 transition-all group-hover:bg-oatmeal/40">
+<img class="max-w-full h-auto drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" data-alt="Sleek black coffee canister on wood surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZyljAvxXJJqdpZy5AIqp6neqam01Bk5Bnivmx1YXxs-1OsZj2x27wll_uby6LfX_LzeBWRAOeLG8WF5zqGrzVWSKjoGFdTgH36jklS1KIYKlYzMZlXJWf69rflnrXWQ0x9XIKdpKlp4BZYIf6oJ4Mj1txK1R1vyrWL-A5IgSgkpXb1aUK7w4Pky0sE3-jD7rvd7tVc7Dab6tEEQ_0pPvG6ORq91MVVnYWM2vBDnjn2eXULRY3pTy0gd_LMkY9kqKyaev4COEBkoc"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-xl font-light mb-1 italic">Amber Glow</h4>
+<p class="text-sm text-stone-500 dark:text-stone-400">Medium Roast | Honey &amp; Hazelnut</p>
+</div>
+<span class="text-lg font-light">$26</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="h-[80vh] relative overflow-hidden">
+<img class="w-full h-full object-cover object-center grayscale-[30%] brightness-90 kitchen-parallax" data-alt="Wide shot of a clean minimalist kitchen with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv4ElkOJ-n-5vAKwozHGJgRVpbL8r7PUHz85CLYpkc5x11AZrMS8R9JBPdN9NNQKKxP3FEGLUB1xTzxzRIzOY-8_p--yydEcX6udWwTixYvvF5wuEJYDClQ4D-ZBFAGwgUC1mUCYxgprDraj8FPPU_oAIFCTRMPiR5sEjHD3nGc9-6x8-KLOziu1_W-hWPy2yjZv0MFRwyYdUEbZtbI35uchhiVqRpS1FZrdm6drMjFvHt48VR2mhe8u4hHlrluHjxor1ByJJ3fxw"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-background-light dark:to-background-dark opacity-40"></div>
+</section>
+<section class="py-32 bg-cream dark:bg-stone-950">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<span class="material-icons text-primary/40 text-6xl mb-8">format_quote</span>
+<p class="text-3xl md:text-4xl font-light italic leading-relaxed mb-10">
+            "In the morning light, coffee is not just a drink, it's a quiet conversation between you and the world before it wakes."
+        </p>
+<div class="flex items-center justify-center space-x-4">
+<div class="h-[1px] w-12 bg-stone-300"></div>
+<span class="text-xs tracking-[0.4em] uppercase font-bold text-stone-400">Elena Vance, Author</span>
+<div class="h-[1px] w-12 bg-stone-300"></div>
+</div>
+</div>
+</section>
+<footer class="bg-background-light dark:bg-background-dark border-t border-stone-200 dark:border-stone-800 py-20">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="col-span-1 md:col-span-2">
+<div class="text-2xl font-bold tracking-widest uppercase text-primary mb-8">Morning Light</div>
+<p class="text-stone-500 dark:text-stone-400 max-w-sm mb-8 leading-relaxed">
+                Elevating the daily ritual through conscious sourcing and meticulous roasting. Join our mailing list for slow-brewing tips and exclusive releases.
+            </p>
+<div class="flex">
+<input class="bg-transparent border-b border-stone-300 dark:border-stone-700 py-2 w-full focus:outline-none focus:border-primary transition-colors text-sm tracking-wide" placeholder="Email Address" type="email"/>
+<button class="ml-4 text-xs tracking-[0.2em] uppercase font-bold text-primary hover:text-stone-600 transition-colors">Join</button>
+</div>
+</div>
+<div>
+<h5 class="text-xs font-bold tracking-[0.3em] uppercase mb-8">Navigation</h5>
+<ul class="space-y-4 text-sm text-stone-500 dark:text-stone-400">
+<li><a class="hover:text-primary" href="#">Our Origins</a></li>
+<li><a class="hover:text-primary" href="#">Brewing Guides</a></li>
+<li><a class="hover:text-primary" href="#">Subscription</a></li>
+<li><a class="hover:text-primary" href="#">Wholesale</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold tracking-[0.3em] uppercase mb-8">Sanctuary</h5>
+<ul class="space-y-4 text-sm text-stone-500 dark:text-stone-400">
+<li><a class="hover:text-primary" href="#">Instagram</a></li>
+<li><a class="hover:text-primary" href="#">Pinterest</a></li>
+<li><a class="hover:text-primary" href="#">Terms</a></li>
+<li><a class="hover:text-primary" href="#">Privacy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-stone-100 dark:border-stone-900 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase text-stone-400">
+<p>© 2024 Morning Light Coffee Co.</p>
+<p>Designed for Silence</p>
+</div>
+</footer>
+<div class="hidden" data-location="Antioquia, Colombia">Our Origin Heritage</div>
+
+<script src="../../../assets/js/global-enhancement.js" defer></script>
+</body></html>

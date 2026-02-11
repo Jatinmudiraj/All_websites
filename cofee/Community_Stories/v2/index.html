@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Community | The Ritual Coffee Stories</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "coffee-900": "#221810",
+                    },
+                    fontFamily: {
+                        "sans": ["Outfit", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .masonry {
+            columns: 1;
+            column-gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .masonry {
+                columns: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry {
+                columns: 3;
+            }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn.active {
+            color: #d46211;
+            font-weight: 700;
+        }
+
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #d46211;
+            box-shadow: 0 0 10px #d46211;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#f8f7f6] dark:bg-coffee-900 text-stone-800 dark:text-stone-100 font-sans transition-colors duration-500 overflow-x-hidden">
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-6">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeUpload()"></div>
+        <div class="relative w-full max-w-xl glass rounded-[2.5rem] p-12 shadow-2xl transform scale-95 opacity-0 transition-all duration-500"
+            id="modal-content">
+            <button class="absolute top-8 right-8 material-icons opacity-40 hover:opacity-100"
+                onclick="closeUpload()">close</button>
+            <h2 class="text-4xl font-serif italic mb-8">Share your Ritual</h2>
+            <form class="space-y-6"
+                onsubmit="event.preventDefault(); alert('Ritual shared! Pending community review.'); closeUpload();">
+                <div
+                    class="border-2 border-dashed border-white/10 rounded-3xl p-12 text-center group hover:border-primary transition-colors cursor-pointer">
+                    <span
+                        class="material-icons text-4xl opacity-20 group-hover:opacity-100 group-hover:text-primary transition-all">add_a_photo</span>
+                    <p class="text-xs uppercase tracking-widest mt-4 opacity-40">Drop your story here</p>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest font-bold opacity-40">Signature Story</label>
+                    <textarea
+                        class="w-full bg-white/5 border-white/10 rounded-2xl p-4 text-sm focus:ring-primary outline-none h-32"
+                        placeholder="Tell us about your morning moment..."></textarea>
+                </div>
+                <button
+                    class="w-full bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-[#b0520e] transition-all">
+                    PUBLISH TO GALLERY
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#f8f7f6]/80 dark:bg-coffee-900/80 backdrop-blur-xl border-b border-white/5 transition-all duration-500"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-[0.2em] uppercase font-serif text-primary italic">The Ritual<span
+                    class="text-stone-400 not-italic">.</span></div>
+            <div class="hidden lg:flex gap-12 text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">
+                <a class="hover:text-primary transition-colors" href="#">Our Beans</a>
+                <a class="hover:text-primary transition-colors" href="#">The Process</a>
+                <a class="text-primary border-b border-primary" href="#">Community</a>
+                <a class="hover:text-primary transition-colors" href="#">Shop</a>
+            </div>
+            <div class="flex items-center gap-8">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+                    <span class="material-icons text-xl dark:hidden">dark_mode</span>
+                    <span class="material-icons text-xl hidden dark:block">light_mode</span>
+                </button>
+                <button onclick="openUpload()"
+                    class="bg-primary text-white px-8 py-3 rounded-full text-[10px] uppercase tracking-widest font-bold hover:shadow-xl hover:shadow-primary/30 transition-all">
+                    Join Ritual
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <header class="relative h-[80vh] flex items-center justify-center overflow-hidden pt-24">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover brightness-50 contrast-125 hero-img transition-all duration-1000"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYqrLKyarSxipDK0G3xIEdYIvYhJNQYUODF4XRs_8-3nf0rwej8_8lrWJGNtsAt0sOOW4td88W3TpkjrWCW4vfjfZssCqhkG-ynWTEJdWk3J7Qq0fecvNFx2dHv2LVhFBIfdXOowIIas1OKDphS-lKZCr2o98b3E_FDJSBfmMKl7rNSGxcKb3j6RwaIaq9gTZuG-5hAMlw6lylSqWesOQFpdbdo3CnYgfltVtXah_7maXkMl_QT3i3sQV3Z2ENt3TZfOcCSLLubfk" />
+                <div class="absolute inset-0 bg-gradient-to-b from-coffee-900/40 via-transparent to-coffee-900"></div>
+            </div>
+
+            <div class="relative z-10 text-center px-8 space-y-12">
+                <div id="hero-reveal">
+                    <span class="text-[10px] uppercase tracking-[0.5em] text-primary font-bold block mb-4">The Slow Brew
+                        Aesthetic</span>
+                    <h1 class="text-6xl md:text-[8rem] font-serif font-light leading-[1] mb-8 text-white">
+                        Community <br /><span class="italic text-primary">&</span> Stories
+                    </h1>
+                    <p
+                        class="text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed opacity-60 font-serif italic text-stone-200">
+                        A collection of quiet moments, morning rituals, and the shared warmth of a perfect cup.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Filter Bar -->
+        <nav
+            class="sticky top-24 z-40 bg-[#f8f7f6]/80 dark:bg-coffee-900/80 backdrop-blur-xl border-b border-white/5 py-10">
+            <div class="max-w-4xl mx-auto px-8">
+                <div
+                    class="flex justify-between overflow-x-auto no-scrollbar whitespace-nowrap gap-12 text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">
+                    <button class="filter-btn active relative hover:text-primary transition-all">All Stories</button>
+                    <button class="filter-btn relative hover:text-primary transition-all">At Home</button>
+                    <button class="filter-btn relative hover:text-primary transition-all">In Our Cafés</button>
+                    <button class="filter-btn relative hover:text-primary transition-all">Global</button>
+                    <button class="filter-btn relative hover:text-primary transition-all">Guides</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Gallery -->
+        <section class="max-w-7xl mx-auto px-8 py-20">
+            <div class="masonry" id="gallery">
+                <div class="masonry-item reveal group" data-delay="0.1">
+                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                        <img class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6pu9vyaYnKOefdnVpjXm6QATgvq9w7WbdrVG7z5pXdKKoC-eW0RnEcvqDgaS7sLZ8DM0T1yjrXpG5neYhh6GTjQo_OFw3pleWbRGVUiP8VYoj_slGnNFy_UfQ5f4GcrWpIrGdV4gR4BvJhD09TpFltlIl-U7VqgKwIF-HaGtt6wIIJvKezse4OH17ipx5Fc4QLJ1pnNp9YDRfA3DJVm0me4V4WOLVgpuNnfAhk5gGUfRx4wQfCo0asqRta2nP9J8rxxGYz-6rnvo" />
+                        <div
+                            class="absolute inset-x-0 bottom-0 p-8 glass transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <p class="text-sm italic text-stone-200">"The morning light and the aroma of freshly ground
+                                beans—my favorite meditation."</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-[9px] uppercase tracking-widest opacity-60">— Elena M.</span>
+                                <button class="material-icons text-primary hover:scale-125 transition-transform"
+                                    onclick="this.innerText='favorite'">favorite_border</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item reveal" data-delay="0.2">
+                    <div class="p-12 rounded-[2.5rem] glass text-center space-y-8">
+                        <span class="material-icons text-primary text-6xl opacity-20">format_quote</span>
+                        <p class="text-3xl font-serif italic leading-relaxed text-stone-300">
+                            Coffee is more than a drink; it's a punctuation mark on the day's busy rhythm.
+                        </p>
+                        <div class="flex items-center justify-center gap-4 py-4">
+                            <div class="h-px w-8 bg-primary"></div>
+                            <span class="text-[10px] uppercase tracking-[0.4em] font-bold opacity-30">Julian V.</span>
+                            <div class="h-px w-8 bg-primary"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item reveal group" data-delay="0.3">
+                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                        <img class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUNDTuars1ogkZdqNayAduYx4dTfCMLyFysKk0C30rm7u7I64zznV0SHuN_BQyt-RyQM9ztkN35AdN_ZciJ9ockZV3RMGev67KgqiyCm77PHIRrYIQG6Db01TK_267RCPIxcNi3gC7AZ6a_6xozhVWxARzmWt5sNGcIFM1_oH5QnSFHR8QHmYRf_ZIqgb20HspWmztdpH2SKWXcJ0xQt9fY6CSzzOpcLytmp7177ZLxFSuxmR4CGhPToK7oNGvU-xv1QjIIwV26EY" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-coffee-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                            <h3 class="text-2xl font-serif italic text-white">Parisian Corner</h3>
+                            <p class="text-[9px] uppercase tracking-widest text-primary font-bold mt-2">CITY STORIES</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 text-center reveal">
+                <button
+                    class="border border-primary text-primary px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white transition-all">LOAD
+                    MORE STORIES</button>
+            </div>
+        </section>
+
+        <!-- Share -->
+        <section class="py-40 bg-primary/5 dark:bg-primary/10 px-8 border-y border-white/5">
+            <div class="max-w-4xl mx-auto text-center space-y-12 reveal">
+                <h2 class="text-6xl md:text-[7rem] font-serif font-light leading-none italic">Share <span
+                        class="not-italic">Your Ritual</span></h2>
+                <p class="text-xl text-stone-500 font-light leading-relaxed">Tag your moments with <span
+                        class="text-primary font-bold">#TheSlowBrewRitual</span> to be featured and receive exclusive
+                    community access.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
+                    <button onclick="openUpload()"
+                        class="bg-primary text-white px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:shadow-2xl hover:shadow-primary/40 transition-all">UPLOAD
+                        STORY</button>
+                    <button
+                        class="border border-primary text-primary px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white transition-all">FOLLOW
+                        INSTAGRAM</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-900 py-32 border-t border-white/5 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="text-3xl font-serif italic text-primary">The Ritual<span
+                    class="text-stone-400 not-italic">.</span></div>
+            <div class="flex gap-12 text-[10px] uppercase tracking-[0.4em] font-bold opacity-30 text-white">
+                <a href="#" class="hover:opacity-100 transition-opacity">Privacy</a>
+                <a href="#" class="hover:opacity-100 transition-opacity">Terms</a>
+                <a href="#" class="hover:opacity-100 transition-opacity">Editorial</a>
+                <a href="#" class="hover:opacity-100 transition-opacity">Contact</a>
+            </div>
+            <div class="flex gap-8">
+                <span
+                    class="material-icons opacity-30 hover:opacity-100 hover:text-primary cursor-pointer text-white">facebook</span>
+                <span
+                    class="material-icons opacity-30 hover:opacity-100 hover:text-primary cursor-pointer text-white">camera_alt</span>
+            </div>
+        </div>
+        <div class="text-center mt-24 text-[9px] uppercase tracking-[0.5em] opacity-10 text-white font-bold">
+            © 2024 The Ritual Coffee Roasters. Curating Quiet.
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Modal Logic
+        const modal = document.getElementById('upload-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        window.openUpload = () => {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+            }, 50);
+        };
+
+        window.closeUpload = () => {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 500);
+        };
+
+        // Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                gsap.from('#gallery', { opacity: 0, scale: 0.98, duration: 0.5 });
+            });
+        });
+
+        // Animations
+        window.addEventListener('load', () => {
+            gsap.to('#hero-reveal', {
+                opacity: 1,
+                y: 0,
+                duration: 1.5,
+                delay: 0.5,
+                ease: "power4.out"
+            });
+            initAnimations();
+        });
+
+        function initAnimations() {
+            document.querySelectorAll('.reveal').forEach((el) => {
+                const delay = el.dataset.delay || 0;
+                gsap.to(el, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.5,
+                    delay: delay,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%",
+                    }
+                });
+            });
+
+            gsap.to('.hero-img', {
+                y: 100,
+                scrollTrigger: {
+                    trigger: 'body',
+                    start: "top top",
+                    scrub: 1
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

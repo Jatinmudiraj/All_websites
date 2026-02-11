@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>TechFix - Precision Electronics Repair</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "slate-neutral": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .dot-pattern {
+            background-image: radial-gradient(circle, #136dec33 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen pb-24">
+<!-- Status Bar Spacer (iOS) -->
+<div class="h-12 w-full"></div>
+<!-- Header Section -->
+<header class="px-5 py-4 flex justify-between items-center border-b border-primary/10">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary flex items-center justify-center rounded">
+<span class="material-icons text-white text-xl">memory</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight">TECHFIX<span class="text-primary italic">.</span></h1>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+<span class="text-[10px] uppercase font-semibold text-green-500 tracking-wider">Store Open • Wait: 15m</span>
+</div>
+</div>
+</div>
+<button class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-icons">notifications_none</span>
+</button>
+</header>
+<main class="dot-pattern">
+<!-- Hero Action Block -->
+<section class="p-5 grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-primary p-6 rounded-xl shadow-lg shadow-primary/20 relative overflow-hidden group">
+<div class="relative z-10">
+<h2 class="text-white text-2xl font-bold leading-tight">Instant Quote</h2>
+<p class="text-white/80 text-sm mt-1">Get pricing for your device in 30 seconds.</p>
+<button class="mt-4 bg-white text-primary px-4 py-2 rounded font-bold text-sm flex items-center gap-2">
+                        START ESTIMATE <span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+<span class="material-icons absolute -right-4 -bottom-4 text-white/10 text-9xl transform -rotate-12">qr_code_2</span>
+</div>
+<div class="bg-slate-neutral/50 dark:bg-slate-neutral/40 border border-primary/20 p-4 rounded-xl">
+<div class="w-10 h-10 bg-primary/20 rounded flex items-center justify-center mb-3">
+<span class="material-icons text-primary">analytics</span>
+</div>
+<h3 class="font-bold text-sm">Check Status</h3>
+<p class="text-[11px] text-slate-400 mt-1">Track your repair in real-time.</p>
+</div>
+<div class="bg-slate-neutral/50 dark:bg-slate-neutral/40 border border-primary/20 p-4 rounded-xl">
+<div class="w-10 h-10 bg-primary/20 rounded flex items-center justify-center mb-3">
+<span class="material-icons text-primary">support_agent</span>
+</div>
+<h3 class="font-bold text-sm">Tech Chat</h3>
+<p class="text-[11px] text-slate-400 mt-1">Talk to a certified technician.</p>
+</div>
+</section>
+<!-- Common Issues Grid -->
+<section class="px-5 py-2">
+<div class="flex justify-between items-end mb-4">
+<h2 class="text-lg font-bold tracking-tight uppercase border-l-4 border-primary pl-3">Fixed Rate Repairs</h2>
+<span class="text-xs text-primary font-bold">VIEW ALL</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Repair Card 1 -->
+<div class="bg-white dark:bg-[#16202c] border border-slate-200 dark:border-slate-800 p-4 rounded-lg flex flex-col justify-between h-32">
+<div>
+<span class="material-icons text-slate-400 text-lg">phonelink_erase</span>
+<h4 class="text-sm font-semibold mt-1 leading-tight">Broken Screen</h4>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-[10px] text-slate-500 uppercase">FROM</span>
+<span class="text-lg font-bold text-primary">$89</span>
+</div>
+</div>
+<!-- Repair Card 2 -->
+<div class="bg-white dark:bg-[#16202c] border border-slate-200 dark:border-slate-800 p-4 rounded-lg flex flex-col justify-between h-32">
+<div>
+<span class="material-icons text-slate-400 text-lg">battery_alert</span>
+<h4 class="text-sm font-semibold mt-1 leading-tight">Battery Swap</h4>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-[10px] text-slate-500 uppercase">FROM</span>
+<span class="text-lg font-bold text-primary">$49</span>
+</div>
+</div>
+<!-- Repair Card 3 -->
+<div class="bg-white dark:bg-[#16202c] border border-slate-200 dark:border-slate-800 p-4 rounded-lg flex flex-col justify-between h-32">
+<div>
+<span class="material-icons text-slate-400 text-lg">water_drop</span>
+<h4 class="text-sm font-semibold mt-1 leading-tight">Water Damage</h4>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-[10px] text-slate-500 uppercase">FROM</span>
+<span class="text-lg font-bold text-primary">$120</span>
+</div>
+</div>
+<!-- Repair Card 4 -->
+<div class="bg-white dark:bg-[#16202c] border border-slate-200 dark:border-slate-800 p-4 rounded-lg flex flex-col justify-between h-32">
+<div>
+<span class="material-icons text-slate-400 text-lg">usb</span>
+<h4 class="text-sm font-semibold mt-1 leading-tight">Port Repair</h4>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-[10px] text-slate-500 uppercase">FROM</span>
+<span class="text-lg font-bold text-primary">$65</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Us / Foot Traffic Section -->
+<section class="p-5 mt-4">
+<div class="bg-slate-900 dark:bg-slate-800/40 rounded-xl overflow-hidden border border-slate-800">
+<div class="h-32 bg-slate-700 relative">
+<img class="w-full h-full object-cover opacity-60 grayscale" data-alt="Abstract dark city map with neon blue lines" data-location="Austin, Texas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1SosjjKj5oTJ3KtBIHHJW9YVtAgDfqgK9Ec9-g5GTqRiuB7JZBAkIqSTYVc5hG1eF1i8Mgv0ZT5ZeUuFbtLv5ONus5aQCeImnJfS60OYTVy_cUlI59zjJGtY-FEt7MW_BRUNEgDCM_-63bMv2NuOsSgAaghZThVrEMGSVZ4mEMZdMjHcr1nWRuz5magi3T8logXOu58Lqhbd0LxS2APHs09lK7xAAjPTqFzQMJRUHahuGpln52YSx0PAkxasiKXxIyMjLj6fFHILT"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-bounce shadow-lg shadow-primary/50">
+<span class="material-icons text-white">location_on</span>
+</div>
+</div>
+</div>
+<div class="p-5">
+<h2 class="text-xl font-bold text-white mb-1">Visit TechFix Austin</h2>
+<p class="text-slate-400 text-sm mb-4">1244 Innovation Blvd, Tech District</p>
+<div class="flex items-center justify-between p-3 bg-black/30 rounded-lg mb-4">
+<div>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Live Traffic</span>
+<div class="flex items-end gap-1 mt-1.5">
+<div class="w-1.5 h-3 bg-primary/40 rounded-full"></div>
+<div class="w-1.5 h-4 bg-primary/40 rounded-full"></div>
+<div class="w-1.5 h-6 bg-primary/40 rounded-full"></div>
+<div class="w-1.5 h-8 bg-primary rounded-full"></div>
+<div class="w-1.5 h-5 bg-primary/40 rounded-full"></div>
+<div class="w-1.5 h-3 bg-primary/40 rounded-full"></div>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-white font-bold text-sm leading-tight italic">Usually Busy</span>
+<span class="text-[10px] text-slate-500">Wait time: ~20 mins</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="flex flex-col items-center gap-1">
+<span class="material-icons text-slate-500 text-xl">directions_walk</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">8m Walk</span>
+</div>
+<div class="flex flex-col items-center gap-1 border-x border-slate-700">
+<span class="material-icons text-slate-500 text-xl">directions_bus</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Line 42/10</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-icons text-slate-500 text-xl">local_parking</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Validated</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="px-5 py-4 flex justify-around opacity-60 grayscale contrast-125">
+<div class="flex flex-col items-center gap-1">
+<span class="material-icons text-xl">verified</span>
+<span class="text-[9px] font-bold uppercase tracking-widest">90-Day Warranty</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-icons text-xl">speed</span>
+<span class="text-[9px] font-bold uppercase tracking-widest">Same-Day Fix</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-icons text-xl">build_circle</span>
+<span class="text-[9px] font-bold uppercase tracking-widest">Certified Techs</span>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-primary/10 px-6 py-4 flex justify-between items-center z-50">
+<div class="flex flex-col items-center text-primary">
+<span class="material-icons">home</span>
+<span class="text-[10px] font-bold mt-1">HOME</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">search</span>
+<span class="text-[10px] font-bold mt-1">DEVICES</span>
+</div>
+<!-- Main Floating Action -->
+<div class="relative -top-10">
+<button class="w-16 h-16 bg-primary rounded-full shadow-xl shadow-primary/40 flex items-center justify-center border-4 border-background-dark">
+<span class="material-icons text-white text-3xl">add</span>
+</button>
+<span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary whitespace-nowrap">BOOK NOW</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">history</span>
+<span class="text-[10px] font-bold mt-1">HISTORY</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">person_outline</span>
+<span class="text-[10px] font-bold mt-1">PROFILE</span>
+</div>
+</nav>
+<!-- Home Indicator Spacer (iOS) -->
+<div class="fixed bottom-0 h-8 w-full bg-transparent pointer-events-none"></div>
+</body></html>

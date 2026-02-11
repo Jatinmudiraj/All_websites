@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Visit Us | Amber & Oak Luxury Coffee</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "coffee-900": "#221810",
+                    },
+                    fontFamily: {
+                        "sans": ["Outfit", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(34, 24, 16, 0.95), rgba(34, 24, 16, 0.4), transparent);
+        }
+
+        @keyframes pulse-custom {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .ping-custom {
+            animation: pulse-custom 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#f8f7f6] dark:bg-coffee-900 text-stone-800 dark:text-stone-100 font-sans transition-colors duration-500 overflow-x-hidden">
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-6">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeBooking()"></div>
+        <div class="relative w-full max-w-xl glass rounded-[2.5rem] p-12 shadow-2xl transform scale-95 opacity-0 transition-all duration-500"
+            id="modal-content">
+            <button class="absolute top-8 right-8 material-icons opacity-40 hover:opacity-100"
+                onclick="closeBooking()">close</button>
+            <h2 class="text-4xl font-serif italic mb-8">Reserve your Moment</h2>
+            <form class="space-y-6"
+                onsubmit="event.preventDefault(); alert('Reservation Requested. We will contact you shortly.'); closeBooking();">
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest font-bold opacity-40">Date & Time</label>
+                    <input type="datetime-local"
+                        class="w-full bg-white/5 border-white/10 rounded-2xl p-4 text-sm focus:ring-primary outline-none"
+                        required>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold opacity-40">Guests</label>
+                        <select class="w-full bg-white/5 border-white/10 rounded-2xl p-4 text-sm focus:ring-primary">
+                            <option>2 Persons</option>
+                            <option>4 Persons</option>
+                            <option>6 Persons (Max)</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold opacity-40">Experience</label>
+                        <select class="w-full bg-white/5 border-white/10 rounded-2xl p-4 text-sm focus:ring-primary">
+                            <option>Slow Brew Pour-over</option>
+                            <option>Cupping Session</option>
+                            <option>Private Tasting</option>
+                        </select>
+                    </div>
+                </div>
+                <button
+                    class="w-full bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-[#b0520e] transition-all">
+                    REQUEST RESERVATION
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#f8f7f6]/80 dark:bg-coffee-900/80 backdrop-blur-xl border-b border-primary/10 transition-all duration-500"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-4 group cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                    <span class="material-symbols-outlined">coffee_maker</span>
+                </div>
+                <span class="text-2xl font-bold tracking-[0.2em] uppercase font-serif">Amber <span
+                        class="text-primary italic">&</span> Oak</span>
+            </div>
+            <div class="hidden lg:flex gap-12 text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">
+                <a class="hover:text-primary transition-colors" href="#">The Brew</a>
+                <a class="text-primary border-b border-primary" href="#">Visit Us</a>
+                <a class="hover:text-primary transition-colors" href="#">Shop</a>
+                <a class="hover:text-primary transition-colors" href="#">Our Story</a>
+            </div>
+            <div class="flex items-center gap-8">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+                    <span class="material-icons text-xl dark:hidden">dark_mode</span>
+                    <span class="material-icons text-xl hidden dark:block">light_mode</span>
+                </button>
+                <button onclick="openBooking()"
+                    class="bg-primary text-white px-8 py-3 rounded-full text-[10px] uppercase tracking-widest font-bold hover:shadow-xl hover:shadow-primary/30 transition-all">
+                    Book a Table
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="relative min-h-screen flex items-center px-8 border-b border-white/5 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover scale-110 hero-img"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCooG0-pMPGRoDr-YkYWV5dxiomB1YHjAped9KMn_KSm-7T7tHJpi5k8R_PTSa5YZkmZkvwR2cNmYZQ5HVTT3LOoVaFs6JLVaWUi5J_OhCf1Sbd9sJAaiV00FYeE2IdfhgXHuSRxOr7EPjlx_csPUT42UkABAAxtGzEMzcmp3rf6YCvSW7AkrOISSmUB1COGdMjp5Xp1IQtwMcrDWHs59mgDmXHMAezItTgfp0vut3TyeWytSKis0BgNJvL-TtCDYVpFhZAETji2zY" />
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-10 max-w-2xl reveal">
+                    <span class="text-[10px] uppercase tracking-[0.5em] text-primary font-bold block">The Atelier
+                        Experience</span>
+                    <h1 class="text-6xl md:text-[6.5rem] font-serif font-light leading-[0.9] text-white">
+                        A <span class="italic text-primary">Sanctuary</span> <br />for the Senses
+                    </h1>
+                    <p class="text-xl text-stone-300 leading-relaxed font-light">
+                        Nestled in the heart of the historic district, Amber & Oak offers a moment of stillness in a
+                        hurried world. Experience the art of the slow-brew in an atmosphere designed for contemplation.
+                    </p>
+                    <div class="flex gap-6">
+                        <button
+                            class="bg-primary text-white px-10 py-5 rounded-2xl flex items-center gap-4 hover:bg-[#b0520e] transition-all font-bold group">
+                            <span
+                                class="material-icons text-sm group-hover:rotate-12 transition-transform">directions</span>
+                            <span class="uppercase tracking-widest text-[10px]">GET DIRECTIONS</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Info Card -->
+                <div class="reveal lg:ml-auto w-full max-w-md glass p-12 rounded-[3rem] shadow-2xl relative"
+                    data-delay="0.2">
+                    <div
+                        class="absolute -top-6 -right-6 w-20 h-20 bg-primary/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/10">
+                        <span class="material-icons text-primary text-3xl">place</span>
+                    </div>
+                    <div class="space-y-12">
+                        <div class="space-y-4">
+                            <h3 class="text-primary uppercase tracking-[0.3em] text-[10px] font-bold">The Location</h3>
+                            <p class="text-2xl font-serif italic text-white leading-snug">422 Artisan Row<br />Heritage
+                                District, LX 90210</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-primary uppercase tracking-[0.3em] text-[10px] font-bold">Visiting Hours
+                            </h3>
+                            <div class="grid grid-cols-2 gap-8">
+                                <div>
+                                    <p class="text-white/40 text-[9px] uppercase tracking-widest mb-2 font-bold">
+                                        Weekdays</p>
+                                    <p class="text-white font-bold">07:00 — 19:00</p>
+                                </div>
+                                <div>
+                                    <p class="text-white/40 text-[9px] uppercase tracking-widest mb-2 font-bold">
+                                        Weekends</p>
+                                    <p class="text-white font-bold">09:00 — 21:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 border-t border-white/10 pt-8">
+                            <h3 class="text-primary uppercase tracking-[0.3em] text-[10px] font-bold">Concierge</h3>
+                            <p class="text-white font-bold text-lg">+1 (555) 892-0431</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="py-40 bg-stone-100 dark:bg-stone-950 px-8">
+            <div class="max-w-7xl mx-auto space-y-20">
+                <div class="flex flex-col md:flex-row justify-between items-end gap-10 reveal">
+                    <div class="max-w-xl">
+                        <span
+                            class="text-[10px] uppercase tracking-[0.4em] text-primary font-bold mb-4 block">Neighborhood
+                            Guide</span>
+                        <h2 class="text-5xl md:text-7xl font-serif font-light">Find Us <span
+                                class="italic text-primary">Nearby</span></h2>
+                    </div>
+                    <button
+                        class="border-b-2 border-primary pb-2 text-[10px] uppercase tracking-[0.4em] font-bold hover:text-primary transition-all">Expand
+                        Map</button>
+                </div>
+
+                <div class="relative h-[600px] w-full bg-stone-200 dark:bg-stone-900 rounded-[3rem] overflow-hidden shadow-inner group reveal"
+                    data-delay="0.2">
+                    <img class="w-full h-full object-cover grayscale brightness-50 contrast-125 opacity-30 group-hover:opacity-50 transition-opacity duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLbwTNtq-xfhQYjsKZGm8-tGpneNuB_mEcBY0rZnuunCorYm0OUeFDlAbljDV79b18btlbSOeLCrHdlBie6mtXWaENU5M_AvAZt1-vWOF5bETjyGb3cuieaTVUGq5qHk0uT-wvo0_BS_bXZfNtlt_iFWBSD5wZ1RRGwA9H6SPhgUo8mVdnJ9dpwuhoe8XDVafRG_MY-EzP25F0LjGaWBRkWgqdBX2O93rmw8NKLl7vgETAk70vUFUnGXQNkxZpYo-vAgbQFBN9FD0" />
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="relative group cursor-pointer">
+                            <div class="absolute inset-0 bg-primary/40 rounded-full blur-2xl ping-custom"></div>
+                            <div
+                                class="relative bg-primary w-16 h-20 rounded-t-full rounded-b-[40%] flex items-center justify-center shadow-2xl border-4 border-white transform transition-all duration-500 hover:scale-125 hover:-translate-y-4">
+                                <span class="material-icons text-white">coffee</span>
+                            </div>
+                            <div
+                                class="absolute top-full left-1/2 -translate-x-1/2 mt-6 glass px-6 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold text-white whitespace-nowrap shadow-2xl scale-0 group-hover:scale-100 transition-transform">
+                                Amber & Oak Atelier
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-10 right-10 flex flex-col gap-4">
+                        <button
+                            class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors"><span
+                                class="material-icons">add</span></button>
+                        <button
+                            class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors"><span
+                                class="material-icons">remove</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Features -->
+        <section class="py-40 bg-white dark:bg-stone-900 px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-24">
+                <div class="space-y-8 reveal" data-delay="0">
+                    <div class="w-16 h-16 bg-primary/10 rounded-[1.5rem] flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-4xl">timer</span>
+                    </div>
+                    <h4 class="text-3xl font-serif italic">The Slow Brew</h4>
+                    <p class="text-stone-500 leading-relaxed font-light">Each cup is meticulously prepared using
+                        heritage methods that honor the bean's origin. Please allow 8-12 minutes for our signature
+                        pour-overs.</p>
+                </div>
+                <div class="space-y-8 reveal" data-delay="0.1">
+                    <div class="w-16 h-16 bg-primary/10 rounded-[1.5rem] flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-4xl">chair</span>
+                    </div>
+                    <h4 class="text-3xl font-serif italic">Curated Space</h4>
+                    <p class="text-stone-500 leading-relaxed font-light">Designed with Belgian linen, reclaimed oak, and
+                        ambient soundscapes to ensure your focus remains on the flavor and the moment.</p>
+                </div>
+                <div class="space-y-8 reveal" data-delay="0.2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-[1.5rem] flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-4xl">loyalty</span>
+                    </div>
+                    <h4 class="text-3xl font-serif italic">Private Tastings</h4>
+                    <p class="text-stone-500 leading-relaxed font-light">Reserve our library room for intimate cupping
+                        sessions led by our master baristas. Available for groups of 2 to 6 guests.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-coffee-900 py-32 border-t border-white/5 px-8">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="text-3xl font-serif italic text-white flex items-center gap-4">
+                    <div class="w-8 h-px bg-primary"></div>
+                    Amber <span class="not-italic font-bold text-primary">&</span> Oak
+                </div>
+                <div class="flex gap-12 text-[10px] uppercase tracking-[0.4em] font-bold opacity-30 text-white">
+                    <a href="#" class="hover:opacity-100 transition-opacity">Privacy</a>
+                    <a href="#" class="hover:opacity-100 transition-opacity">Terms</a>
+                    <a href="#" class="hover:opacity-100 transition-opacity">Events</a>
+                    <a href="#" class="hover:opacity-100 transition-opacity">Careers</a>
+                </div>
+                <div class="flex gap-8">
+                    <span
+                        class="material-icons opacity-30 hover:opacity-100 hover:text-primary cursor-pointer text-white">facebook</span>
+                    <span
+                        class="material-icons opacity-30 hover:opacity-100 hover:text-primary cursor-pointer text-white">camera_alt</span>
+                </div>
+            </div>
+            <div class="text-center mt-24 text-[9px] uppercase tracking-[0.5em] opacity-10 text-white font-bold">
+                © 2024 Amber & Oak Coffee Roasters. Cultivating Stillness.
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animations
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.reveal').forEach((el) => {
+                const delay = el.dataset.delay || 0;
+                gsap.to(el, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.5,
+                    delay: delay,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%",
+                    }
+                });
+            });
+
+            gsap.to('.hero-img', {
+                scale: 1,
+                scrollTrigger: {
+                    trigger: 'body',
+                    start: "top top",
+                    scrub: 1
+                }
+            });
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('booking-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        window.openBooking = () => {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+            }, 50);
+        };
+
+        window.closeBooking = () => {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 500);
+        };
+
+        // Scroll Logic
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('h-20');
+                navbar.classList.remove('h-24');
+            } else {
+                navbar.classList.add('h-24');
+                navbar.classList.remove('h-20');
+            }
+        });
+
+        // Theme Toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            document.documentElement.classList.toggle('light');
+        });
+    </script>
+</body>
+
+</html>

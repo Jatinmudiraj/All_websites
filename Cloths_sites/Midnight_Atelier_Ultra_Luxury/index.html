@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Midnight Atelier | Ultra-Luxury High Fashion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d49311",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#12100e", // Deeper charcoal for ultra-luxury
+                        "neutral-dark": "#221c10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #12100e;
+            color: #f8f7f6;
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gold-leaf-text {
+            background: linear-gradient(to bottom, #fceabb 0%, #d49311 50%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .ethereal-nav {
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 147, 17, 0.1);
+        }
+        .museum-pedestal {
+            perspective: 1000px;
+        }
+        .spotlight {
+            background: radial-gradient(circle at center, rgba(212, 147, 17, 0.15) 0%, transparent 70%);
+        }
+        .serif-title {
+            font-family: serif; /* Fallback for gold-leaf serif look */
+            letter-spacing: 0.1em;
+        }
+    </style>
+<link rel="stylesheet" href="../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display selection:bg-primary selection:text-white">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 ethereal-nav py-6 px-12 flex justify-between items-center">
+<div class="flex space-x-8 items-center">
+<a class="text-[10px] tracking-[0.4em] uppercase opacity-70 hover:opacity-100 hover:text-primary transition-all duration-500" href="#">Collections</a>
+<a class="text-[10px] tracking-[0.4em] uppercase opacity-70 hover:opacity-100 hover:text-primary transition-all duration-500" href="#">The Atelier</a>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 text-center">
+<h1 class="text-xl tracking-[0.8em] font-light uppercase text-primary">Midnight</h1>
+<p class="text-[8px] tracking-[1em] uppercase opacity-50 -mt-1">Atelier</p>
+</div>
+<div class="flex space-x-8 items-center">
+<a class="text-[10px] tracking-[0.4em] uppercase opacity-70 hover:opacity-100 hover:text-primary transition-all duration-500" href="#">Archive</a>
+<div class="flex items-center space-x-4">
+<span class="material-icons text-sm text-primary/80">search</span>
+<span class="material-icons text-sm text-primary/80">shopping_bag</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<img alt="High Fashion Portrait" class="w-full h-full object-cover scale-105" data-alt="High fashion portrait of a model in shadows with golden highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA62Y26j0_y-yIAAGgedapGZk1zf5pZGSILRGEs8zOV6eLIJShouJLSiGm6DrvduTZdjjmFVCCwQdFKRrP-Xo9RvYYf-T2TXiY9lC6ZO_g2wvK3TEQaOTv7mzVEpQQX_lknE3omamWZZTFSuYa4ghEqSzbHikXn3fM1r55nfgyKUrR3k3dxFcTxFsyqxhwnO-5HlMP6WWvgrrGEYEfvtu4A7giuyzLsXCOZyuhSsQzEstIeHmnIWNAAFQWVFJlKAU5kUgymwhb_3OA"/>
+</div>
+<div class="relative z-20 text-center max-w-4xl px-4">
+<p class="text-primary tracking-[0.5em] uppercase text-xs mb-6 opacity-80">Season MMXXIV</p>
+<h2 class="text-6xl md:text-8xl serif-title gold-leaf-text font-light mb-8 italic">The Masterpiece Series</h2>
+<div class="h-[1px] w-24 bg-primary/40 mx-auto mb-8"></div>
+<p class="text-white/60 text-sm tracking-widest max-w-lg mx-auto leading-relaxed">
+                Exploring the intersection of dark architectural form and the fluidity of midnight silk. A curated dialogue between shadow and gold.
+            </p>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+<div class="w-[1px] h-16 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- Limited Edition - Museum Section -->
+<section class="py-32 px-12 bg-background-light dark:bg-background-dark relative overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-24">
+<div>
+<h3 class="text-primary text-[10px] tracking-[0.5em] uppercase mb-4">Curated Selection</h3>
+<h2 class="text-4xl font-extralight tracking-tight">Limited Edition Artifacts</h2>
+</div>
+<div class="text-right">
+<p class="text-white/40 text-[10px] tracking-widest uppercase mb-2">Exclusivity Guaranteed</p>
+<p class="text-primary/60 text-sm italic serif-title">Edition of 12 Pieces Worldwide</p>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+<!-- Product 1 -->
+<div class="group relative">
+<div class="spotlight absolute -inset-10 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative z-10 museum-pedestal pt-12">
+<div class="bg-neutral-dark/40 border border-primary/10 p-12 mb-8 transition-all duration-500 group-hover:border-primary/30 group-hover:-translate-y-4">
+<img alt="Luxury Jewelry Piece" class="w-full aspect-[3/4] object-cover grayscale brightness-75 group-hover:grayscale-0 transition-all duration-700" data-alt="Intricate gold and diamond necklace on a dark bust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIlo-Uwlxs0fSSsFN52q3a7KNpkhBpqv9cDDPZpYUcvwL-1B2AJpJQKD4A91zrBTmpZWmaaVEvAcOLXWs8Qs9zmjwwCIFYK1MGkr5BDAlMKB6rs0Iqbc9mnhkBpSrU5IRVuqGNYl3F4HYRTdItjpf6vZHY_3P-pltRpCro_g-z03dizyJVdgqY3QeDxwQVlfj3UKa4-oai7rYc9loT3oSgEw6yiZBaqwPfncZ5WPkHWlD4pcgjmNIB0TY2CaVm7Hm3ZAmWplbLVyk"/>
+</div>
+<div class="text-center">
+<span class="text-[9px] tracking-[0.3em] text-primary/60 uppercase">Ref. No. 001/012</span>
+<h4 class="text-lg font-light tracking-widest mt-2 group-hover:text-primary transition-colors">The Solstice Pendant</h4>
+<p class="text-white/40 text-xs mt-3 uppercase tracking-widest">24k Gold &amp; Obsidian</p>
+</div>
+</div>
+</div>
+<!-- Product 2 (Couture) -->
+<div class="group relative mt-24">
+<div class="spotlight absolute -inset-10 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative z-10 museum-pedestal pt-12">
+<div class="bg-neutral-dark/40 border border-primary/10 p-12 mb-8 transition-all duration-500 group-hover:border-primary/30 group-hover:-translate-y-4">
+<img alt="High Fashion Couture" class="w-full aspect-[3/4] object-cover grayscale brightness-75 group-hover:grayscale-0 transition-all duration-700" data-alt="Draped charcoal silk evening gown on a minimalist stand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAwedQKRKbS0DaRdb0KTY5hSc5TSqq40E_pk79Q5ifVN6wOfbQwLrM2NpIdEL7hjhmUjCfkqDNw77NkNRJSWWQBFfWvVaApkhC--NLlaYZM3iWBASvHoW6lUxuuq0BBytuvdt7NB6Y2W4mWRCjioJE3GCerYFzzZK9rbXOz6Sxghd6ywCGtxfbmunr6FnMsH1cPlXCH7QDUSCcDzPmLqrXli45X69JvNyQ5rHRncPYW0rvTdb8obYOlaUHx5ZkLJaNPkG7Xio7CEo"/>
+</div>
+<div class="text-center">
+<span class="text-[9px] tracking-[0.3em] text-primary/60 uppercase">Ref. No. 008/012</span>
+<h4 class="text-lg font-light tracking-widest mt-2 group-hover:text-primary transition-colors">Shadow Draped Gown</h4>
+<p class="text-white/40 text-xs mt-3 uppercase tracking-widest">Hand-Spun Midnight Silk</p>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group relative">
+<div class="spotlight absolute -inset-10 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative z-10 museum-pedestal pt-12">
+<div class="bg-neutral-dark/40 border border-primary/10 p-12 mb-8 transition-all duration-500 group-hover:border-primary/30 group-hover:-translate-y-4">
+<img alt="Fine Accessory" class="w-full aspect-[3/4] object-cover grayscale brightness-75 group-hover:grayscale-0 transition-all duration-700" data-alt="Structured geometric gold bracelet on dark stone pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx4uZsT5mDClcLQyL3UpYD6sNrMdWjq9Pi3edwaXO82nVjfxAtSSRHsJ1UPnE_lJ8u3BBnImR97DGL53UxYJSv8lYyUge4CoBcpSx-1W_wL7sjhpjXSvWhVda7PNJd2F9jMzmALSXQ9KG3ljSFG76gLVtTYOLquHGsfGIBcDNYi79PDVjNL5fXBA1K_5ek-OZlRtov38aY67mfTnEYCKvvS1IFUCpJFERbDH9NlVONfGAq3vwA-AYxiv_c07kWt8bYU_P54I8N3Kk"/>
+</div>
+<div class="text-center">
+<span class="text-[9px] tracking-[0.3em] text-primary/60 uppercase">Ref. No. 011/012</span>
+<h4 class="text-lg font-light tracking-widest mt-2 group-hover:text-primary transition-colors">Aurelian Cuff</h4>
+<p class="text-white/40 text-xs mt-3 uppercase tracking-widest">Brushed Titanium &amp; Gold Leaf</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Appointment Section -->
+<section class="relative py-40 px-12 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury Lounge" class="w-full h-full object-cover opacity-20" data-alt="Blurry view of a private luxury lounge with gold lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNr1aLCLhxjqZonMuaK3zfBJEq2Jo22gOwiHd1---YM_ClFFfvC6vXI7oWGw8t1LA6Ba0Lln7ECPS9bEqNr3Z0Oy_Ci0cJJckoPLIIYnbivbCUBRX-O6Kh9lDqKHC6Vz8Py6GUuGBV_1xyaCvzDQyiwIhXVgn0n35t2cjZ_IXQM3pgRKxFrgVfBzPdLRV01-fDBJkMvIVOQI311jpF5r3uLBvvZUJwmWoRVYLMVV5JPb_BBpOKDqC9ryINA3uosM8cBwLIFrlPncg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-background-dark"></div>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto text-center">
+<h2 class="text-4xl md:text-5xl font-extralight tracking-tight mb-8">Bespoke Consultations</h2>
+<p class="text-white/60 text-sm tracking-widest mb-12 leading-loose">
+                Experience the collection in the privacy of our hidden atelier. 
+                Our artisans are available for one-on-one sessions to tailor each artifact to your silhouette.
+            </p>
+<a class="inline-block group relative px-12 py-5 overflow-hidden" href="#">
+<span class="absolute inset-0 border border-primary/40 group-hover:border-primary transition-colors duration-500"></span>
+<span class="relative z-10 text-[10px] tracking-[0.5em] uppercase text-primary font-medium">Request an Appointment</span>
+<div class="absolute bottom-0 left-0 w-full h-0 bg-primary/10 group-hover:h-full transition-all duration-500"></div>
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="pt-24 pb-12 px-12 border-t border-primary/5">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-2">
+<h2 class="text-xl tracking-[0.8em] font-light uppercase text-primary mb-6">Midnight</h2>
+<p class="text-white/40 text-xs tracking-widest leading-relaxed max-w-sm">
+                    A sanctuary for those who find beauty in the deep hours. Crafting timeless artifacts at the edge of couture and sculpture.
+                </p>
+</div>
+<div>
+<h5 class="text-[10px] tracking-[0.4em] uppercase text-primary/80 mb-6">Inquiry</h5>
+<ul class="space-y-4 text-[10px] tracking-widest text-white/50 uppercase">
+<li><a class="hover:text-primary transition-colors" href="#">Heritage</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Craftsmanship</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Ethical Sourcing</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] tracking-[0.4em] uppercase text-primary/80 mb-6">Location</h5>
+<p class="text-[10px] tracking-widest text-white/50 uppercase leading-loose">
+                    Rue de la Paix, 75002<br/>
+                    Paris, France
+                </p>
+<div class="mt-6 flex space-x-4">
+<span class="text-[10px] tracking-widest text-primary">IG</span>
+<span class="text-[10px] tracking-widest text-primary">LN</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 opacity-30 text-[8px] tracking-[0.4em] uppercase">
+<p>© 2024 Midnight Atelier. All Rights Reserved.</p>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script src="../../assets/js/global-enhancement.js" defer></script>
+</body></html>

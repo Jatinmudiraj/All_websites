@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IRON YARD | Earn Your Strength</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25f46a",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                        "iron-gray": "#1e2923",
+                        "steel-accent": "#2c3e33"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Space Grotesk", sans-serif
+    }
+.caution-pattern {
+    background: repeating-linear-gradient(-45deg, #25f46a, #25f46a 10px, #102216 10px, #102216 20px)
+    }
+.noise-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDrv9IiXjvrBrz9YyRn27EkWtqI2YuPXcnMawU77Y4LIwVUs3LLrF8Bfp6gaVK0Y86WUnlqRCfBoUZGwYRImMBx_L62lajtpRrR8F87d-FN9R6bmvNkev7AGlPz26WAXobMw8mvAXutH7aEGKTnsPsDzNijH5EZ6EMBZTwiP1pTVretdzjexvAZvhntm2bBQ1CEabgPJYjRxZQ-eLg2FYSYjTrEDUsUb6t9Ra9VAO3SfMXXfWunW4Mhe_V3EuCHPeObBQ3SWRO2Gpk)
+    }
+.metal-shimmer {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.05) 100%)
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display selection:bg-primary selection:text-background-dark">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 border-b border-primary/20 bg-background-dark/90 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded">
+<span class="material-icons text-background-dark font-bold">fitness_center</span>
+</div>
+<span class="text-2xl font-bold tracking-tighter uppercase italic">IRON <span class="text-primary">YARD</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 uppercase text-sm font-bold tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">WOD</a>
+<a class="hover:text-primary transition-colors" href="#">Membership</a>
+<a class="hover:text-primary transition-colors" href="#">Coaches</a>
+<a class="hover:text-primary transition-colors" href="#">Facility</a>
+<button class="bg-primary text-background-dark px-6 py-2 rounded-sm font-black hover:scale-105 transition-transform">JOIN NOW</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Powerful athlete lifting heavy weights in warehouse" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdjAijnOztBKeyCUWS-poD2Gp2QizhPrJmQ5QvUjUdiW0xTW_EBuWCjjHQNA7pRS3GzGr02GVbxh02ez9hYPmBUGQqbltdvCzoeVp8eXXMyDEBINf4x7UYJ8vcz8JYyUpri2aDK5jIuAdNRy1QXA8ReSbs122hm00FM2grhA2E0eQmKlFYHKZ_OqkE4PbrAR9pxRfhQKBfHFlc_f1foio6HpzXIfaj0HfbFzNWQQN5KkIZ7iz_YkrSKNGSptCTxk6i0WLuc3LtFCg')">
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-sm border border-primary/30 mb-6 uppercase text-xs font-bold tracking-[0.2em]">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    Live Industrial Training
+                </div>
+<h1 class="text-7xl md:text-8xl font-black italic uppercase leading-[0.9] mb-6 tracking-tighter">
+                    EARN YOUR <br/><span class="text-primary">STRENGTH</span>
+</h1>
+<p class="text-xl text-slate-400 mb-10 max-w-lg font-light">
+                    No shortcuts. No air conditioning. Just raw iron and functional excellence. The Yard is where champions are built through grit.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-background-dark px-10 py-5 rounded-sm font-black text-lg uppercase flex items-center gap-3 hover:shadow-[0_0_30px_rgba(37,244,106,0.3)] transition-all">
+                        Drop-In Today
+                        <span class="material-icons">arrow_forward</span>
+</button>
+<button class="border-2 border-slate-600 hover:border-primary px-10 py-5 rounded-sm font-black text-lg uppercase transition-colors">
+                        View Schedule
+                    </button>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute bottom-0 right-0 p-10 hidden lg:block opacity-20">
+<span class="text-[12rem] font-black italic uppercase text-slate-700 leading-none select-none">HARDCORE</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-2 caution-pattern opacity-50"></div>
+</section>
+<!-- WOD Section -->
+<section class="py-24 relative noise-overlay">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-4">
+<div class="bg-iron-gray border-t-4 border-primary p-8 rounded-sm shadow-xl metal-shimmer">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h2 class="text-3xl font-black uppercase tracking-tighter">TODAY'S WOD</h2>
+<p class="text-primary font-bold">October 24, 2023</p>
+</div>
+<div class="text-right">
+<span class="bg-background-dark px-3 py-1 text-xs border border-primary/20 rounded-sm">CODE: THE-GRINDER</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="p-4 bg-background-dark/50 border-l-2 border-primary">
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Buy-In</h4>
+<p class="text-lg font-medium">800m Run / 100 Double Unders</p>
+</div>
+<div class="p-4 bg-background-dark/50 border-l-2 border-primary">
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">The Main Event (5 Rounds)</h4>
+<ul class="space-y-2 text-lg">
+<li class="flex items-center gap-3"><span class="text-primary font-bold">12</span> Power Cleans (135/95)</li>
+<li class="flex items-center gap-3"><span class="text-primary font-bold">15</span> Box Jumps (24"/20")</li>
+<li class="flex items-center gap-3"><span class="text-primary font-bold">20</span> Wall Balls (20lb/14lb)</li>
+</ul>
+</div>
+<div class="p-4 bg-background-dark/50 border-l-2 border-primary">
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Finisher</h4>
+<p class="text-lg font-medium">100 GHD Situps</p>
+</div>
+</div>
+<button class="w-full mt-8 border border-primary/50 text-primary py-4 rounded-sm font-bold uppercase hover:bg-primary hover:text-background-dark transition-all">
+                            Log Your Score
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group relative overflow-hidden rounded-sm aspect-[4/5]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Barbell on gym floor with chalk dust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4XHBIXXIBzyEM5QfIh0_gui4j-Ef-Y6hGEMqNc9H3OF2c-kGz5ZT21MlQkF7DyGhqDkVVv1_uidpx5CSzxDcGuUVysbtiUujWOiKW-LDKuKpqjHBfUfTLpHT5JPXbpM-oR38LoobcXGX0A8O3m2FUlneLdBpqSLIA3Y-4ZkWkHlNodFf51-_uASCtU-XIpHVnY53FLlG90AbK8J9RjIi3-wenJUKggn0THa6ms0XoCRQPZQGKYrcKSWMzd7Zne6j-nIhx18VACf0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-2xl font-black uppercase italic mb-2">Olympic Lifting</h3>
+<p class="text-slate-300">Technical proficiency and explosive power programs available.</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-sm aspect-[4/5]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Athlete hanging from pull up bar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs8Bv1rMkv0m_NjhgTmTchT2Elj4TtPJDaT9MCmmGmmIXWwoXumqSa6kPXlZi2qZPgRWumWpEwtPop9tQNnI8S5PPXfWPbtIVgRYgojAJHKw-YW-bvsm20vyjhs70bwr_2ct-_Gp-L83zOgy7pnI7lvN56Q6gAGSWL69AEgyk2_CHDLK-oXCvUZ-D7gGjvmgmNxfILmV7vdTNksNa9mf3zwXKzGSVqvfDR1iY0ioONuyDJ_gYUaYkk-PXhTjt3lXkgm1kGe06Bhh8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-2xl font-black uppercase italic mb-2">High Intensity</h3>
+<p class="text-slate-300">Metabolic conditioning that pushes you past your limits.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Memberships -->
+<section class="py-24 bg-iron-gray/30">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-5xl font-black uppercase italic tracking-tighter mb-4">CHOOSE YOUR <span class="text-primary">PROGRAM</span></h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Scout -->
+<div class="bg-background-dark border-2 border-slate-800 p-8 rounded-sm relative overflow-hidden flex flex-col group hover:border-primary/50 transition-colors">
+<div class="mb-8">
+<h3 class="text-xl font-black uppercase tracking-widest text-slate-400">SCOUT</h3>
+<div class="text-5xl font-black mt-2">$89<span class="text-lg text-slate-500 font-normal">/mo</span></div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> 3 Sessions per week</li>
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Core Facility Access</li>
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Mobile App Access</li>
+<li class="flex items-center gap-3 text-slate-600"><span class="material-icons text-slate-600 text-sm">cancel</span> Personalized Nutrition</li>
+</ul>
+<button class="w-full border-2 border-slate-700 py-3 font-bold uppercase hover:bg-slate-700 transition-colors">Recruit Level</button>
+</div>
+<!-- Operator (Featured) -->
+<div class="bg-background-dark border-2 border-primary p-10 rounded-sm relative overflow-hidden flex flex-col transform lg:scale-110 z-10 shadow-2xl shadow-primary/10">
+<div class="absolute top-0 right-0 caution-pattern px-6 py-1 text-background-dark font-black text-[10px] uppercase tracking-widest">
+                        MOST POPULAR
+                    </div>
+<div class="mb-8">
+<h3 class="text-xl font-black uppercase tracking-widest text-primary">OPERATOR</h3>
+<div class="text-6xl font-black mt-2">$149<span class="text-lg text-slate-500 font-normal">/mo</span></div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Unlimited Training</li>
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> All Specialist Classes</li>
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Basic Nutrition Guide</li>
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> 2 Guest Passes / Mo</li>
+</ul>
+<button class="w-full bg-primary text-background-dark py-4 font-black uppercase hover:shadow-[0_0_20px_rgba(37,244,106,0.4)] transition-all">Go Pro</button>
+</div>
+<!-- Elite -->
+<div class="bg-background-dark border-2 border-slate-800 p-8 rounded-sm relative overflow-hidden flex flex-col group hover:border-primary/50 transition-colors">
+<div class="mb-8">
+<h3 class="text-xl font-black uppercase tracking-widest text-slate-400">ELITE</h3>
+<div class="text-5xl font-black mt-2">$225<span class="text-lg text-slate-500 font-normal">/mo</span></div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Everything in Operator</li>
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> 1-on-1 Coaching (Monthly)</li>
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Full Nutrition Macro-Plan</li>
+<li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Priority Event Entry</li>
+</ul>
+<button class="w-full border-2 border-slate-700 py-3 font-bold uppercase hover:bg-slate-700 transition-colors">Elite Status</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Coaches Section -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-5xl font-black uppercase italic leading-none">THE <span class="text-primary">COMMAND</span></h2>
+<p class="text-slate-500 mt-2 uppercase tracking-widest font-bold">Expert instruction for extreme results</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-icons">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-icons">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-4 gap-6">
+<!-- Coach 1 -->
+<div class="group">
+<div class="relative aspect-[3/4] overflow-hidden mb-4 border border-slate-800">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Headshot of head coach Mike Irons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9J2fl5c0WFW6H7xjOfRS6IH2SXGmhTAMtWWct7PCQS2wqqn2U6GS9l0zwGIH3vWAB4IFKD_0CUorKOG81d1RHQtq8FTGCBRCl1LEVEkpz7PQ1gL9ycwG06QglYxusVwQOJ0UlOWekbaIyPTNJ0otCmU9ThQYdZW05in11aSRGmk3trZMmb-csV7eH2JHfQ11fOp5NlGbaucSd9XRoPH594snG1ZUaqJqwjDQHnXgE531jmafT-vcUkzZCp3vG8X-vMXzMT4ciGpE"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-background-dark text-[10px] font-black px-2 py-1 uppercase rounded-sm">L-3 Certified</span>
+<span class="bg-white/10 backdrop-blur-md text-white text-[10px] font-black px-2 py-1 uppercase rounded-sm">12YRS EXP</span>
+</div>
+</div>
+<h4 class="text-xl font-black uppercase italic">Mike "The Tank" Irons</h4>
+<p class="text-primary text-sm uppercase font-bold tracking-widest">Head Strength Coach</p>
+</div>
+<!-- Coach 2 -->
+<div class="group">
+<div class="relative aspect-[3/4] overflow-hidden mb-4 border border-slate-800">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Headshot of coach Sarah Steel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASplJATRM9k7Z5sSsHbMuMRs8M5kziRffsDcZQbwPK2Q8o5wItGOBAcDTcdo99admlitTTlYWMeoLSxB9F3pc3IBSK_846SFDVG5Gk1OiXJmeZdhSOovwt6ylFN0Iqugoml5SGJW5vSSH5pIQU7wjB3cpoBcLcerusY-w1pc1kufXs--B4tEuguKG3Xdz13aMIeAgHO1se8kuMSZTMQbfSobXvdlSP4KStBmDi5HQJGOwb8xYd8UVDPF4XRjulMAT7sip2bsuIBmU"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-background-dark text-[10px] font-black px-2 py-1 uppercase rounded-sm">DPT Specialist</span>
+<span class="bg-white/10 backdrop-blur-md text-white text-[10px] font-black px-2 py-1 uppercase rounded-sm">8YRS EXP</span>
+</div>
+</div>
+<h4 class="text-xl font-black uppercase italic">Sarah Steel</h4>
+<p class="text-primary text-sm uppercase font-bold tracking-widest">Mobility &amp; Rehab</p>
+</div>
+<!-- Coach 3 -->
+<div class="group">
+<div class="relative aspect-[3/4] overflow-hidden mb-4 border border-slate-800">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Headshot of coach Alex Blaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo7umpDtK7kZBneoP0sZ7nnwWNq_SZ7ZdYHhbmMNoF8FiywnQliEH9n4RrSGuOA15ONYDUX8BFJ-AY0jw1fkFPwFGNKBrLC1L31zn2DVD_5dlYOWZvkFhXUvavgHpjUXxXdw-63-CKKBeCZXl0T7k8SfHDbEQBhIPx2WO6ElEZC_ZoJX6wiUaMc36BxJdDi_5__XQQdP1XDAMDvVOfPgc3tybItFXIBpoyYjVHwrxys9nk_KJYBIYOEBbHtC6Ym2rtHIWSgFqTZrI"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-background-dark text-[10px] font-black px-2 py-1 uppercase rounded-sm">Oly Expert</span>
+<span class="bg-white/10 backdrop-blur-md text-white text-[10px] font-black px-2 py-1 uppercase rounded-sm">15YRS EXP</span>
+</div>
+</div>
+<h4 class="text-xl font-black uppercase italic">Alex Blaze</h4>
+<p class="text-primary text-sm uppercase font-bold tracking-widest">Barbell Technical</p>
+</div>
+<!-- Coach 4 -->
+<div class="group">
+<div class="relative aspect-[3/4] overflow-hidden mb-4 border border-slate-800">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Headshot of coach Elena Forge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsNSKdHWkv4lhsR_3Tbstl97RN4jL6UuVkq8KSI8dow-FfZ-uo2refCh_iitkUZ_yDMwlW_B9YX8KnhPxKsKzPrPCv5XT0sA44xrwJgc9SEkYWNKLBNr1AYfenhxKwuaFBqAIti88JfYHIzNv6-tUPyCsuu6HyjJsos9N6kZ3Pa0lT6fkC0tw3ds4HAJnVZOL4-mdxdc6UZLxVSyr0PvJWe6-I-OdbF93u8NrP_JpR6Kdjh1jlpWlM1jDezDTtOruHdXtmP59-kfs"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-background-dark text-[10px] font-black px-2 py-1 uppercase rounded-sm">Precision Nutri</span>
+<span class="bg-white/10 backdrop-blur-md text-white text-[10px] font-black px-2 py-1 uppercase rounded-sm">6YRS EXP</span>
+</div>
+</div>
+<h4 class="text-xl font-black uppercase italic">Elena Forge</h4>
+<p class="text-primary text-sm uppercase font-bold tracking-widest">Fuel &amp; Recovery</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Map & Contact Section -->
+<section class="h-[600px] relative overflow-hidden">
+<div class="absolute inset-0 grayscale contrast-125 opacity-40">
+<img class="w-full h-full object-cover" data-alt="Dark moody street map of an industrial area" data-location="Detroit, USA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbc49hQQwDi3zVtzL6g6tH7eIeWgf2-aM0sRW2LidslJO0x1U9zHBPu0QqrwBIftIGFCCI1VO7qs_PndTn1lmd56Iw7ZhoY02eXg-cX99_6hfDJkS5MxmhrQ9TC6yR0hL-kcpCNKkFC94XQDath_WnBEq8lp3TAnzs8F51RhCYGY0wWi0i2_Atpm7pCgxYzxeO-SruHdyTbsT5yjn7HoRfYRUtIea5c2fhyHx_Kw_MC9KlocYpMg_o5S0f69ODKIXwyn-pXSmMGGs"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
+<div class="bg-background-dark/95 backdrop-blur-xl p-12 border-l-8 border-primary max-w-lg shadow-2xl">
+<h2 class="text-4xl font-black uppercase italic mb-6">THE DEPOT</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-icons text-primary">location_on</span>
+<div>
+<p class="font-bold uppercase tracking-widest">Address</p>
+<p class="text-slate-400">882 Iron Yard Dr, Industrial District<br/>Detroit, MI 48201</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-icons text-primary">schedule</span>
+<div>
+<p class="font-bold uppercase tracking-widest">Hours</p>
+<p class="text-slate-400">Open 24/7 for Members<br/>Staffed: 6AM - 8PM Daily</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-icons text-primary">phone</span>
+<div>
+<p class="font-bold uppercase tracking-widest">Direct Line</p>
+<p class="text-slate-400">(555) 902-1314</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-10 bg-primary text-background-dark py-4 font-black uppercase tracking-widest hover:brightness-110 transition-all">Get Directions</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-slate-800 py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary flex items-center justify-center rounded">
+<span class="material-icons text-background-dark font-bold text-sm">fitness_center</span>
+</div>
+<span class="text-xl font-bold tracking-tighter uppercase italic text-white">IRON <span class="text-primary">YARD</span></span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        Building raw strength since 2012. We provide the equipment and expertise, you provide the work.
+                    </p>
+<div class="flex gap-4">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-icons">facebook</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-icons">camera_alt</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-icons">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-black uppercase tracking-widest mb-6 text-white">Programs</h4>
+<ul class="space-y-3 text-slate-500 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Industrial Strength</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Oly Performance</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Conditioning Lab</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Foundations 101</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-black uppercase tracking-widest mb-6 text-white">Support</h4>
+<ul class="space-y-3 text-slate-500 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Member Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Drop-In Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-black uppercase tracking-widest mb-6 text-white">Yard Mail</h4>
+<p class="text-slate-500 text-sm mb-4">Get weekly WOD insights and facility updates.</p>
+<div class="flex">
+<input class="bg-iron-gray border-none focus:ring-1 focus:ring-primary text-sm w-full py-3 px-4 rounded-l-sm" placeholder="Email" type="email"/>
+<button class="bg-primary text-background-dark px-4 py-3 rounded-r-sm font-bold uppercase text-xs">Join</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-widest text-slate-600">
+<p>© 2023 IRON YARD FUNCTIONAL TRAINING. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<span>STATUS: ALL SYSTEMS GO</span>
+<span class="text-primary">EST 2012</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

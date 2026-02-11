@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simplified Appointment Booking | EliteCare Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .step-active { color: #137fec; border-bottom: 2px solid #137fec; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<link rel="stylesheet" href="../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-display transition-colors duration-300 min-h-screen">
+<!-- Navigation Header -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">medical_services</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">EliteCare<span class="text-primary">.</span></span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Our Specialists</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Locations</a>
+<button class="px-5 py-2.5 bg-primary/10 text-primary rounded-full text-sm font-semibold hover:bg-primary/20 transition-all">
+                    Patient Portal
+                </button>
+</nav>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Main Booking Flow (Left 8 columns) -->
+<div class="lg:col-span-8">
+<div class="mb-10">
+<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Book your consultation</h1>
+<p class="text-lg text-slate-500 dark:text-slate-400">Select a time that works best for you. It only takes 2 minutes.</p>
+</div>
+<!-- Progress Stepper -->
+<div class="flex items-center gap-4 mb-12 overflow-x-auto hide-scrollbar pb-2">
+<div class="flex items-center gap-3 shrink-0">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">1</div>
+<span class="font-semibold text-primary">Specialty</span>
+</div>
+<div class="h-px w-8 bg-primary/20 shrink-0"></div>
+<div class="flex items-center gap-3 shrink-0 opacity-50">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 flex items-center justify-center text-sm font-bold">2</div>
+<span class="font-medium">Specialist</span>
+</div>
+<div class="h-px w-8 bg-slate-200 dark:bg-slate-700 shrink-0"></div>
+<div class="flex items-center gap-3 shrink-0 opacity-50">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 flex items-center justify-center text-sm font-bold">3</div>
+<span class="font-medium">Schedule</span>
+</div>
+</div>
+<!-- Section: Specialty Selection (Active) -->
+<div class="space-y-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">What type of care do you need?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<button class="p-6 bg-white dark:bg-slate-800 border-2 border-primary rounded-xl text-left flex items-start gap-4 hover:shadow-lg transition-all ring-4 ring-primary/5">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-icons">favorite</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Cardiology</h3>
+<p class="text-sm text-slate-500 mt-1">Heart health, blood pressure, and diagnostics.</p>
+</div>
+</button>
+<button class="p-6 bg-white dark:bg-slate-800 border-2 border-transparent rounded-xl text-left flex items-start gap-4 hover:border-primary/50 hover:shadow-md transition-all">
+<div class="p-3 bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-500">
+<span class="material-icons">psychology</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Neurology</h3>
+<p class="text-sm text-slate-500 mt-1">Brain health, nerves, and cognitive support.</p>
+</div>
+</button>
+<button class="p-6 bg-white dark:bg-slate-800 border-2 border-transparent rounded-xl text-left flex items-start gap-4 hover:border-primary/50 hover:shadow-md transition-all">
+<div class="p-3 bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-500">
+<span class="material-icons">visibility</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Ophthalmology</h3>
+<p class="text-sm text-slate-500 mt-1">Comprehensive eye care and vision correction.</p>
+</div>
+</button>
+<button class="p-6 bg-white dark:bg-slate-800 border-2 border-transparent rounded-xl text-left flex items-start gap-4 hover:border-primary/50 hover:shadow-md transition-all">
+<div class="p-3 bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-500">
+<span class="material-icons">health_and_safety</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">General Medicine</h3>
+<p class="text-sm text-slate-500 mt-1">Routine checkups and preventive health.</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Section: Time Selection (Simplified Grid) -->
+<div class="mt-16 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Select a time slot</h2>
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Earliest available: Today</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+<!-- Date Navigation -->
+<div class="md:col-span-7 flex items-center justify-between bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-100 dark:border-slate-700">
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-colors">
+<span class="material-icons text-slate-400">chevron_left</span>
+</button>
+<span class="font-bold text-slate-700 dark:text-slate-300">September 14 - September 20, 2023</span>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-colors">
+<span class="material-icons text-slate-400">chevron_right</span>
+</button>
+</div>
+<!-- Time Grid -->
+<div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3">
+<button class="py-4 px-2 text-center rounded-xl border-2 border-slate-100 dark:border-slate-700 hover:border-primary hover:text-primary transition-all group bg-white dark:bg-slate-800">
+<div class="text-xs font-medium text-slate-400 mb-1">Mon, Sep 14</div>
+<div class="text-lg font-bold">09:00 AM</div>
+</button>
+<button class="py-4 px-2 text-center rounded-xl border-2 border-primary bg-primary/5 text-primary transition-all ring-4 ring-primary/5 bg-white dark:bg-slate-800">
+<div class="text-xs font-medium text-primary/60 mb-1">Mon, Sep 14</div>
+<div class="text-lg font-bold">10:30 AM</div>
+</button>
+<button class="py-4 px-2 text-center rounded-xl border-2 border-slate-100 dark:border-slate-700 hover:border-primary hover:text-primary transition-all bg-white dark:bg-slate-800">
+<div class="text-xs font-medium text-slate-400 mb-1">Mon, Sep 14</div>
+<div class="text-lg font-bold">11:00 AM</div>
+</button>
+<button class="py-4 px-2 text-center rounded-xl border-2 border-slate-100 dark:border-slate-700 opacity-40 cursor-not-allowed bg-slate-50 dark:bg-slate-900">
+<div class="text-xs font-medium text-slate-400 mb-1">Mon, Sep 14</div>
+<div class="text-lg font-bold">01:00 PM</div>
+</button>
+<button class="py-4 px-2 text-center rounded-xl border-2 border-slate-100 dark:border-slate-700 hover:border-primary hover:text-primary transition-all bg-white dark:bg-slate-800">
+<div class="text-xs font-medium text-slate-400 mb-1">Mon, Sep 14</div>
+<div class="text-lg font-bold">02:30 PM</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Personal Info Form -->
+<div class="mt-16 space-y-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Your information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Full Name</label>
+<input class="w-full px-4 py-3 rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Email Address</label>
+<input class="w-full px-4 py-3 rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Brief Reason for Visit (Optional)</label>
+<textarea class="w-full px-4 py-3 rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Symptoms, concerns, or regular checkup..." rows="3"></textarea>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/10 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
+<img alt="Doctor Profile" class="w-full h-full object-cover" data-alt="Professional portrait of a male doctor in clinical attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5b0WmrQAvbTWeEEcM8DJ8guDJTufxHT_w0fI-zO_jZLapBc5smlcWGdcIVKwDmiHsuO31bArEtXRGQKTJIctzSQcZdQ74B6W5_D0XMce0KK7Pe7PinS_lIzKX-dunFOJYp-P5Xte3cvbuXame429s0tGKgQWkWcETO0krNvUHnViFXjou7z7MESxzJ2wk1sbu8ZA5hQvmXBosCjgZurBZIpirAT7EWJ9955cBjWsx7gXOggUJnTNmT0YfojyY948t3zzXdFZFNxFi"/>
+</div>
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wider font-bold">Booking with</p>
+<p class="font-bold text-slate-900 dark:text-white">Dr. Sarah Mitchell, Cardiology</p>
+</div>
+</div>
+<button class="w-full sm:w-auto px-10 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98]">
+                        Confirm Appointment
+                    </button>
+</div>
+</div>
+<!-- Reassurance Panel (Right 4 columns) -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- What to Expect -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">What to expect next</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-icons text-sm">mail</span>
+</div>
+<div>
+<p class="font-bold text-sm">Instant Confirmation</p>
+<p class="text-sm text-slate-500 mt-1">Receive a confirmation email with details and a calendar invite.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-icons text-sm">assignment</span>
+</div>
+<div>
+<p class="font-bold text-sm">Pre-visit Form</p>
+<p class="text-sm text-slate-500 mt-1">Complete a secure health form before your arrival to save time.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-icons text-sm">place</span>
+</div>
+<div>
+<p class="font-bold text-sm">Arrival &amp; Check-in</p>
+<p class="text-sm text-slate-500 mt-1">Park in reserved patient slots; check in via tablet at the desk.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="bg-primary/5 dark:bg-slate-800/50 p-8 rounded-2xl border border-primary/20">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Common Questions</h3>
+<div class="space-y-4">
+<details class="group bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-slate-700">
+<summary class="flex items-center justify-between p-4 cursor-pointer list-none">
+<span class="font-semibold text-sm">Can I reschedule later?</span>
+<span class="material-icons text-primary text-lg transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-500 leading-relaxed">
+                                Yes, you can reschedule or cancel up to 24 hours before your appointment through the link in your email or your patient portal.
+                            </div>
+</details>
+<details class="group bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-slate-700">
+<summary class="flex items-center justify-between p-4 cursor-pointer list-none">
+<span class="font-semibold text-sm">Do I need insurance now?</span>
+<span class="material-icons text-primary text-lg transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-500 leading-relaxed">
+                                You don't need to provide insurance details to book. We'll collect those during your digital pre-visit check-in or when you arrive.
+                            </div>
+</details>
+<details class="group bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-slate-700">
+<summary class="flex items-center justify-between p-4 cursor-pointer list-none">
+<span class="font-semibold text-sm">Is my data secure?</span>
+<span class="material-icons text-primary text-lg transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-500 leading-relaxed">
+                                Absolutely. We use bank-level encryption and are fully HIPAA-compliant to ensure your private information stays private.
+                            </div>
+</details>
+</div>
+<div class="mt-8 pt-6 border-t border-primary/10">
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Still have questions?</p>
+<a class="mt-2 inline-flex items-center gap-2 text-primary font-bold hover:underline" href="tel:18005550123">
+<span class="material-icons text-sm">call</span>
+                            1-800-555-0123
+                        </a>
+</div>
+</div>
+<!-- Trusted Badge -->
+<div class="flex items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+<div class="w-12 h-12 bg-green-500/10 text-green-600 rounded-full flex items-center justify-center">
+<span class="material-icons">verified_user</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-slate-400">HIPAA Compliant</p>
+<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Secure &amp; Confidential</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="mt-12 py-12 border-t border-primary/10 bg-white dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="text-slate-400 text-sm">
+                © 2023 EliteCare Specialty Clinics. All rights reserved.
+            </div>
+<div class="flex gap-8">
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="#">Cookie Settings</a>
+</div>
+</div>
+</footer>
+<script src="../../assets/js/global-enhancement.js" defer></script>
+</body></html>

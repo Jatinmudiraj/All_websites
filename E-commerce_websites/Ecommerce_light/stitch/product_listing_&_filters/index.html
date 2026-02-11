@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Product Listing - Modern E-commerce</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: none;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link rel="stylesheet" href="../../../../assets/css/global-styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header & Search -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur border-b border-primary/10">
+<div class="px-4 pt-4 pb-2 flex items-center justify-between">
+<button class="w-10 h-10 flex items-center justify-start text-slate-700 dark:text-slate-300">
+<span class="material-icons-round">arrow_back_ios</span>
+</button>
+<h1 class="text-lg font-bold">New Arrivals</h1>
+<div class="relative w-10 h-10 flex items-center justify-end">
+<span class="material-icons-round text-slate-700 dark:text-slate-300">shopping_bag</span>
+<span class="absolute top-1 -right-1 bg-primary text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 pb-3">
+<div class="relative flex items-center bg-primary/5 dark:bg-white/5 rounded-xl px-3 py-2">
+<span class="material-icons-round text-slate-400 text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full p-0 placeholder-slate-400" placeholder="Search products..." type="text"/>
+</div>
+</div>
+<!-- Sticky Filter Bar -->
+<div class="px-4 py-2 flex items-center gap-2 overflow-x-auto hide-scrollbar border-t border-primary/5">
+<button class="flex items-center gap-1 bg-primary text-white px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap">
+<span class="material-icons-round text-base">tune</span>
+                Filter
+                <span class="ml-1 bg-white/20 w-4 h-4 rounded-full flex items-center justify-center text-[10px]">2</span>
+</button>
+<button class="flex items-center gap-1 bg-primary/10 dark:bg-white/10 text-slate-700 dark:text-slate-200 px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap">
+                Sort: Featured
+                <span class="material-icons-round text-base">expand_more</span>
+</button>
+<button class="flex items-center gap-1 bg-primary/10 dark:bg-white/10 text-slate-700 dark:text-slate-200 px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap">
+                Price
+            </button>
+<button class="flex items-center gap-1 bg-primary/10 dark:bg-white/10 text-slate-700 dark:text-slate-200 px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap">
+                Brand
+            </button>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="px-4 pt-4 pb-24">
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Card 1 -->
+<div class="group relative bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm border border-primary/5">
+<div class="relative aspect-[4/5] bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover" data-alt="Red sleek athletic running shoe side profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz_LB1QEJl9Af_3G9NJPRuDs_oTW0vyPuyJ_7dChKvMAtOJM7pwSrU17ijr4rIY3GMcaT-q1gMobRH2VJbMPFqgC-af3z1Fo-QsmxP1-76EZ8NHdpDlKkdnCU38BEAltBxzj34FNRmcy67dpsPAvfsBqwu-qDYoTVR8u2UrvJ5g7LKk9wXZfPTgx1SOMLkVBgnrsFQ9xbVJ9c0g5Kt73_YHklnHVNOB4XrAdRR9EelUXgyFLY2iT9d6wYikDY_o8F9sgFBa4o"/>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">New</span>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-black/20 ios-blur flex items-center justify-center text-slate-700 dark:text-white">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium text-slate-800 dark:text-slate-200 line-clamp-2 min-h-[40px]">Air Max Precision 5 Pro</h3>
+<div class="mt-1 flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-xs">star</span>
+<span class="text-[11px] text-slate-500 dark:text-slate-400">4.9 (124)</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="text-base font-bold text-primary">$129.00</span>
+<button class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons-round text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm border border-primary/5">
+<div class="relative aspect-[4/5] bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover" data-alt="Minimalist white modern analog wrist watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChHiwZX-9z_rz0oDJRlnOAAr70DGvxVNFh9jS7I0MZcWKGk7NAeWcjiUN6mlt-4QV4v_DG_zrVOY3H2odVX1DhxB20H2v5fp_qkhdOtrZ2S5pZ12Hw-111gfpRQxdn9oiN8Ro1BRSrDPrWHpf_h8HSg1ikFMdqebT1uwv7seKoMie0Ec7RM2mVm5Mkx9JbYZRSaTk3dYlRKXeQNArG1fQzPnhdKnOIoPe15SMPeH1uZOIlkc8lWpNB5XBDtjmZl5gWHNc0N34"/>
+<span class="absolute top-2 left-2 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">-20%</span>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-black/20 ios-blur flex items-center justify-center text-slate-700 dark:text-white">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium text-slate-800 dark:text-slate-200 line-clamp-2 min-h-[40px]">Nomos Glasshütte Minimal</h3>
+<div class="mt-1 flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-xs">star</span>
+<span class="text-[11px] text-slate-500 dark:text-slate-400">4.7 (89)</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<div>
+<span class="text-base font-bold text-primary">$180.00</span>
+<span class="text-[10px] text-slate-400 line-through block leading-tight">$225.00</span>
+</div>
+<button class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons-round text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm border border-primary/5">
+<div class="relative aspect-[4/5] bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover" data-alt="Professional studio over-ear headphones black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo_a_bLUFhgeP1Ve66ZOw_nV4WZYB_w0_X3dJ14UrjRjH8MxF2IN3lm2iN4D1i0C2X3n9Sx4DcYk_kIPg2B9fDzpMs_YXIGYoTWTSyip5G1KxDg3TaBqlMJiye2t20f9nEJFGTuXmUq3_0yXIqcyWbIrvTUDFqJIQY0Z8K0PKxBQfZ10dpBkYIFkBcupgOaTPOqg_Ia8fFfVOG7BbK-Bli4a4Z0E-ggj4RaqGur8HEXZcmTynkMBYR3YBfqXpSk4BheEXRbj0"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-black/20 ios-blur flex items-center justify-center text-slate-700 dark:text-white">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium text-slate-800 dark:text-slate-200 line-clamp-2 min-h-[40px]">Audio-Technica M50x BT</h3>
+<div class="mt-1 flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-xs">star</span>
+<span class="text-[11px] text-slate-500 dark:text-slate-400">4.8 (1.2k)</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="text-base font-bold text-primary">$199.00</span>
+<button class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons-round text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm border border-primary/5">
+<div class="relative aspect-[4/5] bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover" data-alt="Modern stylish sunglasses on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDucUOUxCc_yfMuJdmYkDSbxIb3qiF7_MTaj1ihxcszy3PiOf7_XEW4tH01o_Q0BFk93_tH3Rohga5xkMHZC7bzfmuY4qclyfuIEXPUmQzchH-vdjKZnYdyu5LU5KIbxtlCDs29_fPHY1hhvKJgmX5tszqkpJ9w64STgvB0r1XCsspymKEkGfFeucRk-CczAQIoQS48E2seIrgf-o2rVi6gRnR_1uRM2YcXeqFsQfEMybbn7qf4cJFBNui0oCKBteKbopsT9LY"/>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">New</span>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-black/20 ios-blur flex items-center justify-center text-slate-700 dark:text-white">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium text-slate-800 dark:text-slate-200 line-clamp-2 min-h-[40px]">Aviator Classic Carbon</h3>
+<div class="mt-1 flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-xs">star</span>
+<span class="text-[11px] text-slate-500 dark:text-slate-400">4.6 (56)</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="text-base font-bold text-primary">$145.00</span>
+<button class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons-round text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm border border-primary/5">
+<div class="relative aspect-[4/5] bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover" data-alt="Durable water bottle in aesthetic green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ItbHaWAbrk6oUhthSH7-71qMHTGiYrrD0-3RO7A26VieX3xzR34rJP_46xj6D-7tVdt4gv8zpyoqKCYm5gOG-BZtOoSyG32WpnqQ5sqKtpH59yTSuqC-kF46pyZmUiDiIoGHVxGBXFrffT3AxBSMpXoGNfyK6k1WhUQzpzE32bnfQ4Y0GaQ2h4LHItxP7dz_-EOw3hRDn0-ppseThcXW47k5kaSxbLjA5RuyaA7WlieIk_akc_A9Xt0ScBR7Tue-zR0jFGc"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-black/20 ios-blur flex items-center justify-center text-slate-700 dark:text-white">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium text-slate-800 dark:text-slate-200 line-clamp-2 min-h-[40px]">Insulated Flask 24oz</h3>
+<div class="mt-1 flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-xs">star</span>
+<span class="text-[11px] text-slate-500 dark:text-slate-400">5.0 (214)</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="text-base font-bold text-primary">$35.00</span>
+<button class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons-round text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm border border-primary/5">
+<div class="relative aspect-[4/5] bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover" data-alt="Modern portable wireless speaker charcoal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAribzcDkGJyJgR8ci-4i21l0ACK7OQkhPWrXHp-vS5zN6EuheI_8M5UMyMNhLcedIcFzf5bWw8q1tn5w4SrzouKCmg-6QP1sVat_T0H4Wld2_JeGr6lOvU1OvlPu8cqnLN0n6ddmGGWvNpCw0f806D4Se_dZbt7VPXrY05Hq0aJF3qAL3TiTYmJil2i-VYLwvSA58dcZci49qkAinGIol3LjB3H7BAw1YeHMc2SYzu8NmqhrdOi10qbcI1EoqL8jlhGD3vdfY"/>
+<span class="absolute top-2 left-2 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Sale</span>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-black/20 ios-blur flex items-center justify-center text-slate-700 dark:text-white">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium text-slate-800 dark:text-slate-200 line-clamp-2 min-h-[40px]">Sonic Wave Gen 2</h3>
+<div class="mt-1 flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-xs">star</span>
+<span class="text-[11px] text-slate-500 dark:text-slate-400">4.5 (342)</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<div>
+<span class="text-base font-bold text-primary">$89.00</span>
+<span class="text-[10px] text-slate-400 line-through block leading-tight">$119.00</span>
+</div>
+<button class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons-round text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More Simulator -->
+<div class="mt-8 flex flex-col items-center">
+<p class="text-[12px] text-slate-500 mb-3">Showing 6 of 42 products</p>
+<div class="w-full bg-slate-200 dark:bg-slate-800 h-1 rounded-full mb-6">
+<div class="bg-primary h-1 rounded-full w-[15%]"></div>
+</div>
+<button class="w-full py-4 border-2 border-primary text-primary font-bold rounded-xl active:bg-primary active:text-white transition-colors">
+                Load More Items
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 ios-blur border-t border-primary/10 px-6 py-3 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">explore</span>
+<span class="text-[10px] font-medium">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">favorite_border</span>
+<span class="text-[10px] font-medium">Wishlist</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">person_outline</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+<!-- Floating Filter Overlay (Mockup State) -->
+<div class="fixed inset-0 bg-black/40 hidden z-[60] ios-blur" id="filter-backdrop"></div>
+<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 rounded-t-[2rem] transform translate-y-full transition-transform duration-300 z-[70] max-h-[85vh] overflow-y-auto px-6 py-8" id="filter-drawer">
+<div class="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-6"></div>
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-xl font-bold">Filters</h2>
+<button class="text-primary font-medium text-sm">Clear All</button>
+</div>
+<!-- Filter Sections -->
+<div class="space-y-6">
+<div>
+<h3 class="font-bold text-sm mb-3">Price Range</h3>
+<div class="h-1 bg-slate-100 dark:bg-slate-800 rounded-full relative">
+<div class="absolute inset-y-0 left-[20%] right-[30%] bg-primary"></div>
+<div class="absolute top-1/2 -translate-y-1/2 left-[20%] w-5 h-5 bg-white shadow-md border-2 border-primary rounded-full"></div>
+<div class="absolute top-1/2 -translate-y-1/2 right-[30%] w-5 h-5 bg-white shadow-md border-2 border-primary rounded-full"></div>
+</div>
+<div class="flex justify-between mt-4 text-xs font-medium text-slate-500">
+<span>$0</span>
+<span>$500+</span>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-sm mb-3">Categories</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-lg bg-primary text-white text-xs font-medium">Shoes</button>
+<button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Accessories</button>
+<button class="px-4 py-2 rounded-lg bg-primary/10 text-primary text-xs font-medium">Electronics</button>
+<button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Apparel</button>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-xl mt-10 shadow-lg shadow-primary/20">
+            Apply Filters (24)
+        </button>
+</div>
+<script src="../../../../assets/js/global-enhancement.js" defer></script>
+</body></html>

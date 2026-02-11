@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Contact &amp; Booking | B2B Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full bg-white dark:bg-background-dark sticky top-0 z-50 flex items-center px-6 justify-between border-b border-slate-200/50 dark:border-slate-800/50">
+<button class="text-primary flex items-center gap-1">
+<span class="material-icons text-[20px]">chevron_left</span>
+<span class="text-sm font-medium">Back</span>
+</button>
+<h1 class="text-sm font-semibold uppercase tracking-widest text-slate-500">Connect</h1>
+<div class="w-10"></div> <!-- Spacer for symmetry -->
+</div>
+<main class="max-w-md mx-auto pb-20">
+<!-- Hero Section -->
+<section class="px-6 pt-8 pb-6">
+<h2 class="text-3xl font-bold tracking-tight mb-3">Let’s Scale Your Pipeline.</h2>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                Fill out our inquiry form or skip ahead to book a 15-minute strategy session with our senior partners.
+            </p>
+</section>
+<!-- Form Section -->
+<section class="px-6 mb-10">
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200/60 dark:border-slate-800">
+<h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
+<span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                    Quick Inquiry
+                </h3>
+<form class="space-y-5">
+<div>
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5 ml-1">Full Name</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-none rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-400" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5 ml-1">Work Email</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-none rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-400" placeholder="john@company.com" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5 ml-1">Industry</label>
+<select class="w-full bg-background-light dark:bg-slate-800 border-none rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary/50 transition-all text-slate-600 dark:text-slate-300">
+<option>SaaS &amp; Technology</option>
+<option>Financial Services</option>
+<option>Healthcare B2B</option>
+<option>Professional Services</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5 ml-1">Message</label>
+<textarea class="w-full bg-background-light dark:bg-slate-800 border-none rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-400" placeholder="Tell us about your goals..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-semibold py-4 rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="button">
+                        Send Inquiry
+                        <span class="material-icons text-sm">send</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Divider -->
+<div class="flex items-center px-10 mb-10">
+<div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+<span class="px-4 text-xs font-bold text-slate-400 uppercase tracking-widest">OR</span>
+<div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+</div>
+<!-- Booking Widget Section -->
+<section class="px-6 mb-12">
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200/60 dark:border-slate-800">
+<div class="p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div>
+<h3 class="font-bold text-lg">Strategy Call</h3>
+<p class="text-xs text-slate-500 flex items-center gap-1">
+<span class="material-icons text-[14px]">schedule</span> 15 Minutes • Zoom
+                        </p>
+</div>
+<img class="w-12 h-12 rounded-full object-cover border-2 border-primary/10" data-alt="Professional consultant headshot for booking" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8L_8ul84wBOuy16Vvy4drhlAD8xl-Umw4UYAQFPfzTsVaZb2WAsoPDH7zpQBFF9j7ueUFQIHrxcrqKmrGOJpe2b4cyswooABbNk1Ng81ElWHLV5e5xxskg3QoA1-SMFPC-TxDra7sql4llaBAEnr-PBni5iAdjuMSUsxwcvGLc20Ief_Z5wgGoryO2BPnYADIvQyyNdXeZRGnfeKv5i6X2wHNy1GZd7Ggzqf5TDsHWSBx11Or-pSA01LUOYQN1qf64LumUub5E8vi"/>
+</div>
+<!-- Simple Calendar Mockup -->
+<div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<span class="font-semibold">October 2023</span>
+<div class="flex gap-2">
+<button class="p-1 rounded-full bg-slate-100 dark:bg-slate-800"><span class="material-icons text-sm">chevron_left</span></button>
+<button class="p-1 rounded-full bg-slate-100 dark:bg-slate-800"><span class="material-icons text-sm">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-[10px] font-bold text-slate-400 uppercase mb-2">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center mb-6">
+<span class="py-2 text-slate-300">25</span><span class="py-2 text-slate-300">26</span><span class="py-2 text-slate-300">27</span><span class="py-2 text-slate-300">28</span><span class="py-2 text-slate-300">29</span><span class="py-2 text-slate-300">30</span><button class="py-2 font-medium hover:bg-primary/5 rounded">1</button>
+<button class="py-2 font-medium hover:bg-primary/5 rounded">2</button>
+<button class="py-2 font-medium hover:bg-primary/5 rounded">3</button>
+<button class="py-2 font-medium bg-primary text-white rounded shadow-md shadow-primary/30">4</button>
+<button class="py-2 font-medium hover:bg-primary/5 rounded">5</button>
+<button class="py-2 font-medium hover:bg-primary/5 rounded">6</button>
+<span class="py-2 text-slate-300">7</span><span class="py-2 text-slate-300">8</span>
+</div>
+<div class="space-y-2">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Available Times</p>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 border border-primary/30 text-primary font-semibold rounded-lg hover:bg-primary/5 transition-colors">9:00 AM</button>
+<button class="py-3 border border-primary/30 text-primary font-semibold rounded-lg hover:bg-primary/5 transition-colors">10:30 AM</button>
+<button class="py-3 border border-primary/30 text-primary font-semibold rounded-lg hover:bg-primary/5 transition-colors">1:15 PM</button>
+<button class="py-3 border border-primary/30 text-primary font-semibold rounded-lg hover:bg-primary/5 transition-colors">4:00 PM</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section / Testimonial -->
+<section class="px-6">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-8 relative overflow-hidden">
+<span class="material-icons text-primary/20 absolute -top-2 -left-2 text-7xl">format_quote</span>
+<p class="relative z-10 text-lg italic leading-relaxed text-slate-700 dark:text-slate-300 mb-6">
+                    "The strategic clarity provided by this team transformed our lead generation engine overnight. We saw a 40% increase in qualified pipeline within the first quarter."
+                </p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="High-profile female executive testimonial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMbEZpgIFp1dLeJighMgCEqQtizMDDSocbchv4R3Kzd9D2K4t6F7ybtkIDKnnnMSwaJzQ_r1L0f7zrXLdzNWy4HsQZZnvehDe4zNcerv5wC9zhLHZuWIqetn9L3o_uq9uv73NWn32qaF78-PDReY15EL-zoh5xYQAaYY7c0wSzM1w38FqvGTSV2xLSPzrAUc5Aptu6a-y790KOaQE3YVY9VEvJgIEwcNAoVZBDep6ZpsPvhAeJJNQOK1bQDRc2t2xTvi6ipxU7YLlc"/>
+<div>
+<h4 class="font-bold text-sm">Sarah Jenkins</h4>
+<p class="text-xs text-slate-500 uppercase tracking-wider font-medium">VP Growth, CloudScale AI</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Footer Info -->
+<footer class="mt-12 px-6 pb-12 text-center">
+<div class="flex justify-center gap-6 mb-4 opacity-50 grayscale">
+<img class="h-5" data-alt="Client company logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTsp6rgM-LptKGwppZU5fivnFqA69V22XUyuSyVgFxFxU3NcpPoGoDOn3dqiU9Gj3xOCQ7WmDsq_Z-bqEmeECYOoVmDK2-3hOKBOJ8Q5EpeSF6rdXbROfDUt5wV0HRHX7Q8JMU3BZWlUaDqzf_u4MZZPd8Obp6xBSkvz7njnRmUuvdE48Jok1YcbKE7hrllim1f2cfzNqUox9fXqLCSn4Pmat4zxNrY39XNBmKAH-od7lg1LNmyFasY8tUFe-ydaWqcid4FrYpay8Q"/>
+<img class="h-5" data-alt="Client company logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-EGZmzcCMif3Y52TOY-URVW0uNuCx0rK6tYvrdtTGAz0jG_asWoV3KVPl2EtlsEQKiTCB9QuPY-lr7h2zmb6QaISpvyvtAF2b-_vy7gpL8G2SHuIR-s_69xUbOqK3CxOqEu_yK7W3kP_2xa7ehLJhzCidHn1XFYeH0YACfDUSRbdkqiXvNusRiDOh-xLHB2K6iaR8hQ1yqcm3ylr1WjG25JGWbPjPDEiJXTjTXTmqDLvNOv2xJJK3gnKz-xABloUMAaQ5w2vaPBA-"/>
+<img class="h-5" data-alt="Client company logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOlCVgFYPQRJKL5YMwPHuhfHGnrQ8tXHqcMM7YeJDCUccbPPKCYA297TbUx-avStzwZLM6FUUai0axvyd-tjl3IfO8W8uofJDXdLzAE_6R9ercUnwaWy32i8ld3CRcZyXHZ-EgEx3VHqwpCHI_k0z9Uore_0w6E8H6Cy_QddrEe3CtW3y3gCWJOiGQU2U_JwMkT_Y8B3-xL5Wdic9VcTl1Cs6KPS6eC6Fr7Ez5__5UHKizYy2MS-vBaspWNLhAh0KCjRPagQQFmiBL"/>
+</div>
+<p class="text-[10px] text-slate-400 font-medium uppercase tracking-widest">
+                Trusted by 500+ global enterprises
+            </p>
+</footer>
+</main>
+<!-- iOS Bottom Home Indicator Space -->
+<div class="fixed bottom-0 left-0 right-0 h-8 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md pointer-events-none"></div>
+</body></html>

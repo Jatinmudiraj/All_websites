@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FORM STUDIO | Build Strength with Intention</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#25f46a",
+              "background-light": "#f5f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "serif": ["Playfair Display", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .serif-text {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-nav {
+            background: rgba(16, 34, 22, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(37, 244, 106, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(37, 244, 106, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased overflow-x-hidden">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav">
+<nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center space-x-12">
+<a class="serif-text text-2xl font-semibold tracking-tight text-slate-900 dark:text-white uppercase" href="#">
+                    FORM<span class="text-primary italic">.</span>STUDIO
+                </a>
+<div class="hidden md:flex space-x-8 text-xs font-medium uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#programs">Programs</a>
+<a class="hover:text-primary transition-colors" href="#schedule">Schedule</a>
+<a class="hover:text-primary transition-colors" href="#coaches">Coaches</a>
+<a class="hover:text-primary transition-colors" href="#studio">The Studio</a>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<a class="hidden sm:block text-xs font-medium uppercase tracking-widest hover:text-primary transition-colors" href="#">Login</a>
+<button class="bg-primary text-background-dark px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-lg shadow-primary/20">
+                    Start Trial
+                </button>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Pilates Studio" class="w-full h-full object-cover opacity-40 dark:opacity-30 grayscale" data-alt="Minimalist pilates reformer studio with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE_0H0D6KSOQdYYD1kqYnrt7O5iCWep37mmBlL21gtwgOAPcxoOBCT3b4IctRcg21xUWh_J8I7CevrS1Hn_7e6-LbZqkseZ-XPbY41QhzCzeca9luoLix8dkZjQT9g6UoQTz6V07oZV1I-pHE-oD_okZX1jDlrHhEHFzEJ1fkqwoGprn6tqzwOgsBYsZXjccKDfCiMEHztMfymZLEmR5RGuVVOKx6BFYi6wzfd1sXVfPHEcdFgmZJl3dLtvs52buNh0x_2f7CUbXE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-light dark:from-background-dark via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-2xl">
+<span class="inline-block text-primary text-xs font-bold uppercase tracking-[0.4em] mb-6">Redefining Movement</span>
+<h1 class="serif-text text-6xl md:text-8xl text-slate-900 dark:text-white leading-[1.1] mb-8">
+                    Build strength <br/>with <span class="italic text-primary">intention</span>.
+                </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-lg leading-relaxed font-light">
+                    A premium fusion of high-intensity strength training and mindful Pilates. Precision over speed. Form over force.
+                </p>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<button class="bg-primary text-background-dark px-10 py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-white transition-all">
+                        Book a Class
+                    </button>
+<button class="border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white px-10 py-4 rounded-lg font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">
+                        View Pricing
+                    </button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-icons text-primary opacity-50">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Programs Grid -->
+<section class="py-32 bg-background-light dark:bg-background-dark" id="programs">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="serif-text text-4xl md:text-5xl text-slate-900 dark:text-white mb-6">Our Methodology</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">We believe in a balanced approach to fitness. Our programs are designed to challenge your physical limits while nurturing mental clarity through controlled movement.</p>
+</div>
+<div class="pb-2">
+<a class="text-xs font-bold uppercase tracking-widest text-primary border-b-2 border-primary/30 pb-1 hover:border-primary transition-all" href="#">Explore all programs</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Program 1 -->
+<div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/20 transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Strength Training" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="Modern gym weight rack with sleek design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUDg784FsLMGuDoXyB10urbSFb47mV8UUPiaWsdIIxtkRRzbItsX2meCmGvWtTIkWWhrx0nOJvqYvc9cfrJbe9wwtwgSOkaRmyi5NYAzhKJXXhUG8zJ9xjnVcFTRDyCShDCkJ_jC6nV307X6n-OnFa9Sg_Sa0n9X-xDSTYyP3btPpYjRpvR4TDDPTDuSN7VqSTDg1fxlC8lWi2kk4xonJiry2_YqgXWuGzqBlPnddljAQ2ooVLQPbT5g6W1dXb2eKp_w8GsxvFjUs"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="serif-text text-2xl text-slate-900 dark:text-white italic">The Method</h3>
+<span class="text-[10px] font-bold uppercase tracking-widest bg-primary/20 text-primary px-2 py-1 rounded">High Intensity</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Functional strength training focused on compound movements and progressive overload.</p>
+<button class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center">
+                            Learn More <span class="material-icons text-sm ml-2">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Program 2 -->
+<div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/20 transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Pilates" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="Person practicing pilates on a reformer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJk-wHSnBYt5HHwAmAE6DdlxdCrU1bwFPCaT72GSZu52VPt0naLzUKz9DkpBidUhChXIRgJEdpYtSLdGIi7BG5jPIskv_jSaRgbFkPQ2flkml0DKsXEhKyztShjGI_zzRACkrdLR2CAZWpP8n5fDxhMx4k3yzBxOEwm5cNA3XfxPBsGfZJ0GlwfZ9M8TMKywgGUJh6AhdqWDD6h6N2CbQC6_vvPbW8I7u-ifrTSkZpDeMWwh2ynzrhF-mKoOxW3RS1o3J8hqaLzW4"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="serif-text text-2xl text-slate-900 dark:text-white italic">The Flow</h3>
+<span class="text-[10px] font-bold uppercase tracking-widest bg-slate-200 dark:bg-white/10 text-slate-500 dark:text-slate-400 px-2 py-1 rounded">Low Impact</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Contemporary reformer pilates designed to lengthen, tone, and improve core stability.</p>
+<button class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center">
+                            Learn More <span class="material-icons text-sm ml-2">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Program 3 -->
+<div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/20 transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Recovery" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="Zen yoga studio with soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZdUXjeoTzzw8vxFvpZnTKbmQKW9K_0FP1Wb8u2uD4XGq6UonkPYmIV3DDeTVYbDw7yEvN9_lOj91sqnmpMjkcpvnXUXMsJY0GXGtC0Y-0mKEv6NOxwvW24WHx9QAvSvxD2eQkPAiSLxvtElcGzRr6rdiZ1gkYuF9wf3mChsYoTYN96eHxesL6lfFbVQuZoYns7-Mkywo5V6dpF-Ywukg4eM7Aicd9oKDotnCX18E3IGSzr9KAVZK1BUqud2ZyQS6_-a-I4JcVbHI"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="serif-text text-2xl text-slate-900 dark:text-white italic">The Restore</h3>
+<span class="text-[10px] font-bold uppercase tracking-widest bg-slate-200 dark:bg-white/10 text-slate-500 dark:text-slate-400 px-2 py-1 rounded">Mobility</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">A curated blend of active recovery, mobility work, and myofascial release techniques.</p>
+<button class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center">
+                            Learn More <span class="material-icons text-sm ml-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedule Table -->
+<section class="py-32 border-y border-slate-200 dark:border-white/5" id="schedule">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.5em] block mb-4">Weekly Schedule</span>
+<h2 class="serif-text text-4xl md:text-5xl text-slate-900 dark:text-white italic">Find your space.</h2>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="border-b border-slate-200 dark:border-white/10 text-left">
+<th class="py-6 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">Time</th>
+<th class="py-6 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">Class Type</th>
+<th class="py-6 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">Instructor</th>
+<th class="py-6 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">Intensity</th>
+<th class="py-6 px-4 text-right"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-white/5">
+<tr class="group hover:bg-primary/5 transition-colors">
+<td class="py-8 px-4 font-medium text-slate-900 dark:text-white italic serif-text text-xl">07:00 AM</td>
+<td class="py-8 px-4">
+<span class="block text-sm font-semibold text-slate-900 dark:text-white">Morning Reformer</span>
+<span class="text-xs text-slate-500">60 Minutes</span>
+</td>
+<td class="py-8 px-4 text-sm text-slate-600 dark:text-slate-400 uppercase tracking-widest">Elena Vance</td>
+<td class="py-8 px-4">
+<div class="flex space-x-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+</td>
+<td class="py-8 px-4 text-right">
+<button class="text-[10px] font-bold uppercase tracking-widest px-4 py-2 border border-slate-200 dark:border-white/10 rounded group-hover:bg-primary group-hover:text-background-dark group-hover:border-primary transition-all">Book Spot</button>
+</td>
+</tr>
+<tr class="group hover:bg-primary/5 transition-colors">
+<td class="py-8 px-4 font-medium text-slate-900 dark:text-white italic serif-text text-xl">09:30 AM</td>
+<td class="py-8 px-4">
+<span class="block text-sm font-semibold text-slate-900 dark:text-white">Power Method</span>
+<span class="text-xs text-slate-500">45 Minutes</span>
+</td>
+<td class="py-8 px-4 text-sm text-slate-600 dark:text-slate-400 uppercase tracking-widest">Marcus Chen</td>
+<td class="py-8 px-4">
+<div class="flex space-x-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+</div>
+</td>
+<td class="py-8 px-4 text-right">
+<button class="text-[10px] font-bold uppercase tracking-widest px-4 py-2 border border-slate-200 dark:border-white/10 rounded group-hover:bg-primary group-hover:text-background-dark group-hover:border-primary transition-all">Book Spot</button>
+</td>
+</tr>
+<tr class="group hover:bg-primary/5 transition-colors">
+<td class="py-8 px-4 font-medium text-slate-900 dark:text-white italic serif-text text-xl">12:00 PM</td>
+<td class="py-8 px-4">
+<span class="block text-sm font-semibold text-slate-900 dark:text-white">Form Foundations</span>
+<span class="text-xs text-slate-500">50 Minutes</span>
+</td>
+<td class="py-8 px-4 text-sm text-slate-600 dark:text-slate-400 uppercase tracking-widest">Sarah Jenkins</td>
+<td class="py-8 px-4">
+<div class="flex space-x-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+</td>
+<td class="py-8 px-4 text-right">
+<button class="text-[10px] font-bold uppercase tracking-widest px-4 py-2 border border-slate-200 dark:border-white/10 rounded group-hover:bg-primary group-hover:text-background-dark group-hover:border-primary transition-all">Book Spot</button>
+</td>
+</tr>
+<tr class="group hover:bg-primary/5 transition-colors">
+<td class="py-8 px-4 font-medium text-slate-900 dark:text-white italic serif-text text-xl text-primary">05:30 PM</td>
+<td class="py-8 px-4">
+<span class="block text-sm font-semibold text-slate-900 dark:text-white">Sunset Sculpt</span>
+<span class="text-xs text-primary font-bold">Limited Space</span>
+</td>
+<td class="py-8 px-4 text-sm text-slate-600 dark:text-slate-400 uppercase tracking-widest">Elena Vance</td>
+<td class="py-8 px-4">
+<div class="flex space-x-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+</td>
+<td class="py-8 px-4 text-right">
+<button class="text-[10px] font-bold uppercase tracking-widest px-4 py-2 bg-primary text-background-dark border border-primary rounded hover:bg-white hover:border-white transition-all">Join Waitlist</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Coaches Editorial -->
+<section class="py-32 bg-background-light dark:bg-background-dark" id="coaches">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="serif-text text-5xl md:text-6xl text-slate-900 dark:text-white mb-8">Guided by the <br/><span class="italic">Elite.</span></h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-12">Our instructors aren't just trainers; they are experts in human movement, anatomy, and performance. Each session is meticulously curated to provide maximum results with zero compromise on safety.</p>
+<div class="flex space-x-12">
+<div>
+<span class="block text-3xl serif-text italic text-primary mb-1">12+</span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-slate-500">Expert Coaches</span>
+</div>
+<div>
+<span class="block text-3xl serif-text italic text-primary mb-1">5000+</span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-slate-500">Studio Members</span>
+</div>
+<div>
+<span class="block text-3xl serif-text italic text-primary mb-1">15+</span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-slate-500">Class Formats</span>
+</div>
+</div>
+</div>
+<div class="relative flex space-x-6 overflow-x-auto pb-10 scrollbar-hide">
+<!-- Coach 1 -->
+<div class="flex-shrink-0 w-80 group">
+<div class="relative overflow-hidden rounded-xl mb-6">
+<img alt="Coach" class="w-full aspect-[3/4] object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Professional fitness instructor portrait close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxSv3IDutSmscsHdjop5JSLTrRXL25_mHgoEbpvmo4X-m2IaOXtvR1iqdpkl7xe7QJ_qFanC9yNKGADFO2i0HSl0RFK5cT8Rclbs8jSe3vXsy5UKF_G0DWSWBSx-QpfDUNDzHvIw4Qzkp4ql-ojkzRLq4wO7-4RmzmD_WyJOMycrhJsXZ3RK4VvASMp3zqnpDQOcgQAXEB1Enw9KnKA_5z62wYE6lkElEq8AfUp-TvEz0wF_9B7ATbTFwwsrhujOg92EecOCS4WYY"/>
+<div class="absolute bottom-4 left-4 right-4 bg-background-dark/80 backdrop-blur px-4 py-3 rounded border border-white/10 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">Strength Lead</p>
+</div>
+</div>
+<h4 class="serif-text text-2xl text-slate-900 dark:text-white italic">Elena Vance</h4>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Movement Specialist</p>
+</div>
+<!-- Coach 2 -->
+<div class="flex-shrink-0 w-80 group">
+<div class="relative overflow-hidden rounded-xl mb-6">
+<img alt="Coach" class="w-full aspect-[3/4] object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Male fitness coach looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCloS8kt9Nr1op-6SfaxlXZt1vvT4gygu_3AN2LeCkeW-WPgv3cB1NbS_yD_guoqIqyE5nHbqWEtoy8DDrSQR7NYnTHWwrIwfK9LoMX9RHt0lt3C2ByuIpFVULd80oRhh5Og-R3bpbsjc2uD1DoRVwLOPGosxHIhGf2hYSrJPpSZ0gVFqJq5H6qeglrC1N90JGbBFEqYPMEf9zt8oGO45GzExbCudDoMyXjpLcHAkIMIX5f1cHNuObbmmeg0VgEKP9oH7eJ5fUCiWI"/>
+<div class="absolute bottom-4 left-4 right-4 bg-background-dark/80 backdrop-blur px-4 py-3 rounded border border-white/10 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">Pilates Director</p>
+</div>
+</div>
+<h4 class="serif-text text-2xl text-slate-900 dark:text-white italic">Marcus Chen</h4>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Anatomy Expert</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Studio Showcase -->
+<section class="py-32 overflow-hidden bg-slate-50 dark:bg-white/5" id="studio">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-12 gap-4 h-[600px]">
+<div class="col-span-8 h-full rounded-xl overflow-hidden relative group">
+<img alt="Studio" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" data-alt="Large minimalist studio space with floor to ceiling windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW-0N4poxSPuwPrfjl9GWwq56Dca7XSt-VPijCkMIwB4mg43MCqk2lXXriOmVUQJ6_9E3EGpFjbioF_-jmhQKc-xrvtSIHGkyCVjX78rm9XSb68KaO6WniaRlHRXwJpOhTtj5s5qqyLqg_Dke1QELXA_3VZ4yE9WjpJubDAzZZnc0-Qj4t2q-AttmE-F4utIY15iphVCyqFlOttPMWqltlTPolCSjtOIKlgHDEK6uCl7laBJXvzAv5Ra3CSLjV5AnLwdQqzD7gH9s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/60 to-transparent"></div>
+<div class="absolute bottom-10 left-10">
+<h3 class="serif-text text-4xl text-white italic">The Sanctuary</h3>
+<p class="text-slate-300 text-sm tracking-widest uppercase">7,000 SQ FT OF PURE POTENTIAL</p>
+</div>
+</div>
+<div class="col-span-4 h-full flex flex-col gap-4">
+<div class="h-1/2 rounded-xl overflow-hidden relative group">
+<img alt="Weights" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" data-alt="Close up of high end black and wood dumbbells" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTk2RD_J6huJrMaZldRMC454HLaH-_YZb5txVh6yOQgHzHV0rwbfkgM9Pif_8r7ETsEdyQsIvxZttOAe70wMOJFGwB8jLhmUllpvjnaHYC6D9So7qoXrH7WeB4_nIGogdXqASiK7dhS87_4AZLOY8HAHLGdZcVq9p9FfWQ2IHTEejBKjXgkmXuZggsMCkxvAG0wZSTjnzGUISpHCQsQB0djAccY-d7IoLcG6Kjqrogjfol2i4UQS1okGGvBJojllYRlbBy_3nt-fE"/>
+</div>
+<div class="h-1/2 rounded-xl overflow-hidden relative group">
+<img alt="Yoga" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" data-alt="Minimalist yoga mats neatly stacked" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfAEYGDm_lH78plE2GOA89rC7YuT8jZw1m7xNULjul2NgHQL3Djk9R9wbbWQSOT8_EZ2sjfdzqmsG7qGKE-17vlzEYXMINGMV7Nrd67IV1NXS0rYHmIpsxGecTnS-3Re1Bdz_bQGfN1VNYHBNOJ-QPfh34vb7pIAnfsxlmRtY2C1VTy-vXkLBEMLBeRD1R4I-0f7Br_CjM5lzoEd0-JyPRJ9Jw4wgIrnAqsUddNA5I5631zg_bbkM7Y0bO16cFeJb-gssf8d1eYv0"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[150px] rounded-full pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="serif-text text-6xl md:text-7xl text-slate-900 dark:text-white mb-8">Ready to shift?</h2>
+<p class="text-xl text-slate-600 dark:text-slate-400 mb-12 font-light">Experience the FORM method today with a complimentary first session. Space is limited, intention is mandatory.</p>
+<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+<button class="bg-primary text-background-dark px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-xl shadow-primary/20">
+                    Book Your First Session
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-white/5 pt-20 pb-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-2">
+<a class="serif-text text-3xl font-semibold tracking-tight text-slate-900 dark:text-white uppercase mb-8 block" href="#">
+                        FORM<span class="text-primary italic">.</span>STUDIO
+                    </a>
+<p class="text-slate-500 dark:text-slate-500 max-w-sm leading-relaxed mb-8">Elevating the standard of boutique fitness through precision-based movement and architectural design.</p>
+<div class="flex space-x-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">facebook</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">camera_alt</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">play_circle_outline</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-900 dark:text-white mb-6">Explore</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Class Schedule</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing Plans</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Workshops</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Private Training</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-900 dark:text-white mb-6">Studio</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Location</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-slate-100 dark:divide-white/5">
+<p class="text-xs text-slate-500">© 2024 FORM STUDIO. All rights reserved.</p>
+<div class="flex space-x-8 mt-6 md:mt-0">
+<a class="text-xs text-slate-500 hover:text-white" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-white" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Persistent Floating Action -->
+<div class="fixed bottom-8 right-8 z-40">
+<button class="bg-primary text-background-dark w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group">
+<span class="material-icons group-hover:rotate-12 transition-transform">event_available</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Specialized Care Directory - Premium Medical &amp; Lifestyle Staffing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "accent-success": "#10b981",
+                        "accent-warning": "#f59e0b",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Lexend', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<!-- Top Navigation & Category Toggle -->
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">health_and_safety</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">CareDirect<span class="text-primary">Pro</span></span>
+</div>
+<!-- Main Switcher -->
+<div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700">
+<button class="flex items-center gap-2 px-6 py-2 rounded-lg bg-white dark:bg-primary shadow-sm text-sm font-semibold text-primary dark:text-white transition-all">
+<span class="material-icons text-sm">medical_services</span>
+                        Medical
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-primary transition-all">
+<span class="material-icons text-sm">child_care</span>
+                        Lifestyle
+                    </button>
+</div>
+<!-- User Actions -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-icons">notifications_none</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="User profile avatar image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-cAlezrCzcY9k0rwCQnkIY6kVjUEN1kibhhEC4mDxrlbJcpRZro_hI6jiuWOU-kRi55W3pbC2iygouwpXO6SW1ud6n4b4UblHL8gAx47ffEdegUO_N1WhURDdmRQvwyzEwF3fi6dWQuF44FRCpqQyZ161-Ifr4Hj6mKWxm3LXAKp9L7y6-p5rf6NoB8PrQ5m_kL9x7wMLlQ6T6Z_K2llFlvSGgUhGlHtX2ciPZCUl8j4iVwqCOcTCOZUbvFC5dPCuxuRN2CumiKar"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0 space-y-8">
+<div>
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Filters</h3>
+<div class="space-y-6">
+<!-- Location -->
+<div class="space-y-2">
+<label class="text-sm font-semibold">Location</label>
+<div class="relative">
+<span class="material-icons absolute left-3 top-2.5 text-slate-400 text-sm">location_on</span>
+<input class="w-full pl-9 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm" placeholder="City or Zip" type="text"/>
+</div>
+</div>
+<!-- Specialization -->
+<div class="space-y-2">
+<label class="text-sm font-semibold">Specialization</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">Registered Nurses</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">Pediatricians</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">Physical Therapists</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div class="space-y-2">
+<label class="text-sm font-semibold">Hourly Rate ($)</label>
+<input class="w-full accent-primary" type="range"/>
+<div class="flex justify-between text-xs text-slate-500 font-medium">
+<span>$20/hr</span>
+<span>$150/hr</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-primary/5 rounded-xl border border-primary/10">
+<p class="text-xs text-primary font-bold uppercase mb-1">New Feature</p>
+<p class="text-sm font-medium leading-relaxed">Select up to 3 professionals to compare their credentials side-by-side.</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-grow">
+<div class="flex items-center justify-between mb-8">
+<h1 class="text-2xl font-extrabold tracking-tight">Top Rated Medical Specialists</h1>
+<div class="flex items-center gap-2 text-sm">
+<span class="text-slate-500">Sort by:</span>
+<select class="bg-transparent border-none font-bold text-primary focus:ring-0 cursor-pointer">
+<option>Highly Rated</option>
+<option>Experience</option>
+<option>Price: Low to High</option>
+</select>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Professional Card 1 -->
+<div class="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 hover:border-primary transition-all shadow-sm hover:shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="relative">
+<img class="w-20 h-20 rounded-xl object-cover" data-alt="Female doctor in professional medical attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq_oi_ZoM6Q3H7ODJuvY9xDeDIHEINSs-RmjwbQNJddD-GDunjT_dRHLEFlrzQSJ3PIelooJINDzz_gzVCLRZEcnZHifvMmGH4RI6Htt9G74gX3HasQnT3JIVvV07B3Rt4Aaq_aHpz-vOhrHDncluVlxobQbLtAYyGBH7LxluhrZp8W9NG-Fl3-2FpBjp57IYQdutqAQNtWAyaOImWEK4ezueOpzCpFyc7rrLe9Q04sZYu2hJIYvV1ZxdOiPUGJdCWpCdnckV-x3vg"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-accent-success border-2 border-white dark:border-slate-900 rounded-full"></div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-xs font-bold text-slate-600 dark:text-slate-400">COMPARE</span>
+</label>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-extrabold leading-none">Dr. Sarah Jenkins</h3>
+<p class="text-primary font-semibold text-sm">Registered Nurse, MD</p>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-bold uppercase tracking-wide rounded text-slate-500">12 Years Exp</span>
+<span class="px-2 py-1 bg-accent-success/10 text-accent-success text-[10px] font-bold uppercase tracking-wide rounded">Available Today</span>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-accent-warning text-sm">star</span>
+<span class="text-sm font-bold">4.9</span>
+<span class="text-xs text-slate-400">(128)</span>
+</div>
+<p class="text-xs font-medium text-slate-400 mt-0.5">Real-time Reviews</p>
+</div>
+<div class="text-right">
+<p class="text-lg font-extrabold text-slate-900 dark:text-white">$85<span class="text-xs font-normal text-slate-400">/hr</span></p>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            View Full Profile
+                        </button>
+</div>
+<!-- Professional Card 2 -->
+<div class="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 hover:border-primary transition-all shadow-sm hover:shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="relative">
+<img class="w-20 h-20 rounded-xl object-cover" data-alt="Male healthcare professional in blue scrubs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKZk1ZMbR8s8HSWplwp8LtMAx6VDDqfTaZ8jG3cm9li3hKK6r5QP8Tbnq88-1iAa6ORLumZx_vF_pOrDbp1SQI-MlEYU6BzkNF0cmuDgEUHtoGzGak_B-3ecuxnzZ8_h1TfvuD9jPqJaPEvJLB7epAW2nADH0Epuj7QNlZ5sYmWQqVYCRpkuwUtXmdPCtRB1STwV0pSoK8LERI6TA0OVxiH3LwGytHGRerOp_aUV7uo3E1JSPSGby0h1XpIFtCKNq3Jm91giSAYFJf"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-accent-success border-2 border-white dark:border-slate-900 rounded-full"></div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+<input class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-xs font-bold text-slate-600 dark:text-slate-400">COMPARE</span>
+</label>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-extrabold leading-none">James Wilson</h3>
+<p class="text-primary font-semibold text-sm">Physical Therapist</p>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-bold uppercase tracking-wide rounded text-slate-500">8 Years Exp</span>
+<span class="px-2 py-1 bg-accent-success/10 text-accent-success text-[10px] font-bold uppercase tracking-wide rounded">Available Now</span>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-accent-warning text-sm">star</span>
+<span class="text-sm font-bold">4.7</span>
+<span class="text-xs text-slate-400">(94)</span>
+</div>
+<p class="text-xs font-medium text-slate-400 mt-0.5">Real-time Reviews</p>
+</div>
+<div class="text-right">
+<p class="text-lg font-extrabold text-slate-900 dark:text-white">$65<span class="text-xs font-normal text-slate-400">/hr</span></p>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            View Full Profile
+                        </button>
+</div>
+<!-- Professional Card 3 -->
+<div class="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 hover:border-primary transition-all shadow-sm hover:shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="relative">
+<img class="w-20 h-20 rounded-xl object-cover" data-alt="Female pediatric nurse smiling professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGfTaAhz3aMVKYMMHHLDvSKWD9OTwTKjwguipoNmZ-f9Fx8wJK-2qgGVvZj1NNAl91mbSJyzLoNf396OFo0mfOo-bJRk4tMKJfsWFxxZ9e2VQePSgsTtMaR5NlIEuHVmntDp9CloLIADDrbeRpGVeon8R7pWLlsm1QS9hzvZze7v0brgCj309ztqPjeya4NiU1QwZyC5jXdzWpH3Dt-6g9gc24rwxE3yOEIkzVuL33KTIphCsnE1RJgTWkEbLRkkvoJiq8Y1bS6s1a"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-accent-warning border-2 border-white dark:border-slate-900 rounded-full"></div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-xs font-bold text-slate-600 dark:text-slate-400">COMPARE</span>
+</label>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-extrabold leading-none">Elena Rodriguez</h3>
+<p class="text-primary font-semibold text-sm">Pediatric Specialist</p>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-bold uppercase tracking-wide rounded text-slate-500">15 Years Exp</span>
+<span class="px-2 py-1 bg-accent-warning/10 text-accent-warning text-[10px] font-bold uppercase tracking-wide rounded">Next Slot: 4pm</span>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-accent-warning text-sm">star</span>
+<span class="text-sm font-bold">5.0</span>
+<span class="text-xs text-slate-400">(210)</span>
+</div>
+<p class="text-xs font-medium text-slate-400 mt-0.5">Real-time Reviews</p>
+</div>
+<div class="text-right">
+<p class="text-lg font-extrabold text-slate-900 dark:text-white">$95<span class="text-xs font-normal text-slate-400">/hr</span></p>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            View Full Profile
+                        </button>
+</div>
+<!-- Additional Card 4 (for grid fullness) -->
+<div class="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 hover:border-primary transition-all shadow-sm hover:shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="relative">
+<img class="w-20 h-20 rounded-xl object-cover" data-alt="Male doctor with stethoscope professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyuD3ePyA4YaRgMzhFdHdYreqb5AzKT7R7WH6Sdk0nFRdL7LtVUowB6GgE8e2LnOahD2-tLxG1KvVH4-Ilwh0WGoXBiT4dzexO1zmszzHqVN3i1GTf2EQUgmx_fTTzM4DBG00MTKoQVydV-GsKtZ-JuGtHnZ81SnwFUg1gC0XwUhGtSMP024Y-rR6Q1LvSRwKa9kk0QKejqRYrNfGqp-6o-zoStUPzc0pr48tDsxHBZm0FIXih2uyd0tQWJdKCCh5X5v4ETTbXGfB7"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-accent-success border-2 border-white dark:border-slate-900 rounded-full"></div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+<input class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-xs font-bold text-slate-600 dark:text-slate-400">COMPARE</span>
+</label>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-extrabold leading-none">Marcus Thorne</h3>
+<p class="text-primary font-semibold text-sm">Geriatric Care Specialist</p>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-bold uppercase tracking-wide rounded text-slate-500">20 Years Exp</span>
+<span class="px-2 py-1 bg-accent-success/10 text-accent-success text-[10px] font-bold uppercase tracking-wide rounded">Available Now</span>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-accent-warning text-sm">star</span>
+<span class="text-sm font-bold">4.8</span>
+<span class="text-xs text-slate-400">(156)</span>
+</div>
+<p class="text-xs font-medium text-slate-400 mt-0.5">Real-time Reviews</p>
+</div>
+<div class="text-right">
+<p class="text-lg font-extrabold text-slate-900 dark:text-white">$110<span class="text-xs font-normal text-slate-400">/hr</span></p>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            View Full Profile
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Comparison Tray (Sticky Bottom) -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-4xl px-4">
+<div class="bg-white dark:bg-slate-900 border-2 border-primary rounded-2xl shadow-2xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 overflow-hidden ring-1 ring-slate-200 dark:ring-slate-700">
+<img class="w-full h-full object-cover" data-alt="Miniature avatar for comparison" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp9RK3u44lS41-8ezmwW53txMZiu9xmG0L28Lo13MvfuqD1HeSfRddULKWFmsHJ0eOdGW8g8MdxhhySKit6evCQDcF8_JMPAfLWIfOlECZOHsFYR4KNGIlMtu36_qGthzxZe55nVpcUgFsNOyQlKvvD4gsHsAaoqOdm9CxCzPrnAW3LQx-l6b8fj8n2F2LVzzhPPhg4YLaFN2fsfDMAyM1-Dkf68n6mIejm29bZ8pSNZYdNy6sHL4iMkrwAmBZrZYPv9iICHap5YmX"/>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 overflow-hidden ring-1 ring-slate-200 dark:ring-slate-700">
+<img class="w-full h-full object-cover" data-alt="Miniature avatar for comparison" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgLHJqje430clq1O6kEbcYdWfBkjKoBRISOk-CczjYEyXybS0CeYN2TPsxeNW74bntIT8ed3owflJJaCMWFcfRarRCdv0_zi8S2eZMaxDfVmANJGD32-_jSN9edd_ONgLtZadCuBvXAMTuAtqUG2n2ZU0FXo7bWBNbqtwltfb0VEyHl07l053-pA_NtW8higH1WMCyEkGhuqgv6LQpJDLU-x4vi0hbd6bE4e2Oh6UVIQ-kHDLjA8IMy_RCyjhAtjTTVGQem_HMNoHB"/>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-800 flex items-center justify-center ring-1 ring-slate-200 dark:ring-slate-700">
+<span class="material-icons text-slate-400">add</span>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-extrabold leading-none">2 Caregivers Selected</h4>
+<p class="text-xs text-slate-500 font-medium mt-1">Ready to compare qualifications</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 transition-colors">Clear All</button>
+<button class="bg-primary hover:bg-blue-700 text-white font-extrabold px-8 py-3 rounded-xl flex items-center gap-2 shadow-lg shadow-primary/30">
+                    Compare Now
+                    <span class="material-icons text-sm">compare_arrows</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Background Pattern -->
+<div class="fixed inset-0 -z-10 opacity-30 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-primary/5"></div>
+<svg class="absolute top-0 right-0 w-1/3 h-1/3 text-primary/5" fill="currentColor" viewbox="0 0 100 100">
+<circle cx="90" cy="10" r="10"></circle>
+<circle cx="50" cy="50" r="20"></circle>
+<circle cx="10" cy="90" r="15"></circle>
+</svg>
+</div>
+</body></html>
